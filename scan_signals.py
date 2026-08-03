@@ -819,13 +819,18 @@ CHART_MODAL_SCRIPT = r"""
     return active ? "#ff4d6d" : "rgba(255,77,109,0.35)";
   }
 
-  function drawHorizontalRay(ray) {
-    if (ray.extended && ray.extendTime != null) {
-      drawSegment(ray.startTime, ray.baseLevel, ray.extendTime, ray.baseLevel, rayColor(ray.type, false), 1, LightweightCharts.LineStyle.Dashed);
-      drawSegment(ray.extendTime, ray.drawLevel, ray.endTime, ray.drawLevel, rayColor(ray.type, ray.active), 1, LightweightCharts.LineStyle.Dashed);
-      return;
-    }
-    drawSegment(ray.startTime, ray.drawLevel, ray.endTime, ray.drawLevel, rayColor(ray.type, ray.active), 1, LightweightCharts.LineStyle.Dashed);
+  function drawHorizontalRay(ray, lastTime) {
+    const t1 = lastTime || ray.endTime;
+    const price = ray.level;
+    drawSegment(
+      ray.startTime,
+      price,
+      t1,
+      price,
+      rayColor(ray.type, ray.active),
+      1,
+      LightweightCharts.LineStyle.Dashed
+    );
   }
 
   function normalizeCandles(candles) {
@@ -883,8 +888,9 @@ CHART_MODAL_SCRIPT = r"""
     });
 
     const markers = [];
+    const lastTime = candles[candles.length - 1].time;
     (pack.rays || []).forEach((ray) => {
-      drawHorizontalRay(ray);
+      drawHorizontalRay(ray, lastTime);
       markers.push({
         time: ray.time,
         position: ray.type === "AR" ? "belowBar" : "aboveBar",
