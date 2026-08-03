@@ -61,6 +61,29 @@ FUTURES = [
 ]
 
 
+CRYPTO_FALLBACK = [
+    ("BTCUSDT", "BTC"), ("ETHUSDT", "ETH"), ("SOLUSDT", "SOL"), ("BNBUSDT", "BNB"),
+    ("XRPUSDT", "XRP"), ("DOGEUSDT", "DOGE"), ("ADAUSDT", "ADA"), ("AVAXUSDT", "AVAX"),
+    ("LINKUSDT", "LINK"), ("DOTUSDT", "DOT"), ("TRXUSDT", "TRX"), ("MATICUSDT", "MATIC"),
+    ("LTCUSDT", "LTC"), ("BCHUSDT", "BCH"), ("UNIUSDT", "UNI"), ("ATOMUSDT", "ATOM"),
+    ("NEARUSDT", "NEAR"), ("APTUSDT", "APT"), ("ARBUSDT", "ARB"), ("OPUSDT", "OP"),
+    ("SUIUSDT", "SUI"), ("PEPEUSDT", "PEPE"), ("WIFUSDT", "WIF"), ("FILUSDT", "FIL"),
+    ("ICPUSDT", "ICP"), ("AAVEUSDT", "AAVE"), ("INJUSDT", "INJ"), ("TIAUSDT", "TIA"),
+    ("RENDERUSDT", "RENDER"), ("FETUSDT", "FET"), ("SEIUSDT", "SEI"), ("STXUSDT", "STX"),
+    ("IMXUSDT", "IMX"), ("RUNEUSDT", "RUNE"), ("GRTUSDT", "GRT"), ("MKRUSDT", "MKR"),
+    ("EGLDUSDT", "EGLD"), ("ALGOUSDT", "ALGO"), ("FTMUSDT", "FTM"), ("HBARUSDT", "HBAR"),
+    ("VETUSDT", "VET"), ("SANDUSDT", "SAND"), ("MANAUSDT", "MANA"), ("AXSUSDT", "AXS"),
+    ("THETAUSDT", "THETA"), ("EOSUSDT", "EOS"), ("FLOWUSDT", "FLOW"), ("XTZUSDT", "XTZ"),
+    ("CHZUSDT", "CHZ"), ("LDOUSDT", "LDO"),
+]
+
+BINANCE_BASES = [
+    "https://data-api.binance.vision",
+    "https://api.binance.com",
+    "https://api1.binance.com",
+]
+
+
 def http_get(url: str, timeout: int = 30) -> bytes:
     req = urllib.request.Request(url, headers=UA)
     with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -85,7 +108,7 @@ def fetch_ndx100() -> list[tuple[str, str]]:
         if len(out) >= 80:
             return out
     except Exception as exc:
-        print(f"NDX100 fetch failed: {exc}")
+        print(f"NDX100 fetch failed: {exc}", flush=True)
     return [
         (s, s)
         for s in [
@@ -96,24 +119,31 @@ def fetch_ndx100() -> list[tuple[str, str]]:
 
 
 def fetch_top50_crypto() -> list[tuple[str, str]]:
-    url = "https://api.binance.com/api/v3/ticker/24hr"
-    data = http_get_json(url, timeout=40)
     skip_bases = {
         "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "EUR", "AEUR", "BFUSD", "USD1", "XUSD",
     }
-    usdt = []
-    for t in data:
-        sym = str(t.get("symbol", ""))
-        if not sym.endswith("USDT"):
-            continue
-        if any(x in sym for x in ("UPUSDT", "DOWNUSDT", "BULL", "BEAR")):
-            continue
-        base = sym[:-4]
-        if base in skip_bases:
-            continue
-        usdt.append(t)
-    usdt.sort(key=lambda t: float(t.get("quoteVolume") or 0), reverse=True)
-    return [(t["symbol"], t["symbol"].replace("USDT", "")) for t in usdt[:50]]
+    for base in BINANCE_BASES:
+        try:
+            data = http_get_json(f"{base}/api/v3/ticker/24hr", timeout=40)
+            usdt = []
+            for t in data:
+                sym = str(t.get("symbol", ""))
+                if not sym.endswith("USDT"):
+                    continue
+                if any(x in sym for x in ("UPUSDT", "DOWNUSDT", "BULL", "BEAR")):
+                    continue
+                if sym[:-4] in skip_bases:
+                    continue
+                usdt.append(t)
+            usdt.sort(key=lambda t: float(t.get("quoteVolume") or 0), reverse=True)
+            out = [(t["symbol"], t["symbol"].replace("USDT", "")) for t in usdt[:50]]
+            if out:
+                print(f"Crypto universe via {base}: {len(out)}", flush=True)
+                return out
+        except Exception as exc:
+            print(f"Crypto ticker failed ({base}): {exc}", flush=True)
+    print("Crypto universe fallback list", flush=True)
+    return list(CRYPTO_FALLBACK)
 
 
 def parse_binance_klines(raw: list) -> list[dict]:
@@ -131,49 +161,65 @@ def parse_binance_klines(raw: list) -> list[dict]:
 
 
 def fetch_binance_1h(symbol: str, bars: int = BARS) -> list[dict]:
-    url = (
-        "https://api.binance.com/api/v3/klines?"
-        + urllib.parse.urlencode({"symbol": symbol, "interval": "1h", "limit": min(bars, 1000)})
-    )
-    return parse_binance_klines(http_get_json(url))
+    params = urllib.parse.urlencode({"symbol": symbol, "interval": "1h", "limit": min(bars, 1000)})
+    last_err: Exception | None = None
+    for base in BINANCE_BASES:
+        try:
+            return parse_binance_klines(http_get_json(f"{base}/api/v3/klines?{params}"))
+        except Exception as exc:  # noqa: BLE001
+            last_err = exc
+    raise last_err  # type: ignore[misc]
 
 
 def fetch_yahoo_1h(symbol: str, bars: int = BARS) -> list[dict]:
     yrange = "3mo" if bars <= 700 else "6mo"
-    url = (
-        "https://query1.finance.yahoo.com/v8/finance/chart/"
-        + urllib.parse.quote(symbol, safe="=-.^")
-        + f"?interval=60m&range={yrange}&includePrePost=false"
-    )
-    payload = http_get_json(url)
-    result = (payload.get("chart") or {}).get("result") or []
-    if not result:
-        return []
-    r0 = result[0]
-    ts = r0.get("timestamp") or []
-    q0 = ((r0.get("indicators") or {}).get("quote") or [{}])[0]
-    out = []
-    for i, t in enumerate(ts):
-        o, h, l, c = (
-            (q0.get("open") or [None])[i],
-            (q0.get("high") or [None])[i],
-            (q0.get("low") or [None])[i],
-            (q0.get("close") or [None])[i],
+    hosts = [
+        "https://query1.finance.yahoo.com",
+        "https://query2.finance.yahoo.com",
+    ]
+    last_err: Exception | None = None
+    for host in hosts:
+        url = (
+            f"{host}/v8/finance/chart/"
+            + urllib.parse.quote(symbol, safe="=-.^")
+            + f"?interval=60m&range={yrange}&includePrePost=false"
         )
-        v = (q0.get("volume") or [0])[i] or 0
-        if None in (o, h, l, c):
-            continue
-        out.append(
-            {
-                "time": int(t),
-                "open": float(o),
-                "high": float(h),
-                "low": float(l),
-                "close": float(c),
-                "volume": float(v),
-            }
-        )
-    return out[-bars:] if len(out) > bars else out
+        try:
+            payload = http_get_json(url)
+            result = (payload.get("chart") or {}).get("result") or []
+            if not result:
+                continue
+            r0 = result[0]
+            ts = r0.get("timestamp") or []
+            q0 = ((r0.get("indicators") or {}).get("quote") or [{}])[0]
+            out = []
+            for i, t in enumerate(ts):
+                o, h, l, c = (
+                    (q0.get("open") or [None])[i],
+                    (q0.get("high") or [None])[i],
+                    (q0.get("low") or [None])[i],
+                    (q0.get("close") or [None])[i],
+                )
+                v = (q0.get("volume") or [0])[i] or 0
+                if None in (o, h, l, c):
+                    continue
+                out.append(
+                    {
+                        "time": int(t),
+                        "open": float(o),
+                        "high": float(h),
+                        "low": float(l),
+                        "close": float(c),
+                        "volume": float(v),
+                    }
+                )
+            if out:
+                return out[-bars:] if len(out) > bars else out
+        except Exception as exc:  # noqa: BLE001
+            last_err = exc
+    if last_err:
+        raise last_err
+    return []
 
 
 def bear_bar(c: list[dict], i: int) -> bool:
@@ -207,8 +253,11 @@ def detect_signals(candles: list[dict]) -> list[dict]:
     if len(candles) < LOOKBACK + MIN_STREAK + 2:
         return signals
     for i in range(LOOKBACK + MIN_STREAK, len(candles)):
-        drop_pct = (candles[i - LOOKBACK]["close"] - candles[i]["close"]) / candles[i - LOOKBACK]["close"] * 100
-        rise_pct = (candles[i]["close"] - candles[i - LOOKBACK]["close"]) / candles[i - LOOKBACK]["close"] * 100
+        base = candles[i - LOOKBACK]["close"]
+        if not base:
+            continue
+        drop_pct = (base - candles[i]["close"]) / base * 100
+        rise_pct = (candles[i]["close"] - base) / base * 100
         vol_ma = sma_vol(candles, i, VOL_LEN)
         high_vol = vol_ma is None or candles[i]["volume"] >= vol_ma * VOL_MULT
         prev_drop = drop_pct >= DROP_PCT and streak(candles, i - 1, True, MIN_STREAK)
@@ -720,27 +769,47 @@ def render_html(payload: dict) -> str:
 """
 
 
-def main() -> None:
+def main() -> int:
     os.makedirs(OUT_DIR, exist_ok=True)
-    print("Loading universes…")
-    ndx100 = fetch_ndx100()
-    crypto = fetch_top50_crypto()
+    print("Loading universes…", flush=True)
+    try:
+        ndx100 = fetch_ndx100()
+        crypto = fetch_top50_crypto()
+    except Exception as exc:  # noqa: BLE001
+        print(f"Universe load failed: {exc}", flush=True)
+        ndx100 = fetch_ndx100()  # has internal fallback
+        crypto = list(CRYPTO_FALLBACK)
+
     jobs = (
         [("ndx100", s, n, "yahoo") for s, n in ndx100]
         + [("futures", s, n, "yahoo") for s, n in FUTURES]
         + [("crypto", s, n, "binance") for s, n in crypto]
     )
-    print(f"Scanning {len(jobs)} symbols for touches…")
+    print(f"Scanning {len(jobs)} symbols for touches…", flush=True)
 
     results: list[dict] = []
-    with ThreadPoolExecutor(max_workers=6) as pool:
+    workers = 4 if os.environ.get("GITHUB_ACTIONS") else 6
+    with ThreadPoolExecutor(max_workers=workers) as pool:
         futs = [pool.submit(scan_one, g, s, n, src) for g, s, n, src in jobs]
         done = 0
         for fut in as_completed(futs):
-            results.append(fut.result())
+            try:
+                results.append(fut.result())
+            except Exception as exc:  # noqa: BLE001
+                results.append(
+                    {
+                        "group": "unknown",
+                        "symbol": "?",
+                        "name": "?",
+                        "source": "?",
+                        "bars": 0,
+                        "events": [],
+                        "error": str(exc),
+                    }
+                )
             done += 1
             if done % 50 == 0:
-                print(f"  progress {done}/{len(jobs)}")
+                print(f"  progress {done}/{len(jobs)}", flush=True)
 
     hits = []
     for r in results:
@@ -793,10 +862,11 @@ def main() -> None:
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
         with open(summary, "a", encoding="utf-8") as f:
-            f.write(f"### Touch Alerts\n\nHits: **{len(hits)}** · [latest.html](./signals/latest.html)\n")
+            f.write(f"### Touch Alerts\n\nHits: **{len(hits)}** · OK: **{payload['counts']['ok']}**\n")
 
-    print(f"Hits: {len(hits)} · wrote {html_path} and {json_path}")
+    print(f"Hits: {len(hits)} · wrote {html_path} and {json_path}", flush=True)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
