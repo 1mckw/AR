@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Hourly AR/DR signal scanner: S&P 500 + futures + top 50 crypto."""
+"""Hourly AR/DR signal scanner: NDX 100 + futures + top 50 crypto."""
 
 from __future__ import annotations
 
@@ -57,27 +57,27 @@ def http_get_json(url: str, timeout: int = 30) -> Any:
     return json.loads(http_get(url, timeout).decode())
 
 
-def fetch_sp500() -> list[tuple[str, str]]:
-    url = "https://raw.githubusercontent.com/datasets/s-and-p-500-companies/master/data/constituents.csv"
+def fetch_ndx100() -> list[tuple[str, str]]:
+    url = "https://yfiua.github.io/index-constituents/constituents-nasdaq100.csv"
     try:
         raw = http_get(url, timeout=40).decode()
         rows = list(csv.DictReader(io.StringIO(raw)))
         out = []
         for r in rows:
             sym = (r.get("Symbol") or r.get("symbol") or "").strip().replace(".", "-")
-            name = (r.get("Security") or r.get("Name") or sym).strip()
+            name = (r.get("Name") or r.get("Security") or sym).strip()
             if sym:
                 out.append((sym, name))
-        if len(out) >= 400:
+        if len(out) >= 80:
             return out
     except Exception as exc:
-        print(f"SP500 fetch failed: {exc}")
-    # fallback: liquid mega-caps if CSV unavailable
+        print(f"NDX100 fetch failed: {exc}")
+    # fallback liquid NDX names if CSV unavailable
     return [
         (s, s)
         for s in [
-            "AAPL", "MSFT", "NVDA", "AMZN", "META", "GOOGL", "BRK-B", "AVGO", "TSLA", "JPM",
-            "V", "XOM", "UNH", "MA", "PG", "JNJ", "HD", "COST", "ABBV", "CRM",
+            "AAPL", "MSFT", "NVDA", "AMZN", "META", "GOOGL", "GOOG", "AVGO", "TSLA", "COST",
+            "NFLX", "AMD", "PEP", "ADBE", "CSCO", "INTC", "CMCSA", "QCOM", "INTU", "AMGN",
         ]
     ]
 
@@ -301,7 +301,7 @@ def render_md(payload: dict) -> str:
         "",
         f"Updated: **{payload['generated_at']}** · TF **1H** · fresh last **{FRESH_BARS}** bar(s)",
         "",
-        f"Universe: SP500 `{payload['counts']['sp500']}` · Futures `{payload['counts']['futures']}` · Crypto `{payload['counts']['crypto']}`",
+        f"Universe: NDX100 `{payload['counts']['ndx100']}` · Futures `{payload['counts']['futures']}` · Crypto `{payload['counts']['crypto']}`",
         "",
     ]
     hits = payload["hits"]
@@ -330,10 +330,10 @@ def render_md(payload: dict) -> str:
 def main() -> None:
     os.makedirs(OUT_DIR, exist_ok=True)
     print("Loading universes…")
-    sp500 = fetch_sp500()
+    ndx100 = fetch_ndx100()
     crypto = fetch_top50_crypto()
     jobs: list[tuple[str, str, str, str]] = []
-    jobs += [("sp500", s, n, "yahoo") for s, n in sp500]
+    jobs += [("ndx100", s, n, "yahoo") for s, n in ndx100]
     jobs += [("futures", s, n, "yahoo") for s, n in FUTURES]
     jobs += [("crypto", s, n, "binance") for s, n in crypto]
     print(f"Scanning {len(jobs)} symbols…")
@@ -381,7 +381,7 @@ def main() -> None:
             "use_structure": USE_STRUCTURE,
         },
         "counts": {
-            "sp500": len(sp500),
+            "ndx100": len(ndx100),
             "futures": len(FUTURES),
             "crypto": len(crypto),
             "ok": sum(1 for r in results if not r.get("error")),

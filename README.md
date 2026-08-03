@@ -12,7 +12,7 @@
 
 | 池 | 來源 | 說明 |
 |----|------|------|
-| **S&P 500** | datasets constituents CSV | 約 500 檔美股 |
+| **NDX 100** | NASDAQ-100 成分股 CSV | 約 100 檔美股 |
 | **期貨** | Yahoo `=F` | 金銀銅油氣、股指、債、外匯、BTC 期 |
 | **Crypto Top 50** | Binance 24h USDT 成交額 | 前 50 名現貨 |
 

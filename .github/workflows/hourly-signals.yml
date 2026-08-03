@@ -26,7 +26,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Scan SP500 + Futures + Top50 Crypto
+      - name: Scan NDX100 + Futures + Top50 Crypto
         run: python scan_signals.py
 
       - name: Commit signal report
