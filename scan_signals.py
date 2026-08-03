@@ -334,6 +334,8 @@ def resolve_horizontal_ray(candles: list[dict], item: dict) -> dict:
                         "extended": True,
                         "active": False,
                         "late_touch_index": None,
+                        "startTime": signal_time,
+                        "extendTime": bar["time"],
                         "endTime": b2["time"],
                     }
             return {
@@ -342,6 +344,8 @@ def resolve_horizontal_ray(candles: list[dict], item: dict) -> dict:
                 "extended": True,
                 "active": True,
                 "late_touch_index": None,
+                "startTime": signal_time,
+                "extendTime": bar["time"],
                 "endTime": candles[-1]["time"],
             }
         if hit_base and not within:
@@ -351,6 +355,8 @@ def resolve_horizontal_ray(candles: list[dict], item: dict) -> dict:
                 "extended": False,
                 "active": False,
                 "late_touch_index": j,
+                "startTime": signal_time,
+                "extendTime": None,
                 "endTime": bar["time"],
             }
     return {
@@ -359,8 +365,9 @@ def resolve_horizontal_ray(candles: list[dict], item: dict) -> dict:
         "extended": False,
         "active": True,
         "late_touch_index": None,
-        "endTime": candles[-1]["time"],
         "startTime": signal_time,
+        "extendTime": None,
+        "endTime": candles[-1]["time"],
     }
 
 
@@ -558,6 +565,86 @@ def collect_trend_touches(candles: list[dict], lines: list[dict]) -> list[dict]:
     return hits
 
 
+CHART_BARS = 300
+
+
+def build_chart_pack(candles: list[dict], signals: list[dict], lines: list[dict]) -> dict:
+    """Compact candles + AR/DR rays + trend lines for the HTML chart modal."""
+    rays = []
+    for sig in signals:
+        ray = resolve_horizontal_ray(candles, sig)
+        rays.append(
+            {
+                "type": sig["type"],
+                "time": int(sig["time"]),
+                "level": float(sig["level"]),
+                "baseLevel": float(ray["baseLevel"]),
+                "drawLevel": float(ray["level"]),
+                "startTime": int(ray.get("startTime") or sig["time"]),
+                "extendTime": int(ray["extendTime"]) if ray.get("extendTime") is not None else None,
+                "endTime": int(ray["endTime"]),
+                "active": bool(ray["active"]),
+                "extended": bool(ray["extended"]),
+            }
+        )
+
+    trend = []
+    last_i = len(candles) - 1
+    for line in lines:
+        invalidated = check_line_invalidation(candles, line)
+        end_time = candles[last_i]["time"]
+        end_price = line_price(line["p1"], line["slope"], last_i)
+        if invalidated:
+            consecutive = 0
+            p1, slope, typ = line["p1"], line["slope"], line["type"]
+            for i in range(last_i, p1["index"], -1):
+                lp = line_price(p1, slope, i)
+                c = candles[i]
+                crossed = (
+                    c["close"] > lp and c["open"] > lp * 0.999
+                    if typ == "resistance"
+                    else c["close"] < lp and c["open"] < lp * 1.001
+                )
+                if crossed:
+                    consecutive += 1
+                    if consecutive >= INVALIDATE_CROSS:
+                        end_time = c["time"]
+                        end_price = lp
+                        break
+                else:
+                    consecutive = 0
+        trend.append(
+            {
+                "type": line["type"],
+                "p1": {"time": int(line["p1"]["time"]), "price": float(line["p1"]["price"])},
+                "p2": {"time": int(line["p2"]["time"]), "price": float(line["p2"]["price"])},
+                "endTime": int(end_time),
+                "endPrice": float(end_price),
+                "invalidated": invalidated,
+            }
+        )
+
+    trimmed = candles[-CHART_BARS:] if len(candles) > CHART_BARS else candles
+    return {
+        "candles": [
+            {
+                "time": int(c["time"]),
+                "open": float(c["open"]),
+                "high": float(c["high"]),
+                "low": float(c["low"]),
+                "close": float(c["close"]),
+            }
+            for c in trimmed
+        ],
+        "rays": rays,
+        "trend_lines": trend,
+    }
+
+
+def chart_key(group: str, symbol: str, timeframe: str) -> str:
+    return f"{group}|{symbol}|{timeframe}"
+
+
 def with_retries(fn, retries: int = 3, pause: float = 0.8):
     last_err = None
     for attempt in range(retries):
@@ -582,7 +669,7 @@ def scan_one(group: str, symbol: str, name: str, source: str, timeframe: str) ->
         events = late + trend
         for ev in events:
             ev["timeframe"] = timeframe
-        return {
+        out = {
             "group": group,
             "symbol": symbol,
             "name": name,
@@ -592,6 +679,9 @@ def scan_one(group: str, symbol: str, name: str, source: str, timeframe: str) ->
             "events": events,
             "error": None,
         }
+        if events:
+            out["chart"] = build_chart_pack(candles, signals, lines)
+        return out
     except Exception as exc:  # noqa: BLE001
         return {
             "group": group,
@@ -621,21 +711,13 @@ CHART_MODAL_SCRIPT = r"""
 <script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
 <script>
 (function () {
+  const PACKS = window.CHART_PACKS || {};
   const FUTURES_TV = {
-    "GC=F": "COMEX:GC1!",
-    "SI=F": "COMEX:SI1!",
-    "HG=F": "COMEX:HG1!",
-    "CL=F": "NYMEX:CL1!",
-    "NG=F": "NYMEX:NG1!",
-    "ES=F": "CME_MINI:ES1!",
-    "NQ=F": "CME_MINI:NQ1!",
-    "YM=F": "CBOT_MINI:YM1!",
-    "RTY=F": "CME_MINI:RTY1!",
-    "ZB=F": "CBOT:ZB1!",
-    "ZN=F": "CBOT:ZN1!",
-    "6E=F": "CME:6E1!",
-    "6J=F": "CME:6J1!",
-    "BTC=F": "CME:BTC1!",
+    "GC=F": "COMEX:GC1!", "SI=F": "COMEX:SI1!", "HG=F": "COMEX:HG1!",
+    "CL=F": "NYMEX:CL1!", "NG=F": "NYMEX:NG1!", "ES=F": "CME_MINI:ES1!",
+    "NQ=F": "CME_MINI:NQ1!", "YM=F": "CBOT_MINI:YM1!", "RTY=F": "CME_MINI:RTY1!",
+    "ZB=F": "CBOT:ZB1!", "ZN=F": "CBOT:ZN1!", "6E=F": "CME:6E1!",
+    "6J=F": "CME:6J1!", "BTC=F": "CME:BTC1!",
   };
 
   const modal = document.getElementById("chart-modal");
@@ -647,7 +729,13 @@ CHART_MODAL_SCRIPT = r"""
   const closeBtn = document.getElementById("chart-close");
   let chart = null;
   let series = null;
+  let overlays = [];
   let openToken = 0;
+  let resizeObs = null;
+
+  function packKey(group, symbol, tf) {
+    return group + "|" + symbol + "|" + tf;
+  }
 
   function tvSymbol(group, symbol) {
     if (group === "crypto") return "BINANCE:" + symbol;
@@ -673,6 +761,8 @@ CHART_MODAL_SCRIPT = r"""
   }
 
   function destroyChart() {
+    if (resizeObs) { resizeObs.disconnect(); resizeObs = null; }
+    overlays = [];
     if (chart) {
       chart.remove();
       chart = null;
@@ -702,38 +792,67 @@ CHART_MODAL_SCRIPT = r"""
     statusEl.hidden = true;
   }
 
-  async function fetchBinance(symbol, tf) {
-    const iv = tf === "1d" ? "1d" : "1h";
-    const bases = [
-      "https://data-api.binance.vision",
-      "https://api.binance.com",
-    ];
-    let lastErr = null;
-    for (const base of bases) {
-      try {
-        const url = `${base}/api/v3/klines?symbol=${encodeURIComponent(symbol)}&interval=${iv}&limit=300`;
-        const res = await fetch(url);
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        const rows = await res.json();
-        if (!Array.isArray(rows) || !rows.length) throw new Error("empty");
-        return rows.map((k) => ({
-          time: Math.floor(k[0] / 1000),
-          open: +k[1],
-          high: +k[2],
-          low: +k[3],
-          close: +k[4],
-        }));
-      } catch (err) {
-        lastErr = err;
-      }
-    }
-    throw lastErr || new Error("binance failed");
+  function drawSegment(t0, p0, t1, p1, color, width, style) {
+    if (t0 == null || t1 == null || t0 === t1) return;
+    const s = chart.addLineSeries({
+      color,
+      lineWidth: width,
+      lineStyle: style ?? LightweightCharts.LineStyle.Solid,
+      priceLineVisible: false,
+      lastValueVisible: false,
+      crosshairMarkerVisible: false,
+    });
+    s.setData([
+      { time: t0, value: p0 },
+      { time: t1, value: p1 },
+    ]);
+    overlays.push(s);
   }
 
-  function renderLwc(candles, level, type) {
+  function rayColor(type, active) {
+    const rgb = type === "AR" ? "0,232,150" : "255,77,109";
+    return active ? `rgba(${rgb},1)` : `rgba(${rgb},0.35)`;
+  }
+
+  function markerColor(type, active) {
+    if (type === "AR") return active ? "#00e896" : "rgba(0,232,150,0.35)";
+    return active ? "#ff4d6d" : "rgba(255,77,109,0.35)";
+  }
+
+  function drawHorizontalRay(ray) {
+    if (ray.extended && ray.extendTime != null) {
+      drawSegment(ray.startTime, ray.baseLevel, ray.extendTime, ray.baseLevel, rayColor(ray.type, false), 1, LightweightCharts.LineStyle.Dashed);
+      drawSegment(ray.extendTime, ray.drawLevel, ray.endTime, ray.drawLevel, rayColor(ray.type, ray.active), 1, LightweightCharts.LineStyle.Dashed);
+      return;
+    }
+    drawSegment(ray.startTime, ray.drawLevel, ray.endTime, ray.drawLevel, rayColor(ray.type, ray.active), 1, LightweightCharts.LineStyle.Dashed);
+  }
+
+  function normalizeCandles(candles) {
+    const out = [];
+    let prev = null;
+    for (const c of candles) {
+      const t = c.time;
+      if (prev != null && t <= prev) continue;
+      out.push({
+        time: t,
+        open: c.open,
+        high: c.high,
+        low: c.low,
+        close: c.close,
+      });
+      prev = t;
+    }
+    return out;
+  }
+
+  function renderPack(pack, touchLevel, touchType) {
     destroyChart();
     lwcEl.hidden = false;
     frameEl.hidden = true;
+    const candles = normalizeCandles(pack.candles || []);
+    if (!candles.length) throw new Error("no candles");
+
     chart = LightweightCharts.createChart(lwcEl, {
       layout: { background: { color: "#05070b" }, textColor: "#7a93a8" },
       grid: {
@@ -753,9 +872,34 @@ CHART_MODAL_SCRIPT = r"""
       wickDownColor: "#ff7a90",
     });
     series.setData(candles);
-    const lv = Number(level);
+
+    (pack.trend_lines || []).forEach((line) => {
+      const alpha = line.invalidated ? 0.3 : 0.95;
+      const color = line.type === "resistance"
+        ? `rgba(239,68,68,${alpha})`
+        : `rgba(34,197,94,${alpha})`;
+      drawSegment(line.p1.time, line.p1.price, line.endTime, line.endPrice, color, 2);
+      drawSegment(line.p1.time, line.p1.price, line.p2.time, line.p2.price, color, 1, LightweightCharts.LineStyle.Dotted);
+    });
+
+    const markers = [];
+    (pack.rays || []).forEach((ray) => {
+      drawHorizontalRay(ray);
+      markers.push({
+        time: ray.time,
+        position: ray.type === "AR" ? "belowBar" : "aboveBar",
+        color: markerColor(ray.type, ray.active),
+        shape: "circle",
+        size: ray.active ? 2 : 1,
+        text: ray.type,
+      });
+    });
+    markers.sort((a, b) => a.time - b.time);
+    series.setMarkers(markers);
+
+    const lv = Number(touchLevel);
     if (Number.isFinite(lv)) {
-      const color = type === "AR" || type === "support" ? "#00e896" : "#ff4d6d";
+      const color = touchType === "AR" || touchType === "support" ? "#00e896" : "#ff4d6d";
       series.createPriceLine({
         price: lv,
         color,
@@ -765,12 +909,13 @@ CHART_MODAL_SCRIPT = r"""
         title: "touch",
       });
     }
+
     chart.timeScale().fitContent();
-    const ro = new ResizeObserver(() => {
+    resizeObs = new ResizeObserver(() => {
       if (!chart) return;
       chart.applyOptions({ width: lwcEl.clientWidth, height: lwcEl.clientHeight });
     });
-    ro.observe(lwcEl);
+    resizeObs.observe(lwcEl);
     chart.applyOptions({ width: lwcEl.clientWidth, height: lwcEl.clientHeight });
   }
 
@@ -778,11 +923,9 @@ CHART_MODAL_SCRIPT = r"""
     destroyChart();
     lwcEl.hidden = true;
     frameEl.hidden = false;
-    const sym = tvSymbol(group, symbol);
-    const iv = tvInterval(tf);
     const params = new URLSearchParams({
-      symbol: sym,
-      interval: iv,
+      symbol: tvSymbol(group, symbol),
+      interval: tvInterval(tf),
       theme: "dark",
       style: "1",
       locale: "zh_TW",
@@ -806,11 +949,16 @@ CHART_MODAL_SCRIPT = r"""
     const type = btn.dataset.type || "";
     const kind = btn.dataset.kind || "";
     const token = ++openToken;
+    const key = packKey(group, symbol, tf);
+    const pack = PACKS[key];
 
     titleEl.textContent = `${symbol} · ${tf === "1d" ? "1D" : "1H"}`;
+    const rayN = pack && pack.rays ? pack.rays.length : 0;
+    const tlN = pack && pack.trend_lines ? pack.trend_lines.length : 0;
     subEl.innerHTML =
       `${escapeHtml(name)} · ${escapeHtml(group)} · ${escapeHtml(typeLabel(type, kind))}` +
-      (level ? ` · Level <strong>${escapeHtml(fmtLevel(level))}</strong>` : "");
+      (level ? ` · Level <strong>${escapeHtml(fmtLevel(level))}</strong>` : "") +
+      (pack ? ` · AR/DR ${rayN} · 趨勢線 ${tlN}` : "");
 
     modal.hidden = false;
     modal.setAttribute("aria-hidden", "false");
@@ -820,20 +968,23 @@ CHART_MODAL_SCRIPT = r"""
     showStatus("載入蠟燭圖…");
 
     try {
-      if (group === "crypto") {
-        const candles = await fetchBinance(symbol, tf);
+      if (pack && pack.candles && pack.candles.length) {
         if (token !== openToken) return;
         hideStatus();
-        renderLwc(candles, level, type);
-      } else {
-        if (token !== openToken) return;
-        hideStatus();
-        renderTradingView(group, symbol, tf);
+        renderPack(pack, level, type);
+        return;
       }
-    } catch (err) {
       if (token !== openToken) return;
       hideStatus();
       renderTradingView(group, symbol, tf);
+    } catch (err) {
+      if (token !== openToken) return;
+      showStatus("圖表載入失敗，改開 TradingView…");
+      setTimeout(() => {
+        if (token !== openToken) return;
+        hideStatus();
+        renderTradingView(group, symbol, tf);
+      }, 400);
     }
   }
 
@@ -1066,7 +1217,7 @@ def render_html(payload: dict) -> str:
       <li><strong>不報告</strong> 近 {TOUCH_WINDOW_BARS} 根內新出現的 AR/DR</li>
       <li><strong>報告</strong> 信號後超過 {TOUCH_WINDOW_BARS} 根才觸碰 AR/DR 原價位</li>
       <li><strong>報告</strong> 趨勢線影線觸碰</li>
-      <li>點擊 <strong>Symbol</strong> 開啟對應週期蠟燭圖</li>
+      <li>點擊 <strong>Symbol</strong> 開啟蠟燭圖（含 AR/DR 與趨勢線）</li>
     </ul>
 
     <h2>AR/DR 觸碰（&gt;{TOUCH_WINDOW_BARS} 根後） · {len(ar_dr)}</h2>
@@ -1120,7 +1271,13 @@ def render_html(payload: dict) -> str:
     </div>
   </div>
 """
-    return page_head + CHART_MODAL_SCRIPT + "\n</body>\n</html>\n"
+    charts = payload.get("charts") or {}
+    packs_js = (
+        "<script>window.CHART_PACKS = "
+        + json.dumps(charts, ensure_ascii=False, separators=(",", ":"))
+        + ";</script>\n"
+    )
+    return page_head + packs_js + CHART_MODAL_SCRIPT + "\n</body>\n</html>\n"
 
 
 def main() -> int:
@@ -1168,7 +1325,14 @@ def main() -> int:
                 print(f"  progress {done}/{len(jobs)}", flush=True)
 
     hits = []
+    charts: dict[str, dict] = {}
+    slim_results: list[dict] = []
     for r in results:
+        pack = r.pop("chart", None)
+        if pack and r.get("events"):
+            key = chart_key(r["group"], r["symbol"], r.get("timeframe") or "")
+            charts.setdefault(key, pack)
+        slim_results.append(r)
         for ev in r.get("events") or []:
             hits.append(
                 {
@@ -1208,11 +1372,13 @@ def main() -> int:
             "futures": len(FUTURES),
             "crypto": len(crypto),
             "jobs": len(jobs),
-            "ok": sum(1 for r in results if not r.get("error")),
+            "ok": sum(1 for r in slim_results if not r.get("error")),
             "hits": len(hits),
+            "charts": len(charts),
         },
         "hits": hits,
-        "results": results,
+        "charts": charts,
+        "results": slim_results,
     }
 
     json_path = os.path.join(OUT_DIR, "latest.json")
