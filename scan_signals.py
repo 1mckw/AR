@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Hourly touch scanner: NDX100 + futures + top 50 crypto.
+"""Touch scanner: NDX100 + futures + top 50 crypto on 1H and 1D.
 
 Reports only:
   - AR/DR base-level touch after >12 bars from signal (not new AR/DR within 12 bars)
@@ -32,6 +32,10 @@ USE_STRUCTURE = True
 TOUCH_WINDOW_BARS = 12
 FRESH_BARS = 2  # report touches on last N bars
 BARS = 500
+TIMEFRAMES = ("1h", "1d")
+TF_LABEL = {"1h": "1H", "1d": "1D"}
+YAHOO_INTERVAL = {"1h": "60m", "1d": "1d"}
+BINANCE_INTERVAL = {"1h": "1h", "1d": "1d"}
 
 PIVOT_HIGH = 4
 PIVOT_LOW = 4
@@ -160,8 +164,23 @@ def parse_binance_klines(raw: list) -> list[dict]:
     ]
 
 
-def fetch_binance_1h(symbol: str, bars: int = BARS) -> list[dict]:
-    params = urllib.parse.urlencode({"symbol": symbol, "interval": "1h", "limit": min(bars, 1000)})
+def yahoo_range(interval: str, bars: int) -> str:
+    if interval == "1d":
+        if bars <= 500:
+            return "2y"
+        if bars <= 2000:
+            return "5y"
+        return "10y"
+    if bars <= 700:
+        return "3mo"
+    if bars <= 2000:
+        return "6mo"
+    return "1y"
+
+
+def fetch_binance(symbol: str, timeframe: str = "1h", bars: int = BARS) -> list[dict]:
+    iv = BINANCE_INTERVAL[timeframe]
+    params = urllib.parse.urlencode({"symbol": symbol, "interval": iv, "limit": min(bars, 1000)})
     last_err: Exception | None = None
     for base in BINANCE_BASES:
         try:
@@ -171,8 +190,9 @@ def fetch_binance_1h(symbol: str, bars: int = BARS) -> list[dict]:
     raise last_err  # type: ignore[misc]
 
 
-def fetch_yahoo_1h(symbol: str, bars: int = BARS) -> list[dict]:
-    yrange = "3mo" if bars <= 700 else "6mo"
+def fetch_yahoo(symbol: str, timeframe: str = "1h", bars: int = BARS) -> list[dict]:
+    iv = YAHOO_INTERVAL[timeframe]
+    yrange = yahoo_range(timeframe, bars)
     hosts = [
         "https://query1.finance.yahoo.com",
         "https://query2.finance.yahoo.com",
@@ -182,7 +202,7 @@ def fetch_yahoo_1h(symbol: str, bars: int = BARS) -> list[dict]:
         url = (
             f"{host}/v8/finance/chart/"
             + urllib.parse.quote(symbol, safe="=-.^")
-            + f"?interval=60m&range={yrange}&includePrePost=false"
+            + f"?interval={iv}&range={yrange}&includePrePost=false"
         )
         try:
             payload = http_get_json(url)
@@ -549,22 +569,25 @@ def with_retries(fn, retries: int = 3, pause: float = 0.8):
     raise last_err  # type: ignore[misc]
 
 
-def scan_one(group: str, symbol: str, name: str, source: str) -> dict:
+def scan_one(group: str, symbol: str, name: str, source: str, timeframe: str) -> dict:
     try:
         if source == "binance":
-            candles = with_retries(lambda: fetch_binance_1h(symbol))
+            candles = with_retries(lambda: fetch_binance(symbol, timeframe))
         else:
-            candles = with_retries(lambda: fetch_yahoo_1h(symbol))
+            candles = with_retries(lambda: fetch_yahoo(symbol, timeframe))
         signals = detect_signals(candles)
         late = collect_late_ar_dr_touches(candles, signals)
         lines = build_auto_trend_lines(candles)
         trend = collect_trend_touches(candles, lines)
         events = late + trend
+        for ev in events:
+            ev["timeframe"] = timeframe
         return {
             "group": group,
             "symbol": symbol,
             "name": name,
             "source": source,
+            "timeframe": timeframe,
             "bars": len(candles),
             "events": events,
             "error": None,
@@ -575,6 +598,7 @@ def scan_one(group: str, symbol: str, name: str, source: str) -> dict:
             "symbol": symbol,
             "name": name,
             "source": source,
+            "timeframe": timeframe,
             "bars": 0,
             "events": [],
             "error": str(exc),
@@ -589,6 +613,10 @@ def fmt_num(v: float) -> str:
     return f"{v:.6g}"
 
 
+def fmt_tf(tf: str) -> str:
+    return TF_LABEL.get(tf, (tf or "?").upper())
+
+
 def render_html(payload: dict) -> str:
     hits = payload["hits"]
     ar_dr = [h for h in hits if h["kind"] == "ar_dr_touch"]
@@ -598,13 +626,14 @@ def render_html(payload: dict) -> str:
 
     def rows_ar_dr() -> str:
         if not ar_dr:
-            return '<tr><td colspan="7" class="empty">目前無 AR/DR 觸碰</td></tr>'
+            return '<tr><td colspan="8" class="empty">目前無 AR/DR 觸碰</td></tr>'
         out = []
         for h in ar_dr:
             cls = "ar" if h.get("type") == "AR" else "dr"
             out.append(
                 "<tr>"
                 f'<td><span class="tag {cls}">{html.escape(str(h.get("type", "")))}</span></td>'
+                f"<td>{html.escape(fmt_tf(h.get('timeframe', '')))}</td>"
                 f"<td>{html.escape(h.get('group', ''))}</td>"
                 f"<td><code>{html.escape(h.get('symbol', ''))}</code></td>"
                 f"<td>{html.escape(h.get('name', ''))}</td>"
@@ -617,13 +646,14 @@ def render_html(payload: dict) -> str:
 
     def rows_trend() -> str:
         if not trend:
-            return '<tr><td colspan="6" class="empty">目前無趨勢線觸碰</td></tr>'
+            return '<tr><td colspan="7" class="empty">目前無趨勢線觸碰</td></tr>'
         out = []
         for h in trend:
             cls = "resist" if h.get("type") == "resistance" else "support"
             out.append(
                 "<tr>"
                 f'<td><span class="tag {cls}">{html.escape(str(h.get("type", "")))}</span></td>'
+                f"<td>{html.escape(fmt_tf(h.get('timeframe', '')))}</td>"
                 f"<td>{html.escape(h.get('group', ''))}</td>"
                 f"<td><code>{html.escape(h.get('symbol', ''))}</code></td>"
                 f"<td>{html.escape(h.get('name', ''))}</td>"
@@ -640,6 +670,8 @@ def render_html(payload: dict) -> str:
             for e in errs[:15]
         )
         err_block = f"<h2>Sample errors</h2><ul class=\"errs\">{items}</ul>"
+
+    tf_meta = " · ".join(fmt_tf(tf) for tf in payload.get("timeframes") or TIMEFRAMES)
 
     return f"""<!DOCTYPE html>
 <html lang="zh-Hant">
@@ -718,7 +750,7 @@ def render_html(payload: dict) -> str:
 <body>
   <div class="wrap">
     <h1>Touch Alerts</h1>
-    <p class="meta">Updated <strong>{html.escape(payload['generated_at'])}</strong> · TF <strong>1H</strong> · fresh last <strong>{FRESH_BARS}</strong> bar(s)</p>
+    <p class="meta">Updated <strong>{html.escape(payload['generated_at'])}</strong> · TF <strong>{html.escape(tf_meta)}</strong> · fresh last <strong>{FRESH_BARS}</strong> bar(s)</p>
     <div class="cards">
       <div class="card"><div class="lbl">Hits</div><div class="val">{c['hits']}</div></div>
       <div class="card"><div class="lbl">NDX100</div><div class="val">{c['ndx100']}</div></div>
@@ -735,7 +767,7 @@ def render_html(payload: dict) -> str:
     <div class="panel">
       <table>
         <thead>
-          <tr><th>Type</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th class="num">Bars after</th><th>Time</th></tr>
+          <tr><th>Type</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th class="num">Bars after</th><th>Time</th></tr>
         </thead>
         <tbody>
           {rows_ar_dr()}
@@ -747,7 +779,7 @@ def render_html(payload: dict) -> str:
     <div class="panel">
       <table>
         <thead>
-          <tr><th>Side</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th>Time</th></tr>
+          <tr><th>Side</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th>Time</th></tr>
         </thead>
         <tbody>
           {rows_trend()}
@@ -756,7 +788,7 @@ def render_html(payload: dict) -> str:
     </div>
 
     <h2>Scan stats</h2>
-    <p class="meta">OK symbols <strong>{c['ok']}</strong> · Errors <strong>{len(errs)}</strong> · Hits <strong>{c['hits']}</strong></p>
+    <p class="meta">OK scans <strong>{c['ok']}</strong> · Errors <strong>{len(errs)}</strong> · Hits <strong>{c['hits']}</strong></p>
     {err_block}
 
     <footer>
@@ -780,17 +812,18 @@ def main() -> int:
         ndx100 = fetch_ndx100()  # has internal fallback
         crypto = list(CRYPTO_FALLBACK)
 
-    jobs = (
-        [("ndx100", s, n, "yahoo") for s, n in ndx100]
-        + [("futures", s, n, "yahoo") for s, n in FUTURES]
-        + [("crypto", s, n, "binance") for s, n in crypto]
-    )
-    print(f"Scanning {len(jobs)} symbols for touches…", flush=True)
+    jobs = []
+    for tf in TIMEFRAMES:
+        jobs.extend(("ndx100", s, n, "yahoo", tf) for s, n in ndx100)
+        jobs.extend(("futures", s, n, "yahoo", tf) for s, n in FUTURES)
+        jobs.extend(("crypto", s, n, "binance", tf) for s, n in crypto)
+    tf_label = " + ".join(fmt_tf(tf) for tf in TIMEFRAMES)
+    print(f"Scanning {len(jobs)} jobs ({len(ndx100)+len(FUTURES)+len(crypto)} symbols × {tf_label})…", flush=True)
 
     results: list[dict] = []
     workers = 4 if os.environ.get("GITHUB_ACTIONS") else 6
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        futs = [pool.submit(scan_one, g, s, n, src) for g, s, n, src in jobs]
+        futs = [pool.submit(scan_one, g, s, n, src, tf) for g, s, n, src, tf in jobs]
         done = 0
         for fut in as_completed(futs):
             try:
@@ -802,6 +835,7 @@ def main() -> int:
                         "symbol": "?",
                         "name": "?",
                         "source": "?",
+                        "timeframe": "?",
                         "bars": 0,
                         "events": [],
                         "error": str(exc),
@@ -820,13 +854,23 @@ def main() -> int:
                     "group": r["group"],
                     "symbol": r["symbol"],
                     "name": r["name"],
+                    "timeframe": ev.get("timeframe") or r.get("timeframe"),
                 }
             )
-    hits.sort(key=lambda x: (x["kind"], x["group"], x["symbol"], x.get("type", "")))
+    hits.sort(
+        key=lambda x: (
+            x["kind"],
+            x.get("timeframe", ""),
+            x["group"],
+            x["symbol"],
+            x.get("type", ""),
+        )
+    )
 
     payload = {
         "generated_at": datetime.now(tz=timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
-        "timeframe": "1h",
+        "timeframes": list(TIMEFRAMES),
+        "timeframe": "+".join(TIMEFRAMES),
         "params": {
             "touch_window_bars": TOUCH_WINDOW_BARS,
             "fresh_bars": FRESH_BARS,
@@ -841,6 +885,7 @@ def main() -> int:
             "ndx100": len(ndx100),
             "futures": len(FUTURES),
             "crypto": len(crypto),
+            "jobs": len(jobs),
             "ok": sum(1 for r in results if not r.get("error")),
             "hits": len(hits),
         },
