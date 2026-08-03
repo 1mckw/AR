@@ -31,7 +31,8 @@ VOL_MULT = 1.2
 USE_STRUCTURE = True
 TOUCH_WINDOW_BARS = 12
 FRESH_BARS = 2  # report touches on last N bars
-BARS = 500
+BARS = 5000
+CHART_BARS = 5000
 TIMEFRAMES = ("1h", "1d")
 TF_LABEL = {"1h": "1H", "1d": "1D"}
 YAHOO_INTERVAL = {"1h": "60m", "1d": "1d"}
@@ -39,7 +40,7 @@ BINANCE_INTERVAL = {"1h": "1h", "1d": "1d"}
 
 PIVOT_HIGH = 4
 PIVOT_LOW = 4
-MAX_LOOKBACK = 500
+MAX_LOOKBACK = 5000
 INVALIDATE_CROSS = 2
 MAX_RESISTANCE = 1
 MAX_SUPPORT = 1
@@ -170,24 +171,54 @@ def yahoo_range(interval: str, bars: int) -> str:
             return "2y"
         if bars <= 2000:
             return "5y"
-        return "10y"
+        if bars <= 3000:
+            return "10y"
+        return "max"
+    # 1h
     if bars <= 700:
         return "3mo"
     if bars <= 2000:
         return "6mo"
-    return "1y"
+    if bars <= 3000:
+        return "1y"
+    return "730d"
 
 
 def fetch_binance(symbol: str, timeframe: str = "1h", bars: int = BARS) -> list[dict]:
+    """Paginate Binance klines (max 1000 per request) up to `bars`."""
     iv = BINANCE_INTERVAL[timeframe]
-    params = urllib.parse.urlencode({"symbol": symbol, "interval": iv, "limit": min(bars, 1000)})
+    by_time: dict[int, dict] = {}
+    end_time: int | None = None
     last_err: Exception | None = None
-    for base in BINANCE_BASES:
-        try:
-            return parse_binance_klines(http_get_json(f"{base}/api/v3/klines?{params}"))
-        except Exception as exc:  # noqa: BLE001
-            last_err = exc
-    raise last_err  # type: ignore[misc]
+
+    while len(by_time) < bars:
+        need = min(1000, bars - len(by_time))
+        params: dict[str, str | int] = {"symbol": symbol, "interval": iv, "limit": need}
+        if end_time is not None:
+            params["endTime"] = end_time
+        query = urllib.parse.urlencode(params)
+        batch = None
+        for base in BINANCE_BASES:
+            try:
+                batch = http_get_json(f"{base}/api/v3/klines?{query}", timeout=45)
+                last_err = None
+                break
+            except Exception as exc:  # noqa: BLE001
+                last_err = exc
+        if batch is None:
+            if by_time:
+                break
+            raise last_err  # type: ignore[misc]
+        if not batch:
+            break
+        for c in parse_binance_klines(batch):
+            by_time[c["time"]] = c
+        end_time = int(batch[0][0]) - 1
+        if len(batch) < need:
+            break
+
+    out = sorted(by_time.values(), key=lambda c: c["time"])
+    return out[-bars:] if len(out) > bars else out
 
 
 def fetch_yahoo(symbol: str, timeframe: str = "1h", bars: int = BARS) -> list[dict]:
@@ -205,7 +236,7 @@ def fetch_yahoo(symbol: str, timeframe: str = "1h", bars: int = BARS) -> list[di
             + f"?interval={iv}&range={yrange}&includePrePost=false"
         )
         try:
-            payload = http_get_json(url)
+            payload = http_get_json(url, timeout=45)
             result = (payload.get("chart") or {}).get("result") or []
             if not result:
                 continue
@@ -565,9 +596,6 @@ def collect_trend_touches(candles: list[dict], lines: list[dict]) -> list[dict]:
     return hits
 
 
-CHART_BARS = 300
-
-
 def build_chart_pack(candles: list[dict], signals: list[dict], lines: list[dict]) -> dict:
     """Compact candles + AR/DR rays + trend lines for the HTML chart modal."""
     rays = []
@@ -851,7 +879,7 @@ CHART_MODAL_SCRIPT = r"""
     return out;
   }
 
-  function renderPack(pack, touchLevel, touchType) {
+  function renderPack(pack) {
     destroyChart();
     lwcEl.hidden = false;
     frameEl.hidden = true;
@@ -902,19 +930,6 @@ CHART_MODAL_SCRIPT = r"""
     });
     markers.sort((a, b) => a.time - b.time);
     series.setMarkers(markers);
-
-    const lv = Number(touchLevel);
-    if (Number.isFinite(lv)) {
-      const color = touchType === "AR" || touchType === "support" ? "#00e896" : "#ff4d6d";
-      series.createPriceLine({
-        price: lv,
-        color,
-        lineWidth: 2,
-        lineStyle: LightweightCharts.LineStyle.Dashed,
-        axisLabelVisible: true,
-        title: "touch",
-      });
-    }
 
     chart.timeScale().fitContent();
     resizeObs = new ResizeObserver(() => {
@@ -977,7 +992,7 @@ CHART_MODAL_SCRIPT = r"""
       if (pack && pack.candles && pack.candles.length) {
         if (token !== openToken) return;
         hideStatus();
-        renderPack(pack, level, type);
+        renderPack(pack);
         return;
       }
       if (token !== openToken) return;
@@ -1364,6 +1379,7 @@ def main() -> int:
         "timeframes": list(TIMEFRAMES),
         "timeframe": "+".join(TIMEFRAMES),
         "params": {
+            "bars": BARS,
             "touch_window_bars": TOUCH_WINDOW_BARS,
             "fresh_bars": FRESH_BARS,
             "drop_pct": DROP_PCT,
