@@ -20,23 +20,29 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from typing import Any
 
+import ardr
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(ROOT, "signals")
 
-LOOKBACK = 10
-VOL_LEN = 20
-DROP_PCT = 3.0
-MIN_STREAK = 3
-VOL_MULT = 1.2
-USE_STRUCTURE = True
-TOUCH_WINDOW_BARS = 12
-FRESH_BARS = 2  # report touches on last N bars
+LOOKBACK = ardr.LOOKBACK
+VOL_LEN = ardr.VOL_LEN
+DROP_PCT = ardr.DROP_PCT
+MIN_STREAK = ardr.MIN_STREAK
+VOL_MULT = ardr.VOL_MULT
+USE_STRUCTURE = ardr.USE_STRUCTURE
+TOUCH_WINDOW_BARS = ardr.TOUCH_WINDOW_BARS
+FRESH_BARS = ardr.FRESH_BARS
 BARS = 5000
 CHART_BARS = 5000
 TIMEFRAMES = ("1h", "1d")
 TF_LABEL = {"1h": "1H", "1d": "1D"}
 YAHOO_INTERVAL = {"1h": "60m", "1d": "1d"}
 BINANCE_INTERVAL = {"1h": "1h", "1d": "1d"}
+
+detect_signals = ardr.detect_signals
+resolve_horizontal_ray = ardr.resolve_horizontal_ray
+collect_late_ar_dr_touches = ardr.collect_late_ar_dr_touches
 
 PIVOT_HIGH = 4
 PIVOT_LOW = 4
@@ -273,171 +279,6 @@ def fetch_yahoo(symbol: str, timeframe: str = "1h", bars: int = BARS) -> list[di
     return []
 
 
-def bear_bar(c: list[dict], i: int) -> bool:
-    return c[i]["close"] < c[i]["open"]
-
-
-def bull_bar(c: list[dict], i: int) -> bool:
-    return c[i]["close"] > c[i]["open"]
-
-
-def streak(c: list[dict], i: int, bear: bool, length: int) -> bool:
-    for j in range(1, length + 1):
-        idx = i - j
-        if idx < 0:
-            return False
-        if bear and not bear_bar(c, idx):
-            return False
-        if not bear and not bull_bar(c, idx):
-            return False
-    return True
-
-
-def sma_vol(c: list[dict], i: int, length: int) -> float | None:
-    if i < length - 1:
-        return None
-    return sum(c[i - j]["volume"] for j in range(length)) / length
-
-
-def detect_signals(candles: list[dict]) -> list[dict]:
-    signals = []
-    if len(candles) < LOOKBACK + MIN_STREAK + 2:
-        return signals
-    for i in range(LOOKBACK + MIN_STREAK, len(candles)):
-        base = candles[i - LOOKBACK]["close"]
-        if not base:
-            continue
-        drop_pct = (base - candles[i]["close"]) / base * 100
-        rise_pct = (candles[i]["close"] - base) / base * 100
-        vol_ma = sma_vol(candles, i, VOL_LEN)
-        high_vol = vol_ma is None or candles[i]["volume"] >= vol_ma * VOL_MULT
-        prev_drop = drop_pct >= DROP_PCT and streak(candles, i - 1, True, MIN_STREAK)
-        prev_rise = rise_pct >= DROP_PCT and streak(candles, i - 1, False, MIN_STREAK)
-        if USE_STRUCTURE:
-            max_h = max(candles[i - k]["high"] for k in range(1, LOOKBACK + 1))
-            min_l = min(candles[i - k]["low"] for k in range(1, LOOKBACK + 1))
-            prev_drop = prev_drop and candles[i]["high"] < max_h
-            prev_rise = prev_rise and candles[i]["low"] > min_l
-        if high_vol and bull_bar(candles, i) and bear_bar(candles, i - 1) and prev_drop:
-            signals.append(
-                {
-                    "type": "AR",
-                    "index": i,
-                    "time": candles[i]["time"],
-                    "level": candles[i]["high"],
-                    "close": candles[i]["close"],
-                    "volume": candles[i]["volume"],
-                }
-            )
-        if high_vol and bear_bar(candles, i) and bull_bar(candles, i - 1) and prev_rise:
-            signals.append(
-                {
-                    "type": "DR",
-                    "index": i,
-                    "time": candles[i]["time"],
-                    "level": candles[i]["low"],
-                    "close": candles[i]["close"],
-                    "volume": candles[i]["volume"],
-                }
-            )
-    return signals
-
-
-def resolve_horizontal_ray(candles: list[dict], item: dict) -> dict:
-    """Return ray state. late_touch_index set when base touched after >12 bars."""
-    is_ar = item["type"] == "AR"
-    base_level = item["level"]
-    signal_time = item["time"]
-    for j in range(item["index"] + 1, len(candles)):
-        bar = candles[j]
-        within = j - item["index"] <= TOUCH_WINDOW_BARS
-        hit_base = bar["high"] >= base_level if is_ar else bar["low"] <= base_level
-        if hit_base and within:
-            sig_bar = candles[item["index"]]
-            ext_level = sig_bar["low"] if is_ar else sig_bar["high"]
-            for m in range(j + 1, len(candles)):
-                b2 = candles[m]
-                hit_ext = b2["low"] <= ext_level if is_ar else b2["high"] >= ext_level
-                if hit_ext:
-                    return {
-                        "baseLevel": base_level,
-                        "level": ext_level,
-                        "extended": True,
-                        "active": False,
-                        "late_touch_index": None,
-                        "startTime": signal_time,
-                        "extendTime": bar["time"],
-                        "endTime": b2["time"],
-                    }
-            return {
-                "baseLevel": base_level,
-                "level": ext_level,
-                "extended": True,
-                "active": True,
-                "late_touch_index": None,
-                "startTime": signal_time,
-                "extendTime": bar["time"],
-                "endTime": candles[-1]["time"],
-            }
-        if hit_base and not within:
-            return {
-                "baseLevel": base_level,
-                "level": base_level,
-                "extended": False,
-                "active": False,
-                "late_touch_index": j,
-                "startTime": signal_time,
-                "extendTime": None,
-                "endTime": bar["time"],
-            }
-    return {
-        "baseLevel": base_level,
-        "level": base_level,
-        "extended": False,
-        "active": True,
-        "late_touch_index": None,
-        "startTime": signal_time,
-        "extendTime": None,
-        "endTime": candles[-1]["time"],
-    }
-
-
-def fresh_range(n: int) -> tuple[int, int]:
-    last = n - 1
-    lo = max(0, last - (FRESH_BARS - 1))
-    return lo, last
-
-
-def collect_late_ar_dr_touches(candles: list[dict], signals: list[dict]) -> list[dict]:
-    """AR/DR base touch after >12 bars, only if touch bar is fresh."""
-    if not candles:
-        return []
-    lo, last = fresh_range(len(candles))
-    hits = []
-    for sig in signals:
-        ray = resolve_horizontal_ray(candles, sig)
-        ti = ray.get("late_touch_index")
-        if ti is None:
-            continue
-        if not (lo <= ti <= last):
-            continue
-        hits.append(
-            {
-                "kind": "ar_dr_touch",
-                "label": f"{sig['type']} 觸碰",
-                "type": sig["type"],
-                "signal_time": sig["time"],
-                "signal_index": sig["index"],
-                "bars_after_signal": ti - sig["index"],
-                "time": candles[ti]["time"],
-                "index": ti,
-                "level": ray["baseLevel"],
-                "close": candles[ti]["close"],
-            }
-        )
-    return hits
-
-
 def find_pivots(candles: list[dict], length: int, highs_only: bool, lows_only: bool):
     highs, lows = [], []
     for i in range(length, len(candles) - length):
@@ -598,23 +439,11 @@ def collect_trend_touches(candles: list[dict], lines: list[dict]) -> list[dict]:
 
 def build_chart_pack(candles: list[dict], signals: list[dict], lines: list[dict]) -> dict:
     """Compact candles + AR/DR rays + trend lines for the HTML chart modal."""
-    rays = []
-    for sig in signals:
-        ray = resolve_horizontal_ray(candles, sig)
-        rays.append(
-            {
-                "type": sig["type"],
-                "time": int(sig["time"]),
-                "level": float(sig["level"]),
-                "baseLevel": float(ray["baseLevel"]),
-                "drawLevel": float(ray["level"]),
-                "startTime": int(ray.get("startTime") or sig["time"]),
-                "extendTime": int(ray["extendTime"]) if ray.get("extendTime") is not None else None,
-                "endTime": int(ray["endTime"]),
-                "active": bool(ray["active"]),
-                "extended": bool(ray["extended"]),
-            }
-        )
+    last_time = int(candles[-1]["time"]) if candles else 0
+    rays = [
+        ardr.signal_to_chart_ray(sig, resolve_horizontal_ray(candles, sig), last_time)
+        for sig in signals
+    ]
 
     trend = []
     last_i = len(candles) - 1
@@ -847,20 +676,20 @@ CHART_MODAL_SCRIPT = r"""
     return active ? "#ff4d6d" : "rgba(255,77,109,0.35)";
   }
 
-  function drawHorizontalRay(ray, lastTime) {
-    const price = ray.level;
-    // Untouched: extend to latest bar. Touched: stop at endTime (no further ray).
-    const t1 = ray.active ? (lastTime || ray.endTime) : ray.endTime;
-    if (t1 == null || ray.startTime == null || t1 <= ray.startTime) return;
-    drawSegment(
-      ray.startTime,
-      price,
-      t1,
-      price,
-      rayColor(ray.type, ray.active),
-      1,
-      LightweightCharts.LineStyle.Dashed
-    );
+  function drawRaySegments(ray, lastTime) {
+    const segs = ray.segments || [];
+    for (const seg of segs) {
+      const t1 = seg.t1 === lastTime && ray.active && !ray.extended ? lastTime : seg.t1;
+      drawSegment(
+        seg.t0,
+        seg.price,
+        t1,
+        seg.price,
+        rayColor(ray.type, seg.active),
+        1,
+        LightweightCharts.LineStyle.Dashed
+      );
+    }
   }
 
   function normalizeCandles(candles) {
@@ -920,7 +749,7 @@ CHART_MODAL_SCRIPT = r"""
     const markers = [];
     const lastTime = candles[candles.length - 1].time;
     (pack.rays || []).forEach((ray) => {
-      drawHorizontalRay(ray, lastTime);
+      drawRaySegments(ray, lastTime);
       markers.push({
         time: ray.time,
         position: ray.type === "AR" ? "belowBar" : "aboveBar",
@@ -1237,13 +1066,16 @@ def render_html(payload: dict) -> str:
       <div class="card"><div class="lbl">Crypto</div><div class="val">{c['crypto']}</div></div>
     </div>
     <ul class="rules">
+      <li><strong>AR</strong> 急跌反彈：水平射線在信號 K <strong>最高價</strong></li>
+      <li><strong>DR</strong> 急漲回落：水平射線在信號 K <strong>最低價</strong></li>
+      <li><strong>12 根內</strong>觸原價 → 延伸至信號 K 對側（AR→低、DR→高）</li>
+      <li><strong>超過 12 根</strong>才觸原價 → 射線停在觸碰 K，<strong>不延伸</strong>（報告此類）</li>
       <li><strong>不報告</strong> 近 {TOUCH_WINDOW_BARS} 根內新出現的 AR/DR</li>
-      <li><strong>報告</strong> 信號後超過 {TOUCH_WINDOW_BARS} 根才觸碰 AR/DR 原價位</li>
       <li><strong>報告</strong> 趨勢線影線觸碰</li>
       <li>點擊 <strong>Symbol</strong> 開啟蠟燭圖（含 AR/DR 與趨勢線）</li>
     </ul>
 
-    <h2>AR/DR 觸碰（&gt;{TOUCH_WINDOW_BARS} 根後） · {len(ar_dr)}</h2>
+    <h2>AR/DR 晚觸碰（&gt;{TOUCH_WINDOW_BARS} 根後） · {len(ar_dr)}</h2>
     <div class="panel">
       <table>
         <thead>

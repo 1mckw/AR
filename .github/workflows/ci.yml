@@ -15,4 +15,4 @@ jobs:
         with:
           python-version: "3.12"
       - name: Syntax check
-        run: python -m py_compile scan_signals.py server.py
+        run: python -m py_compile ardr.py scan_signals.py server.py
