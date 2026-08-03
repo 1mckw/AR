@@ -476,6 +476,8 @@
 
     const LS_SYMBOL = 'tv_ar_symbol_v2';
     const LOGO_BASE = 'https://s3-symbol-logo.tradingview.com/';
+    const IS_PAGES = /\.github\.io$/i.test(location.hostname);
+    const API_BASE = ''; // same-origin proxy (python server.py); unavailable on GitHub Pages
     const DEFAULT_SYMBOL_RAW = {
       symbol: 'BTCUSDT',
       exchange: 'Binance',
@@ -676,14 +678,17 @@
       const seq = ++searchSeq;
       list.innerHTML = '<li class="empty-hint" style="pointer-events:none;border:0;display:block;padding:14px">搜尋中…</li>';
       try {
-        const res = await fetch(`/api/tv-search?q=${encodeURIComponent(q)}`);
+        const res = await fetch(`${API_BASE}/api/tv-search?q=${encodeURIComponent(q)}`);
         if (!res.ok) throw new Error(`搜尋 HTTP ${res.status}`);
         const data = await res.json();
         if (seq !== searchSeq) return;
         renderSearchResults(data.symbols || [], '無符合商品');
       } catch (e) {
         if (seq !== searchSeq) return;
-        renderSearchResults([], `搜尋失敗：${e.message}`);
+        const hint = IS_PAGES
+          ? 'GitHub Pages 無搜尋代理，請本機執行 python server.py'
+          : e.message;
+        renderSearchResults([], `搜尋失敗：${hint}`);
       }
     }
 
@@ -733,7 +738,10 @@
     }
 
     async function fetchYahooKlines(symbol, totalBars, interval, onProgress) {
-      const url = `/api/yahoo?symbol=${encodeURIComponent(symbol)}&bars=${totalBars}&interval=${interval}`;
+      if (IS_PAGES) {
+        throw new Error('GitHub Pages 不支援 Yahoo 代理，請本機執行 python server.py，或選 Binance 加密貨幣');
+      }
+      const url = `${API_BASE}/api/yahoo?symbol=${encodeURIComponent(symbol)}&bars=${totalBars}&interval=${interval}`;
       const res = await fetch(url);
       if (!res.ok) throw new Error(`Yahoo HTTP ${res.status}（請用 python server.py 啟動）`);
       const raw = await res.json();

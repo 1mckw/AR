@@ -1,24 +1,47 @@
-# AR/DR + Simple Auto Trend Lines 工作流
+# AR/DR · Trend Lines
+
+HTML 圖表：AR/DR 信號 + Simple Auto Trend Lines（TradingView 商品搜尋、圖例、12 根 K 延伸）。
+
+## 線上（GitHub Actions → Pages）
+
+自動部署：**https://1mckw.github.io/AR/**
+
+1. Repo → **Settings → Pages → Build and deployment → Source: GitHub Actions**
+2. 推送 `main` 後，於 **Actions** 查看 `Deploy GitHub Pages` / `CI`
+
+> Pages 為靜態站：Binance crypto 可直接用；TradingView 搜尋與 Yahoo（股／期）需本機 `server.py`。
+
+## 本機完整功能
+
+```bash
+python server.py
+# → http://127.0.0.1:8765/
+```
+
+| 端點 | 用途 |
+|------|------|
+| `/` | 圖表 UI |
+| `/api/tv-search?q=` | TradingView 商品搜尋 |
+| `/api/yahoo?symbol=&bars=&interval=` | 股票／期貨 K 線 |
 
 ## 你的定義
 
 | 信號 | 意思 |
 |------|------|
-| **AR** | 急**下跌**趨勢中，**第一根陽線**（1H） |
-| **DR** | 急**上漲**趨勢中，**第一根陰線**（1H，反之） |
+| **AR** | 急**下跌**趨勢中，**第一根陽線** |
+| **DR** | 急**上漲**趨勢中，**第一根陰線** |
 
-## 圖表設定（單一商品）
+## 圖表設定（TradingView Pine）
 
-1. 開 **1H** 圖表（台指期 TXF1!、大型股、高成交量 crypto）
-2. 加 community 指標：[Simple Auto Trend Lines](https://www.tradingview.com/script/UpsMdRXG-Simple-Auto-Trend-Lines/)
-3. 再加本 repo 的 `pine/ar_signal_volume_filter.pine`
-4. 看 **趨勢線結構 + AR/DR 標記** 一起判斷
+1. 開 **1H** 圖表
+2. 加 [Simple Auto Trend Lines](https://www.tradingview.com/script/UpsMdRXG-Simple-Auto-Trend-Lines/)
+3. 再加 `pine/ar_signal_volume_filter.pine`
 
 ### 建議參數
 
 **Simple Auto Trend Lines**
 
-- Pivot High/Low: `4`（1H 常用）
+- Pivot High/Low: `4`
 - Max drawing distance: `500`
 - Candles to cross for invalidation: `2–3`
 
@@ -26,9 +49,9 @@
 
 - 急趨勢幅度: `3%`（crypto 可調 `4–5%`）
 - 最少連續陰/陽線: `3`
-- 量能 ≥ MA(20) × `1.2`（過濾冷門標的）
+- 量能 ≥ MA(20) × `1.2`
 
-## 怎麼解讀（配合你之前的平行高點邏輯）
+## 怎麼解讀
 
 ```
 急跌 → 下降趨勢線仍壓在上方的空頭結構
@@ -40,29 +63,18 @@
 
 - **AR 出現 + 仍在下降趨勢線下方** → 短線反彈，不是結構翻多
 - **AR 出現 + 放量站回趨勢線** → 結構轉強機率較高
-- **DR** 是 AR 的鏡像，用在急漲後第一根陰線
+- **DR** 是 AR 的鏡像
 
-## 掃描大型股 / 高量 Crypto
+## 掃描
 
-TradingView Screener：
-
-1. **Stock**：Filter 加 `Market cap > 10B` 或自選權值股 watchlist
-2. **Crypto**：Filter 加 `24h Volume` 排序前 20–50
-3. Timeframe 設 **1 hour**
-4. 加入 `pine/ar_screener.pine` 作為 screener 條件
-
-Pine 無法直接讀「市值排名」，**大型股用 Screener 內建 filter，流動性用 volume 倍數過濾**。
-
-## 安裝 Pine Script
-
-1. TradingView → Pine Editor → 新建
-2. 貼上 `pine/ar_signal_volume_filter.pine` 內容
-3. Save → Add to chart
-4. 可設 Alert：`AR — 急跌後首根陽線 + 高量`
+TradingView Screener + `pine/ar_screener.pine`（1H、高量／大型股 filter）。
 
 ## 檔案
 
 | 檔案 | 用途 |
 |------|------|
-| `pine/ar_signal_volume_filter.pine` | 圖表 overlay，標 AR/DR + 高量過濾 |
-| `pine/ar_screener.pine` | Screener 批量掃描 |
+| `index.html` | Web 圖表 |
+| `server.py` | 靜態 + Yahoo / TV 搜尋代理 |
+| `pine/ar_signal_volume_filter.pine` | 圖表 overlay |
+| `pine/ar_screener.pine` | Screener |
+| `.github/workflows/` | Pages 部署 + CI 煙霧測試 |
