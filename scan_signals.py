@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Hourly AR/DR signal scanner: NDX 100 + futures + top 50 crypto."""
+"""Hourly AR/DR signal scanner: NASDAQ-100 + futures + top 50 crypto."""
 
 from __future__ import annotations
 
@@ -58,6 +58,7 @@ def http_get_json(url: str, timeout: int = 30) -> Any:
 
 
 def fetch_ndx100() -> list[tuple[str, str]]:
+    """NASDAQ-100 constituents (Symbol, Name)."""
     url = "https://yfiua.github.io/index-constituents/constituents-nasdaq100.csv"
     try:
         raw = http_get(url, timeout=40).decode()
@@ -77,7 +78,7 @@ def fetch_ndx100() -> list[tuple[str, str]]:
         (s, s)
         for s in [
             "AAPL", "MSFT", "NVDA", "AMZN", "META", "GOOGL", "GOOG", "AVGO", "TSLA", "COST",
-            "NFLX", "AMD", "PEP", "ADBE", "CSCO", "INTC", "CMCSA", "QCOM", "INTU", "AMGN",
+            "NFLX", "AMD", "PEP", "ADBE", "CSCO", "TMUS", "INTC", "INTU", "AMAT", "QCOM",
         ]
     ]
 
