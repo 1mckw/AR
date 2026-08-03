@@ -848,8 +848,10 @@ CHART_MODAL_SCRIPT = r"""
   }
 
   function drawHorizontalRay(ray, lastTime) {
-    const t1 = lastTime || ray.endTime;
     const price = ray.level;
+    // Untouched: extend to latest bar. Touched: stop at endTime (no further ray).
+    const t1 = ray.active ? (lastTime || ray.endTime) : ray.endTime;
+    if (t1 == null || ray.startTime == null || t1 <= ray.startTime) return;
     drawSegment(
       ray.startTime,
       price,
