@@ -617,12 +617,276 @@ def fmt_tf(tf: str) -> str:
     return TF_LABEL.get(tf, (tf or "?").upper())
 
 
+CHART_MODAL_SCRIPT = r"""
+<script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+<script>
+(function () {
+  const FUTURES_TV = {
+    "GC=F": "COMEX:GC1!",
+    "SI=F": "COMEX:SI1!",
+    "HG=F": "COMEX:HG1!",
+    "CL=F": "NYMEX:CL1!",
+    "NG=F": "NYMEX:NG1!",
+    "ES=F": "CME_MINI:ES1!",
+    "NQ=F": "CME_MINI:NQ1!",
+    "YM=F": "CBOT_MINI:YM1!",
+    "RTY=F": "CME_MINI:RTY1!",
+    "ZB=F": "CBOT:ZB1!",
+    "ZN=F": "CBOT:ZN1!",
+    "6E=F": "CME:6E1!",
+    "6J=F": "CME:6J1!",
+    "BTC=F": "CME:BTC1!",
+  };
+
+  const modal = document.getElementById("chart-modal");
+  const titleEl = document.getElementById("chart-title");
+  const subEl = document.getElementById("chart-sub");
+  const statusEl = document.getElementById("chart-status");
+  const lwcEl = document.getElementById("lwc");
+  const frameEl = document.getElementById("tv-frame");
+  const closeBtn = document.getElementById("chart-close");
+  let chart = null;
+  let series = null;
+  let openToken = 0;
+
+  function tvSymbol(group, symbol) {
+    if (group === "crypto") return "BINANCE:" + symbol;
+    if (group === "futures") return FUTURES_TV[symbol] || symbol;
+    return "NASDAQ:" + symbol;
+  }
+
+  function tvInterval(tf) {
+    return tf === "1d" ? "D" : "60";
+  }
+
+  function fmtLevel(v) {
+    const n = Number(v);
+    if (!Number.isFinite(n)) return String(v || "");
+    return n.toLocaleString(undefined, { maximumFractionDigits: 8 });
+  }
+
+  function typeLabel(type, kind) {
+    if (kind === "ar_dr_touch") return type || "AR/DR";
+    if (type === "resistance") return "阻力線";
+    if (type === "support") return "支撐線";
+    return type || "觸碰";
+  }
+
+  function destroyChart() {
+    if (chart) {
+      chart.remove();
+      chart = null;
+      series = null;
+    }
+    lwcEl.innerHTML = "";
+    frameEl.removeAttribute("src");
+    frameEl.hidden = true;
+    lwcEl.hidden = true;
+  }
+
+  function closeModal() {
+    openToken += 1;
+    destroyChart();
+    modal.classList.remove("open");
+    modal.hidden = true;
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function showStatus(msg) {
+    statusEl.hidden = false;
+    statusEl.textContent = msg;
+  }
+
+  function hideStatus() {
+    statusEl.hidden = true;
+  }
+
+  async function fetchBinance(symbol, tf) {
+    const iv = tf === "1d" ? "1d" : "1h";
+    const bases = [
+      "https://data-api.binance.vision",
+      "https://api.binance.com",
+    ];
+    let lastErr = null;
+    for (const base of bases) {
+      try {
+        const url = `${base}/api/v3/klines?symbol=${encodeURIComponent(symbol)}&interval=${iv}&limit=300`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const rows = await res.json();
+        if (!Array.isArray(rows) || !rows.length) throw new Error("empty");
+        return rows.map((k) => ({
+          time: Math.floor(k[0] / 1000),
+          open: +k[1],
+          high: +k[2],
+          low: +k[3],
+          close: +k[4],
+        }));
+      } catch (err) {
+        lastErr = err;
+      }
+    }
+    throw lastErr || new Error("binance failed");
+  }
+
+  function renderLwc(candles, level, type) {
+    destroyChart();
+    lwcEl.hidden = false;
+    frameEl.hidden = true;
+    chart = LightweightCharts.createChart(lwcEl, {
+      layout: { background: { color: "#05070b" }, textColor: "#7a93a8" },
+      grid: {
+        vertLines: { color: "rgba(0,240,200,0.05)" },
+        horzLines: { color: "rgba(0,240,200,0.05)" },
+      },
+      rightPriceScale: { borderColor: "#2a364d" },
+      timeScale: { borderColor: "#2a364d", timeVisible: true, secondsVisible: false },
+      crosshair: { mode: LightweightCharts.CrosshairMode.Normal },
+    });
+    series = chart.addCandlestickSeries({
+      upColor: "#00e896",
+      downColor: "#ff4d6d",
+      borderUpColor: "#00e896",
+      borderDownColor: "#ff4d6d",
+      wickUpColor: "#5dffb1",
+      wickDownColor: "#ff7a90",
+    });
+    series.setData(candles);
+    const lv = Number(level);
+    if (Number.isFinite(lv)) {
+      const color = type === "AR" || type === "support" ? "#00e896" : "#ff4d6d";
+      series.createPriceLine({
+        price: lv,
+        color,
+        lineWidth: 2,
+        lineStyle: LightweightCharts.LineStyle.Dashed,
+        axisLabelVisible: true,
+        title: "touch",
+      });
+    }
+    chart.timeScale().fitContent();
+    const ro = new ResizeObserver(() => {
+      if (!chart) return;
+      chart.applyOptions({ width: lwcEl.clientWidth, height: lwcEl.clientHeight });
+    });
+    ro.observe(lwcEl);
+    chart.applyOptions({ width: lwcEl.clientWidth, height: lwcEl.clientHeight });
+  }
+
+  function renderTradingView(group, symbol, tf) {
+    destroyChart();
+    lwcEl.hidden = true;
+    frameEl.hidden = false;
+    const sym = tvSymbol(group, symbol);
+    const iv = tvInterval(tf);
+    const params = new URLSearchParams({
+      symbol: sym,
+      interval: iv,
+      theme: "dark",
+      style: "1",
+      locale: "zh_TW",
+      timezone: "Etc/UTC",
+      toolbarbg: "0c121c",
+      hideideas: "1",
+      hidesidetoolbar: "0",
+      symboledit: "1",
+      saveimage: "0",
+      withdateranges: "1",
+    });
+    frameEl.src = "https://s.tradingview.com/widgetembed/?" + params.toString();
+  }
+
+  async function openChart(btn) {
+    const symbol = btn.dataset.symbol || "";
+    const group = btn.dataset.group || "";
+    const name = btn.dataset.name || symbol;
+    const tf = btn.dataset.tf || "1h";
+    const level = btn.dataset.level || "";
+    const type = btn.dataset.type || "";
+    const kind = btn.dataset.kind || "";
+    const token = ++openToken;
+
+    titleEl.textContent = `${symbol} · ${tf === "1d" ? "1D" : "1H"}`;
+    subEl.innerHTML =
+      `${escapeHtml(name)} · ${escapeHtml(group)} · ${escapeHtml(typeLabel(type, kind))}` +
+      (level ? ` · Level <strong>${escapeHtml(fmtLevel(level))}</strong>` : "");
+
+    modal.hidden = false;
+    modal.setAttribute("aria-hidden", "false");
+    requestAnimationFrame(() => modal.classList.add("open"));
+    document.body.style.overflow = "hidden";
+    destroyChart();
+    showStatus("載入蠟燭圖…");
+
+    try {
+      if (group === "crypto") {
+        const candles = await fetchBinance(symbol, tf);
+        if (token !== openToken) return;
+        hideStatus();
+        renderLwc(candles, level, type);
+      } else {
+        if (token !== openToken) return;
+        hideStatus();
+        renderTradingView(group, symbol, tf);
+      }
+    } catch (err) {
+      if (token !== openToken) return;
+      hideStatus();
+      renderTradingView(group, symbol, tf);
+    }
+  }
+
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  document.addEventListener("click", (ev) => {
+    const btn = ev.target.closest(".sym-btn");
+    if (btn) {
+      ev.preventDefault();
+      openChart(btn);
+      return;
+    }
+    if (ev.target === modal) closeModal();
+  });
+  closeBtn.addEventListener("click", closeModal);
+  document.addEventListener("keydown", (ev) => {
+    if (ev.key === "Escape" && modal.classList.contains("open")) closeModal();
+  });
+})();
+</script>
+"""
+
+
 def render_html(payload: dict) -> str:
     hits = payload["hits"]
     ar_dr = [h for h in hits if h["kind"] == "ar_dr_touch"]
     trend = [h for h in hits if h["kind"] == "trend_touch"]
     errs = [r for r in payload["results"] if r.get("error")]
     c = payload["counts"]
+
+    def sym_btn(h: dict) -> str:
+        sym = str(h.get("symbol", ""))
+        attrs = (
+            f'data-symbol="{html.escape(sym, quote=True)}" '
+            f'data-group="{html.escape(str(h.get("group", "")), quote=True)}" '
+            f'data-name="{html.escape(str(h.get("name", "")), quote=True)}" '
+            f'data-tf="{html.escape(str(h.get("timeframe", "")), quote=True)}" '
+            f'data-level="{html.escape(str(h.get("level", "")), quote=True)}" '
+            f'data-type="{html.escape(str(h.get("type", "")), quote=True)}" '
+            f'data-kind="{html.escape(str(h.get("kind", "")), quote=True)}" '
+            f'data-time="{html.escape(str(h.get("time", "")), quote=True)}"'
+        )
+        return (
+            f'<button type="button" class="sym-btn" {attrs} '
+            f'title="開啟蠟燭圖">'
+            f"<code>{html.escape(sym)}</code></button>"
+        )
 
     def rows_ar_dr() -> str:
         if not ar_dr:
@@ -635,7 +899,7 @@ def render_html(payload: dict) -> str:
                 f'<td><span class="tag {cls}">{html.escape(str(h.get("type", "")))}</span></td>'
                 f"<td>{html.escape(fmt_tf(h.get('timeframe', '')))}</td>"
                 f"<td>{html.escape(h.get('group', ''))}</td>"
-                f"<td><code>{html.escape(h.get('symbol', ''))}</code></td>"
+                f"<td>{sym_btn(h)}</td>"
                 f"<td>{html.escape(h.get('name', ''))}</td>"
                 f"<td class=\"num\">{fmt_num(float(h['level']))}</td>"
                 f"<td class=\"num\">{int(h.get('bars_after_signal', 0))}</td>"
@@ -655,7 +919,7 @@ def render_html(payload: dict) -> str:
                 f'<td><span class="tag {cls}">{html.escape(str(h.get("type", "")))}</span></td>'
                 f"<td>{html.escape(fmt_tf(h.get('timeframe', '')))}</td>"
                 f"<td>{html.escape(h.get('group', ''))}</td>"
-                f"<td><code>{html.escape(h.get('symbol', ''))}</code></td>"
+                f"<td>{sym_btn(h)}</td>"
                 f"<td>{html.escape(h.get('name', ''))}</td>"
                 f"<td class=\"num\">{fmt_num(float(h['level']))}</td>"
                 f"<td>{html.escape(fmt_ts(int(h['time'])))}</td>"
@@ -673,7 +937,7 @@ def render_html(payload: dict) -> str:
 
     tf_meta = " · ".join(fmt_tf(tf) for tf in payload.get("timeframes") or TIMEFRAMES)
 
-    return f"""<!DOCTYPE html>
+    page_head = f"""<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
@@ -745,6 +1009,47 @@ def render_html(payload: dict) -> str:
     .errs {{ margin: 8px 0 0 1.1em; color: var(--muted); font-size: .82rem; }}
     footer {{ margin-top: 28px; color: var(--muted); font-size: .75rem; }}
     a {{ color: var(--primary); }}
+    .sym-btn {{
+      background: none; border: 0; padding: 0; cursor: pointer; color: inherit;
+      border-radius: 4px; text-align: left;
+    }}
+    .sym-btn:hover code {{ text-decoration: underline; text-underline-offset: 3px; }}
+    .sym-btn:focus-visible {{ outline: 2px solid var(--primary); outline-offset: 3px; }}
+    .modal {{
+      position: fixed; inset: 0; z-index: 80; display: flex; align-items: center; justify-content: center;
+      padding: 16px; background: rgba(2, 6, 12, .72); backdrop-filter: blur(8px);
+      opacity: 0; pointer-events: none; transition: opacity .2s ease;
+    }}
+    .modal.open {{ opacity: 1; pointer-events: auto; }}
+    .modal-panel {{
+      width: min(1100px, 100%); height: min(720px, 92vh);
+      background: var(--panel); border: 1px solid var(--border); border-radius: 16px;
+      display: flex; flex-direction: column; overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0,0,0,.45);
+      transform: translateY(10px) scale(.985); transition: transform .22s ease;
+    }}
+    .modal.open .modal-panel {{ transform: none; }}
+    .modal-head {{
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+      padding: 14px 16px; border-bottom: 1px solid rgba(0,240,200,.1); background: var(--surface);
+    }}
+    .modal-title {{ font-size: 1.05rem; font-weight: 650; letter-spacing: -.02em; }}
+    .modal-sub {{ color: var(--muted); font-size: .82rem; margin-top: 4px; }}
+    .modal-sub strong {{ color: var(--primary); font-weight: 600; }}
+    .modal-close {{
+      width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--border);
+      background: transparent; color: var(--text); font-size: 1.25rem; cursor: pointer; flex: 0 0 auto;
+    }}
+    .modal-close:hover {{ border-color: var(--primary); color: var(--primary); }}
+    .modal-chart {{ flex: 1; min-height: 0; position: relative; background: #05070b; }}
+    .modal-chart iframe, .modal-chart #lwc {{ position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }}
+    .modal-status {{
+      position: absolute; inset: 0; display: grid; place-items: center;
+      color: var(--muted); font-size: .9rem; padding: 20px; text-align: center;
+    }}
+    @media (prefers-reduced-motion: reduce) {{
+      .modal, .modal-panel {{ transition: none; }}
+    }}
   </style>
 </head>
 <body>
@@ -761,6 +1066,7 @@ def render_html(payload: dict) -> str:
       <li><strong>不報告</strong> 近 {TOUCH_WINDOW_BARS} 根內新出現的 AR/DR</li>
       <li><strong>報告</strong> 信號後超過 {TOUCH_WINDOW_BARS} 根才觸碰 AR/DR 原價位</li>
       <li><strong>報告</strong> 趨勢線影線觸碰</li>
+      <li>點擊 <strong>Symbol</strong> 開啟對應週期蠟燭圖</li>
     </ul>
 
     <h2>AR/DR 觸碰（&gt;{TOUCH_WINDOW_BARS} 根後） · {len(ar_dr)}</h2>
@@ -796,9 +1102,25 @@ def render_html(payload: dict) -> str:
       JSON: <a href="./latest.json">latest.json</a>
     </footer>
   </div>
-</body>
-</html>
+
+  <div id="chart-modal" class="modal" hidden aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="chart-title">
+      <div class="modal-head">
+        <div>
+          <div id="chart-title" class="modal-title">Chart</div>
+          <div id="chart-sub" class="modal-sub"></div>
+        </div>
+        <button type="button" class="modal-close" id="chart-close" aria-label="關閉">×</button>
+      </div>
+      <div class="modal-chart" id="chart-body">
+        <div class="modal-status" id="chart-status">載入中…</div>
+        <div id="lwc" hidden></div>
+        <iframe id="tv-frame" title="TradingView chart" hidden></iframe>
+      </div>
+    </div>
+  </div>
 """
+    return page_head + CHART_MODAL_SCRIPT + "\n</body>\n</html>\n"
 
 
 def main() -> int:

@@ -70,6 +70,47 @@
     .errs { margin: 8px 0 0 1.1em; color: var(--muted); font-size: .82rem; }
     footer { margin-top: 28px; color: var(--muted); font-size: .75rem; }
     a { color: var(--primary); }
+    .sym-btn {
+      background: none; border: 0; padding: 0; cursor: pointer; color: inherit;
+      border-radius: 4px; text-align: left;
+    }
+    .sym-btn:hover code { text-decoration: underline; text-underline-offset: 3px; }
+    .sym-btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+    .modal {
+      position: fixed; inset: 0; z-index: 80; display: flex; align-items: center; justify-content: center;
+      padding: 16px; background: rgba(2, 6, 12, .72); backdrop-filter: blur(8px);
+      opacity: 0; pointer-events: none; transition: opacity .2s ease;
+    }
+    .modal.open { opacity: 1; pointer-events: auto; }
+    .modal-panel {
+      width: min(1100px, 100%); height: min(720px, 92vh);
+      background: var(--panel); border: 1px solid var(--border); border-radius: 16px;
+      display: flex; flex-direction: column; overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0,0,0,.45);
+      transform: translateY(10px) scale(.985); transition: transform .22s ease;
+    }
+    .modal.open .modal-panel { transform: none; }
+    .modal-head {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+      padding: 14px 16px; border-bottom: 1px solid rgba(0,240,200,.1); background: var(--surface);
+    }
+    .modal-title { font-size: 1.05rem; font-weight: 650; letter-spacing: -.02em; }
+    .modal-sub { color: var(--muted); font-size: .82rem; margin-top: 4px; }
+    .modal-sub strong { color: var(--primary); font-weight: 600; }
+    .modal-close {
+      width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--border);
+      background: transparent; color: var(--text); font-size: 1.25rem; cursor: pointer; flex: 0 0 auto;
+    }
+    .modal-close:hover { border-color: var(--primary); color: var(--primary); }
+    .modal-chart { flex: 1; min-height: 0; position: relative; background: #05070b; }
+    .modal-chart iframe, .modal-chart #lwc { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .modal-status {
+      position: absolute; inset: 0; display: grid; place-items: center;
+      color: var(--muted); font-size: .9rem; padding: 20px; text-align: center;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .modal, .modal-panel { transition: none; }
+    }
   </style>
 </head>
 <body>
@@ -86,6 +127,7 @@
       <li><strong>不報告</strong> 近 12 根內新出現的 AR/DR</li>
       <li><strong>報告</strong> 信號後超過 12 根才觸碰 AR/DR 原價位</li>
       <li><strong>報告</strong> 趨勢線影線觸碰</li>
+      <li>點擊 <strong>Symbol</strong> 開啟對應週期蠟燭圖</li>
     </ul>
 
     <h2>AR/DR 觸碰（&gt;12 根後） · 1</h2>
@@ -95,7 +137,7 @@
           <tr><th>Type</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th class="num">Bars after</th><th>Time</th></tr>
         </thead>
         <tbody>
-          <tr><td><span class="tag dr">DR</span></td><td>1D</td><td>ndx100</td><td><code>INSM</code></td><td>Insmed Incorporated</td><td class="num">102.59</td><td class="num">23</td><td>2026-07-30 13:30 UTC</td></tr>
+          <tr><td><span class="tag dr">DR</span></td><td>1D</td><td>ndx100</td><td><button type="button" class="sym-btn" data-symbol="INSM" data-group="ndx100" data-name="Insmed Incorporated" data-tf="1d" data-level="102.58999633789062" data-type="DR" data-kind="ar_dr_touch" data-time="1785418200" title="開啟蠟燭圖"><code>INSM</code></button></td><td>Insmed Incorporated</td><td class="num">102.59</td><td class="num">23</td><td>2026-07-30 13:30 UTC</td></tr>
         </tbody>
       </table>
     </div>
@@ -107,18 +149,18 @@
           <tr><th>Side</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th>Time</th></tr>
         </thead>
         <tbody>
-          <tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>crypto</td><td><code>ENAUSDT</code></td><td>ENA</td><td class="num">0.0903889</td><td>2026-08-02 00:00 UTC</td></tr>
-<tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>crypto</td><td><code>PAXGUSDT</code></td><td>PAXG</td><td class="num">4073.87</td><td>2026-08-03 00:00 UTC</td></tr>
-<tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>crypto</td><td><code>PEPEUSDT</code></td><td>PEPE</td><td class="num">2.95253e-06</td><td>2026-08-02 00:00 UTC</td></tr>
-<tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>crypto</td><td><code>UTKUSDT</code></td><td>UTK</td><td class="num">0.00803036</td><td>2026-04-14 00:00 UTC</td></tr>
-<tr><td><span class="tag support">support</span></td><td>1D</td><td>ndx100</td><td><code>APP</code></td><td>Applovin Corp</td><td class="num">390.209</td><td>2026-07-31 13:30 UTC</td></tr>
-<tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>ndx100</td><td><code>AVGO</code></td><td>Broadcom Inc.</td><td class="num">398.027</td><td>2026-07-31 13:30 UTC</td></tr>
-<tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>ndx100</td><td><code>DDOG</code></td><td>Datadog</td><td class="num">275.898</td><td>2026-07-31 13:30 UTC</td></tr>
-<tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>ndx100</td><td><code>MPWR</code></td><td>Monolithic Power Systems</td><td class="num">1543.8</td><td>2026-07-31 13:30 UTC</td></tr>
-<tr><td><span class="tag support">support</span></td><td>1D</td><td>ndx100</td><td><code>MSTR</code></td><td>MicroStrategy Inc.</td><td class="num">91.8521</td><td>2026-07-31 13:30 UTC</td></tr>
-<tr><td><span class="tag support">support</span></td><td>1D</td><td>ndx100</td><td><code>ODFL</code></td><td>Old Dominion Freight Line</td><td class="num">205.632</td><td>2026-07-30 13:30 UTC</td></tr>
-<tr><td><span class="tag resist">resistance</span></td><td>1H</td><td>crypto</td><td><code>BANKUSDT</code></td><td>BANK</td><td class="num">0.0452</td><td>2026-08-03 06:00 UTC</td></tr>
-<tr><td><span class="tag support">support</span></td><td>1H</td><td>crypto</td><td><code>KAITOUSDT</code></td><td>KAITO</td><td class="num">0.937862</td><td>2026-08-03 05:00 UTC</td></tr>
+          <tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>crypto</td><td><button type="button" class="sym-btn" data-symbol="ENAUSDT" data-group="crypto" data-name="ENA" data-tf="1d" data-level="0.0903888888888889" data-type="resistance" data-kind="trend_touch" data-time="1785628800" title="開啟蠟燭圖"><code>ENAUSDT</code></button></td><td>ENA</td><td class="num">0.0903889</td><td>2026-08-02 00:00 UTC</td></tr>
+<tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>crypto</td><td><button type="button" class="sym-btn" data-symbol="PAXGUSDT" data-group="crypto" data-name="PAXG" data-tf="1d" data-level="4073.8684210526317" data-type="resistance" data-kind="trend_touch" data-time="1785715200" title="開啟蠟燭圖"><code>PAXGUSDT</code></button></td><td>PAXG</td><td class="num">4073.87</td><td>2026-08-03 00:00 UTC</td></tr>
+<tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>crypto</td><td><button type="button" class="sym-btn" data-symbol="PEPEUSDT" data-group="crypto" data-name="PEPE" data-tf="1d" data-level="2.9525252525252526e-06" data-type="resistance" data-kind="trend_touch" data-time="1785628800" title="開啟蠟燭圖"><code>PEPEUSDT</code></button></td><td>PEPE</td><td class="num">2.95253e-06</td><td>2026-08-02 00:00 UTC</td></tr>
+<tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>crypto</td><td><button type="button" class="sym-btn" data-symbol="UTKUSDT" data-group="crypto" data-name="UTK" data-tf="1d" data-level="0.008030364464692477" data-type="resistance" data-kind="trend_touch" data-time="1776124800" title="開啟蠟燭圖"><code>UTKUSDT</code></button></td><td>UTK</td><td class="num">0.00803036</td><td>2026-04-14 00:00 UTC</td></tr>
+<tr><td><span class="tag support">support</span></td><td>1D</td><td>ndx100</td><td><button type="button" class="sym-btn" data-symbol="APP" data-group="ndx100" data-name="Applovin Corp" data-tf="1d" data-level="390.2089373811762" data-type="support" data-kind="trend_touch" data-time="1785504600" title="開啟蠟燭圖"><code>APP</code></button></td><td>Applovin Corp</td><td class="num">390.209</td><td>2026-07-31 13:30 UTC</td></tr>
+<tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>ndx100</td><td><button type="button" class="sym-btn" data-symbol="AVGO" data-group="ndx100" data-name="Broadcom Inc." data-tf="1d" data-level="398.02662150065106" data-type="resistance" data-kind="trend_touch" data-time="1785504600" title="開啟蠟燭圖"><code>AVGO</code></button></td><td>Broadcom Inc.</td><td class="num">398.027</td><td>2026-07-31 13:30 UTC</td></tr>
+<tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>ndx100</td><td><button type="button" class="sym-btn" data-symbol="DDOG" data-group="ndx100" data-name="Datadog" data-tf="1d" data-level="275.8980224609375" data-type="resistance" data-kind="trend_touch" data-time="1785504600" title="開啟蠟燭圖"><code>DDOG</code></button></td><td>Datadog</td><td class="num">275.898</td><td>2026-07-31 13:30 UTC</td></tr>
+<tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>ndx100</td><td><button type="button" class="sym-btn" data-symbol="MPWR" data-group="ndx100" data-name="Monolithic Power Systems" data-tf="1d" data-level="1543.8001708984375" data-type="resistance" data-kind="trend_touch" data-time="1785504600" title="開啟蠟燭圖"><code>MPWR</code></button></td><td>Monolithic Power Systems</td><td class="num">1543.8</td><td>2026-07-31 13:30 UTC</td></tr>
+<tr><td><span class="tag support">support</span></td><td>1D</td><td>ndx100</td><td><button type="button" class="sym-btn" data-symbol="MSTR" data-group="ndx100" data-name="MicroStrategy Inc." data-tf="1d" data-level="91.85210860402961" data-type="support" data-kind="trend_touch" data-time="1785504600" title="開啟蠟燭圖"><code>MSTR</code></button></td><td>MicroStrategy Inc.</td><td class="num">91.8521</td><td>2026-07-31 13:30 UTC</td></tr>
+<tr><td><span class="tag support">support</span></td><td>1D</td><td>ndx100</td><td><button type="button" class="sym-btn" data-symbol="ODFL" data-group="ndx100" data-name="Old Dominion Freight Line" data-tf="1d" data-level="205.63224621033402" data-type="support" data-kind="trend_touch" data-time="1785418200" title="開啟蠟燭圖"><code>ODFL</code></button></td><td>Old Dominion Freight Line</td><td class="num">205.632</td><td>2026-07-30 13:30 UTC</td></tr>
+<tr><td><span class="tag resist">resistance</span></td><td>1H</td><td>crypto</td><td><button type="button" class="sym-btn" data-symbol="BANKUSDT" data-group="crypto" data-name="BANK" data-tf="1h" data-level="0.045200000000000004" data-type="resistance" data-kind="trend_touch" data-time="1785736800" title="開啟蠟燭圖"><code>BANKUSDT</code></button></td><td>BANK</td><td class="num">0.0452</td><td>2026-08-03 06:00 UTC</td></tr>
+<tr><td><span class="tag support">support</span></td><td>1H</td><td>crypto</td><td><button type="button" class="sym-btn" data-symbol="KAITOUSDT" data-group="crypto" data-name="KAITO" data-tf="1h" data-level="0.9378620253164556" data-type="support" data-kind="trend_touch" data-time="1785733200" title="開啟蠟燭圖"><code>KAITOUSDT</code></button></td><td>KAITO</td><td class="num">0.937862</td><td>2026-08-03 05:00 UTC</td></tr>
         </tbody>
       </table>
     </div>
@@ -132,5 +174,266 @@
       JSON: <a href="./latest.json">latest.json</a>
     </footer>
   </div>
+
+  <div id="chart-modal" class="modal" hidden aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="chart-title">
+      <div class="modal-head">
+        <div>
+          <div id="chart-title" class="modal-title">Chart</div>
+          <div id="chart-sub" class="modal-sub"></div>
+        </div>
+        <button type="button" class="modal-close" id="chart-close" aria-label="關閉">×</button>
+      </div>
+      <div class="modal-chart" id="chart-body">
+        <div class="modal-status" id="chart-status">載入中…</div>
+        <div id="lwc" hidden></div>
+        <iframe id="tv-frame" title="TradingView chart" hidden></iframe>
+      </div>
+    </div>
+  </div>
+
+<script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+<script>
+(function () {
+  const FUTURES_TV = {
+    "GC=F": "COMEX:GC1!",
+    "SI=F": "COMEX:SI1!",
+    "HG=F": "COMEX:HG1!",
+    "CL=F": "NYMEX:CL1!",
+    "NG=F": "NYMEX:NG1!",
+    "ES=F": "CME_MINI:ES1!",
+    "NQ=F": "CME_MINI:NQ1!",
+    "YM=F": "CBOT_MINI:YM1!",
+    "RTY=F": "CME_MINI:RTY1!",
+    "ZB=F": "CBOT:ZB1!",
+    "ZN=F": "CBOT:ZN1!",
+    "6E=F": "CME:6E1!",
+    "6J=F": "CME:6J1!",
+    "BTC=F": "CME:BTC1!",
+  };
+
+  const modal = document.getElementById("chart-modal");
+  const titleEl = document.getElementById("chart-title");
+  const subEl = document.getElementById("chart-sub");
+  const statusEl = document.getElementById("chart-status");
+  const lwcEl = document.getElementById("lwc");
+  const frameEl = document.getElementById("tv-frame");
+  const closeBtn = document.getElementById("chart-close");
+  let chart = null;
+  let series = null;
+  let openToken = 0;
+
+  function tvSymbol(group, symbol) {
+    if (group === "crypto") return "BINANCE:" + symbol;
+    if (group === "futures") return FUTURES_TV[symbol] || symbol;
+    return "NASDAQ:" + symbol;
+  }
+
+  function tvInterval(tf) {
+    return tf === "1d" ? "D" : "60";
+  }
+
+  function fmtLevel(v) {
+    const n = Number(v);
+    if (!Number.isFinite(n)) return String(v || "");
+    return n.toLocaleString(undefined, { maximumFractionDigits: 8 });
+  }
+
+  function typeLabel(type, kind) {
+    if (kind === "ar_dr_touch") return type || "AR/DR";
+    if (type === "resistance") return "阻力線";
+    if (type === "support") return "支撐線";
+    return type || "觸碰";
+  }
+
+  function destroyChart() {
+    if (chart) {
+      chart.remove();
+      chart = null;
+      series = null;
+    }
+    lwcEl.innerHTML = "";
+    frameEl.removeAttribute("src");
+    frameEl.hidden = true;
+    lwcEl.hidden = true;
+  }
+
+  function closeModal() {
+    openToken += 1;
+    destroyChart();
+    modal.classList.remove("open");
+    modal.hidden = true;
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function showStatus(msg) {
+    statusEl.hidden = false;
+    statusEl.textContent = msg;
+  }
+
+  function hideStatus() {
+    statusEl.hidden = true;
+  }
+
+  async function fetchBinance(symbol, tf) {
+    const iv = tf === "1d" ? "1d" : "1h";
+    const bases = [
+      "https://data-api.binance.vision",
+      "https://api.binance.com",
+    ];
+    let lastErr = null;
+    for (const base of bases) {
+      try {
+        const url = `${base}/api/v3/klines?symbol=${encodeURIComponent(symbol)}&interval=${iv}&limit=300`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const rows = await res.json();
+        if (!Array.isArray(rows) || !rows.length) throw new Error("empty");
+        return rows.map((k) => ({
+          time: Math.floor(k[0] / 1000),
+          open: +k[1],
+          high: +k[2],
+          low: +k[3],
+          close: +k[4],
+        }));
+      } catch (err) {
+        lastErr = err;
+      }
+    }
+    throw lastErr || new Error("binance failed");
+  }
+
+  function renderLwc(candles, level, type) {
+    destroyChart();
+    lwcEl.hidden = false;
+    frameEl.hidden = true;
+    chart = LightweightCharts.createChart(lwcEl, {
+      layout: { background: { color: "#05070b" }, textColor: "#7a93a8" },
+      grid: {
+        vertLines: { color: "rgba(0,240,200,0.05)" },
+        horzLines: { color: "rgba(0,240,200,0.05)" },
+      },
+      rightPriceScale: { borderColor: "#2a364d" },
+      timeScale: { borderColor: "#2a364d", timeVisible: true, secondsVisible: false },
+      crosshair: { mode: LightweightCharts.CrosshairMode.Normal },
+    });
+    series = chart.addCandlestickSeries({
+      upColor: "#00e896",
+      downColor: "#ff4d6d",
+      borderUpColor: "#00e896",
+      borderDownColor: "#ff4d6d",
+      wickUpColor: "#5dffb1",
+      wickDownColor: "#ff7a90",
+    });
+    series.setData(candles);
+    const lv = Number(level);
+    if (Number.isFinite(lv)) {
+      const color = type === "AR" || type === "support" ? "#00e896" : "#ff4d6d";
+      series.createPriceLine({
+        price: lv,
+        color,
+        lineWidth: 2,
+        lineStyle: LightweightCharts.LineStyle.Dashed,
+        axisLabelVisible: true,
+        title: "touch",
+      });
+    }
+    chart.timeScale().fitContent();
+    const ro = new ResizeObserver(() => {
+      if (!chart) return;
+      chart.applyOptions({ width: lwcEl.clientWidth, height: lwcEl.clientHeight });
+    });
+    ro.observe(lwcEl);
+    chart.applyOptions({ width: lwcEl.clientWidth, height: lwcEl.clientHeight });
+  }
+
+  function renderTradingView(group, symbol, tf) {
+    destroyChart();
+    lwcEl.hidden = true;
+    frameEl.hidden = false;
+    const sym = tvSymbol(group, symbol);
+    const iv = tvInterval(tf);
+    const params = new URLSearchParams({
+      symbol: sym,
+      interval: iv,
+      theme: "dark",
+      style: "1",
+      locale: "zh_TW",
+      timezone: "Etc/UTC",
+      toolbarbg: "0c121c",
+      hideideas: "1",
+      hidesidetoolbar: "0",
+      symboledit: "1",
+      saveimage: "0",
+      withdateranges: "1",
+    });
+    frameEl.src = "https://s.tradingview.com/widgetembed/?" + params.toString();
+  }
+
+  async function openChart(btn) {
+    const symbol = btn.dataset.symbol || "";
+    const group = btn.dataset.group || "";
+    const name = btn.dataset.name || symbol;
+    const tf = btn.dataset.tf || "1h";
+    const level = btn.dataset.level || "";
+    const type = btn.dataset.type || "";
+    const kind = btn.dataset.kind || "";
+    const token = ++openToken;
+
+    titleEl.textContent = `${symbol} · ${tf === "1d" ? "1D" : "1H"}`;
+    subEl.innerHTML =
+      `${escapeHtml(name)} · ${escapeHtml(group)} · ${escapeHtml(typeLabel(type, kind))}` +
+      (level ? ` · Level <strong>${escapeHtml(fmtLevel(level))}</strong>` : "");
+
+    modal.hidden = false;
+    modal.setAttribute("aria-hidden", "false");
+    requestAnimationFrame(() => modal.classList.add("open"));
+    document.body.style.overflow = "hidden";
+    destroyChart();
+    showStatus("載入蠟燭圖…");
+
+    try {
+      if (group === "crypto") {
+        const candles = await fetchBinance(symbol, tf);
+        if (token !== openToken) return;
+        hideStatus();
+        renderLwc(candles, level, type);
+      } else {
+        if (token !== openToken) return;
+        hideStatus();
+        renderTradingView(group, symbol, tf);
+      }
+    } catch (err) {
+      if (token !== openToken) return;
+      hideStatus();
+      renderTradingView(group, symbol, tf);
+    }
+  }
+
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  document.addEventListener("click", (ev) => {
+    const btn = ev.target.closest(".sym-btn");
+    if (btn) {
+      ev.preventDefault();
+      openChart(btn);
+      return;
+    }
+    if (ev.target === modal) closeModal();
+  });
+  closeBtn.addEventListener("click", closeModal);
+  document.addEventListener("keydown", (ev) => {
+    if (ev.key === "Escape" && modal.classList.contains("open")) closeModal();
+  });
+})();
+</script>
+
 </body>
 </html>
