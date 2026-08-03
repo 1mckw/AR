@@ -337,7 +337,7 @@
     return out;
   }
 
-  function renderPack(pack, touchLevel, touchType) {
+  function renderPack(pack) {
     destroyChart();
     lwcEl.hidden = false;
     frameEl.hidden = true;
@@ -388,19 +388,6 @@
     });
     markers.sort((a, b) => a.time - b.time);
     series.setMarkers(markers);
-
-    const lv = Number(touchLevel);
-    if (Number.isFinite(lv)) {
-      const color = touchType === "AR" || touchType === "support" ? "#00e896" : "#ff4d6d";
-      series.createPriceLine({
-        price: lv,
-        color,
-        lineWidth: 2,
-        lineStyle: LightweightCharts.LineStyle.Dashed,
-        axisLabelVisible: true,
-        title: "touch",
-      });
-    }
 
     chart.timeScale().fitContent();
     resizeObs = new ResizeObserver(() => {
@@ -463,7 +450,7 @@
       if (pack && pack.candles && pack.candles.length) {
         if (token !== openToken) return;
         hideStatus();
-        renderPack(pack, level, type);
+        renderPack(pack);
         return;
       }
       if (token !== openToken) return;
