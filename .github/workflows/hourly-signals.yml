@@ -1,0 +1,45 @@
+name: Hourly AR/DR Signals
+
+on:
+  schedule:
+    # Every hour at :10 UTC (after many 1H candles close)
+    - cron: "10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hourly-signals
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scan SP500 + Futures + Top50 Crypto
+        run: python scan_signals.py
+
+      - name: Commit signal report
+        run: |
+          git add signals/latest.json signals/latest.md
+          if git diff --staged --quiet; then
+            echo "No signal file changes"
+            exit 0
+          fi
+          git commit -m "chore: update hourly AR/DR signals"
+          git push
+        env:
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com

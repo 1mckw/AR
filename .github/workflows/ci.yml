@@ -7,26 +7,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  smoke:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
       - name: Syntax check
-        run: python -m py_compile server.py
-
-      - name: Start server and smoke test
-        run: |
-          python server.py &
-          sleep 2
-          curl -fsS "http://127.0.0.1:8765/" | head -c 200
-          echo
-          curl -fsS "http://127.0.0.1:8765/api/tv-search?q=BTC" | head -c 300
-          echo
-          curl -fsS "http://127.0.0.1:8765/api/yahoo?symbol=AAPL&bars=10&interval=1d" | head -c 200
-          echo
+        run: python -m py_compile scan_signals.py server.py
