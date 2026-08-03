@@ -1,0 +1,37 @@
+//@version=5
+indicator("AR/DR Screener (1H + Volume)", overlay=false)
+
+dropPctMin    = input.float(3.0, "急趨勢幅度 %", minval=0.5, step=0.5)
+trendLookback = input.int(10, "回看 K 數", minval=3)
+minStreak     = input.int(3, "最少連續 K 數", minval=2)
+volLen        = input.int(20, "量能 MA")
+volMult       = input.float(1.2, "量能倍數")
+scanAR        = input.bool(true, "掃 AR")
+scanDR        = input.bool(true, "掃 DR")
+
+bearBar(i) => close[i] < open[i]
+bullBar(i) => close[i] > open[i]
+
+streak(isBear, len) =>
+    ok = true
+    for j = 1 to len
+        ok := ok and (isBear ? bearBar(j) : bullBar(j))
+    ok
+
+dropPct = (close[trendLookback] - close) / close[trendLookback] * 100.0
+risePct = (close - close[trendLookback]) / close[trendLookback] * 100.0
+
+highVol = volume >= ta.sma(volume, volLen) * volMult
+
+sharpDown = dropPct >= dropPctMin and streak(true, minStreak)
+sharpUp   = risePct >= dropPctMin and streak(false, minStreak)
+
+arHit = scanAR and bullBar(0) and bearBar(1) and sharpDown[1] and highVol
+drHit = scanDR and bearBar(0) and bullBar(1) and sharpUp[1] and highVol
+hit   = arHit or drHit
+
+plot(arHit ? 1 : 0, "AR", display=display.none)
+plot(drHit ? 1 : 0, "DR", display=display.none)
+plot(hit ? 1 : 0, "AR or DR", display=display.none)
+
+alertcondition(hit, "Screener hit", "AR/DR on {{ticker}}")

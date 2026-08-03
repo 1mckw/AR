@@ -1,0 +1,70 @@
+//@version=5
+indicator("AR Signal + High Volume Filter", shorttitle="AR/DR Vol", overlay=true, max_labels_count=500)
+
+// AR : 急下跌趨勢中，第一根陽線（建議 1H）
+// DR : 急上漲趨勢中，第一根陰線（反之）
+// 搭配 Simple Auto Trend Lines：趨勢線看結構，AR/DR 看轉折第一根 K
+
+grpTrend = "急趨勢判定"
+dropPctMin    = input.float(3.0, "急趨勢幅度 % (跌/漲)", minval=0.5, step=0.5, group=grpTrend)
+trendLookback = input.int(10,  "幅度計算回看 K 數", minval=3, group=grpTrend)
+minStreak     = input.int(3,    "最少連續同向 K 數", minval=2, group=grpTrend)
+useStructure  = input.bool(true, "要求 Lower High / Higher Low", group=grpTrend)
+
+grpVol = "高量過濾 (大型股 / 高量 crypto)"
+volLen  = input.int(20,    "量能 MA 週期", minval=5, group=grpVol)
+volMult = input.float(1.2,  "量能 ≥ MA ×", minval=0.5, step=0.1, group=grpVol)
+useVol  = input.bool(true,  "啟用量能過濾", group=grpVol)
+
+grpTf = "週期"
+require1H     = input.bool(true,  "僅在 1H 圖表觸發", group=grpTf)
+warnOtherTf   = input.bool(true,  "非 1H 時顯示提醒", group=grpTf)
+
+grpVis = "顯示"
+showAR = input.bool(true, "標記 AR (急跌後首陽)", group=grpVis)
+showDR = input.bool(true, "標記 DR (急漲後首陰)", group=grpVis)
+showBg = input.bool(false, "急趨勢背景色", group=grpVis)
+
+is1H    = timeframe.in_seconds() == 3600
+tfOk    = not require1H or is1H
+highVol = not useVol or volume >= ta.sma(volume, volLen) * volMult
+
+bearBar(i) => close[i] < open[i]
+bullBar(i) => close[i] > open[i]
+
+streak(isBear, len) =>
+    ok = true
+    for j = 1 to len
+        ok := ok and (isBear ? bearBar(j) : bullBar(j))
+    ok
+
+dropPct = (close[trendLookback] - close) / close[trendLookback] * 100.0
+risePct = (close - close[trendLookback]) / close[trendLookback] * 100.0
+
+lowerHigh = high < ta.highest(high, trendLookback)[1]
+higherLow = low > ta.lowest(low, trendLookback)[1]
+
+sharpDown = dropPct >= dropPctMin and streak(true, minStreak)
+sharpDown := useStructure ? sharpDown and lowerHigh : sharpDown
+
+sharpUp = risePct >= dropPctMin and streak(false, minStreak)
+sharpUp := useStructure ? sharpUp and higherLow : sharpUp
+
+// 前一根仍在急趨勢；當根為該段的第一根反向 K
+arSignal = tfOk and showAR and highVol and bullBar(0) and bearBar(1) and sharpDown[1]
+drSignal = tfOk and showDR and highVol and bearBar(0) and bullBar(1) and sharpUp[1]
+
+plotshape(arSignal, title="AR", style=shape.triangleup, location=location.belowbar,
+     color=color.new(color.lime, 0), size=size.small, text="AR")
+plotshape(drSignal, title="DR", style=shape.triangledown, location=location.abovebar,
+     color=color.new(color.red, 0), size=size.small, text="DR")
+
+bgcolor(showBg and sharpDown ? color.new(color.red, 92) : na)
+bgcolor(showBg and sharpUp ? color.new(color.green, 92) : na)
+
+if warnOtherTf and not is1H and barstate.islast
+    label.new(bar_index, high, "⚠ 請切到 1H 使用 AR/DR", style=label.style_label_lower_left,
+         color=color.new(color.orange, 20), textcolor=color.white, size=size.small)
+
+alertcondition(arSignal, "AR — 急跌後首根陽線 + 高量", "AR on {{ticker}} {{interval}}")
+alertcondition(drSignal, "DR — 急漲後首根陰線 + 高量", "DR on {{ticker}} {{interval}}")
