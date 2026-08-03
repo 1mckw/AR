@@ -31,12 +31,12 @@ jobs:
 
       - name: Commit signal report
         run: |
-          git add signals/latest.json signals/latest.md
+          git add signals/latest.json signals/latest.html signals/index.html
           if git diff --staged --quiet; then
             echo "No signal file changes"
             exit 0
           fi
-          git commit -m "chore: update hourly AR/DR signals"
+          git commit -m "chore: update hourly touch alerts HTML"
           git push
         env:
           GIT_AUTHOR_NAME: github-actions[bot]

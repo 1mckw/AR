@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="refresh" content="3600" />
+  <title>AR/DR Touch Alerts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #05070b; --panel: #0c121c; --surface: #121a28; --border: rgba(0,240,200,.16);
+      --text: #e8f7f4; --muted: #7a93a8; --primary: #00f0c8;
+      --ar: #00e896; --dr: #ff4d6d; --support: #00e896; --resist: #ff4d6d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      background:
+        radial-gradient(900px 420px at 10% -10%, rgba(0,240,200,.08), transparent 55%),
+        linear-gradient(180deg, #070b12, var(--bg));
+      color: var(--text); min-height: 100vh; padding: 28px 18px 48px;
+      line-height: 1.45;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    h1 {
+      font-size: 1.55rem; font-weight: 700; letter-spacing: -.03em;
+      background: linear-gradient(90deg, #e8f7f4, var(--primary));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .meta { color: var(--muted); font-size: .9rem; margin: 8px 0 18px; }
+    .meta strong { color: var(--primary); font-weight: 600; }
+    .cards {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 22px;
+    }
+    @media (max-width: 720px) { .cards { grid-template-columns: 1fr 1fr; } }
+    .card {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px;
+    }
+    .card .lbl { font-size: .65rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+    .card .val { font-family: "JetBrains Mono", monospace; font-size: 1.25rem; font-weight: 700; margin-top: 4px; }
+    .rules {
+      background: rgba(0,240,200,.04); border: 1px solid var(--border); border-radius: 12px;
+      padding: 12px 14px; margin-bottom: 22px; font-size: .85rem; color: var(--muted);
+    }
+    .rules li { margin: 4px 0 4px 1.1em; }
+    h2 { font-size: 1.05rem; margin: 22px 0 10px; font-weight: 650; }
+    .panel {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: .84rem; }
+    th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid rgba(0,240,200,.08); }
+    th {
+      background: var(--surface); color: var(--muted); font-size: .68rem;
+      text-transform: uppercase; letter-spacing: .06em; font-weight: 600;
+    }
+    tr:hover td { background: rgba(0,240,200,.04); }
+    td.num, th.num { text-align: right; font-family: "JetBrains Mono", monospace; font-variant-numeric: tabular-nums; }
+    td.empty { text-align: center; color: var(--muted); padding: 22px; }
+    code { font-family: "JetBrains Mono", monospace; font-size: .82em; color: var(--primary); }
+    .tag {
+      display: inline-block; font-family: "JetBrains Mono", monospace; font-weight: 700;
+      font-size: .72rem; padding: 2px 7px; border-radius: 5px;
+    }
+    .tag.ar { background: rgba(0,232,150,.14); color: var(--ar); }
+    .tag.dr { background: rgba(255,77,109,.14); color: var(--dr); }
+    .tag.resist { background: rgba(255,77,109,.14); color: var(--resist); }
+    .tag.support { background: rgba(0,232,150,.14); color: var(--support); }
+    .errs { margin: 8px 0 0 1.1em; color: var(--muted); font-size: .82rem; }
+    footer { margin-top: 28px; color: var(--muted); font-size: .75rem; }
+    a { color: var(--primary); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Touch Alerts</h1>
+    <p class="meta">Updated <strong>2026-08-03 03:00:00 UTC</strong> · TF <strong>1H</strong> · fresh last <strong>2</strong> bar(s)</p>
+    <div class="cards">
+      <div class="card"><div class="lbl">Hits</div><div class="val">2</div></div>
+      <div class="card"><div class="lbl">NDX100</div><div class="val">101</div></div>
+      <div class="card"><div class="lbl">Futures</div><div class="val">14</div></div>
+      <div class="card"><div class="lbl">Crypto</div><div class="val">50</div></div>
+    </div>
+    <ul class="rules">
+      <li><strong>不報告</strong> 近 12 根內新出現的 AR/DR</li>
+      <li><strong>報告</strong> 信號後超過 12 根才觸碰 AR/DR 原價位</li>
+      <li><strong>報告</strong> 趨勢線影線觸碰</li>
+    </ul>
+
+    <h2>AR/DR 觸碰（&gt;12 根後） · 1</h2>
+    <div class="panel">
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th class="num">Bars after</th><th>Time</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="tag ar">AR</span></td><td>crypto</td><td><code>BTCUSDT</code></td><td>BTC</td><td class="num">65000.1</td><td class="num">15</td><td>2024-07-03 09:46 UTC</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>趨勢線觸碰 · 1</h2>
+    <div class="panel">
+      <table>
+        <thead>
+          <tr><th>Side</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th>Time</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="tag resist">resistance</span></td><td>ndx100</td><td><code>AAPL</code></td><td>Apple</td><td class="num">190.2</td><td>2024-07-03 10:46 UTC</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Scan stats</h2>
+    <p class="meta">OK symbols <strong>160</strong> · Errors <strong>1</strong> · Hits <strong>2</strong></p>
+    <h2>Sample errors</h2><ul class="errs"><li><code>ZZZ</code> — timeout</li></ul>
+
+    <footer>
+      Source: <a href="https://github.com/1mckw/AR">1mckw/AR</a> ·
+      JSON: <a href="./latest.json">latest.json</a>
+    </footer>
+  </div>
+</body>
+</html>

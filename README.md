@@ -4,9 +4,11 @@
 
 ## 線上報告
 
-- 最新：https://github.com/1mckw/AR/blob/main/signals/latest.md
+- HTML：https://1mckw.github.io/AR/ （或 repo 內 [`signals/latest.html`](./signals/latest.html)）
 - JSON：https://github.com/1mckw/AR/blob/main/signals/latest.json
 - Actions：https://github.com/1mckw/AR/actions/workflows/hourly-signals.yml
+
+首次請到 **Settings → Pages → Source: GitHub Actions**。
 
 ## 商品池
 

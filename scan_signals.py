@@ -9,6 +9,7 @@ Reports only:
 from __future__ import annotations
 
 import csv
+import html
 import io
 import json
 import os
@@ -535,69 +536,188 @@ def fmt_ts(ts: int) -> str:
     return datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
 
-def render_md(payload: dict) -> str:
-    lines = [
-        "# Touch Alerts",
-        "",
-        f"Updated: **{payload['generated_at']}** · TF **1H** · fresh last **{FRESH_BARS}** bar(s)",
-        "",
-        (
-            f"Universe: NDX100 `{payload['counts']['ndx100']}` · "
-            f"Futures `{payload['counts']['futures']}` · Crypto `{payload['counts']['crypto']}`"
-        ),
-        "",
-        "Rules:",
-        "- **不報告** 近 12 根內新出現的 AR/DR",
-        "- **報告** 信號後超過 12 根才觸碰 AR/DR 原價位",
-        "- **報告** 趨勢線影線觸碰",
-        "",
-    ]
-    hits = payload["hits"]
-    if not hits:
-        lines += ["## No fresh touches", "", "_No late AR/DR or trend-line touches on latest bars._", ""]
-    else:
-        ar_dr = [h for h in hits if h["kind"] == "ar_dr_touch"]
-        trend = [h for h in hits if h["kind"] == "trend_touch"]
-        if ar_dr:
-            lines += [f"## AR/DR 觸碰（>{TOUCH_WINDOW_BARS} 根後） ({len(ar_dr)})", ""]
-            lines += [
-                "| Type | Group | Symbol | Name | Level | Bars after | Time |",
-                "|------|-------|--------|------|------:|----------:|------|",
-            ]
-            for h in ar_dr:
-                lines.append(
-                    f"| **{h['type']}** | {h['group']} | `{h['symbol']}` | {h['name']} | "
-                    f"{h['level']:.4g} | {h['bars_after_signal']} | {fmt_ts(h['time'])} |"
-                )
-            lines.append("")
-        if trend:
-            lines += [f"## 趨勢線觸碰 ({len(trend)})", ""]
-            lines += [
-                "| Side | Group | Symbol | Name | Level | Time |",
-                "|------|-------|--------|------|------:|------|",
-            ]
-            for h in trend:
-                lines.append(
-                    f"| **{h['type']}** | {h['group']} | `{h['symbol']}` | {h['name']} | "
-                    f"{h['level']:.4g} | {fmt_ts(h['time'])} |"
-                )
-            lines.append("")
+def fmt_num(v: float) -> str:
+    return f"{v:.6g}"
 
+
+def render_html(payload: dict) -> str:
+    hits = payload["hits"]
+    ar_dr = [h for h in hits if h["kind"] == "ar_dr_touch"]
+    trend = [h for h in hits if h["kind"] == "trend_touch"]
     errs = [r for r in payload["results"] if r.get("error")]
-    lines += [
-        "## Scan stats",
-        "",
-        f"- OK symbols: {payload['counts']['ok']}",
-        f"- Errors: {len(errs)}",
-        f"- Hits: {len(hits)}",
-        "",
-    ]
+    c = payload["counts"]
+
+    def rows_ar_dr() -> str:
+        if not ar_dr:
+            return '<tr><td colspan="7" class="empty">目前無 AR/DR 觸碰</td></tr>'
+        out = []
+        for h in ar_dr:
+            cls = "ar" if h.get("type") == "AR" else "dr"
+            out.append(
+                "<tr>"
+                f'<td><span class="tag {cls}">{html.escape(str(h.get("type", "")))}</span></td>'
+                f"<td>{html.escape(h.get('group', ''))}</td>"
+                f"<td><code>{html.escape(h.get('symbol', ''))}</code></td>"
+                f"<td>{html.escape(h.get('name', ''))}</td>"
+                f"<td class=\"num\">{fmt_num(float(h['level']))}</td>"
+                f"<td class=\"num\">{int(h.get('bars_after_signal', 0))}</td>"
+                f"<td>{html.escape(fmt_ts(int(h['time'])))}</td>"
+                "</tr>"
+            )
+        return "\n".join(out)
+
+    def rows_trend() -> str:
+        if not trend:
+            return '<tr><td colspan="6" class="empty">目前無趨勢線觸碰</td></tr>'
+        out = []
+        for h in trend:
+            cls = "resist" if h.get("type") == "resistance" else "support"
+            out.append(
+                "<tr>"
+                f'<td><span class="tag {cls}">{html.escape(str(h.get("type", "")))}</span></td>'
+                f"<td>{html.escape(h.get('group', ''))}</td>"
+                f"<td><code>{html.escape(h.get('symbol', ''))}</code></td>"
+                f"<td>{html.escape(h.get('name', ''))}</td>"
+                f"<td class=\"num\">{fmt_num(float(h['level']))}</td>"
+                f"<td>{html.escape(fmt_ts(int(h['time'])))}</td>"
+                "</tr>"
+            )
+        return "\n".join(out)
+
+    err_block = ""
     if errs[:15]:
-        lines += ["### Sample errors", ""]
-        for e in errs[:15]:
-            lines.append(f"- `{e['symbol']}`: {e['error']}")
-        lines.append("")
-    return "\n".join(lines) + "\n"
+        items = "".join(
+            f"<li><code>{html.escape(e['symbol'])}</code> — {html.escape(str(e['error']))}</li>"
+            for e in errs[:15]
+        )
+        err_block = f"<h2>Sample errors</h2><ul class=\"errs\">{items}</ul>"
+
+    return f"""<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="refresh" content="3600" />
+  <title>AR/DR Touch Alerts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {{
+      --bg: #05070b; --panel: #0c121c; --surface: #121a28; --border: rgba(0,240,200,.16);
+      --text: #e8f7f4; --muted: #7a93a8; --primary: #00f0c8;
+      --ar: #00e896; --dr: #ff4d6d; --support: #00e896; --resist: #ff4d6d;
+    }}
+    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    body {{
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      background:
+        radial-gradient(900px 420px at 10% -10%, rgba(0,240,200,.08), transparent 55%),
+        linear-gradient(180deg, #070b12, var(--bg));
+      color: var(--text); min-height: 100vh; padding: 28px 18px 48px;
+      line-height: 1.45;
+    }}
+    .wrap {{ max-width: 1100px; margin: 0 auto; }}
+    h1 {{
+      font-size: 1.55rem; font-weight: 700; letter-spacing: -.03em;
+      background: linear-gradient(90deg, #e8f7f4, var(--primary));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }}
+    .meta {{ color: var(--muted); font-size: .9rem; margin: 8px 0 18px; }}
+    .meta strong {{ color: var(--primary); font-weight: 600; }}
+    .cards {{
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 22px;
+    }}
+    @media (max-width: 720px) {{ .cards {{ grid-template-columns: 1fr 1fr; }} }}
+    .card {{
+      background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px;
+    }}
+    .card .lbl {{ font-size: .65rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }}
+    .card .val {{ font-family: "JetBrains Mono", monospace; font-size: 1.25rem; font-weight: 700; margin-top: 4px; }}
+    .rules {{
+      background: rgba(0,240,200,.04); border: 1px solid var(--border); border-radius: 12px;
+      padding: 12px 14px; margin-bottom: 22px; font-size: .85rem; color: var(--muted);
+    }}
+    .rules li {{ margin: 4px 0 4px 1.1em; }}
+    h2 {{ font-size: 1.05rem; margin: 22px 0 10px; font-weight: 650; }}
+    .panel {{
+      background: var(--panel); border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
+    }}
+    table {{ width: 100%; border-collapse: collapse; font-size: .84rem; }}
+    th, td {{ padding: 9px 12px; text-align: left; border-bottom: 1px solid rgba(0,240,200,.08); }}
+    th {{
+      background: var(--surface); color: var(--muted); font-size: .68rem;
+      text-transform: uppercase; letter-spacing: .06em; font-weight: 600;
+    }}
+    tr:hover td {{ background: rgba(0,240,200,.04); }}
+    td.num, th.num {{ text-align: right; font-family: "JetBrains Mono", monospace; font-variant-numeric: tabular-nums; }}
+    td.empty {{ text-align: center; color: var(--muted); padding: 22px; }}
+    code {{ font-family: "JetBrains Mono", monospace; font-size: .82em; color: var(--primary); }}
+    .tag {{
+      display: inline-block; font-family: "JetBrains Mono", monospace; font-weight: 700;
+      font-size: .72rem; padding: 2px 7px; border-radius: 5px;
+    }}
+    .tag.ar {{ background: rgba(0,232,150,.14); color: var(--ar); }}
+    .tag.dr {{ background: rgba(255,77,109,.14); color: var(--dr); }}
+    .tag.resist {{ background: rgba(255,77,109,.14); color: var(--resist); }}
+    .tag.support {{ background: rgba(0,232,150,.14); color: var(--support); }}
+    .errs {{ margin: 8px 0 0 1.1em; color: var(--muted); font-size: .82rem; }}
+    footer {{ margin-top: 28px; color: var(--muted); font-size: .75rem; }}
+    a {{ color: var(--primary); }}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Touch Alerts</h1>
+    <p class="meta">Updated <strong>{html.escape(payload['generated_at'])}</strong> · TF <strong>1H</strong> · fresh last <strong>{FRESH_BARS}</strong> bar(s)</p>
+    <div class="cards">
+      <div class="card"><div class="lbl">Hits</div><div class="val">{c['hits']}</div></div>
+      <div class="card"><div class="lbl">NDX100</div><div class="val">{c['ndx100']}</div></div>
+      <div class="card"><div class="lbl">Futures</div><div class="val">{c['futures']}</div></div>
+      <div class="card"><div class="lbl">Crypto</div><div class="val">{c['crypto']}</div></div>
+    </div>
+    <ul class="rules">
+      <li><strong>不報告</strong> 近 {TOUCH_WINDOW_BARS} 根內新出現的 AR/DR</li>
+      <li><strong>報告</strong> 信號後超過 {TOUCH_WINDOW_BARS} 根才觸碰 AR/DR 原價位</li>
+      <li><strong>報告</strong> 趨勢線影線觸碰</li>
+    </ul>
+
+    <h2>AR/DR 觸碰（&gt;{TOUCH_WINDOW_BARS} 根後） · {len(ar_dr)}</h2>
+    <div class="panel">
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th class="num">Bars after</th><th>Time</th></tr>
+        </thead>
+        <tbody>
+          {rows_ar_dr()}
+        </tbody>
+      </table>
+    </div>
+
+    <h2>趨勢線觸碰 · {len(trend)}</h2>
+    <div class="panel">
+      <table>
+        <thead>
+          <tr><th>Side</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th>Time</th></tr>
+        </thead>
+        <tbody>
+          {rows_trend()}
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Scan stats</h2>
+    <p class="meta">OK symbols <strong>{c['ok']}</strong> · Errors <strong>{len(errs)}</strong> · Hits <strong>{c['hits']}</strong></p>
+    {err_block}
+
+    <footer>
+      Source: <a href="https://github.com/1mckw/AR">1mckw/AR</a> ·
+      JSON: <a href="./latest.json">latest.json</a>
+    </footer>
+  </div>
+</body>
+</html>
+"""
 
 
 def main() -> None:
@@ -660,17 +780,22 @@ def main() -> None:
     }
 
     json_path = os.path.join(OUT_DIR, "latest.json")
-    md_path = os.path.join(OUT_DIR, "latest.md")
+    html_path = os.path.join(OUT_DIR, "latest.html")
+    index_path = os.path.join(OUT_DIR, "index.html")
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
-    md = render_md(payload)
-    with open(md_path, "w", encoding="utf-8") as f:
-        f.write(md)
+    page = render_html(payload)
+    with open(html_path, "w", encoding="utf-8") as f:
+        f.write(page)
+    with open(index_path, "w", encoding="utf-8") as f:
+        f.write(page)
+
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
         with open(summary, "a", encoding="utf-8") as f:
-            f.write(md)
-    print(f"Hits: {len(hits)} · wrote {json_path} and {md_path}")
+            f.write(f"### Touch Alerts\n\nHits: **{len(hits)}** · [latest.html](./signals/latest.html)\n")
+
+    print(f"Hits: {len(hits)} · wrote {html_path} and {json_path}")
 
 
 if __name__ == "__main__":
