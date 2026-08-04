@@ -43,6 +43,7 @@ BINANCE_INTERVAL = {"1h": "1h", "1d": "1d"}
 detect_signals = ardr.detect_signals
 resolve_horizontal_ray = ardr.resolve_horizontal_ray
 collect_late_ar_dr_touches = ardr.collect_late_ar_dr_touches
+fresh_range = ardr.fresh_range
 
 PIVOT_HIGH = 4
 PIVOT_LOW = 4
