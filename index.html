@@ -466,7 +466,7 @@
 
   <script>
     const LOOKBACK = 10, VOL_LEN = 20, MAX_LINES_PER_PIVOT = 1;
-    const TOUCH_WINDOW_BARS = 12; // 信號後 N 根 K 內觸碰 → 延伸
+    const TOUCH_WINDOW_BARS = 12; // 主引線觸碰在此窗口內不報告
 
     const TIMEFRAMES = {
       '1h': { label: '1H', binance: '1h', yahoo: '1h', periodSec: 3600 },
@@ -492,7 +492,7 @@
     let currentCandles = [], activeTrendLines = [];
     let pollTimer = null;
     let watchBaseline = false;
-    let untouchedRayKeys = new Set(); // AR/DR 尚未觸碰（有效且未延伸）
+    let untouchedRayKeys = new Set(); // AR/DR 主引線尚未觸碰
     let activeExtRayKeys = new Set(); // 已延伸且仍有效的 AR/DR
     let untouchedTrendKeys = new Set(); // 趨勢線尚未觸碰
     let breakHistory = [];
@@ -925,71 +925,36 @@
       return signals;
     }
 
-    function resolveHorizontalRay(candles, item) {
-      const isAR = item.type === 'AR';
-      const baseLevel = item.level;
-      const signalTime = item.time;
-
-      for (let j = item.index + 1; j < candles.length; j++) {
+    function resolveWickRay(candles, sigIdx, level, side) {
+      const startTime = candles[sigIdx].time;
+      const isUpper = side === 'upper';
+      for (let j = sigIdx + 1; j < candles.length; j++) {
         const bar = candles[j];
-        const withinWindow = j - item.index <= TOUCH_WINDOW_BARS;
-        const hitBase = isAR ? bar.high >= baseLevel : bar.low <= baseLevel;
-
-        if (hitBase && withinWindow) {
-          // 延伸用 AR/DR 信號那根 K 的低/高，不是碰線那根
-          const sigBar = candles[item.index];
-          const extLevel = isAR ? sigBar.low : sigBar.high;
-
-          for (let m = j + 1; m < candles.length; m++) {
-            const b2 = candles[m];
-            const hitExt = isAR ? b2.low <= extLevel : b2.high >= extLevel;
-            if (hitExt) {
-              return {
-                level: extLevel,
-                baseLevel,
-                startTime: signalTime,
-                extendTime: bar.time,
-                endTime: b2.time,
-                active: false,
-                extended: true,
-              };
-            }
-          }
-          const last = candles[candles.length - 1];
+        const touched = isUpper ? bar.high >= level : bar.low <= level;
+        if (touched) {
           return {
-            level: extLevel,
-            baseLevel,
-            startTime: signalTime,
-            extendTime: bar.time,
-            endTime: last.time,
-            active: true,
-            extended: true,
-          };
-        }
-
-        if (hitBase && !withinWindow) {
-          return {
-            level: baseLevel,
-            baseLevel,
-            startTime: signalTime,
-            extendTime: null,
-            endTime: bar.time,
-            active: false,
-            extended: false,
+            side, level, startTime, endTime: bar.time, touchIndex: j,
+            active: false, barsAfter: j - sigIdx,
           };
         }
       }
-
       const last = candles[candles.length - 1];
       return {
-        level: baseLevel,
-        baseLevel,
-        startTime: signalTime,
-        extendTime: null,
-        endTime: last.time,
-        active: true,
-        extended: false,
+        side, level, startTime, endTime: last.time, touchIndex: null,
+        active: true, barsAfter: null,
       };
+    }
+
+    function resolveSignalRays(candles, item) {
+      const bar = candles[item.index];
+      return {
+        upper: resolveWickRay(candles, item.index, bar.high, 'upper'),
+        lower: resolveWickRay(candles, item.index, bar.low, 'lower'),
+      };
+    }
+
+    function primaryRay(rays, type) {
+      return type === 'AR' ? rays.upper : rays.lower;
     }
 
     function analyzeSignalContext(sig, candles, trendLines) {
@@ -1072,45 +1037,28 @@
 
     function checkTouchNotifications(signals, trendLines, candles, ctx) {
       const nextUntouchedRays = new Set();
-      const nextActiveExt = new Set();
       const nextUntouchedTrends = new Set();
       const touches = [];
 
       for (const sig of signals) {
-        if (!sig.ray) continue;
+        if (!sig.rays) continue;
         const key = rayWatchKey(ctx, sig);
-        const { ray } = sig;
+        const primary = primaryRay(sig.rays, sig.type);
 
-        if (ray.active && !ray.extended) {
+        if (primary.active) {
           nextUntouchedRays.add(key);
         } else if (watchBaseline && untouchedRayKeys.has(key)) {
-          // 12 根 K 內觸碰會延伸，不顯示通知；超過 12 根才通知
-          if (!ray.extended) {
-            const touchTime = ray.endTime;
+          if (primary.barsAfter != null && primary.barsAfter > TOUCH_WINDOW_BARS) {
             touches.push({
-              key: `${key}:base:${touchTime}`,
+              key: `${key}:${primary.side}:${primary.endTime}`,
               cssType: sig.type.toLowerCase(),
               label: `${sig.type} 觸碰`,
               symbol: ctx.symbol,
               tfLabel: ctx.tfLabel,
-              level: ray.baseLevel ?? sig.level,
-              time: touchTime,
+              level: primary.level,
+              time: primary.endTime,
             });
           }
-        }
-
-        if (ray.active && ray.extended) {
-          nextActiveExt.add(key);
-        } else if (watchBaseline && activeExtRayKeys.has(key) && !ray.active) {
-          touches.push({
-            key: `${key}:ext:${ray.endTime}`,
-            cssType: sig.type.toLowerCase(),
-            label: `${sig.type} 延伸線觸碰`,
-            symbol: ctx.symbol,
-            tfLabel: ctx.tfLabel,
-            level: ray.level,
-            time: ray.endTime,
-          });
         }
       }
 
@@ -1135,10 +1083,9 @@
 
       if (!watchBaseline) {
         for (const sig of signals) {
-          if (!sig.ray) continue;
+          if (!sig.rays) continue;
           const key = rayWatchKey(ctx, sig);
-          if (sig.ray.active && !sig.ray.extended) untouchedRayKeys.add(key);
-          if (sig.ray.active && sig.ray.extended) activeExtRayKeys.add(key);
+          if (primaryRay(sig.rays, sig.type).active) untouchedRayKeys.add(key);
         }
         for (const line of trendLines) {
           if (!line.invalidated && !findTrendTouch(candles, line)) {
@@ -1150,7 +1097,7 @@
       }
 
       untouchedRayKeys = nextUntouchedRays;
-      activeExtRayKeys = nextActiveExt;
+      activeExtRayKeys = new Set();
       untouchedTrendKeys = nextUntouchedTrends;
       touches.forEach(recordTouch);
       return touches.length;
@@ -1170,27 +1117,27 @@
     function renderSignals(signals, candles, trendLines) {
       const ul = document.getElementById('signals');
       ul.innerHTML = '';
-      const rayOf = s => s.ray || resolveHorizontalRay(candles, s);
+      const raysOf = s => s.rays || resolveSignalRays(candles, s);
 
-      document.getElementById('arCount').textContent = signals.filter(s => s.type === 'AR' && rayOf(s).active).length;
-      document.getElementById('drCount').textContent = signals.filter(s => s.type === 'DR' && rayOf(s).active).length;
+      document.getElementById('arCount').textContent = signals.filter(s => s.type === 'AR' && primaryRay(raysOf(s), s.type).active).length;
+      document.getElementById('drCount').textContent = signals.filter(s => s.type === 'DR' && primaryRay(raysOf(s), s.type).active).length;
 
       if (!signals.length) {
         ul.innerHTML = '<li class="empty-hint">尚無 AR/DR 信號</li>';
         return;
       }
       [...signals].reverse().slice(0, 15).forEach(sig => {
-        const ray = rayOf(sig);
+        const rays = raysOf(sig);
+        const primary = primaryRay(rays, sig.type);
         const ctx = analyzeSignalContext(sig, candles, trendLines);
         const li = document.createElement('li');
-        li.className = `signal-item ${sig.type.toLowerCase()}${ray.active ? '' : ' touched'}`;
+        li.className = `signal-item ${sig.type.toLowerCase()}${primary.active ? '' : ' touched'}`;
         li.innerHTML = `
           <span class="tag ${sig.type.toLowerCase()}">${sig.type}</span>
-          ${ray.active ? '<span style="color:var(--profit)">有效</span>' : '<span style="color:var(--muted)">已碰</span>'}
-          ${ray.extended && ray.level !== ray.baseLevel ? ' · <span style="color:var(--accent)">12K 延伸</span>' : ''}
+          ${primary.active ? '<span style="color:var(--profit)">有效</span>' : '<span style="color:var(--muted)">已碰</span>'}
           · ${fmtTime(sig.time)}<br>
-          ${sig.type === 'AR' ? '延伸低' : '延伸高'} ${ray.level.toLocaleString(undefined, { maximumFractionDigits: 2 })}
-          ${ray.extended ? ` · 原${sig.type === 'AR' ? '高' : '低'} ${ray.baseLevel.toLocaleString(undefined, { maximumFractionDigits: 2 })}` : ''}
+          上 ${rays.upper.level.toLocaleString(undefined, { maximumFractionDigits: 2 })} ${rays.upper.active ? '→' : '停'}
+          · 下 ${rays.lower.level.toLocaleString(undefined, { maximumFractionDigits: 2 })} ${rays.lower.active ? '→' : '停'}<br>
           · 收 ${sig.close.toLocaleString(undefined, { maximumFractionDigits: 2 })}<br>
           <span class="ctx ${ctx.cls}">${ctx.text}</span>
         `;
@@ -1243,14 +1190,13 @@
       return active ? '#ff4d6d' : 'rgba(255,77,109,0.35)';
     }
 
-    function drawHorizontalRay(sig, ray) {
-      const active = ray.active;
-      if (ray.extended && ray.extendTime != null) {
-        drawRaySegment(ray.baseLevel, ray.startTime, ray.extendTime, sig.type, false);
-        drawRaySegment(ray.level, ray.extendTime, ray.endTime, sig.type, active);
-        return;
+    function drawSignalRays(sig, rays, lastTime) {
+      for (const side of ['upper', 'lower']) {
+        const r = rays[side];
+        const t1 = r.active ? lastTime : r.endTime;
+        if (t1 <= r.startTime) continue;
+        drawRaySegment(r.level, r.startTime, t1, sig.type, r.active);
       }
-      drawRaySegment(ray.level, ray.startTime, ray.endTime, sig.type, active);
     }
 
     function drawRaySegment(level, t0, t1, type, active) {
@@ -1329,14 +1275,15 @@
         const signals = detectSignals(candles, dropPct, minStreak, volMult, useStructure);
 
         signals.forEach(sig => {
-          sig.ray = resolveHorizontalRay(candles, sig);
-          drawHorizontalRay(sig, sig.ray);
+          sig.rays = resolveSignalRays(candles, sig);
+          drawSignalRays(sig, sig.rays, candles[candles.length - 1].time);
+          const primary = primaryRay(sig.rays, sig.type);
           markers.push({
             time: sig.time,
             position: sig.type === 'AR' ? 'belowBar' : 'aboveBar',
-            color: signalMarkerColor(sig.type, sig.ray.active),
+            color: signalMarkerColor(sig.type, primary.active),
             shape: 'circle',
-            size: sig.ray.active ? 2 : 1,
+            size: primary.active ? 2 : 1,
             text: sig.type,
           });
         });
@@ -1348,7 +1295,7 @@
         chart.timeScale().fitContent();
         resizeChart();
 
-        const activeRays = signals.filter(s => s.ray?.active).length;
+        const activeRays = signals.filter(s => primaryRay(s.rays || resolveSignalRays(candles, s), s.type).active).length;
         const pollSec = +document.getElementById('pollInterval').value;
         const pollHint = pollSec > 0 ? ` · 自動刷新 ${pollSec}s` : '';
         if (newBreaks === 0) {

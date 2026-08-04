@@ -8,12 +8,10 @@ DR
   Sharp rise, consecutive bull bars, bearish reversal on high volume.
   Ray level = signal bar LOW.
 
-Ray rules (TOUCH_WINDOW_BARS = 12)
-  1. Untouched — horizontal ray at base level extends right (active).
-  2. Base touched within 12 bars — switch to extended ray (AR→signal low, DR→signal high).
-     Extended ray stays active until the opposite level is hit.
-  3. Base touched after 12 bars (late touch) — ray stops at touch bar, no extension.
-     This is what the hourly scanner reports.
+Ray rules
+  Each AR/DR signal bar draws two horizontal wick rays (upper=high, lower=low).
+  Both extend right from the signal bar; each stops at its first wick touch.
+  Scanner reports primary wick late touch: AR→high, DR→low, only after >12 bars.
 """
 
 from __future__ import annotations
@@ -131,73 +129,45 @@ def detect_signals(candles: list[dict]) -> list[dict]:
     return signals
 
 
-def resolve_horizontal_ray(candles: list[dict], item: dict) -> dict[str, Any]:
-    """Resolve ray state after signal bar.
-
-    Returns dict with:
-      baseLevel, level (draw price), extended, active,
-      startTime, extendTime, endTime, late_touch_index
-    """
-    is_ar = item["type"] == "AR"
-    base_level = item["level"]
-    signal_time = item["time"]
-    sig_idx = item["index"]
-
+def resolve_wick_ray(candles: list[dict], sig_idx: int, level: float, side: str) -> dict[str, Any]:
+    """One wick ray from signal bar; stop at first touch."""
+    start_time = candles[sig_idx]["time"]
+    is_upper = side == "upper"
     for j in range(sig_idx + 1, len(candles)):
         bar = candles[j]
-        within = j - sig_idx <= TOUCH_WINDOW_BARS
-        hit_base = bar["high"] >= base_level if is_ar else bar["low"] <= base_level
-
-        if hit_base and within:
-            sig_bar = candles[sig_idx]
-            ext_level = sig_bar["low"] if is_ar else sig_bar["high"]
-            for m in range(j + 1, len(candles)):
-                b2 = candles[m]
-                hit_ext = b2["low"] <= ext_level if is_ar else b2["high"] >= ext_level
-                if hit_ext:
-                    return {
-                        "baseLevel": base_level,
-                        "level": ext_level,
-                        "extended": True,
-                        "active": False,
-                        "late_touch_index": None,
-                        "startTime": signal_time,
-                        "extendTime": bar["time"],
-                        "endTime": b2["time"],
-                    }
+        touched = bar["high"] >= level if is_upper else bar["low"] <= level
+        if touched:
             return {
-                "baseLevel": base_level,
-                "level": ext_level,
-                "extended": True,
-                "active": True,
-                "late_touch_index": None,
-                "startTime": signal_time,
-                "extendTime": bar["time"],
-                "endTime": candles[-1]["time"],
-            }
-
-        if hit_base and not within:
-            return {
-                "baseLevel": base_level,
-                "level": base_level,
-                "extended": False,
+                "side": side,
+                "level": float(level),
+                "startTime": int(start_time),
+                "endTime": int(bar["time"]),
+                "touch_index": j,
                 "active": False,
-                "late_touch_index": j,
-                "startTime": signal_time,
-                "extendTime": None,
-                "endTime": bar["time"],
             }
-
+    last = candles[-1]
     return {
-        "baseLevel": base_level,
-        "level": base_level,
-        "extended": False,
+        "side": side,
+        "level": float(level),
+        "startTime": int(start_time),
+        "endTime": int(last["time"]),
+        "touch_index": None,
         "active": True,
-        "late_touch_index": None,
-        "startTime": signal_time,
-        "extendTime": None,
-        "endTime": candles[-1]["time"],
     }
+
+
+def resolve_signal_rays(candles: list[dict], item: dict) -> dict[str, Any]:
+    """Upper (high) and lower (low) wick rays for one AR/DR signal."""
+    idx = item["index"]
+    bar = candles[idx]
+    return {
+        "upper": resolve_wick_ray(candles, idx, bar["high"], "upper"),
+        "lower": resolve_wick_ray(candles, idx, bar["low"], "lower"),
+    }
+
+
+def primary_wick_ray(rays: dict[str, Any], sig_type: str) -> dict[str, Any]:
+    return rays["upper"] if sig_type == "AR" else rays["lower"]
 
 
 def fresh_range(n: int) -> tuple[int, int]:
@@ -207,15 +177,19 @@ def fresh_range(n: int) -> tuple[int, int]:
 
 
 def collect_late_ar_dr_touches(candles: list[dict], signals: list[dict]) -> list[dict]:
-    """Report base-level touch after >12 bars when touch bar is fresh."""
+    """Report primary wick touch after >12 bars when touch bar is fresh."""
     if not candles:
         return []
     lo, last = fresh_range(len(candles))
     hits: list[dict] = []
     for sig in signals:
-        ray = resolve_horizontal_ray(candles, sig)
-        ti = ray.get("late_touch_index")
+        rays = resolve_signal_rays(candles, sig)
+        ray = primary_wick_ray(rays, sig["type"])
+        ti = ray.get("touch_index")
         if ti is None:
+            continue
+        bars_after = ti - sig["index"]
+        if bars_after <= TOUCH_WINDOW_BARS:
             continue
         if not (lo <= ti <= last):
             continue
@@ -224,69 +198,44 @@ def collect_late_ar_dr_touches(candles: list[dict], signals: list[dict]) -> list
                 "kind": "ar_dr_touch",
                 "label": f"{sig['type']} 觸碰",
                 "type": sig["type"],
+                "wick": ray["side"],
                 "signal_time": sig["time"],
                 "signal_index": sig["index"],
-                "bars_after_signal": ti - sig["index"],
+                "bars_after_signal": bars_after,
                 "time": candles[ti]["time"],
                 "index": ti,
-                "level": ray["baseLevel"],
+                "level": ray["level"],
                 "close": candles[ti]["close"],
             }
         )
     return hits
 
 
-def ray_chart_segments(ray: dict[str, Any], last_time: int) -> list[dict[str, Any]]:
-    """Build drawable horizontal segments for lightweight-charts.
-
-    - Untouched active: base level → last_time
-    - Late touch (inactive, not extended): base level → endTime only
-    - Within-12 extended: base → extendTime (faded), then ext level → end
-    """
+def wick_ray_segments(rays: dict[str, Any], last_time: int) -> list[dict[str, Any]]:
     segs: list[dict[str, Any]] = []
-    base = float(ray["baseLevel"])
-    t0 = int(ray["startTime"])
-
-    if ray.get("extended") and ray.get("extendTime") is not None:
-        ext_t = int(ray["extendTime"])
-        if ext_t > t0:
-            segs.append({"t0": t0, "t1": ext_t, "price": base, "active": False})
-        ext_price = float(ray["level"])
-        t1 = int(last_time if ray["active"] else ray["endTime"])
-        if t1 > ext_t:
+    for side in ("upper", "lower"):
+        r = rays[side]
+        t0 = int(r["startTime"])
+        t1 = int(last_time if r["active"] else r["endTime"])
+        if t1 > t0:
             segs.append(
                 {
-                    "t0": ext_t,
+                    "t0": t0,
                     "t1": t1,
-                    "price": ext_price,
-                    "active": bool(ray["active"]),
+                    "price": float(r["level"]),
+                    "active": bool(r["active"]),
+                    "side": r["side"],
                 }
             )
-        return segs
-
-    # Base-level ray only
-    if ray["active"]:
-        t1 = int(last_time)
-    else:
-        t1 = int(ray["endTime"])  # late touch: stop at touch bar
-    if t1 > t0:
-        segs.append(
-            {
-                "t0": t0,
-                "t1": t1,
-                "price": base,
-                "active": bool(ray["active"]),
-            }
-        )
     return segs
 
 
-def signal_to_chart_ray(sig: dict, ray: dict[str, Any], last_time: int) -> dict[str, Any]:
+def signal_to_chart_ray(sig: dict, candles: list[dict], last_time: int) -> dict[str, Any]:
     """Compact ray payload for HTML chart packs."""
+    rays = resolve_signal_rays(candles, sig)
     return {
         "type": sig["type"],
         "time": int(sig["time"]),
-        "active": bool(ray["active"]),
-        "extended": bool(ray["extended"]),
-        "segments": ray_chart_segments(ray, last_time),
+        "active": bool(rays["upper"]["active"] or rays["lower"]["active"]),
+        "segments": wick_ray_segments(rays, last_time),
     }

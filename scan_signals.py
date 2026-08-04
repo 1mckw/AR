@@ -41,7 +41,7 @@ YAHOO_INTERVAL = {"1h": "60m", "1d": "1d"}
 BINANCE_INTERVAL = {"1h": "1h", "1d": "1d"}
 
 detect_signals = ardr.detect_signals
-resolve_horizontal_ray = ardr.resolve_horizontal_ray
+resolve_signal_rays = ardr.resolve_signal_rays
 collect_late_ar_dr_touches = ardr.collect_late_ar_dr_touches
 fresh_range = ardr.fresh_range
 
@@ -442,7 +442,7 @@ def build_chart_pack(candles: list[dict], signals: list[dict], lines: list[dict]
     """Compact candles + AR/DR rays + trend lines for the HTML chart modal."""
     last_time = int(candles[-1]["time"]) if candles else 0
     rays = [
-        ardr.signal_to_chart_ray(sig, resolve_horizontal_ray(candles, sig), last_time)
+        ardr.signal_to_chart_ray(sig, candles, last_time)
         for sig in signals
     ]
 
@@ -680,14 +680,14 @@ CHART_MODAL_SCRIPT = r"""
   function drawRaySegments(ray, lastTime) {
     const segs = ray.segments || [];
     for (const seg of segs) {
-      const t1 = seg.t1 === lastTime && ray.active && !ray.extended ? lastTime : seg.t1;
+      if (seg.t0 == null || seg.t1 == null || seg.t0 >= seg.t1) continue;
       drawSegment(
         seg.t0,
         seg.price,
-        t1,
+        seg.t1,
         seg.price,
         rayColor(ray.type, seg.active),
-        1,
+        seg.side === "upper" ? 1 : 1,
         LightweightCharts.LineStyle.Dashed
       );
     }
@@ -1067,11 +1067,9 @@ def render_html(payload: dict) -> str:
       <div class="card"><div class="lbl">Crypto</div><div class="val">{c['crypto']}</div></div>
     </div>
     <ul class="rules">
-      <li><strong>AR</strong> 急跌反彈：水平射線在信號 K <strong>最高價</strong></li>
-      <li><strong>DR</strong> 急漲回落：水平射線在信號 K <strong>最低價</strong></li>
-      <li><strong>12 根內</strong>觸原價 → 延伸至信號 K 對側（AR→低、DR→高）</li>
-      <li><strong>超過 12 根</strong>才觸原價 → 射線停在觸碰 K，<strong>不延伸</strong>（報告此類）</li>
-      <li><strong>不報告</strong> 近 {TOUCH_WINDOW_BARS} 根內新出現的 AR/DR</li>
+      <li><strong>AR/DR</strong> 信號 K 的<strong>上引線（高）</strong>與<strong>下引線（低）</strong>皆向右延伸</li>
+      <li>任一侧影線被碰到即<strong>停止</strong>該射線（不再延伸）</li>
+      <li><strong>報告</strong> AR 上引線 / DR 下引線 超過 {TOUCH_WINDOW_BARS} 根後的晚觸碰</li>
       <li><strong>報告</strong> 趨勢線影線觸碰</li>
       <li>點擊 <strong>Symbol</strong> 開啟蠟燭圖（含 AR/DR 與趨勢線）</li>
     </ul>
