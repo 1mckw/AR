@@ -37,6 +37,7 @@ BARS = 2000
 CHART_BARS = 2000
 TIMEFRAMES = ("1h", "1d")
 TF_LABEL = {"1h": "1H", "1d": "1D"}
+TF_ORDER = {tf: i for i, tf in enumerate(TIMEFRAMES)}
 YAHOO_INTERVAL = {"1h": "60m", "1d": "1d"}
 BINANCE_INTERVAL = {"1h": "1h", "1d": "1d"}
 
@@ -1200,7 +1201,7 @@ def main() -> int:
     hits.sort(
         key=lambda x: (
             x["kind"],
-            x.get("timeframe", ""),
+            TF_ORDER.get(x.get("timeframe", ""), 99),
             x["group"],
             x["symbol"],
             x.get("type", ""),
