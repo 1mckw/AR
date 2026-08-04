@@ -452,8 +452,8 @@
       <label class="field" for="maxLookback">Bars
         <input id="maxLookback" type="number" value="500" min="100" step="100" style="width:48px" />
       </label>
-      <label class="field" for="invalidateCross">Cross
-        <input id="invalidateCross" type="number" value="2" min="1" max="5" style="width:32px" />
+      <label class="field" for="invalidateCross">Grace
+        <input id="invalidateCross" type="number" value="2" min="1" max="5" style="width:32px" title="急涨跌贯穿后实体仍在线外允许的最大 K 数" />
       </label>
       <label class="field" for="maxResistance">阻
         <input id="maxResistance" type="number" value="1" min="1" max="5" style="width:32px" />
@@ -466,6 +466,7 @@
 
   <script>
     const LOOKBACK = 10, VOL_LEN = 20, MAX_LINES_PER_PIVOT = 1;
+    const SHARP_PIERCE_GRACE_BARS = 2;
     const TOUCH_WINDOW_BARS = 12; // 主引線觸碰在此窗口內不報告
 
     const TIMEFRAMES = {
@@ -775,33 +776,82 @@
       return p1.price + slope * (idx - p1.index);
     }
 
-    /** 兩 pivot 之間不可被實體穿透（TradingView Simple Auto Trend Lines） */
-    function validBetweenPivots(candles, p1, p2, resistance) {
-      if (p2.index <= p1.index) return false;
-      const slope = (p2.price - p1.price) / (p2.index - p1.index);
-      for (let i = p1.index + 1; i < p2.index; i++) {
+    function bodyCrosses(candles, i, lp, resistance) {
+      const c = candles[i];
+      if (resistance) return Math.max(c.open, c.close) > lp;
+      return Math.min(c.open, c.close) < lp;
+    }
+
+    function isSharpPierceBar(candles, i, resistance, sharpOpts) {
+      if (resistance) return sharpUp(candles, i, sharpOpts.dropPct, sharpOpts.minStreak, sharpOpts.useStructure);
+      return sharpDown(candles, i, sharpOpts.dropPct, sharpOpts.minStreak, sharpOpts.useStructure);
+    }
+
+    /** 实体穿透校验：急涨/跌可贯穿；贯穿后 wrong-side 实体不得超过 SHARP_PIERCE_GRACE_BARS 根 */
+    function validateLineBodySegment(candles, p1, slope, startI, endI, resistance, sharpOpts) {
+      if (startI > endI) return true;
+      let inGrace = false;
+      let afterPierce = 0;
+      for (let i = startI; i <= endI; i++) {
         const lp = linePrice(p1, slope, i);
-        if (resistance) {
-          if (Math.max(candles[i].open, candles[i].close) > lp) return false;
-        } else {
-          if (Math.min(candles[i].open, candles[i].close) < lp) return false;
+        if (!bodyCrosses(candles, i, lp, resistance)) {
+          inGrace = false;
+          afterPierce = 0;
+          continue;
         }
+        if (isSharpPierceBar(candles, i, resistance, sharpOpts)) {
+          inGrace = true;
+          afterPierce = 0;
+          continue;
+        }
+        if (inGrace) {
+          afterPierce++;
+          if (afterPierce > (sharpOpts.graceBars ?? SHARP_PIERCE_GRACE_BARS)) return false;
+          continue;
+        }
+        return false;
       }
       return true;
     }
 
-    /** 第二 pivot 到現價之間也不可被穿透 */
-    function validToCurrent(candles, p1, p2, resistance) {
-      const slope = (p2.price - p1.price) / (p2.index - p1.index);
-      for (let i = p2.index + 1; i < candles.length; i++) {
+    function findLineBreakIndex(candles, line, sharpOpts) {
+      const { p1, slope, type } = line;
+      const resistance = type === 'resistance';
+      let inGrace = false;
+      let afterPierce = 0;
+      for (let i = p1.index + 1; i < candles.length; i++) {
         const lp = linePrice(p1, slope, i);
-        if (resistance) {
-          if (Math.max(candles[i].open, candles[i].close) > lp) return false;
-        } else {
-          if (Math.min(candles[i].open, candles[i].close) < lp) return false;
+        if (!bodyCrosses(candles, i, lp, resistance)) {
+          inGrace = false;
+          afterPierce = 0;
+          continue;
         }
+        if (isSharpPierceBar(candles, i, resistance, sharpOpts)) {
+          inGrace = true;
+          afterPierce = 0;
+          continue;
+        }
+        if (inGrace) {
+          afterPierce++;
+          if (afterPierce > (sharpOpts.graceBars ?? SHARP_PIERCE_GRACE_BARS)) return i;
+          continue;
+        }
+        return i;
       }
-      return true;
+      return null;
+    }
+
+    /** 兩 pivot 之間不可被實體穿透（TradingView Simple Auto Trend Lines + 急涨跌贯穿 grace） */
+    function validBetweenPivots(candles, p1, p2, resistance, sharpOpts) {
+      if (p2.index <= p1.index) return false;
+      const slope = (p2.price - p1.price) / (p2.index - p1.index);
+      return validateLineBodySegment(candles, p1, slope, p1.index + 1, p2.index - 1, resistance, sharpOpts);
+    }
+
+    /** 第二 pivot 到現價之間也不可被穿透 */
+    function validToCurrent(candles, p1, p2, resistance, sharpOpts) {
+      const slope = (p2.price - p1.price) / (p2.index - p1.index);
+      return validateLineBodySegment(candles, p1, slope, p2.index + 1, candles.length - 1, resistance, sharpOpts);
     }
 
     function buildAutoTrendLines(candles, opts) {
@@ -814,6 +864,13 @@
       const pivLow = findPivots(slice, opts.pivotLow, false, true).lows
         .map(p => ({ ...p, index: p.index + offset }));
 
+      const sharpOpts = {
+        dropPct: opts.dropPct,
+        minStreak: opts.minStreak,
+        useStructure: opts.useStructure,
+        graceBars: opts.graceBars ?? SHARP_PIERCE_GRACE_BARS,
+      };
+
       function collect(pts, resistance) {
         const candidates = [];
         for (let a = 0; a < pts.length; a++) {
@@ -823,8 +880,8 @@
             const p1 = pts[a], p2 = pts[b];
             if (resistance && p2.price >= p1.price) continue;
             if (!resistance && p2.price <= p1.price) continue;
-            if (!validBetweenPivots(candles, p1, p2, resistance)) continue;
-            if (!validToCurrent(candles, p1, p2, resistance)) continue;
+            if (!validBetweenPivots(candles, p1, p2, resistance, sharpOpts)) continue;
+            if (!validToCurrent(candles, p1, p2, resistance, sharpOpts)) continue;
             const slope = (p2.price - p1.price) / (p2.index - p1.index);
             const endIdx = candles.length - 1;
             candidates.push({
@@ -852,25 +909,19 @@
       return [...collect(pivHigh, true), ...collect(pivLow, false)];
     }
 
-    function checkLineInvalidation(candles, line, crossBars) {
-      const { p1, slope, type } = line;
-      let consecutive = 0;
-      for (let i = candles.length - 1; i > p1.index; i--) {
-        const lp = linePrice(p1, slope, i);
-        const c = candles[i];
-        const crossed = type === 'resistance'
-          ? c.close > lp && c.open > lp * 0.999
-          : c.close < lp && c.open < lp * 1.001;
-        if (crossed) {
-          consecutive++;
-          if (consecutive >= crossBars) {
-            return { invalid: true, breakIndex: i, breakTime: c.time, breakPrice: c.close };
-          }
-        } else {
-          consecutive = 0;
-        }
-      }
-      return { invalid: false };
+    function checkLineInvalidation(candles, line, sharpOpts) {
+      return findLineBreakIndex(candles, line, sharpOpts) != null;
+    }
+
+    function lineEndAtBreak(candles, line, sharpOpts) {
+      const breakI = findLineBreakIndex(candles, line, sharpOpts);
+      const endI = breakI != null ? breakI : candles.length - 1;
+      const safeEnd = Math.max(endI, line.p2.index);
+      return {
+        endTime: candles[safeEnd].time,
+        endPrice: linePrice(line.p1, line.slope, safeEnd),
+        invalid: breakI != null,
+      };
     }
 
     function priceAtLine(line, index) {
@@ -1021,10 +1072,12 @@
       });
     }
 
-    /** 趨勢線首次被 K 線影線觸碰 */
-    function findTrendTouch(candles, line) {
+    /** 趨勢線首次被 K 線影線觸碰（失效 bar 之前） */
+    function findTrendTouch(candles, line, sharpOpts) {
       const start = Math.max(line.p2.index, line.p1.index) + 1;
-      for (let i = start; i < candles.length; i++) {
+      const breakI = findLineBreakIndex(candles, line, sharpOpts);
+      const end = breakI != null ? breakI - 1 : candles.length - 1;
+      for (let i = start; i <= end; i++) {
         const lp = linePrice(line.p1, line.slope, i);
         const c = candles[i];
         const touched = line.type === 'resistance' ? c.high >= lp : c.low <= lp;
@@ -1035,7 +1088,7 @@
       return null;
     }
 
-    function checkTouchNotifications(signals, trendLines, candles, ctx) {
+    function checkTouchNotifications(signals, trendLines, candles, ctx, sharpOpts) {
       const nextUntouchedRays = new Set();
       const nextUntouchedTrends = new Set();
       const touches = [];
@@ -1065,7 +1118,7 @@
       for (const line of trendLines) {
         if (line.invalidated) continue;
         const key = trendWatchKey(ctx, line);
-        const touch = findTrendTouch(candles, line);
+        const touch = findTrendTouch(candles, line, sharpOpts);
         if (!touch) {
           nextUntouchedTrends.add(key);
         } else if (watchBaseline && untouchedTrendKeys.has(key)) {
@@ -1088,7 +1141,7 @@
           if (primaryRay(sig.rays, sig.type).active) untouchedRayKeys.add(key);
         }
         for (const line of trendLines) {
-          if (!line.invalidated && !findTrendTouch(candles, line)) {
+          if (!line.invalidated && !findTrendTouch(candles, line, sharpOpts)) {
             untouchedTrendKeys.add(trendWatchKey(ctx, line));
           }
         }
@@ -1224,14 +1277,23 @@
         pivotHigh: +document.getElementById('pivotHigh').value,
         pivotLow: +document.getElementById('pivotLow').value,
         maxLookback: +document.getElementById('maxLookback').value,
-        invalidateCross: +document.getElementById('invalidateCross').value,
+        graceBars: +document.getElementById('invalidateCross').value,
         maxResistance: +document.getElementById('maxResistance').value,
         maxSupport: +document.getElementById('maxSupport').value,
+        dropPct: +document.getElementById('dropPct').value,
+        minStreak: +document.getElementById('minStreak').value,
+        useStructure: document.getElementById('useStructure').value === '1',
       };
-      const dropPct = +document.getElementById('dropPct').value;
-      const minStreak = +document.getElementById('minStreak').value;
+      const sharpOpts = {
+        dropPct: tlOpts.dropPct,
+        minStreak: tlOpts.minStreak,
+        useStructure: tlOpts.useStructure,
+        graceBars: tlOpts.graceBars,
+      };
+      const dropPct = tlOpts.dropPct;
+      const minStreak = tlOpts.minStreak;
       const volMult = +document.getElementById('volMult').value;
-      const useStructure = document.getElementById('useStructure').value === '1';
+      const useStructure = tlOpts.useStructure;
       const status = document.getElementById('status');
       const display = displaySymbol(symbolInfo);
 
@@ -1253,11 +1315,14 @@
 
         const trendLines = buildAutoTrendLines(candles, tlOpts);
         trendLines.forEach(line => {
-          const inv = checkLineInvalidation(candles, line, tlOpts.invalidateCross);
-          line.invalidated = inv.invalid;
-          if (inv.invalid) {
-            line.endTime = inv.breakTime;
-            line.endPrice = linePrice(line.p1, line.slope, inv.breakIndex);
+          const end = lineEndAtBreak(candles, line, sharpOpts);
+          line.invalidated = end.invalid;
+          line.endTime = end.endTime;
+          line.endPrice = end.endPrice;
+          if (!line.invalidated) {
+            const last = candles[candles.length - 1];
+            line.endTime = last.time;
+            line.endPrice = linePrice(line.p1, line.slope, candles.length - 1);
           }
         });
         activeTrendLines = trendLines.filter(l => !l.invalidated);
@@ -1288,7 +1353,7 @@
           });
         });
 
-        const newBreaks = checkTouchNotifications(signals, trendLines, candles, watchCtx);
+        const newBreaks = checkTouchNotifications(signals, trendLines, candles, watchCtx, sharpOpts);
 
         candleSeries.setMarkers(markers.sort((a, b) => a.time - b.time));
         renderSignals(signals, candles, trendLines);

@@ -21,6 +21,7 @@ from datetime import datetime, timezone
 from typing import Any
 
 import ardr
+import trendlines as tl
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(ROOT, "signals")
@@ -46,13 +47,20 @@ resolve_signal_rays = ardr.resolve_signal_rays
 collect_late_ar_dr_touches = ardr.collect_late_ar_dr_touches
 fresh_range = ardr.fresh_range
 
-PIVOT_HIGH = 4
-PIVOT_LOW = 4
-MAX_LOOKBACK = 2000
-INVALIDATE_CROSS = 2
-MAX_RESISTANCE = 1
-MAX_SUPPORT = 1
-MAX_LINES_PER_PIVOT = 1
+PIVOT_HIGH = tl.PIVOT_HIGH
+PIVOT_LOW = tl.PIVOT_LOW
+MAX_LOOKBACK = tl.MAX_LOOKBACK
+MAX_RESISTANCE = tl.MAX_RESISTANCE
+MAX_SUPPORT = tl.MAX_SUPPORT
+MAX_LINES_PER_PIVOT = tl.MAX_LINES_PER_PIVOT
+SHARP_PIERCE_GRACE_BARS = tl.SHARP_PIERCE_GRACE_BARS
+find_pivots = tl.find_pivots
+line_price = tl.line_price
+build_auto_trend_lines = tl.build_auto_trend_lines
+check_line_invalidation = tl.check_line_invalidation
+find_trend_touch = tl.find_trend_touch
+find_line_break_index = tl.find_line_break_index
+line_end_at_break = tl.line_end_at_break
 
 UA = {"User-Agent": "Mozilla/5.0 (compatible; AR-Signal-Scanner/1.0)"}
 
@@ -281,136 +289,6 @@ def fetch_yahoo(symbol: str, timeframe: str = "1h", bars: int = BARS) -> list[di
     return []
 
 
-def find_pivots(candles: list[dict], length: int, highs_only: bool, lows_only: bool):
-    highs, lows = [], []
-    for i in range(length, len(candles) - length):
-        is_high = is_low = True
-        for j in range(1, length + 1):
-            if candles[i]["high"] <= candles[i - j]["high"] or candles[i]["high"] <= candles[i + j]["high"]:
-                is_high = False
-            if candles[i]["low"] >= candles[i - j]["low"] or candles[i]["low"] >= candles[i + j]["low"]:
-                is_low = False
-        if is_high and not lows_only:
-            highs.append({"index": i, "time": candles[i]["time"], "price": candles[i]["high"]})
-        if is_low and not highs_only:
-            lows.append({"index": i, "time": candles[i]["time"], "price": candles[i]["low"]})
-    return highs, lows
-
-
-def line_price(p1: dict, slope: float, idx: int) -> float:
-    return p1["price"] + slope * (idx - p1["index"])
-
-
-def valid_between_pivots(candles: list[dict], p1: dict, p2: dict, resistance: bool) -> bool:
-    if p2["index"] <= p1["index"]:
-        return False
-    slope = (p2["price"] - p1["price"]) / (p2["index"] - p1["index"])
-    for i in range(p1["index"] + 1, p2["index"]):
-        lp = line_price(p1, slope, i)
-        body_hi = max(candles[i]["open"], candles[i]["close"])
-        body_lo = min(candles[i]["open"], candles[i]["close"])
-        if resistance and body_hi > lp:
-            return False
-        if not resistance and body_lo < lp:
-            return False
-    return True
-
-
-def valid_to_current(candles: list[dict], p1: dict, p2: dict, resistance: bool) -> bool:
-    slope = (p2["price"] - p1["price"]) / (p2["index"] - p1["index"])
-    for i in range(p2["index"] + 1, len(candles)):
-        lp = line_price(p1, slope, i)
-        body_hi = max(candles[i]["open"], candles[i]["close"])
-        body_lo = min(candles[i]["open"], candles[i]["close"])
-        if resistance and body_hi > lp:
-            return False
-        if not resistance and body_lo < lp:
-            return False
-    return True
-
-
-def build_auto_trend_lines(candles: list[dict]) -> list[dict]:
-    start_idx = max(0, len(candles) - MAX_LOOKBACK)
-    slice_c = candles[start_idx:]
-    offset = start_idx
-    piv_high, _ = find_pivots(slice_c, PIVOT_HIGH, True, False)
-    _, piv_low = find_pivots(slice_c, PIVOT_LOW, False, True)
-    piv_high = [{**p, "index": p["index"] + offset} for p in piv_high]
-    piv_low = [{**p, "index": p["index"] + offset} for p in piv_low]
-
-    def collect(pts: list[dict], resistance: bool) -> list[dict]:
-        candidates = []
-        for a, p1 in enumerate(pts):
-            count_from = 0
-            for b in range(a + 1, len(pts)):
-                if count_from >= MAX_LINES_PER_PIVOT:
-                    break
-                p2 = pts[b]
-                if resistance and p2["price"] >= p1["price"]:
-                    continue
-                if not resistance and p2["price"] <= p1["price"]:
-                    continue
-                if not valid_between_pivots(candles, p1, p2, resistance):
-                    continue
-                if not valid_to_current(candles, p1, p2, resistance):
-                    continue
-                slope = (p2["price"] - p1["price"]) / (p2["index"] - p1["index"])
-                candidates.append(
-                    {
-                        "type": "resistance" if resistance else "support",
-                        "p1": p1,
-                        "p2": p2,
-                        "slope": slope,
-                        "span": p2["index"] - p1["index"],
-                    }
-                )
-                count_from += 1
-        candidates.sort(key=lambda c: (-c["span"], c["p1"]["index"]))
-        picked, used = [], set()
-        limit = MAX_RESISTANCE if resistance else MAX_SUPPORT
-        for c in candidates:
-            if len(picked) >= limit:
-                break
-            if c["p1"]["index"] in used:
-                continue
-            picked.append(c)
-            used.add(c["p1"]["index"])
-        return picked
-
-    return collect(piv_high, True) + collect(piv_low, False)
-
-
-def check_line_invalidation(candles: list[dict], line: dict) -> bool:
-    consecutive = 0
-    p1, slope, typ = line["p1"], line["slope"], line["type"]
-    for i in range(len(candles) - 1, p1["index"], -1):
-        lp = line_price(p1, slope, i)
-        c = candles[i]
-        crossed = (
-            c["close"] > lp and c["open"] > lp * 0.999
-            if typ == "resistance"
-            else c["close"] < lp and c["open"] < lp * 1.001
-        )
-        if crossed:
-            consecutive += 1
-            if consecutive >= INVALIDATE_CROSS:
-                return True
-        else:
-            consecutive = 0
-    return False
-
-
-def find_trend_touch(candles: list[dict], line: dict) -> dict | None:
-    start = max(line["p2"]["index"], line["p1"]["index"]) + 1
-    for i in range(start, len(candles)):
-        lp = line_price(line["p1"], line["slope"], i)
-        c = candles[i]
-        touched = c["high"] >= lp if line["type"] == "resistance" else c["low"] <= lp
-        if touched:
-            return {"time": c["time"], "price": lp, "index": i, "close": c["close"]}
-    return None
-
-
 def collect_trend_touches(candles: list[dict], lines: list[dict]) -> list[dict]:
     if not candles:
         return []
@@ -448,30 +326,9 @@ def build_chart_pack(candles: list[dict], signals: list[dict], lines: list[dict]
     ]
 
     trend = []
-    last_i = len(candles) - 1
     for line in lines:
         invalidated = check_line_invalidation(candles, line)
-        end_time = candles[last_i]["time"]
-        end_price = line_price(line["p1"], line["slope"], last_i)
-        if invalidated:
-            consecutive = 0
-            p1, slope, typ = line["p1"], line["slope"], line["type"]
-            for i in range(last_i, p1["index"], -1):
-                lp = line_price(p1, slope, i)
-                c = candles[i]
-                crossed = (
-                    c["close"] > lp and c["open"] > lp * 0.999
-                    if typ == "resistance"
-                    else c["close"] < lp and c["open"] < lp * 1.001
-                )
-                if crossed:
-                    consecutive += 1
-                    if consecutive >= INVALIDATE_CROSS:
-                        end_time = c["time"]
-                        end_price = lp
-                        break
-                else:
-                    consecutive = 0
+        end_time, end_price = line_end_at_break(candles, line)
         trend.append(
             {
                 "type": line["type"],
@@ -1071,6 +928,7 @@ def render_html(payload: dict) -> str:
       <li><strong>AR/DR</strong> 信號 K 的<strong>上引線（高）</strong>與<strong>下引線（低）</strong>皆向右延伸</li>
       <li>任一侧影線被碰到即<strong>停止</strong>該射線（不再延伸）</li>
       <li><strong>報告</strong> AR 上引線 / DR 下引線 超過 {TOUCH_WINDOW_BARS} 根後的晚觸碰</li>
+      <li>急漲/急跌 K 實體可<strong>貫穿</strong>趨勢線（阻力←急漲、支撐←急跌）；貫穿後實體仍在线外不得超過 <strong>{SHARP_PIERCE_GRACE_BARS}</strong> 根 K</li>
       <li><strong>報告</strong> 趨勢線影線觸碰</li>
       <li>點擊 <strong>Symbol</strong> 開啟蠟燭圖（含 AR/DR 與趨勢線）</li>
     </ul>
