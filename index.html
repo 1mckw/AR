@@ -877,30 +877,48 @@
       return linePrice(line.p1, line.slope, index);
     }
 
+    function sharpDown(candles, idx, dropPctMin, minStreak, useStructure) {
+      if (idx < LOOKBACK + minStreak) return false;
+      const base = candles[idx - LOOKBACK].close;
+      if (!base) return false;
+      const dropPct = (base - candles[idx].close) / base * 100;
+      if (dropPct < dropPctMin) return false;
+      if (!streak(candles, idx, true, minStreak)) return false;
+      if (useStructure) {
+        let priorMax = -Infinity;
+        for (let k = 1; k <= LOOKBACK; k++) priorMax = Math.max(priorMax, candles[idx - k].high);
+        if (candles[idx].high >= priorMax) return false;
+      }
+      return true;
+    }
+
+    function sharpUp(candles, idx, dropPctMin, minStreak, useStructure) {
+      if (idx < LOOKBACK + minStreak) return false;
+      const base = candles[idx - LOOKBACK].close;
+      if (!base) return false;
+      const risePct = (candles[idx].close - base) / base * 100;
+      if (risePct < dropPctMin) return false;
+      if (!streak(candles, idx, false, minStreak)) return false;
+      if (useStructure) {
+        let priorMin = Infinity;
+        for (let k = 1; k <= LOOKBACK; k++) priorMin = Math.min(priorMin, candles[idx - k].low);
+        if (candles[idx].low <= priorMin) return false;
+      }
+      return true;
+    }
+
     function detectSignals(candles, dropPctMin, minStreak, volMult, useStructure) {
       const signals = [];
-      for (let i = LOOKBACK + minStreak; i < candles.length; i++) {
-        const dropPct = (candles[i - LOOKBACK].close - candles[i].close) / candles[i - LOOKBACK].close * 100;
-        const risePct = (candles[i].close - candles[i - LOOKBACK].close) / candles[i - LOOKBACK].close * 100;
+      const start = LOOKBACK + minStreak + 1;
+      for (let i = start; i < candles.length; i++) {
         const volMa = sma(candles.map(x => x.volume), i, VOL_LEN);
         const highVol = volMa == null || candles[i].volume >= volMa * volMult;
-
-        let prevDrop = dropPct >= dropPctMin && streak(candles, i - 1, true, minStreak);
-        let prevRise = risePct >= dropPctMin && streak(candles, i - 1, false, minStreak);
-
-        if (useStructure) {
-          let maxH = -Infinity;
-          for (let k = 1; k <= LOOKBACK; k++) maxH = Math.max(maxH, candles[i - k].high);
-          let minL = Infinity;
-          for (let k = 1; k <= LOOKBACK; k++) minL = Math.min(minL, candles[i - k].low);
-          prevDrop = prevDrop && candles[i].high < maxH;
-          prevRise = prevRise && candles[i].low > minL;
-        }
-
-        if (highVol && bullBar(candles, i) && bearBar(candles, i - 1) && prevDrop) {
+        if (!highVol) continue;
+        const prev = i - 1;
+        if (bullBar(candles, i) && bearBar(candles, prev) && sharpDown(candles, prev, dropPctMin, minStreak, useStructure)) {
           signals.push({ type: 'AR', index: i, time: candles[i].time, level: candles[i].high, close: candles[i].close, volume: candles[i].volume });
         }
-        if (highVol && bearBar(candles, i) && bullBar(candles, i - 1) && prevRise) {
+        if (bearBar(candles, i) && bullBar(candles, prev) && sharpUp(candles, prev, dropPctMin, minStreak, useStructure)) {
           signals.push({ type: 'DR', index: i, time: candles[i].time, level: candles[i].low, close: candles[i].close, volume: candles[i].volume });
         }
       }

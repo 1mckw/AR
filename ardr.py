@@ -56,27 +56,57 @@ def sma_vol(c: list[dict], i: int, length: int) -> float | None:
     return sum(c[i - j]["volume"] for j in range(length)) / length
 
 
+def sharp_down(candles: list[dict], idx: int) -> bool:
+    """Pine ``sharpDown`` at bar ``idx`` (drop + bear streak + optional lower high)."""
+    if idx < LOOKBACK + MIN_STREAK:
+        return False
+    base = candles[idx - LOOKBACK]["close"]
+    if not base:
+        return False
+    drop_pct = (base - candles[idx]["close"]) / base * 100
+    if drop_pct < DROP_PCT:
+        return False
+    if not streak(candles, idx, True, MIN_STREAK):
+        return False
+    if USE_STRUCTURE:
+        prior_max = max(candles[idx - k]["high"] for k in range(1, LOOKBACK + 1))
+        if candles[idx]["high"] >= prior_max:
+            return False
+    return True
+
+
+def sharp_up(candles: list[dict], idx: int) -> bool:
+    """Pine ``sharpUp`` at bar ``idx`` (rise + bull streak + optional higher low)."""
+    if idx < LOOKBACK + MIN_STREAK:
+        return False
+    base = candles[idx - LOOKBACK]["close"]
+    if not base:
+        return False
+    rise_pct = (candles[idx]["close"] - base) / base * 100
+    if rise_pct < DROP_PCT:
+        return False
+    if not streak(candles, idx, False, MIN_STREAK):
+        return False
+    if USE_STRUCTURE:
+        prior_min = min(candles[idx - k]["low"] for k in range(1, LOOKBACK + 1))
+        if candles[idx]["low"] <= prior_min:
+            return False
+    return True
+
+
 def detect_signals(candles: list[dict]) -> list[dict]:
-    """Find AR/DR reversal bars."""
+    """Find AR/DR reversal bars (matches Pine: sharpDown[1] / sharpUp[1])."""
     signals: list[dict] = []
-    if len(candles) < LOOKBACK + MIN_STREAK + 2:
+    start = LOOKBACK + MIN_STREAK + 1
+    if len(candles) < start + 1:
         return signals
-    for i in range(LOOKBACK + MIN_STREAK, len(candles)):
-        base = candles[i - LOOKBACK]["close"]
-        if not base:
-            continue
-        drop_pct = (base - candles[i]["close"]) / base * 100
-        rise_pct = (candles[i]["close"] - base) / base * 100
+    for i in range(start, len(candles)):
         vol_ma = sma_vol(candles, i, VOL_LEN)
         high_vol = vol_ma is None or candles[i]["volume"] >= vol_ma * VOL_MULT
-        prev_drop = drop_pct >= DROP_PCT and streak(candles, i - 1, True, MIN_STREAK)
-        prev_rise = rise_pct >= DROP_PCT and streak(candles, i - 1, False, MIN_STREAK)
-        if USE_STRUCTURE:
-            max_h = max(candles[i - k]["high"] for k in range(1, LOOKBACK + 1))
-            min_l = min(candles[i - k]["low"] for k in range(1, LOOKBACK + 1))
-            prev_drop = prev_drop and candles[i]["high"] < max_h
-            prev_rise = prev_rise and candles[i]["low"] > min_l
-        if high_vol and bull_bar(candles, i) and bear_bar(candles, i - 1) and prev_drop:
+        if not high_vol:
+            continue
+        prev = i - 1
+        if bull_bar(candles, i) and bear_bar(candles, prev) and sharp_down(candles, prev):
             signals.append(
                 {
                     "type": "AR",
@@ -87,7 +117,7 @@ def detect_signals(candles: list[dict]) -> list[dict]:
                     "volume": candles[i]["volume"],
                 }
             )
-        if high_vol and bear_bar(candles, i) and bull_bar(candles, i - 1) and prev_rise:
+        if bear_bar(candles, i) and bull_bar(candles, prev) and sharp_up(candles, prev):
             signals.append(
                 {
                     "type": "DR",
