@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-04 00:28:54 UTC",
+  "generated_at": "2026-08-04 01:14:58 UTC",
   "timeframes": [
     "1h",
     "1d"
   ],
   "timeframe": "1h+1d",
   "params": {
-    "bars": 5000,
+    "bars": 2000,
     "touch_window_bars": 12,
     "fresh_bars": 2,
     "drop_pct": 3.0,
@@ -30,8 +30,8 @@
   "results": [
     {
       "group": "ndx100",
-      "symbol": "AAPL",
-      "name": "Apple Inc.",
+      "symbol": "MSFT",
+      "name": "Microsoft",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -40,8 +40,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "AMZN",
-      "name": "Amazon",
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -60,28 +60,18 @@
     },
     {
       "group": "ndx100",
+      "symbol": "AMZN",
+      "name": "Amazon",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
       "symbol": "GOOGL",
       "name": "Alphabet Inc. (Class A)",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
-      "symbol": "MSFT",
-      "name": "Microsoft",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
-      "symbol": "GOOG",
-      "name": "Alphabet Inc. (Class C)",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -100,28 +90,28 @@
     },
     {
       "group": "ndx100",
-      "symbol": "TSLA",
-      "name": "Tesla, Inc.",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
-      "symbol": "WMT",
-      "name": "Walmart",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
       "symbol": "META",
       "name": "Meta Platforms",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "GOOG",
+      "name": "Alphabet Inc. (Class C)",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "TSLA",
+      "name": "Tesla, Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -140,8 +130,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MU",
-      "name": "Micron Technology",
+      "symbol": "WMT",
+      "name": "Walmart",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -160,8 +150,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "PLTR",
-      "name": "Palantir Technologies",
+      "symbol": "NFLX",
+      "name": "Netflix",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -170,8 +160,18 @@
     },
     {
       "group": "ndx100",
-      "symbol": "NFLX",
-      "name": "Netflix",
+      "symbol": "MU",
+      "name": "Micron Technology",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "PLTR",
+      "name": "Palantir Technologies",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -210,6 +210,16 @@
     },
     {
       "group": "ndx100",
+      "symbol": "TMUS",
+      "name": "T-Mobile US",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
       "symbol": "LRCX",
       "name": "Lam Research",
       "source": "yahoo",
@@ -240,16 +250,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "TMUS",
-      "name": "T-Mobile US",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
       "symbol": "PEP",
       "name": "PepsiCo",
       "source": "yahoo",
@@ -270,8 +270,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "TXN",
-      "name": "Texas Instruments",
+      "symbol": "AMGN",
+      "name": "Amgen",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -280,8 +280,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "AMGN",
-      "name": "Amgen",
+      "symbol": "TXN",
+      "name": "Texas Instruments",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -300,18 +300,18 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ARM",
-      "name": "Arm Holdings",
+      "symbol": "ISRG",
+      "name": "Intuitive Surgical",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
       "events": [],
-      "error": "HTTP Error 422: Unprocessable Entity"
+      "error": "name 'fresh_range' is not defined"
     },
     {
       "group": "ndx100",
-      "symbol": "SHOP",
-      "name": "Shopify",
+      "symbol": "ARM",
+      "name": "Arm Holdings",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -330,8 +330,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ISRG",
-      "name": "Intuitive Surgical",
+      "symbol": "SHOP",
+      "name": "Shopify",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -360,16 +360,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "APP",
-      "name": "Applovin Corp",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
       "symbol": "QCOM",
       "name": "Qualcomm",
       "source": "yahoo",
@@ -380,8 +370,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "PANW",
-      "name": "Palo Alto Networks",
+      "symbol": "APP",
+      "name": "Applovin Corp",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -400,6 +390,16 @@
     },
     {
       "group": "ndx100",
+      "symbol": "PANW",
+      "name": "Palo Alto Networks",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
       "symbol": "INTU",
       "name": "Intuit",
       "source": "yahoo",
@@ -410,8 +410,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CMCSA",
-      "name": "Comcast",
+      "symbol": "VRTX",
+      "name": "Vertex Pharmaceuticals",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -430,8 +430,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "VRTX",
-      "name": "Vertex Pharmaceuticals",
+      "symbol": "CMCSA",
+      "name": "Comcast",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -490,8 +490,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MRVL",
-      "name": "Marvell Technology",
+      "symbol": "MELI",
+      "name": "MercadoLibre",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -500,8 +500,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MELI",
-      "name": "MercadoLibre",
+      "symbol": "ADP",
+      "name": "ADP",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -520,8 +520,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ADP",
-      "name": "ADP",
+      "symbol": "MRVL",
+      "name": "Marvell Technology",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -550,16 +550,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "SNPS",
-      "name": "Synopsys",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
       "symbol": "CSX",
       "name": "CSX Corporation",
       "source": "yahoo",
@@ -570,8 +560,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ORLY",
-      "name": "O'Reilly Automotive",
+      "symbol": "SNPS",
+      "name": "Synopsys",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -590,8 +580,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "AEP",
-      "name": "American Electric Power",
+      "symbol": "ORLY",
+      "name": "O'Reilly Automotive",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -620,8 +610,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ROST",
-      "name": "Ross Stores",
+      "symbol": "AEP",
+      "name": "American Electric Power",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -640,8 +630,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "DASH",
-      "name": "DoorDash",
+      "symbol": "ROST",
+      "name": "Ross Stores",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -652,6 +642,16 @@
       "group": "ndx100",
       "symbol": "CTAS",
       "name": "Cintas",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "DASH",
+      "name": "DoorDash",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -700,8 +700,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "FANG",
-      "name": "Diamondback Energy",
+      "symbol": "FAST",
+      "name": "Fastenal",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -710,8 +710,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "FAST",
-      "name": "Fastenal",
+      "symbol": "FANG",
+      "name": "Diamondback Energy",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -730,8 +730,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "EXC",
-      "name": "Exelon",
+      "symbol": "ADSK",
+      "name": "Autodesk",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -740,8 +740,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ADSK",
-      "name": "Autodesk",
+      "symbol": "EXC",
+      "name": "Exelon",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -770,6 +770,16 @@
     },
     {
       "group": "ndx100",
+      "symbol": "IDXX",
+      "name": "Idexx Laboratories",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
       "symbol": "FER",
       "name": "Ferrovial SE",
       "source": "yahoo",
@@ -782,16 +792,6 @@
       "group": "ndx100",
       "symbol": "ALNY",
       "name": "Alnylam Pharmaceuticals",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
-      "symbol": "IDXX",
-      "name": "Idexx Laboratories",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -860,16 +860,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ROP",
-      "name": "Roper Technologies",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
       "symbol": "TTWO",
       "name": "Take-Two Interactive",
       "source": "yahoo",
@@ -880,8 +870,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "INSM",
-      "name": "Insmed Incorporated",
+      "symbol": "ROP",
+      "name": "Roper Technologies",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -892,6 +882,16 @@
       "group": "ndx100",
       "symbol": "KDP",
       "name": "Keurig Dr Pepper",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "INSM",
+      "name": "Insmed Incorporated",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -960,8 +960,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CTSH",
-      "name": "Cognizant",
+      "symbol": "CHTR",
+      "name": "Charter Communications",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -970,8 +970,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CHTR",
-      "name": "Charter Communications",
+      "symbol": "CTSH",
+      "name": "Cognizant",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -1040,16 +1040,6 @@
     },
     {
       "group": "futures",
-      "symbol": "HG=F",
-      "name": "Copper",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "futures",
       "symbol": "GC=F",
       "name": "Gold",
       "source": "yahoo",
@@ -1062,6 +1052,16 @@
       "group": "futures",
       "symbol": "SI=F",
       "name": "Silver",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "futures",
+      "symbol": "HG=F",
+      "name": "Copper",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -1120,8 +1120,8 @@
     },
     {
       "group": "futures",
-      "symbol": "RTY=F",
-      "name": "E-mini Russell",
+      "symbol": "ZB=F",
+      "name": "US Treasury Bond",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -1130,8 +1130,8 @@
     },
     {
       "group": "futures",
-      "symbol": "ZB=F",
-      "name": "US Treasury Bond",
+      "symbol": "RTY=F",
+      "name": "E-mini Russell",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 0,
@@ -1190,16 +1190,6 @@
     },
     {
       "group": "crypto",
-      "symbol": "MIRAUSDT",
-      "name": "MIRA",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
       "symbol": "ETHUSDT",
       "name": "ETH",
       "source": "binance",
@@ -1210,8 +1200,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "SNDKBUSDT",
-      "name": "SNDKB",
+      "symbol": "MIRAUSDT",
+      "name": "MIRA",
       "source": "binance",
       "timeframe": "1h",
       "bars": 0,
@@ -1230,8 +1220,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "BNBUSDT",
-      "name": "BNB",
+      "symbol": "SNDKBUSDT",
+      "name": "SNDKB",
       "source": "binance",
       "timeframe": "1h",
       "bars": 0,
@@ -1250,28 +1240,18 @@
     },
     {
       "group": "crypto",
+      "symbol": "BNBUSDT",
+      "name": "BNB",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
       "symbol": "ADAUSDT",
       "name": "ADA",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
-      "symbol": "RLUSDUSDT",
-      "name": "RLUSD",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
-      "symbol": "SPCXBUSDT",
-      "name": "SPCXB",
       "source": "binance",
       "timeframe": "1h",
       "bars": 0,
@@ -1290,8 +1270,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "SOXLBUSDT",
-      "name": "SOXLB",
+      "symbol": "RLUSDUSDT",
+      "name": "RLUSD",
       "source": "binance",
       "timeframe": "1h",
       "bars": 0,
@@ -1310,8 +1290,18 @@
     },
     {
       "group": "crypto",
-      "symbol": "SKHYBUSDT",
-      "name": "SKHYB",
+      "symbol": "SPCXBUSDT",
+      "name": "SPCXB",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "SOXLBUSDT",
+      "name": "SOXLB",
       "source": "binance",
       "timeframe": "1h",
       "bars": 0,
@@ -1340,8 +1330,18 @@
     },
     {
       "group": "crypto",
-      "symbol": "XAUTUSDT",
-      "name": "XAUT",
+      "symbol": "VICUSDT",
+      "name": "VIC",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "SKHYBUSDT",
+      "name": "SKHYB",
       "source": "binance",
       "timeframe": "1h",
       "bars": 0,
@@ -1360,6 +1360,26 @@
     },
     {
       "group": "crypto",
+      "symbol": "ENAUSDT",
+      "name": "ENA",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "XAUTUSDT",
+      "name": "XAUT",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
       "symbol": "UUSDT",
       "name": "U",
       "source": "binance",
@@ -1370,8 +1390,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "VICUSDT",
-      "name": "VIC",
+      "symbol": "GIGGLEUSDT",
+      "name": "GIGGLE",
       "source": "binance",
       "timeframe": "1h",
       "bars": 0,
@@ -1390,26 +1410,6 @@
     },
     {
       "group": "crypto",
-      "symbol": "ENAUSDT",
-      "name": "ENA",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
-      "symbol": "BANKUSDT",
-      "name": "BANK",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
       "symbol": "EULUSDT",
       "name": "EUL",
       "source": "binance",
@@ -1420,8 +1420,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "GIGGLEUSDT",
-      "name": "GIGGLE",
+      "symbol": "BANKUSDT",
+      "name": "BANK",
       "source": "binance",
       "timeframe": "1h",
       "bars": 0,
@@ -1490,16 +1490,6 @@
     },
     {
       "group": "crypto",
-      "symbol": "DEXEUSDT",
-      "name": "DEXE",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
       "symbol": "UTKUSDT",
       "name": "UTK",
       "source": "binance",
@@ -1510,8 +1500,18 @@
     },
     {
       "group": "crypto",
-      "symbol": "CRCLBUSDT",
-      "name": "CRCLB",
+      "symbol": "DEXEUSDT",
+      "name": "DEXE",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "GRAMUSDT",
+      "name": "GRAM",
       "source": "binance",
       "timeframe": "1h",
       "bars": 0,
@@ -1530,8 +1530,28 @@
     },
     {
       "group": "crypto",
+      "symbol": "PAXGUSDT",
+      "name": "PAXG",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
       "symbol": "ONDOUSDT",
       "name": "ONDO",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "CRCLBUSDT",
+      "name": "CRCLB",
       "source": "binance",
       "timeframe": "1h",
       "bars": 0,
@@ -1552,16 +1572,6 @@
       "group": "crypto",
       "symbol": "AAVEUSDT",
       "name": "AAVE",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
-      "symbol": "PAXGUSDT",
-      "name": "PAXG",
       "source": "binance",
       "timeframe": "1h",
       "bars": 0,
@@ -1610,8 +1620,28 @@
     },
     {
       "group": "crypto",
+      "symbol": "KORUBUSDT",
+      "name": "KORUB",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
       "symbol": "TONUSDT",
       "name": "TON",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "TAOUSDT",
+      "name": "TAO",
       "source": "binance",
       "timeframe": "1h",
       "bars": 0,
@@ -1630,8 +1660,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "KORUBUSDT",
-      "name": "KORUB",
+      "symbol": "SNXXBUSDT",
+      "name": "SNXXB",
       "source": "binance",
       "timeframe": "1h",
       "bars": 0,
@@ -1640,8 +1670,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "SNXXBUSDT",
-      "name": "SNXXB",
+      "symbol": "XLMUSDT",
+      "name": "XLM",
       "source": "binance",
       "timeframe": "1h",
       "bars": 0,
@@ -1660,8 +1690,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "AAPL",
-      "name": "Apple Inc.",
+      "symbol": "MSFT",
+      "name": "Microsoft",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -1670,8 +1700,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MSFT",
-      "name": "Microsoft",
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -1799,16 +1829,6 @@
       "error": "name 'fresh_range' is not defined"
     },
     {
-      "group": "crypto",
-      "symbol": "TAOUSDT",
-      "name": "TAO",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
       "group": "ndx100",
       "symbol": "AMD",
       "name": "Advanced Micro Devices Inc.",
@@ -1880,16 +1900,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "PEP",
-      "name": "PepsiCo",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
       "symbol": "KLAC",
       "name": "KLA Corporation",
       "source": "yahoo",
@@ -1900,8 +1910,28 @@
     },
     {
       "group": "ndx100",
+      "symbol": "PEP",
+      "name": "PepsiCo",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
       "symbol": "AMGN",
       "name": "Amgen",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "GILD",
+      "name": "Gilead Sciences",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -1930,16 +1960,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "GILD",
-      "name": "Gilead Sciences",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
       "symbol": "ARM",
       "name": "Arm Holdings",
       "source": "yahoo",
@@ -1959,16 +1979,6 @@
       "error": "name 'fresh_range' is not defined"
     },
     {
-      "group": "crypto",
-      "symbol": "XLMUSDT",
-      "name": "XLM",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
       "group": "ndx100",
       "symbol": "ADI",
       "name": "Analog Devices",
@@ -1980,8 +1990,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "PDD",
-      "name": "PDD Holdings",
+      "symbol": "HON",
+      "name": "Honeywell",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -1990,8 +2000,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "HON",
-      "name": "Honeywell",
+      "symbol": "PDD",
+      "name": "PDD Holdings",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2020,16 +2030,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "PANW",
-      "name": "Palo Alto Networks",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
       "symbol": "BKNG",
       "name": "Booking Holdings",
       "source": "yahoo",
@@ -2040,8 +2040,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "VRTX",
-      "name": "Vertex Pharmaceuticals",
+      "symbol": "PANW",
+      "name": "Palo Alto Networks",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2070,8 +2070,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CMCSA",
-      "name": "Comcast",
+      "symbol": "VRTX",
+      "name": "Vertex Pharmaceuticals",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2082,6 +2082,16 @@
       "group": "ndx100",
       "symbol": "CEG",
       "name": "Constellation Energy",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "CMCSA",
+      "name": "Comcast",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2120,36 +2130,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "STX",
-      "name": "Seagate Technology Holdings",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
-      "symbol": "MELI",
-      "name": "MercadoLibre",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
-      "symbol": "MAR",
-      "name": "Marriott International",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
       "symbol": "MRVL",
       "name": "Marvell Technology",
       "source": "yahoo",
@@ -2160,28 +2140,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CDNS",
-      "name": "Cadence Design Systems",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
-      "symbol": "FILUSDT",
-      "name": "FIL",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
-      "symbol": "ADP",
-      "name": "ADP",
+      "symbol": "STX",
+      "name": "Seagate Technology Holdings",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2200,8 +2160,38 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ORLY",
-      "name": "O'Reilly Automotive",
+      "symbol": "MAR",
+      "name": "Marriott International",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "ADP",
+      "name": "ADP",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "MELI",
+      "name": "MercadoLibre",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "CDNS",
+      "name": "Cadence Design Systems",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2230,8 +2220,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ABNB",
-      "name": "Airbnb",
+      "symbol": "ORLY",
+      "name": "O'Reilly Automotive",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2240,8 +2230,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MNST",
-      "name": "Monster Beverage",
+      "symbol": "ABNB",
+      "name": "Airbnb",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2260,16 +2250,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "WBD",
-      "name": "Warner Bros. Discovery",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
       "symbol": "AEP",
       "name": "American Electric Power",
       "source": "yahoo",
@@ -2280,8 +2260,28 @@
     },
     {
       "group": "ndx100",
+      "symbol": "MNST",
+      "name": "Monster Beverage",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
       "symbol": "ROST",
       "name": "Ross Stores",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "WBD",
+      "name": "Warner Bros. Discovery",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2310,28 +2310,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "FTNT",
-      "name": "Fortinet",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
       "symbol": "PCAR",
       "name": "Paccar",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
-      "symbol": "BKR",
-      "name": "Baker Hughes",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2350,8 +2330,18 @@
     },
     {
       "group": "ndx100",
-      "symbol": "FAST",
-      "name": "Fastenal",
+      "symbol": "FTNT",
+      "name": "Fortinet",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "BKR",
+      "name": "Baker Hughes",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2380,6 +2370,16 @@
     },
     {
       "group": "ndx100",
+      "symbol": "FAST",
+      "name": "Fastenal",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
       "symbol": "ADSK",
       "name": "Autodesk",
       "source": "yahoo",
@@ -2400,8 +2400,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "IDXX",
-      "name": "Idexx Laboratories",
+      "symbol": "EXC",
+      "name": "Exelon",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2420,8 +2420,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "EXC",
-      "name": "Exelon",
+      "symbol": "XEL",
+      "name": "Xcel Energy",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2430,8 +2430,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "XEL",
-      "name": "Xcel Energy",
+      "symbol": "IDXX",
+      "name": "Idexx Laboratories",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2480,8 +2480,28 @@
     },
     {
       "group": "ndx100",
+      "symbol": "CCEP",
+      "name": "Coca-Cola Europacific Partners",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
       "symbol": "ODFL",
       "name": "Old Dominion Freight Line",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "TRI",
+      "name": "Thomson Reuters Corporation",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2500,18 +2520,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CCEP",
-      "name": "Coca-Cola Europacific Partners",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
-      "symbol": "INSM",
-      "name": "Insmed Incorporated",
+      "symbol": "KDP",
+      "name": "Keurig Dr Pepper",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2530,8 +2540,18 @@
     },
     {
       "group": "ndx100",
-      "symbol": "KDP",
-      "name": "Keurig Dr Pepper",
+      "symbol": "INSM",
+      "name": "Insmed Incorporated",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "MCHP",
+      "name": "Microchip Technology",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2560,8 +2580,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MCHP",
-      "name": "Microchip Technology",
+      "symbol": "PAYX",
+      "name": "Paychex",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2590,18 +2610,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "TRI",
-      "name": "Thomson Reuters Corporation",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
-      "symbol": "PAYX",
-      "name": "Paychex",
+      "symbol": "CTSH",
+      "name": "Cognizant",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2630,28 +2640,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CTSH",
-      "name": "Cognizant",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
       "symbol": "VRSK",
       "name": "Verisk",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "ndx100",
-      "symbol": "ZS",
-      "name": "Zscaler",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2670,8 +2660,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "TEAM",
-      "name": "Atlassian",
+      "symbol": "ZS",
+      "name": "Zscaler",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2690,16 +2680,6 @@
     },
     {
       "group": "futures",
-      "symbol": "HG=F",
-      "name": "Copper",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "futures",
       "symbol": "SI=F",
       "name": "Silver",
       "source": "yahoo",
@@ -2710,8 +2690,8 @@
     },
     {
       "group": "futures",
-      "symbol": "GC=F",
-      "name": "Gold",
+      "symbol": "HG=F",
+      "name": "Copper",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2730,8 +2710,8 @@
     },
     {
       "group": "futures",
-      "symbol": "ES=F",
-      "name": "E-mini S&P 500",
+      "symbol": "NG=F",
+      "name": "Natural Gas",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2740,8 +2720,8 @@
     },
     {
       "group": "futures",
-      "symbol": "NG=F",
-      "name": "Natural Gas",
+      "symbol": "ES=F",
+      "name": "E-mini S&P 500",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2770,8 +2750,18 @@
     },
     {
       "group": "futures",
-      "symbol": "ZN=F",
-      "name": "10Y T-Note",
+      "symbol": "GC=F",
+      "name": "Gold",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "ndx100",
+      "symbol": "TEAM",
+      "name": "Atlassian",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2790,16 +2780,6 @@
     },
     {
       "group": "futures",
-      "symbol": "6E=F",
-      "name": "Euro FX",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "futures",
       "symbol": "ZB=F",
       "name": "US Treasury Bond",
       "source": "yahoo",
@@ -2810,8 +2790,28 @@
     },
     {
       "group": "futures",
+      "symbol": "ZN=F",
+      "name": "10Y T-Note",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "futures",
       "symbol": "6J=F",
       "name": "Japanese Yen",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "futures",
+      "symbol": "6E=F",
+      "name": "Euro FX",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 0,
@@ -2840,8 +2840,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "SOLUSDT",
-      "name": "SOL",
+      "symbol": "SNDKBUSDT",
+      "name": "SNDKB",
       "source": "binance",
       "timeframe": "1d",
       "bars": 0,
@@ -2860,18 +2860,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "BNBUSDT",
-      "name": "BNB",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
-      "symbol": "SNDKBUSDT",
-      "name": "SNDKB",
+      "symbol": "SOLUSDT",
+      "name": "SOL",
       "source": "binance",
       "timeframe": "1d",
       "bars": 0,
@@ -2890,16 +2880,6 @@
     },
     {
       "group": "crypto",
-      "symbol": "RLUSDUSDT",
-      "name": "RLUSD",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
       "symbol": "XRPUSDT",
       "name": "XRP",
       "source": "binance",
@@ -2910,8 +2890,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "SPCXBUSDT",
-      "name": "SPCXB",
+      "symbol": "BNBUSDT",
+      "name": "BNB",
       "source": "binance",
       "timeframe": "1d",
       "bars": 0,
@@ -2920,18 +2900,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "ZECUSDT",
-      "name": "ZEC",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
-      "symbol": "TRXUSDT",
-      "name": "TRX",
+      "symbol": "RLUSDUSDT",
+      "name": "RLUSD",
       "source": "binance",
       "timeframe": "1d",
       "bars": 0,
@@ -2950,38 +2920,28 @@
     },
     {
       "group": "crypto",
+      "symbol": "ZECUSDT",
+      "name": "ZEC",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "SPCXBUSDT",
+      "name": "SPCXB",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
       "symbol": "SOXLBUSDT",
       "name": "SOXLB",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
-      "symbol": "SKHYBUSDT",
-      "name": "SKHYB",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
-      "symbol": "BICOUSDT",
-      "name": "BICO",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
-      "symbol": "XAUTUSDT",
-      "name": "XAUT",
       "source": "binance",
       "timeframe": "1d",
       "bars": 0,
@@ -3000,8 +2960,18 @@
     },
     {
       "group": "crypto",
-      "symbol": "ENAUSDT",
-      "name": "ENA",
+      "symbol": "TRXUSDT",
+      "name": "TRX",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "BICOUSDT",
+      "name": "BICO",
       "source": "binance",
       "timeframe": "1d",
       "bars": 0,
@@ -3020,8 +2990,48 @@
     },
     {
       "group": "crypto",
+      "symbol": "XAUTUSDT",
+      "name": "XAUT",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "SKHYBUSDT",
+      "name": "SKHYB",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
       "symbol": "UUSDT",
       "name": "U",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "ENAUSDT",
+      "name": "ENA",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "GIGGLEUSDT",
+      "name": "GIGGLE",
       "source": "binance",
       "timeframe": "1d",
       "bars": 0,
@@ -3040,8 +3050,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "GIGGLEUSDT",
-      "name": "GIGGLE",
+      "symbol": "EULUSDT",
+      "name": "EUL",
       "source": "binance",
       "timeframe": "1d",
       "bars": 0,
@@ -3062,16 +3072,6 @@
       "group": "crypto",
       "symbol": "BANKUSDT",
       "name": "BANK",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
-      "symbol": "EULUSDT",
-      "name": "EUL",
       "source": "binance",
       "timeframe": "1d",
       "bars": 0,
@@ -3130,16 +3130,6 @@
     },
     {
       "group": "crypto",
-      "symbol": "UTKUSDT",
-      "name": "UTK",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
       "symbol": "NEARUSDT",
       "name": "NEAR",
       "source": "binance",
@@ -3150,8 +3140,38 @@
     },
     {
       "group": "crypto",
+      "symbol": "UTKUSDT",
+      "name": "UTK",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
       "symbol": "DEXEUSDT",
       "name": "DEXE",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "GRAMUSDT",
+      "name": "GRAM",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "LINKUSDT",
+      "name": "LINK",
       "source": "binance",
       "timeframe": "1d",
       "bars": 0,
@@ -3190,26 +3210,6 @@
     },
     {
       "group": "crypto",
-      "symbol": "LINKUSDT",
-      "name": "LINK",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
-      "symbol": "SUIUSDT",
-      "name": "SUI",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
       "symbol": "PAXGUSDT",
       "name": "PAXG",
       "source": "binance",
@@ -3230,8 +3230,38 @@
     },
     {
       "group": "crypto",
+      "symbol": "SUIUSDT",
+      "name": "SUI",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "AVAXUSDT",
+      "name": "AVAX",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
       "symbol": "AAVEUSDT",
       "name": "AAVE",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "KORUBUSDT",
+      "name": "KORUB",
       "source": "binance",
       "timeframe": "1d",
       "bars": 0,
@@ -3270,26 +3300,6 @@
     },
     {
       "group": "crypto",
-      "symbol": "KORUBUSDT",
-      "name": "KORUB",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
-      "symbol": "AVAXUSDT",
-      "name": "AVAX",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
       "symbol": "SNXXBUSDT",
       "name": "SNXXB",
       "source": "binance",
@@ -3300,28 +3310,18 @@
     },
     {
       "group": "crypto",
-      "symbol": "XLMUSDT",
-      "name": "XLM",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
-      "symbol": "FILUSDT",
-      "name": "FIL",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "name 'fresh_range' is not defined"
-    },
-    {
-      "group": "crypto",
       "symbol": "LTCUSDT",
       "name": "LTC",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "name 'fresh_range' is not defined"
+    },
+    {
+      "group": "crypto",
+      "symbol": "XLMUSDT",
+      "name": "XLM",
       "source": "binance",
       "timeframe": "1d",
       "bars": 0,
