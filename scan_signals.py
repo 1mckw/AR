@@ -362,6 +362,44 @@ def chart_key(group: str, symbol: str, timeframe: str) -> str:
     return f"{group}|{symbol}|{timeframe}"
 
 
+def build_symbol_catalog(results: list[dict], charts: dict) -> list[dict]:
+    """All successfully scanned symbols for the report search FAB."""
+    seen: set[tuple[str, str, str]] = set()
+    catalog: list[dict] = []
+    for r in results:
+        if r.get("error"):
+            continue
+        group = str(r.get("group") or "")
+        symbol = str(r.get("symbol") or "")
+        tf = str(r.get("timeframe") or "")
+        if not group or not symbol or not tf:
+            continue
+        key = (group, symbol, tf)
+        if key in seen:
+            continue
+        seen.add(key)
+        ck = chart_key(group, symbol, tf)
+        has_hit = bool(r.get("events"))
+        catalog.append(
+            {
+                "group": group,
+                "symbol": symbol,
+                "name": r.get("name") or symbol,
+                "timeframe": tf,
+                "hasHit": has_hit,
+                "hasChart": ck in charts,
+            }
+        )
+    catalog.sort(
+        key=lambda x: (
+            not x["hasHit"],
+            TF_ORDER.get(x["timeframe"], 99),
+            x["symbol"],
+        )
+    )
+    return catalog
+
+
 def with_retries(fn, retries: int = 3, pause: float = 0.8):
     last_err = None
     for attempt in range(retries):
@@ -718,8 +756,140 @@ CHART_MODAL_SCRIPT = r"""
     if (ev.target === modal) closeModal();
   });
   closeBtn.addEventListener("click", closeModal);
+
+  const CATALOG = window.SYMBOL_CATALOG || [];
+  const GROUP_LABEL = { ndx100: "NDX100", crypto: "Crypto", futures: "Futures" };
+  const fab = document.getElementById("symbolFab");
+  const searchOverlay = document.getElementById("symbolOverlay");
+  const searchInput = document.getElementById("symbolSearch");
+  const searchList = document.getElementById("symbolList");
+  const searchClose = document.getElementById("symbolSearchClose");
+  let searchHi = -1;
+  let searchTimer = null;
+
+  function tfLabel(tf) {
+    return tf === "1d" ? "1D" : "1H";
+  }
+
+  function openSymbolSearch() {
+    if (!searchOverlay) return;
+    searchOverlay.hidden = false;
+    searchInput.value = "";
+    searchHi = -1;
+    renderSearchList(CATALOG.slice(0, 80), CATALOG.length ? "輸入代碼或名稱篩選…" : "無掃描商品");
+    requestAnimationFrame(() => searchInput.focus());
+  }
+
+  function closeSymbolSearch() {
+    if (!searchOverlay) return;
+    searchOverlay.hidden = true;
+    searchHi = -1;
+    clearTimeout(searchTimer);
+  }
+
+  function filterCatalog(q) {
+    const s = q.trim().toLowerCase();
+    if (!s) return CATALOG.slice(0, 80);
+    return CATALOG.filter((item) => {
+      const hay = [
+        item.symbol,
+        item.name,
+        item.group,
+        GROUP_LABEL[item.group] || item.group,
+        tfLabel(item.timeframe),
+      ].join(" ").toLowerCase();
+      return hay.includes(s);
+    }).slice(0, 80);
+  }
+
+  function renderSearchList(items, emptyMsg) {
+    if (!searchList) return;
+    searchList.innerHTML = "";
+    if (!items.length) {
+      searchList.innerHTML = `<li class="empty">${escapeHtml(emptyMsg)}</li>`;
+      searchHi = -1;
+      return;
+    }
+    searchHi = 0;
+    items.forEach((item, i) => {
+      const li = document.createElement("li");
+      li.dataset.index = String(i);
+      li.className = i === 0 ? "active" : "";
+      const hit = item.hasHit ? '<span class="hit-badge">Hit</span>' : "";
+      li.innerHTML =
+        `<span class="sym">${escapeHtml(item.symbol)}</span>` +
+        `<span class="ex">${escapeHtml(GROUP_LABEL[item.group] || item.group)} · ${escapeHtml(tfLabel(item.timeframe))}</span>` +
+        hit +
+        `<span class="desc">${escapeHtml(item.name || "")}</span>`;
+      li.addEventListener("mousedown", (ev) => {
+        ev.preventDefault();
+        pickCatalogItem(item);
+      });
+      searchList.appendChild(li);
+    });
+  }
+
+  function pickCatalogItem(item) {
+    closeSymbolSearch();
+    const sel = `.sym-btn[data-symbol="${CSS.escape(item.symbol)}"][data-group="${CSS.escape(item.group)}"][data-tf="${CSS.escape(item.timeframe)}"]`;
+    const hitBtn = document.querySelector(sel);
+    if (hitBtn) {
+      hitBtn.scrollIntoView({ behavior: "smooth", block: "center" });
+      hitBtn.classList.add("flash");
+      setTimeout(() => hitBtn.classList.remove("flash"), 1600);
+    }
+    const btn = document.createElement("button");
+    btn.dataset.symbol = item.symbol;
+    btn.dataset.group = item.group;
+    btn.dataset.name = item.name || item.symbol;
+    btn.dataset.tf = item.timeframe;
+    openChart(btn);
+  }
+
+  function scheduleSearch() {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => {
+      const items = filterCatalog(searchInput.value);
+      renderSearchList(items, "無符合商品");
+    }, 180);
+  }
+
+  if (fab) fab.addEventListener("click", openSymbolSearch);
+  if (searchClose) searchClose.addEventListener("click", closeSymbolSearch);
+  if (searchOverlay) {
+    searchOverlay.addEventListener("mousedown", (ev) => {
+      if (ev.target === searchOverlay) closeSymbolSearch();
+    });
+  }
+  if (searchInput) {
+    searchInput.addEventListener("input", scheduleSearch);
+    searchInput.addEventListener("keydown", (ev) => {
+      const opts = [...(searchList?.querySelectorAll("li[data-index]") || [])];
+      if (ev.key === "ArrowDown" && opts.length) {
+        ev.preventDefault();
+        searchHi = Math.min(searchHi + 1, opts.length - 1);
+        opts.forEach((li, i) => li.classList.toggle("active", i === searchHi));
+        opts[searchHi].scrollIntoView({ block: "nearest" });
+      } else if (ev.key === "ArrowUp" && opts.length) {
+        ev.preventDefault();
+        searchHi = Math.max(searchHi - 1, 0);
+        opts.forEach((li, i) => li.classList.toggle("active", i === searchHi));
+        opts[searchHi].scrollIntoView({ block: "nearest" });
+      } else if (ev.key === "Enter") {
+        const li = opts[searchHi] || opts[0];
+        if (li) li.dispatchEvent(new MouseEvent("mousedown", { bubbles: true }));
+      }
+    });
+  }
+
   document.addEventListener("keydown", (ev) => {
-    if (ev.key === "Escape" && modal.classList.contains("open")) closeModal();
+    if (ev.key === "Escape") {
+      if (searchOverlay && !searchOverlay.hidden) {
+        closeSymbolSearch();
+        return;
+      }
+      if (modal.classList.contains("open")) closeModal();
+    }
   });
 })();
 </script>
@@ -913,6 +1083,102 @@ def render_html(payload: dict) -> str:
     @media (prefers-reduced-motion: reduce) {{
       .modal, .modal-panel {{ transition: none; }}
     }}
+    .sym-btn.flash code {{
+      background: rgba(0,240,200,.18); border-radius: 4px;
+      box-shadow: 0 0 0 2px rgba(0,240,200,.25);
+    }}
+    .search-fab {{
+      position: fixed; right: 18px; bottom: 22px; z-index: 70;
+      display: flex; align-items: center; gap: 10px;
+      padding: 12px 16px 12px 14px; border-radius: 14px;
+      border: 1px solid rgba(0,240,200,.28);
+      background: linear-gradient(145deg, rgba(12,22,34,.94), rgba(8,14,24,.9));
+      backdrop-filter: blur(14px);
+      box-shadow: 0 12px 32px rgba(0,0,0,.45), 0 0 24px rgba(0,240,200,.12);
+      color: var(--text); cursor: pointer; font: inherit;
+      transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+    }}
+    .search-fab:hover {{
+      transform: translateY(-2px); border-color: var(--primary);
+      box-shadow: 0 16px 36px rgba(0,0,0,.5), 0 0 28px rgba(0,240,200,.22);
+    }}
+    .search-fab-icon {{
+      width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
+      display: grid; place-items: center;
+      background: rgba(0,240,200,.1); border: 1px solid rgba(0,240,200,.2);
+      color: var(--primary); font-size: 1.05rem;
+    }}
+    .search-fab-meta {{ display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }}
+    .search-fab-label {{
+      font-size: .58rem; font-weight: 700; color: var(--primary);
+      text-transform: uppercase; letter-spacing: .1em;
+    }}
+    .search-fab-hint {{
+      font-family: "JetBrains Mono", monospace; font-size: .86rem; font-weight: 600;
+    }}
+    .search-overlay {{
+      position: fixed; inset: 0; z-index: 85;
+      background: rgba(2,6,12,.72); backdrop-filter: blur(6px);
+      display: flex; align-items: flex-start; justify-content: center;
+      padding: 10vh 16px 16px;
+    }}
+    .search-overlay[hidden] {{ display: none !important; }}
+    .search-modal {{
+      width: min(520px, 100%); max-height: min(70vh, 560px);
+      background: var(--panel); border: 1px solid var(--border); border-radius: 16px;
+      box-shadow: 0 24px 60px rgba(0,0,0,.55);
+      display: flex; flex-direction: column; overflow: hidden;
+    }}
+    .search-modal-head {{
+      display: flex; align-items: center; gap: 8px;
+      padding: 14px; border-bottom: 1px solid rgba(0,240,200,.1);
+      background: var(--surface); flex-shrink: 0;
+    }}
+    #symbolSearch {{
+      flex: 1; height: 42px; padding: 8px 14px; border-radius: 10px;
+      border: 1px solid rgba(0,240,200,.2); background: #060c14; color: var(--text);
+      font-family: "JetBrains Mono", monospace; font-size: .92rem;
+    }}
+    #symbolSearch:focus {{
+      outline: none; border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0,240,200,.15);
+    }}
+    #symbolSearchClose {{
+      height: 42px; padding: 0 14px; border-radius: 10px;
+      border: 1px solid var(--border); background: transparent; color: var(--text);
+      cursor: pointer; font: inherit;
+    }}
+    #symbolSearchClose:hover {{ border-color: var(--primary); color: var(--primary); }}
+    #symbolList {{
+      list-style: none; margin: 0; padding: 8px; overflow-y: auto; flex: 1;
+    }}
+    #symbolList li {{
+      padding: 10px 12px; border-radius: 10px; cursor: pointer;
+      border: 1px solid transparent;
+    }}
+    #symbolList li:hover, #symbolList li.active {{
+      background: rgba(0,240,200,.06); border-color: rgba(0,240,200,.14);
+    }}
+    #symbolList li.empty {{ color: var(--muted); cursor: default; text-align: center; }}
+    #symbolList .sym {{
+      font-family: "JetBrains Mono", monospace; font-weight: 700; color: var(--primary);
+      margin-right: 8px;
+    }}
+    #symbolList .ex {{ font-size: .78rem; color: var(--muted); }}
+    #symbolList .desc {{
+      display: block; font-size: .78rem; color: var(--muted); margin-top: 3px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }}
+    #symbolList .hit-badge {{
+      display: inline-block; margin-left: 6px; font-size: .62rem; font-weight: 700;
+      padding: 1px 6px; border-radius: 4px;
+      background: rgba(0,240,200,.12); color: var(--primary);
+      vertical-align: middle;
+    }}
+    @media (max-width: 520px) {{
+      .search-fab-hint {{ display: none; }}
+      .search-fab {{ padding: 12px; border-radius: 999px; }}
+    }}
   </style>
 </head>
 <body>
@@ -969,6 +1235,23 @@ def render_html(payload: dict) -> str:
     </footer>
   </div>
 
+  <button type="button" class="search-fab" id="symbolFab" aria-haspopup="dialog" aria-controls="symbolOverlay" title="搜尋掃描商品">
+    <span class="search-fab-icon" aria-hidden="true">⌕</span>
+    <span class="search-fab-meta">
+      <span class="search-fab-label">Search</span>
+      <span class="search-fab-hint">搜尋商品…</span>
+    </span>
+  </button>
+  <div class="search-overlay" id="symbolOverlay" hidden>
+    <div class="search-modal" role="dialog" aria-modal="true" aria-label="搜尋掃描商品">
+      <div class="search-modal-head">
+        <input id="symbolSearch" type="search" autocomplete="off" spellcheck="false" placeholder="代碼、名稱、NDX100 / Crypto / Futures…" aria-controls="symbolList" />
+        <button type="button" id="symbolSearchClose">關閉</button>
+      </div>
+      <ul id="symbolList" role="listbox"></ul>
+    </div>
+  </div>
+
   <div id="chart-modal" class="modal" hidden aria-hidden="true">
     <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="chart-title">
       <div class="modal-head">
@@ -987,12 +1270,15 @@ def render_html(payload: dict) -> str:
   </div>
 """
     charts = payload.get("charts") or {}
-    packs_js = (
+    catalog = build_symbol_catalog(payload.get("results") or [], charts)
+    embed_js = (
         "<script>window.CHART_PACKS = "
         + json.dumps(charts, ensure_ascii=False, separators=(",", ":"))
+        + ";window.SYMBOL_CATALOG = "
+        + json.dumps(catalog, ensure_ascii=False, separators=(",", ":"))
         + ";</script>\n"
     )
-    return page_head + packs_js + CHART_MODAL_SCRIPT + "\n</body>\n</html>\n"
+    return page_head + embed_js + CHART_MODAL_SCRIPT + "\n</body>\n</html>\n"
 
 
 def main() -> int:
