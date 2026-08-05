@@ -466,6 +466,8 @@
 
   <script>
     const LOOKBACK = 10, VOL_LEN = 20, MAX_LINES_PER_PIVOT = 1;
+    const MIN_LINE_PIVOTS = 3;
+    const PIVOT_LINE_TOL_PCT = 0.002;
     const SHARP_PIERCE_GRACE_BARS = 2;
     const TOUCH_WINDOW_BARS = 12; // 主引線觸碰在此窗口內不報告
 
@@ -776,6 +778,20 @@
       return p1.price + slope * (idx - p1.index);
     }
 
+    function pivotOnLine(p, lp) {
+      const tol = Math.max(Math.abs(lp) * PIVOT_LINE_TOL_PCT, 1e-9);
+      return Math.abs(p.price - lp) <= tol;
+    }
+
+    function countLinePivots(pts, a, c, p1, slope) {
+      let n = 0;
+      for (let k = a; k <= c; k++) {
+        const lp = linePrice(p1, slope, pts[k].index);
+        if (pivotOnLine(pts[k], lp)) n++;
+      }
+      return n;
+    }
+
     function bodyCrosses(candles, i, lp, resistance) {
       const c = candles[i];
       if (resistance) return Math.max(c.open, c.close) > lp;
@@ -875,26 +891,29 @@
         const candidates = [];
         for (let a = 0; a < pts.length; a++) {
           let countFromPivot = 0;
-          for (let b = a + 1; b < pts.length; b++) {
+          for (let c = a + MIN_LINE_PIVOTS - 1; c < pts.length; c++) {
             if (countFromPivot >= MAX_LINES_PER_PIVOT) break;
-            const p1 = pts[a], p2 = pts[b];
-            if (resistance && p2.price >= p1.price) continue;
-            if (!resistance && p2.price <= p1.price) continue;
-            if (!validBetweenPivots(candles, p1, p2, resistance, sharpOpts)) continue;
-            if (!validToCurrent(candles, p1, p2, resistance, sharpOpts)) continue;
-            const slope = (p2.price - p1.price) / (p2.index - p1.index);
+            const p1 = pts[a], p3 = pts[c];
+            if (resistance && p3.price >= p1.price) continue;
+            if (!resistance && p3.price <= p1.price) continue;
+            const slope = (p3.price - p1.price) / (p3.index - p1.index);
+            const pivotCount = countLinePivots(pts, a, c, p1, slope);
+            if (pivotCount < MIN_LINE_PIVOTS) continue;
+            if (!validBetweenPivots(candles, p1, p3, resistance, sharpOpts)) continue;
+            if (!validToCurrent(candles, p1, p3, resistance, sharpOpts)) continue;
             const endIdx = candles.length - 1;
             candidates.push({
               type: resistance ? 'resistance' : 'support',
-              p1, p2, slope,
-              span: p2.index - p1.index,
+              p1, p2: p3, slope,
+              span: p3.index - p1.index,
+              pivotCount,
               endTime: candles[endIdx].time,
               endPrice: linePrice(p1, slope, endIdx),
             });
             countFromPivot++;
           }
         }
-        candidates.sort((a, b) => b.span - a.span || a.p1.index - b.p1.index);
+        candidates.sort((a, b) => b.pivotCount - a.pivotCount || b.span - a.span || a.p1.index - b.p1.index);
         const picked = [];
         const usedPivotA = new Set();
         for (const c of candidates) {

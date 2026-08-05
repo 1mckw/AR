@@ -1,4 +1,4 @@
-"""Auto trend lines: pivot pairs, body validation, sharp pierce grace.
+"""Auto trend lines: ≥3 pivot touches, body validation, sharp pierce grace.
 
 Sharp rally/drop bars may body-pierce a trend line (resistance←sharpUp,
 support←sharpDown). After such a pierce, body may stay on the wrong side
@@ -17,6 +17,8 @@ MAX_LOOKBACK = 2000
 MAX_RESISTANCE = 1
 MAX_SUPPORT = 1
 MAX_LINES_PER_PIVOT = 1
+MIN_LINE_PIVOTS = 3
+PIVOT_LINE_TOL_PCT = 0.002
 SHARP_PIERCE_GRACE_BARS = 2
 
 
@@ -113,6 +115,21 @@ def find_line_break_index(candles: list[dict], line: dict) -> int | None:
     return None
 
 
+def pivot_on_line(p: dict, lp: float) -> bool:
+    tol = max(abs(lp) * PIVOT_LINE_TOL_PCT, 1e-9)
+    return abs(p["price"] - lp) <= tol
+
+
+def count_line_pivots(pts: list[dict], a: int, c: int, p1: dict, slope: float) -> int:
+    """Pivot highs/lows on the line between indices a..c inclusive."""
+    n = 0
+    for k in range(a, c + 1):
+        lp = line_price(p1, slope, pts[k]["index"])
+        if pivot_on_line(pts[k], lp):
+            n += 1
+    return n
+
+
 def valid_between_pivots(candles: list[dict], p1: dict, p2: dict, resistance: bool) -> bool:
     if p2["index"] <= p1["index"]:
         return False
@@ -140,32 +157,37 @@ def build_auto_trend_lines(candles: list[dict]) -> list[dict]:
 
     def collect(pts: list[dict], resistance: bool) -> list[dict]:
         candidates = []
-        for a, p1 in enumerate(pts):
+        n_pts = len(pts)
+        for a in range(n_pts):
             count_from = 0
-            for b in range(a + 1, len(pts)):
+            for c in range(a + MIN_LINE_PIVOTS - 1, n_pts):
                 if count_from >= MAX_LINES_PER_PIVOT:
                     break
-                p2 = pts[b]
-                if resistance and p2["price"] >= p1["price"]:
+                p1, p3 = pts[a], pts[c]
+                if resistance and p3["price"] >= p1["price"]:
                     continue
-                if not resistance and p2["price"] <= p1["price"]:
+                if not resistance and p3["price"] <= p1["price"]:
                     continue
-                if not valid_between_pivots(candles, p1, p2, resistance):
+                slope = (p3["price"] - p1["price"]) / (p3["index"] - p1["index"])
+                pivot_count = count_line_pivots(pts, a, c, p1, slope)
+                if pivot_count < MIN_LINE_PIVOTS:
                     continue
-                if not valid_to_current(candles, p1, p2, resistance):
+                if not valid_between_pivots(candles, p1, p3, resistance):
                     continue
-                slope = (p2["price"] - p1["price"]) / (p2["index"] - p1["index"])
+                if not valid_to_current(candles, p1, p3, resistance):
+                    continue
                 candidates.append(
                     {
                         "type": "resistance" if resistance else "support",
                         "p1": p1,
-                        "p2": p2,
+                        "p2": p3,
                         "slope": slope,
-                        "span": p2["index"] - p1["index"],
+                        "span": p3["index"] - p1["index"],
+                        "pivot_count": pivot_count,
                     }
                 )
                 count_from += 1
-        candidates.sort(key=lambda c: (-c["span"], c["p1"]["index"]))
+        candidates.sort(key=lambda c: (-c["pivot_count"], -c["span"], c["p1"]["index"]))
         picked, used = [], set()
         limit = MAX_RESISTANCE if resistance else MAX_SUPPORT
         for c in candidates:
