@@ -468,6 +468,9 @@
     const LOOKBACK = 10, VOL_LEN = 20, MAX_LINES_PER_PIVOT = 1;
     const MIN_LINE_PIVOTS = 3;
     const PIVOT_LINE_TOL_PCT = 0.002;
+    const NEAR_LINE_TOL_PCT = 0.004;
+    const LOCAL_EXTREME_WING = 2;
+    const MIN_TOUCH_BAR_GAP = 3;
     const SHARP_PIERCE_GRACE_BARS = 2;
     const TOUCH_WINDOW_BARS = 12; // 主引線觸碰在此窗口內不報告
 
@@ -783,13 +786,63 @@
       return Math.abs(p.price - lp) <= tol;
     }
 
-    function countLinePivots(pts, a, c, p1, slope) {
-      let n = 0;
-      for (let k = a; k <= c; k++) {
-        const lp = linePrice(p1, slope, pts[k].index);
-        if (pivotOnLine(pts[k], lp)) n++;
+    function wickNearLine(candles, i, lp, resistance) {
+      const tol = Math.max(Math.abs(lp) * NEAR_LINE_TOL_PCT, 1e-9);
+      const wick = resistance ? candles[i].high : candles[i].low;
+      return Math.abs(wick - lp) <= tol;
+    }
+
+    function isLocalExtreme(candles, i, resistance) {
+      const wing = LOCAL_EXTREME_WING;
+      if (resistance) {
+        const h = candles[i].high;
+        for (let j = 1; j <= wing; j++) {
+          if (i - j < 0 || i + j >= candles.length) return false;
+          if (candles[i - j].high > h || candles[i + j].high > h) return false;
+        }
+        return true;
       }
-      return n;
+      const lo = candles[i].low;
+      for (let j = 1; j <= wing; j++) {
+        if (i - j < 0 || i + j >= candles.length) return false;
+        if (candles[i - j].low < lo || candles[i + j].low < lo) return false;
+      }
+      return true;
+    }
+
+    function countLineTouchPoints(candles, p1, slope, startI, endI, resistance, pts, ptLo, ptHi) {
+      const onLinePivotIdx = new Set();
+      if (pts != null && ptHi >= ptLo) {
+        for (let k = ptLo; k <= ptHi; k++) {
+          const idx = pts[k].index;
+          const lp = linePrice(p1, slope, idx);
+          if (pivotOnLine(pts[k], lp)) onLinePivotIdx.add(idx);
+        }
+      }
+      let count = 0;
+      let lastTouchI = -1e9;
+      for (let i = startI; i <= endI; i++) {
+        const lp = linePrice(p1, slope, i);
+        let qualifies;
+        if (onLinePivotIdx.has(i)) {
+          qualifies = true;
+        } else if (isLocalExtreme(candles, i, resistance) && wickNearLine(candles, i, lp, resistance)) {
+          qualifies = true;
+        } else {
+          qualifies = false;
+        }
+        if (!qualifies) continue;
+        if (i - lastTouchI < MIN_TOUCH_BAR_GAP) continue;
+        count++;
+        lastTouchI = i;
+      }
+      return count;
+    }
+
+    function countLinePivots(candles, pts, a, c, p1, slope, resistance) {
+      return countLineTouchPoints(
+        candles, p1, slope, pts[a].index, pts[c].index, resistance, pts, a, c
+      );
     }
 
     function bodyCrosses(candles, i, lp, resistance) {
@@ -891,13 +944,13 @@
         const candidates = [];
         for (let a = 0; a < pts.length; a++) {
           let countFromPivot = 0;
-          for (let c = a + MIN_LINE_PIVOTS - 1; c < pts.length; c++) {
+          for (let c = a + 1; c < pts.length; c++) {
             if (countFromPivot >= MAX_LINES_PER_PIVOT) break;
             const p1 = pts[a], p3 = pts[c];
             if (resistance && p3.price >= p1.price) continue;
             if (!resistance && p3.price <= p1.price) continue;
             const slope = (p3.price - p1.price) / (p3.index - p1.index);
-            const pivotCount = countLinePivots(pts, a, c, p1, slope);
+            const pivotCount = countLinePivots(candles, pts, a, c, p1, slope, resistance);
             if (pivotCount < MIN_LINE_PIVOTS) continue;
             if (!validBetweenPivots(candles, p1, p3, resistance, sharpOpts)) continue;
             if (!validToCurrent(candles, p1, p3, resistance, sharpOpts)) continue;

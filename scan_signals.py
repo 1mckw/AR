@@ -929,7 +929,7 @@ def render_html(payload: dict) -> str:
       <li><strong>AR/DR</strong> 信號 K 的<strong>上引線（高）</strong>與<strong>下引線（低）</strong>皆向右延伸</li>
       <li>任一侧影線被碰到即<strong>停止</strong>該射線（不再延伸）</li>
       <li><strong>報告</strong> AR 上引線 / DR 下引線 超過 {TOUCH_WINDOW_BARS} 根後的晚觸碰</li>
-      <li>趨勢線須至少 <strong>{MIN_LINE_PIVOTS}</strong> 個 Pivot 點共線</li>
+      <li>趨勢線須至少 <strong>{MIN_LINE_PIVOTS}</strong> 個觸點（Pivot 共線，或局部高低點影線近觸）</li>
       <li>急漲/急跌 K 實體可<strong>貫穿</strong>趨勢線（阻力←急漲、支撐←急跌）；貫穿後實體仍在线外不得超過 <strong>{SHARP_PIERCE_GRACE_BARS}</strong> 根 K</li>
       <li><strong>報告</strong> 趨勢線影線觸碰</li>
       <li>點擊 <strong>Symbol</strong> 開啟蠟燭圖（含 AR/DR 與趨勢線）</li>

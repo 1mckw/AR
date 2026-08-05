@@ -1,8 +1,7 @@
-"""Auto trend lines: ≥3 pivot touches, body validation, sharp pierce grace.
+"""Auto trend lines: ≥3 touch points, body validation, sharp pierce grace.
 
-Sharp rally/drop bars may body-pierce a trend line (resistance←sharpUp,
-support←sharpDown). After such a pierce, body may stay on the wrong side
-for at most SHARP_PIERCE_GRACE_BARS additional bars; otherwise the line fails.
+Touch points = strict pivots on the line plus local extrema (wing 2) whose
+wick is near the line. Sharp pierce grace unchanged.
 """
 
 from __future__ import annotations
@@ -19,6 +18,9 @@ MAX_SUPPORT = 1
 MAX_LINES_PER_PIVOT = 1
 MIN_LINE_PIVOTS = 3
 PIVOT_LINE_TOL_PCT = 0.002
+NEAR_LINE_TOL_PCT = 0.004
+LOCAL_EXTREME_WING = 2
+MIN_TOUCH_BAR_GAP = 3
 SHARP_PIERCE_GRACE_BARS = 2
 
 
@@ -120,14 +122,93 @@ def pivot_on_line(p: dict, lp: float) -> bool:
     return abs(p["price"] - lp) <= tol
 
 
-def count_line_pivots(pts: list[dict], a: int, c: int, p1: dict, slope: float) -> int:
-    """Pivot highs/lows on the line between indices a..c inclusive."""
-    n = 0
-    for k in range(a, c + 1):
-        lp = line_price(p1, slope, pts[k]["index"])
-        if pivot_on_line(pts[k], lp):
-            n += 1
-    return n
+def wick_near_line(candles: list[dict], i: int, lp: float, resistance: bool) -> bool:
+    tol = max(abs(lp) * NEAR_LINE_TOL_PCT, 1e-9)
+    wick = candles[i]["high"] if resistance else candles[i]["low"]
+    return abs(wick - lp) <= tol
+
+
+def is_local_extreme(candles: list[dict], i: int, resistance: bool) -> bool:
+    """Looser local high/low (wing=2) for less obvious swing points."""
+    wing = LOCAL_EXTREME_WING
+    if resistance:
+        h = candles[i]["high"]
+        for j in range(1, wing + 1):
+            if i - j < 0 or i + j >= len(candles):
+                return False
+            if candles[i - j]["high"] > h or candles[i + j]["high"] > h:
+                return False
+        return True
+    lo = candles[i]["low"]
+    for j in range(1, wing + 1):
+        if i - j < 0 or i + j >= len(candles):
+            return False
+        if candles[i - j]["low"] < lo or candles[i + j]["low"] < lo:
+            return False
+    return True
+
+
+def count_line_touch_points(
+    candles: list[dict],
+    p1: dict,
+    slope: float,
+    start_i: int,
+    end_i: int,
+    resistance: bool,
+    pts: list[dict] | None = None,
+    pt_lo: int = 0,
+    pt_hi: int = -1,
+) -> int:
+    """Touch points: strict pivots on line + local extrema with wick near line."""
+    if start_i > end_i:
+        return 0
+    on_line_pivot_idx = set()
+    if pts is not None and pt_hi >= pt_lo:
+        for k in range(pt_lo, pt_hi + 1):
+            idx = pts[k]["index"]
+            lp = line_price(p1, slope, idx)
+            if pivot_on_line(pts[k], lp):
+                on_line_pivot_idx.add(idx)
+
+    count = 0
+    last_touch_i = -10**9
+    for i in range(start_i, end_i + 1):
+        lp = line_price(p1, slope, i)
+        if i in on_line_pivot_idx:
+            qualifies = True
+        elif is_local_extreme(candles, i, resistance) and wick_near_line(candles, i, lp, resistance):
+            qualifies = True
+        else:
+            qualifies = False
+        if not qualifies:
+            continue
+        if i - last_touch_i < MIN_TOUCH_BAR_GAP:
+            continue
+        count += 1
+        last_touch_i = i
+    return count
+
+
+def count_line_pivots(
+    candles: list[dict],
+    pts: list[dict],
+    a: int,
+    c: int,
+    p1: dict,
+    slope: float,
+    resistance: bool,
+) -> int:
+    return count_line_touch_points(
+        candles,
+        p1,
+        slope,
+        pts[a]["index"],
+        pts[c]["index"],
+        resistance,
+        pts,
+        a,
+        c,
+    )
 
 
 def valid_between_pivots(candles: list[dict], p1: dict, p2: dict, resistance: bool) -> bool:
@@ -160,7 +241,7 @@ def build_auto_trend_lines(candles: list[dict]) -> list[dict]:
         n_pts = len(pts)
         for a in range(n_pts):
             count_from = 0
-            for c in range(a + MIN_LINE_PIVOTS - 1, n_pts):
+            for c in range(a + 1, n_pts):
                 if count_from >= MAX_LINES_PER_PIVOT:
                     break
                 p1, p3 = pts[a], pts[c]
@@ -169,8 +250,8 @@ def build_auto_trend_lines(candles: list[dict]) -> list[dict]:
                 if not resistance and p3["price"] <= p1["price"]:
                     continue
                 slope = (p3["price"] - p1["price"]) / (p3["index"] - p1["index"])
-                pivot_count = count_line_pivots(pts, a, c, p1, slope)
-                if pivot_count < MIN_LINE_PIVOTS:
+                touch_count = count_line_pivots(candles, pts, a, c, p1, slope, resistance)
+                if touch_count < MIN_LINE_PIVOTS:
                     continue
                 if not valid_between_pivots(candles, p1, p3, resistance):
                     continue
@@ -183,7 +264,7 @@ def build_auto_trend_lines(candles: list[dict]) -> list[dict]:
                         "p2": p3,
                         "slope": slope,
                         "span": p3["index"] - p1["index"],
-                        "pivot_count": pivot_count,
+                        "pivot_count": touch_count,
                     }
                 )
                 count_from += 1
