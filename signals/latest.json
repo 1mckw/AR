@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05 03:38:30 UTC",
+  "generated_at": "2026-08-05 03:59:33 UTC",
   "timeframes": [
     "1h",
     "1d"
@@ -33,7 +33,7 @@
       "time": 1785898800,
       "index": 1998,
       "level": 61.099768101668154,
-      "close": 61.08000183105469,
+      "close": 60.994998931884766,
       "timeframe": "1h",
       "group": "futures",
       "symbol": "SI=F",
@@ -69,10 +69,10 @@
       "kind": "trend_touch",
       "label": "阻力趨勢線觸碰",
       "type": "resistance",
-      "time": 1785900375,
+      "time": 1785901618,
       "index": 1257,
       "level": 1.1558144438093987,
-      "close": 1.155650019645691,
+      "close": 1.1555500030517578,
       "timeframe": "1d",
       "group": "futures",
       "symbol": "6E=F",
@@ -20226,14 +20226,14 @@
           "open": 60.95000076293945,
           "high": 61.209999084472656,
           "low": 60.880001068115234,
-          "close": 61.08000183105469
+          "close": 60.994998931884766
         },
         {
-          "time": 1785899958,
-          "open": 61.05500030517578,
-          "high": 61.05500030517578,
-          "low": 61.05500030517578,
-          "close": 61.05500030517578
+          "time": 1785901266,
+          "open": 61.02000045776367,
+          "high": 61.02000045776367,
+          "low": 61.02000045776367,
+          "close": 61.02000045776367
         }
       ],
       "rays": [
@@ -20459,7 +20459,7 @@
             "time": 1784728800,
             "price": 61.27000045776367
           },
-          "endTime": 1785899958,
+          "endTime": 1785901266,
           "endPrice": 61.09899078497366,
           "invalidated": false
         },
@@ -20473,7 +20473,7 @@
             "time": 1785762000,
             "price": 56.70500183105469
           },
-          "endTime": 1785899958,
+          "endTime": 1785901266,
           "endPrice": 56.94396042101311,
           "invalidated": false
         }
@@ -29281,11 +29281,11 @@
           "close": 7628.25
         },
         {
-          "time": 1785900358,
+          "time": 1785901641,
           "open": 7772.0,
           "high": 7792.5,
           "low": 7771.0,
-          "close": 7789.0
+          "close": 7791.5
         }
       ],
       "rays": [
@@ -29366,7 +29366,7 @@
             },
             {
               "t0": 1665633600,
-              "t1": 1785900358,
+              "t1": 1785901641,
               "price": 3502.0,
               "active": true,
               "side": "lower"
@@ -29387,7 +29387,7 @@
             },
             {
               "t0": 1702616400,
-              "t1": 1785900358,
+              "t1": 1785901641,
               "price": 4694.27001953125,
               "active": true,
               "side": "lower"
@@ -29448,7 +29448,7 @@
             "time": 1784174400,
             "price": 7632.0
           },
-          "endTime": 1785900358,
+          "endTime": 1785901641,
           "endPrice": 7631.895161290323,
           "invalidated": false
         },
@@ -29462,7 +29462,7 @@
             "time": 1743998400,
             "price": 4832.0
           },
-          "endTime": 1785900358,
+          "endTime": 1785901641,
           "endPrice": 5486.015834932821,
           "invalidated": false
         }
@@ -38270,11 +38270,11 @@
           "close": 1.1538000106811523
         },
         {
-          "time": 1785900375,
+          "time": 1785901618,
           "open": 1.1549500226974487,
           "high": 1.1559499502182007,
           "low": 1.1545000076293945,
-          "close": 1.155650019645691
+          "close": 1.1555500030517578
         }
       ],
       "rays": [
@@ -38311,7 +38311,7 @@
             "time": 1778040000,
             "price": 1.180299997329712
           },
-          "endTime": 1785900375,
+          "endTime": 1785901618,
           "endPrice": 1.1558144438093987,
           "invalidated": false
         },
@@ -38325,7 +38325,7 @@
             "time": 1785211200,
             "price": 1.1365000009536743
           },
-          "endTime": 1785900375,
+          "endTime": 1785901618,
           "endPrice": 1.1370743442522853,
           "invalidated": false
         }
@@ -52797,8 +52797,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "AMZN",
-      "name": "Amazon",
+      "symbol": "NVDA",
+      "name": "Nvidia",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -52807,8 +52807,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "NVDA",
-      "name": "Nvidia",
+      "symbol": "AMZN",
+      "name": "Amazon",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -52927,16 +52927,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CSCO",
-      "name": "Cisco",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 869,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "AMD",
       "name": "Advanced Micro Devices Inc.",
       "source": "yahoo",
@@ -52947,8 +52937,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "TMUS",
-      "name": "T-Mobile US",
+      "symbol": "CSCO",
+      "name": "Cisco",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -52977,18 +52967,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "LIN",
-      "name": "Linde plc",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 869,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "KLAC",
-      "name": "KLA Corporation",
+      "symbol": "TMUS",
+      "name": "T-Mobile US",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53007,8 +52987,28 @@
     },
     {
       "group": "ndx100",
+      "symbol": "LIN",
+      "name": "Linde plc",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 869,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "PEP",
       "name": "PepsiCo",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 869,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "KLAC",
+      "name": "KLA Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53058,16 +53058,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ARM",
-      "name": "Arm Holdings",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 869,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "ISRG",
       "name": "Intuitive Surgical",
       "source": "yahoo",
@@ -53078,8 +53068,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "SHOP",
-      "name": "Shopify",
+      "symbol": "ARM",
+      "name": "Arm Holdings",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53098,8 +53088,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "HON",
-      "name": "Honeywell",
+      "symbol": "SHOP",
+      "name": "Shopify",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53118,8 +53108,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "APP",
-      "name": "Applovin Corp",
+      "symbol": "HON",
+      "name": "Honeywell",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53130,6 +53120,16 @@
       "group": "ndx100",
       "symbol": "QCOM",
       "name": "Qualcomm",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 869,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "APP",
+      "name": "Applovin Corp",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53158,16 +53158,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "INTU",
-      "name": "Intuit",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 869,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "VRTX",
       "name": "Vertex Pharmaceuticals",
       "source": "yahoo",
@@ -53178,8 +53168,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CMCSA",
-      "name": "Comcast",
+      "symbol": "INTU",
+      "name": "Intuit",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53198,8 +53188,28 @@
     },
     {
       "group": "ndx100",
+      "symbol": "CMCSA",
+      "name": "Comcast",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 869,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "CEG",
       "name": "Constellation Energy",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 869,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "CRWD",
+      "name": "CrowdStrike",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53228,16 +53238,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CRWD",
-      "name": "CrowdStrike",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 869,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "STX",
       "name": "Seagate Technology Holdings",
       "source": "yahoo",
@@ -53258,8 +53258,18 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MELI",
-      "name": "MercadoLibre",
+      "symbol": "ADP",
+      "name": "ADP",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 868,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "MAR",
+      "name": "Marriott International",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53268,8 +53278,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MAR",
-      "name": "Marriott International",
+      "symbol": "MELI",
+      "name": "MercadoLibre",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53288,16 +53298,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ADP",
-      "name": "ADP",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 868,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "CDNS",
       "name": "Cadence Design Systems",
       "source": "yahoo",
@@ -53308,8 +53308,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ORLY",
-      "name": "O'Reilly Automotive",
+      "symbol": "CSX",
+      "name": "CSX Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53328,8 +53328,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CSX",
-      "name": "CSX Corporation",
+      "symbol": "ORLY",
+      "name": "O'Reilly Automotive",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53398,28 +53398,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "DASH",
-      "name": "DoorDash",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 869,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "CTAS",
       "name": "Cintas",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 869,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "FTNT",
-      "name": "Fortinet",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53438,8 +53418,18 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MPWR",
-      "name": "Monolithic Power Systems",
+      "symbol": "DASH",
+      "name": "DoorDash",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 869,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "FTNT",
+      "name": "Fortinet",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53450,6 +53440,16 @@
       "group": "ndx100",
       "symbol": "BKR",
       "name": "Baker Hughes",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 869,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "MPWR",
+      "name": "Monolithic Power Systems",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53498,8 +53498,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "EXC",
-      "name": "Exelon",
+      "symbol": "NXPI",
+      "name": "NXP Semiconductors",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53508,8 +53508,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "NXPI",
-      "name": "NXP Semiconductors",
+      "symbol": "EXC",
+      "name": "Exelon",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53548,16 +53548,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MSTR",
-      "name": "MicroStrategy Inc.",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 869,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "ALNY",
       "name": "Alnylam Pharmaceuticals",
       "source": "yahoo",
@@ -53568,8 +53558,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "DDOG",
-      "name": "Datadog",
+      "symbol": "MSTR",
+      "name": "MicroStrategy Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53578,8 +53568,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CCEP",
-      "name": "Coca-Cola Europacific Partners",
+      "symbol": "DDOG",
+      "name": "Datadog",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53608,6 +53598,16 @@
     },
     {
       "group": "ndx100",
+      "symbol": "CCEP",
+      "name": "Coca-Cola Europacific Partners",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 869,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "TRI",
       "name": "Thomson Reuters Corporation",
       "source": "yahoo",
@@ -53628,16 +53628,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "KDP",
-      "name": "Keurig Dr Pepper",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 869,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "ROP",
       "name": "Roper Technologies",
       "source": "yahoo",
@@ -53648,8 +53638,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MCHP",
-      "name": "Microchip Technology",
+      "symbol": "KDP",
+      "name": "Keurig Dr Pepper",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53678,6 +53668,16 @@
     },
     {
       "group": "ndx100",
+      "symbol": "MCHP",
+      "name": "Microchip Technology",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 869,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "WDAY",
       "name": "Workday, Inc.",
       "source": "yahoo",
@@ -53688,8 +53688,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "GEHC",
-      "name": "GE HealthCare",
+      "symbol": "PAYX",
+      "name": "Paychex",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53698,8 +53698,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "PAYX",
-      "name": "Paychex",
+      "symbol": "GEHC",
+      "name": "GE HealthCare",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53728,6 +53728,16 @@
     },
     {
       "group": "ndx100",
+      "symbol": "KHC",
+      "name": "Kraft Heinz",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 869,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "CHTR",
       "name": "Charter Communications",
       "source": "yahoo",
@@ -53738,8 +53748,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "KHC",
-      "name": "Kraft Heinz",
+      "symbol": "VRSK",
+      "name": "Verisk",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53760,16 +53770,6 @@
       "group": "ndx100",
       "symbol": "ZS",
       "name": "Zscaler",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 869,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "VRSK",
-      "name": "Verisk",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 869,
@@ -53821,7 +53821,7 @@
           "time": 1785898800,
           "index": 1998,
           "level": 61.099768101668154,
-          "close": 61.08000183105469,
+          "close": 60.994998931884766,
           "timeframe": "1h"
         }
       ],
@@ -53899,8 +53899,8 @@
     },
     {
       "group": "futures",
-      "symbol": "RTY=F",
-      "name": "E-mini Russell",
+      "symbol": "ZN=F",
+      "name": "10Y T-Note",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -53909,8 +53909,8 @@
     },
     {
       "group": "futures",
-      "symbol": "ZN=F",
-      "name": "10Y T-Note",
+      "symbol": "RTY=F",
+      "name": "E-mini Russell",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -53929,8 +53929,8 @@
     },
     {
       "group": "futures",
-      "symbol": "6J=F",
-      "name": "Japanese Yen",
+      "symbol": "BTC=F",
+      "name": "Bitcoin Futures",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -53939,8 +53939,8 @@
     },
     {
       "group": "futures",
-      "symbol": "BTC=F",
-      "name": "Bitcoin Futures",
+      "symbol": "6J=F",
+      "name": "Japanese Yen",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -53969,16 +53969,6 @@
     },
     {
       "group": "crypto",
-      "symbol": "SPCXBUSDT",
-      "name": "SPCXB",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 1283,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
       "symbol": "SOLUSDT",
       "name": "SOL",
       "source": "binance",
@@ -53994,6 +53984,16 @@
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "SPCXBUSDT",
+      "name": "SPCXB",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 1283,
       "events": [],
       "error": null
     },
@@ -54049,8 +54049,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "ZECUSDT",
-      "name": "ZEC",
+      "symbol": "HOMEUSDT",
+      "name": "HOME",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -54059,8 +54059,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "HOMEUSDT",
-      "name": "HOME",
+      "symbol": "ZECUSDT",
+      "name": "ZEC",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -54079,16 +54079,6 @@
     },
     {
       "group": "crypto",
-      "symbol": "SOXLBUSDT",
-      "name": "SOXLB",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 687,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
       "symbol": "ADAUSDT",
       "name": "ADA",
       "source": "binance",
@@ -54099,11 +54089,41 @@
     },
     {
       "group": "crypto",
+      "symbol": "SOXLBUSDT",
+      "name": "SOXLB",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 687,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
       "symbol": "SKHYBUSDT",
       "name": "SKHYB",
       "source": "binance",
       "timeframe": "1h",
       "bars": 543,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "EULUSDT",
+      "name": "EUL",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "XAUTUSDT",
+      "name": "XAUT",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 2000,
       "events": [],
       "error": null
     },
@@ -54129,18 +54149,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "XAUTUSDT",
-      "name": "XAUT",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 2000,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "EULUSDT",
-      "name": "EUL",
+      "symbol": "PUMPUSDT",
+      "name": "PUMP",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -54159,16 +54169,6 @@
     },
     {
       "group": "crypto",
-      "symbol": "UNIUSDT",
-      "name": "UNI",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 2000,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
       "symbol": "HEIUSDT",
       "name": "HEI",
       "source": "binance",
@@ -54179,8 +54179,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "PUMPUSDT",
-      "name": "PUMP",
+      "symbol": "UNIUSDT",
+      "name": "UNI",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -54219,8 +54219,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "AVAXUSDT",
-      "name": "AVAX",
+      "symbol": "TAOUSDT",
+      "name": "TAO",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -54239,8 +54239,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "TAOUSDT",
-      "name": "TAO",
+      "symbol": "AVAXUSDT",
+      "name": "AVAX",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -54249,8 +54249,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "VICUSDT",
-      "name": "VIC",
+      "symbol": "WLDUSDT",
+      "name": "WLD",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -54269,8 +54269,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "WLDUSDT",
-      "name": "WLD",
+      "symbol": "VICUSDT",
+      "name": "VIC",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -54339,6 +54339,16 @@
     },
     {
       "group": "crypto",
+      "symbol": "ONDOUSDT",
+      "name": "ONDO",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
       "symbol": "CRCLBUSDT",
       "name": "CRCLB",
       "source": "binance",
@@ -54351,16 +54361,6 @@
       "group": "crypto",
       "symbol": "PEPEUSDT",
       "name": "PEPE",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 2000,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "ONDOUSDT",
-      "name": "ONDO",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -54389,21 +54389,31 @@
     },
     {
       "group": "crypto",
-      "symbol": "SNXXBUSDT",
-      "name": "SNXXB",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 327,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
       "symbol": "TONUSDT",
       "name": "TON",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "TUTUSDT",
+      "name": "TUT",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "SNXXBUSDT",
+      "name": "SNXXB",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 327,
       "events": [],
       "error": null
     },
@@ -54419,8 +54429,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "AAVEUSDT",
-      "name": "AAVE",
+      "symbol": "XLMUSDT",
+      "name": "XLM",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -54429,8 +54439,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "TUTUSDT",
-      "name": "TUT",
+      "symbol": "AAVEUSDT",
+      "name": "AAVE",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -54449,26 +54459,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MSFT",
-      "name": "Microsoft",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "XLMUSDT",
-      "name": "XLM",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 2000,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "AAPL",
       "name": "Apple Inc.",
       "source": "yahoo",
@@ -54479,8 +54469,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "GOOGL",
-      "name": "Alphabet Inc. (Class A)",
+      "symbol": "MSFT",
+      "name": "Microsoft",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54499,8 +54489,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "GOOG",
-      "name": "Alphabet Inc. (Class C)",
+      "symbol": "GOOGL",
+      "name": "Alphabet Inc. (Class A)",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54509,8 +54499,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "AVGO",
-      "name": "Broadcom Inc.",
+      "symbol": "GOOG",
+      "name": "Alphabet Inc. (Class C)",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54529,8 +54519,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "TSLA",
-      "name": "Tesla, Inc.",
+      "symbol": "AVGO",
+      "name": "Broadcom Inc.",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54549,8 +54539,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ASML",
-      "name": "ASML Holding",
+      "symbol": "TSLA",
+      "name": "Tesla, Inc.",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54569,16 +54559,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MU",
-      "name": "Micron Technology",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "NFLX",
       "name": "Netflix",
       "source": "yahoo",
@@ -54589,8 +54569,18 @@
     },
     {
       "group": "ndx100",
-      "symbol": "AMD",
-      "name": "Advanced Micro Devices Inc.",
+      "symbol": "ASML",
+      "name": "ASML Holding",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "MU",
+      "name": "Micron Technology",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54601,6 +54591,16 @@
       "group": "ndx100",
       "symbol": "PLTR",
       "name": "Palantir Technologies",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "AMD",
+      "name": "Advanced Micro Devices Inc.",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54629,6 +54629,16 @@
     },
     {
       "group": "ndx100",
+      "symbol": "LRCX",
+      "name": "Lam Research",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "LIN",
       "name": "Linde plc",
       "source": "yahoo",
@@ -54649,38 +54659,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "LRCX",
-      "name": "Lam Research",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "INTC",
       "name": "Intel",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "PEP",
-      "name": "PepsiCo",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "KLAC",
-      "name": "KLA Corporation",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54699,8 +54679,18 @@
     },
     {
       "group": "ndx100",
-      "symbol": "GILD",
-      "name": "Gilead Sciences",
+      "symbol": "KLAC",
+      "name": "KLA Corporation",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "PEP",
+      "name": "PepsiCo",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54721,6 +54711,16 @@
       "group": "ndx100",
       "symbol": "TXN",
       "name": "Texas Instruments",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "GILD",
+      "name": "Gilead Sciences",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54769,16 +54769,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "HON",
-      "name": "Honeywell",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "QCOM",
       "name": "Qualcomm",
       "source": "yahoo",
@@ -54789,28 +54779,18 @@
     },
     {
       "group": "ndx100",
+      "symbol": "HON",
+      "name": "Honeywell",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "APP",
       "name": "Applovin Corp",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "PANW",
-      "name": "Palo Alto Networks",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "VRTX",
-      "name": "Vertex Pharmaceuticals",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54839,18 +54819,18 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CEG",
-      "name": "Constellation Energy",
+      "symbol": "PANW",
+      "name": "Palo Alto Networks",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1139,
+      "bars": 1254,
       "events": [],
       "error": null
     },
     {
       "group": "ndx100",
-      "symbol": "CMCSA",
-      "name": "Comcast",
+      "symbol": "VRTX",
+      "name": "Vertex Pharmaceuticals",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54869,8 +54849,28 @@
     },
     {
       "group": "ndx100",
+      "symbol": "CEG",
+      "name": "Constellation Energy",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1139,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "CRWD",
       "name": "CrowdStrike",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "CMCSA",
+      "name": "Comcast",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54909,8 +54909,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MELI",
-      "name": "MercadoLibre",
+      "symbol": "MRVL",
+      "name": "Marvell Technology",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54919,8 +54919,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ADP",
-      "name": "ADP",
+      "symbol": "MELI",
+      "name": "MercadoLibre",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54939,8 +54939,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MRVL",
-      "name": "Marvell Technology",
+      "symbol": "ADP",
+      "name": "ADP",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54989,8 +54989,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ABNB",
-      "name": "Airbnb",
+      "symbol": "ORLY",
+      "name": "O'Reilly Automotive",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -54999,8 +54999,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ORLY",
-      "name": "O'Reilly Automotive",
+      "symbol": "ABNB",
+      "name": "Airbnb",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -55029,8 +55029,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "AEP",
-      "name": "American Electric Power",
+      "symbol": "ROST",
+      "name": "Ross Stores",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -55039,8 +55039,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ROST",
-      "name": "Ross Stores",
+      "symbol": "AEP",
+      "name": "American Electric Power",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -55099,16 +55099,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "FTNT",
-      "name": "Fortinet",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "MPWR",
       "name": "Monolithic Power Systems",
       "source": "yahoo",
@@ -55119,8 +55109,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "FANG",
-      "name": "Diamondback Energy",
+      "symbol": "FTNT",
+      "name": "Fortinet",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -55149,8 +55139,28 @@
     },
     {
       "group": "ndx100",
+      "symbol": "FANG",
+      "name": "Diamondback Energy",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "ADSK",
       "name": "Autodesk",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "NXPI",
+      "name": "NXP Semiconductors",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -55189,8 +55199,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "NXPI",
-      "name": "NXP Semiconductors",
+      "symbol": "MSTR",
+      "name": "MicroStrategy Inc.",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -55219,28 +55229,28 @@
     },
     {
       "group": "ndx100",
-      "symbol": "DDOG",
-      "name": "Datadog",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "MSTR",
-      "name": "MicroStrategy Inc.",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "ODFL",
       "name": "Old Dominion Freight Line",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "PYPL",
+      "name": "PayPal",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "DDOG",
+      "name": "Datadog",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -55259,16 +55269,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "TRI",
-      "name": "Thomson Reuters Corporation",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "TTWO",
       "name": "Take-Two Interactive",
       "source": "yahoo",
@@ -55279,8 +55279,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "PYPL",
-      "name": "PayPal",
+      "symbol": "TRI",
+      "name": "Thomson Reuters Corporation",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -55339,21 +55339,21 @@
     },
     {
       "group": "ndx100",
-      "symbol": "PAYX",
-      "name": "Paychex",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "GEHC",
       "name": "GE HealthCare",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 910,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "PAYX",
+      "name": "Paychex",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -55448,6 +55448,16 @@
       "error": null
     },
     {
+      "group": "futures",
+      "symbol": "GC=F",
+      "name": "Gold",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1257,
+      "events": [],
+      "error": null
+    },
+    {
       "group": "ndx100",
       "symbol": "CSGP",
       "name": "CoStar Group",
@@ -55459,8 +55469,8 @@
     },
     {
       "group": "futures",
-      "symbol": "GC=F",
-      "name": "Gold",
+      "symbol": "SI=F",
+      "name": "Silver",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1257,
@@ -55479,41 +55489,11 @@
     },
     {
       "group": "futures",
-      "symbol": "SI=F",
-      "name": "Silver",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1257,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "futures",
       "symbol": "CL=F",
       "name": "Crude Oil",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1257,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "futures",
-      "symbol": "NG=F",
-      "name": "Natural Gas",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1258,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "futures",
-      "symbol": "NQ=F",
-      "name": "E-mini Nasdaq",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1258,
       "events": [],
       "error": null
     },
@@ -55540,6 +55520,26 @@
     },
     {
       "group": "futures",
+      "symbol": "NG=F",
+      "name": "Natural Gas",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1258,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "futures",
+      "symbol": "NQ=F",
+      "name": "E-mini Nasdaq",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1258,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "futures",
       "symbol": "YM=F",
       "name": "E-mini Dow",
       "source": "yahoo",
@@ -55550,8 +55550,8 @@
     },
     {
       "group": "futures",
-      "symbol": "ZB=F",
-      "name": "US Treasury Bond",
+      "symbol": "RTY=F",
+      "name": "E-mini Russell",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1258,
@@ -55560,8 +55560,8 @@
     },
     {
       "group": "futures",
-      "symbol": "RTY=F",
-      "name": "E-mini Russell",
+      "symbol": "ZB=F",
+      "name": "US Treasury Bond",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1258,
@@ -55590,10 +55590,10 @@
           "kind": "trend_touch",
           "label": "阻力趨勢線觸碰",
           "type": "resistance",
-          "time": 1785900375,
+          "time": 1785901618,
           "index": 1257,
           "level": 1.1558144438093987,
-          "close": 1.155650019645691,
+          "close": 1.1555500030517578,
           "timeframe": "1d"
         }
       ],
@@ -55651,31 +55651,11 @@
     },
     {
       "group": "crypto",
-      "symbol": "ETHUSDT",
-      "name": "ETH",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 2000,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
       "symbol": "SNDKBUSDT",
       "name": "SNDKB",
       "source": "binance",
       "timeframe": "1d",
       "bars": 56,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "BANKUSDT",
-      "name": "BANK",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 266,
       "events": [],
       "error": null
     },
@@ -55691,21 +55671,31 @@
     },
     {
       "group": "crypto",
-      "symbol": "RLUSDUSDT",
-      "name": "RLUSD",
+      "symbol": "ETHUSDT",
+      "name": "ETH",
       "source": "binance",
       "timeframe": "1d",
-      "bars": 196,
+      "bars": 2000,
       "events": [],
       "error": null
     },
     {
       "group": "crypto",
-      "symbol": "BNBUSDT",
-      "name": "BNB",
+      "symbol": "BANKUSDT",
+      "name": "BANK",
       "source": "binance",
       "timeframe": "1d",
-      "bars": 2000,
+      "bars": 266,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "RLUSDUSDT",
+      "name": "RLUSD",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 196,
       "events": [],
       "error": null
     },
@@ -55721,8 +55711,28 @@
     },
     {
       "group": "crypto",
+      "symbol": "BNBUSDT",
+      "name": "BNB",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
       "symbol": "ZECUSDT",
       "name": "ZEC",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "XRPUSDT",
+      "name": "XRP",
       "source": "binance",
       "timeframe": "1d",
       "bars": 2000,
@@ -55741,16 +55751,6 @@
     },
     {
       "group": "crypto",
-      "symbol": "EULUSDT",
-      "name": "EUL",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 297,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
       "symbol": "XAUTUSDT",
       "name": "XAUT",
       "source": "binance",
@@ -55761,21 +55761,31 @@
     },
     {
       "group": "crypto",
-      "symbol": "SOXLBUSDT",
-      "name": "SOXLB",
+      "symbol": "EULUSDT",
+      "name": "EUL",
       "source": "binance",
       "timeframe": "1d",
-      "bars": 30,
+      "bars": 297,
       "events": [],
       "error": null
     },
     {
       "group": "crypto",
-      "symbol": "XRPUSDT",
-      "name": "XRP",
+      "symbol": "SKHYBUSDT",
+      "name": "SKHYB",
       "source": "binance",
       "timeframe": "1d",
-      "bars": 2000,
+      "bars": 24,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "SOXLBUSDT",
+      "name": "SOXLB",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 30,
       "events": [],
       "error": null
     },
@@ -55801,26 +55811,6 @@
     },
     {
       "group": "crypto",
-      "symbol": "SKHYBUSDT",
-      "name": "SKHYB",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 24,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "ADAUSDT",
-      "name": "ADA",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 2000,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
       "symbol": "PUMPUSDT",
       "name": "PUMP",
       "source": "binance",
@@ -55836,6 +55826,16 @@
       "source": "binance",
       "timeframe": "1d",
       "bars": 539,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "ADAUSDT",
+      "name": "ADA",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 2000,
       "events": [],
       "error": null
     },
@@ -55881,16 +55881,6 @@
     },
     {
       "group": "crypto",
-      "symbol": "UNIUSDT",
-      "name": "UNI",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 2000,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
       "symbol": "DOGEUSDT",
       "name": "DOGE",
       "source": "binance",
@@ -55901,18 +55891,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "VICUSDT",
-      "name": "VIC",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 986,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "AVAXUSDT",
-      "name": "AVAX",
+      "symbol": "UNIUSDT",
+      "name": "UNI",
       "source": "binance",
       "timeframe": "1d",
       "bars": 2000,
@@ -55941,6 +55921,26 @@
     },
     {
       "group": "crypto",
+      "symbol": "AVAXUSDT",
+      "name": "AVAX",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "VICUSDT",
+      "name": "VIC",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 986,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
       "symbol": "DEXEUSDT",
       "name": "DEXE",
       "source": "binance",
@@ -55951,11 +55951,61 @@
     },
     {
       "group": "crypto",
+      "symbol": "COTIUSDT",
+      "name": "COTI",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "LTCUSDT",
+      "name": "LTC",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
       "symbol": "LINKUSDT",
       "name": "LINK",
       "source": "binance",
       "timeframe": "1d",
       "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "ENAUSDT",
+      "name": "ENA",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 856,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "ONDOUSDT",
+      "name": "ONDO",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 482,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "CRCLBUSDT",
+      "name": "CRCLB",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 56,
       "events": [],
       "error": null
     },
@@ -55982,51 +56032,21 @@
     },
     {
       "group": "crypto",
-      "symbol": "ENAUSDT",
-      "name": "ENA",
+      "symbol": "LDOUSDT",
+      "name": "LDO",
       "source": "binance",
       "timeframe": "1d",
-      "bars": 856,
+      "bars": 1550,
       "events": [],
       "error": null
     },
     {
       "group": "crypto",
-      "symbol": "COTIUSDT",
-      "name": "COTI",
+      "symbol": "TUTUSDT",
+      "name": "TUT",
       "source": "binance",
       "timeframe": "1d",
-      "bars": 2000,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "LTCUSDT",
-      "name": "LTC",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 2000,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "ONDOUSDT",
-      "name": "ONDO",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 482,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "CRCLBUSDT",
-      "name": "CRCLB",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 56,
+      "bars": 497,
       "events": [],
       "error": null
     },
@@ -56062,31 +56082,11 @@
     },
     {
       "group": "crypto",
-      "symbol": "TUTUSDT",
-      "name": "TUT",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 497,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
       "symbol": "SNXXBUSDT",
       "name": "SNXXB",
       "source": "binance",
       "timeframe": "1d",
       "bars": 15,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "LDOUSDT",
-      "name": "LDO",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 1550,
       "events": [],
       "error": null
     },
@@ -56102,8 +56102,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "AAVEUSDT",
-      "name": "AAVE",
+      "symbol": "NEARUSDT",
+      "name": "NEAR",
       "source": "binance",
       "timeframe": "1d",
       "bars": 2000,
@@ -56112,8 +56112,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "NEARUSDT",
-      "name": "NEAR",
+      "symbol": "AAVEUSDT",
+      "name": "AAVE",
       "source": "binance",
       "timeframe": "1d",
       "bars": 2000,
