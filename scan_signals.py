@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Touch scanner: NDX100 + futures + top 50 crypto on 1H and 1D.
+"""Touch scanner: NDX100 + DJI30 + futures + top 50 crypto on 1H and 1D.
 
 Reports only:
   - AR/DR base-level touch after >12 bars from signal (not new AR/DR within 12 bars)
@@ -116,17 +116,22 @@ def http_get_json(url: str, timeout: int = 30) -> Any:
     return json.loads(http_get(url, timeout).decode())
 
 
+def _parse_constituents_csv(raw: str) -> list[tuple[str, str]]:
+    rows = list(csv.DictReader(io.StringIO(raw)))
+    out: list[tuple[str, str]] = []
+    for r in rows:
+        sym = (r.get("Symbol") or r.get("symbol") or "").strip().replace(".", "-")
+        name = (r.get("Name") or r.get("Security") or sym).strip()
+        if sym:
+            out.append((sym, name))
+    return out
+
+
 def fetch_ndx100() -> list[tuple[str, str]]:
     url = "https://yfiua.github.io/index-constituents/constituents-nasdaq100.csv"
     try:
         raw = http_get(url, timeout=40).decode()
-        rows = list(csv.DictReader(io.StringIO(raw)))
-        out = []
-        for r in rows:
-            sym = (r.get("Symbol") or r.get("symbol") or "").strip().replace(".", "-")
-            name = (r.get("Name") or r.get("Security") or sym).strip()
-            if sym:
-                out.append((sym, name))
+        out = _parse_constituents_csv(raw)
         if len(out) >= 80:
             return out
     except Exception as exc:
@@ -136,6 +141,32 @@ def fetch_ndx100() -> list[tuple[str, str]]:
         for s in [
             "AAPL", "MSFT", "NVDA", "AMZN", "META", "GOOGL", "GOOG", "AVGO", "TSLA", "COST",
             "NFLX", "AMD", "PEP", "ADBE", "CSCO", "TMUS", "INTC", "INTU", "AMAT", "QCOM",
+        ]
+    ]
+
+
+def fetch_dji30() -> list[tuple[str, str]]:
+    url = "https://yfiua.github.io/index-constituents/constituents-dowjones.csv"
+    try:
+        raw = http_get(url, timeout=40).decode()
+        out = _parse_constituents_csv(raw)
+        if len(out) >= 25:
+            return out
+    except Exception as exc:
+        print(f"DJI30 fetch failed: {exc}", flush=True)
+    return [
+        (s, n)
+        for s, n in [
+            ("GS", "Goldman Sachs"), ("CAT", "Caterpillar"), ("MSFT", "Microsoft"),
+            ("AMGN", "Amgen"), ("HD", "Home Depot"), ("SHW", "Sherwin-Williams"),
+            ("MCD", "McDonald's"), ("AXP", "American Express"), ("V", "Visa"),
+            ("JPM", "JPMorgan"), ("TRV", "Travelers"), ("UNH", "UnitedHealth"),
+            ("AAPL", "Apple"), ("JNJ", "Johnson & Johnson"), ("IBM", "IBM"),
+            ("HON", "Honeywell"), ("AMZN", "Amazon"), ("CVX", "Chevron"),
+            ("BA", "Boeing"), ("CRM", "Salesforce"), ("NVDA", "Nvidia"),
+            ("MMM", "3M"), ("PG", "Procter & Gamble"), ("WMT", "Walmart"),
+            ("MRK", "Merck"), ("DIS", "Disney"), ("CSCO", "Cisco"),
+            ("KO", "Coca-Cola"), ("VZ", "Verizon"), ("NKE", "Nike"),
         ]
     ]
 
@@ -495,6 +526,7 @@ CHART_MODAL_SCRIPT = r"""
   function tvSymbol(group, symbol) {
     if (group === "crypto") return "BINANCE:" + symbol;
     if (group === "futures") return FUTURES_TV[symbol] || symbol;
+    if (group === "dji30") return symbol;
     return "NASDAQ:" + symbol;
   }
 
@@ -758,7 +790,7 @@ CHART_MODAL_SCRIPT = r"""
   closeBtn.addEventListener("click", closeModal);
 
   const CATALOG = window.SYMBOL_CATALOG || [];
-  const GROUP_LABEL = { ndx100: "NDX100", crypto: "Crypto", futures: "Futures" };
+  const GROUP_LABEL = { ndx100: "NDX100", dji30: "DJI30", crypto: "Crypto", futures: "Futures" };
   const fab = document.getElementById("symbolFab");
   const searchOverlay = document.getElementById("symbolOverlay");
   const searchInput = document.getElementById("symbolSearch");
@@ -1004,8 +1036,9 @@ def render_html(payload: dict) -> str:
     .meta {{ color: var(--muted); font-size: .9rem; margin: 8px 0 18px; }}
     .meta strong {{ color: var(--primary); font-weight: 600; }}
     .cards {{
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 22px;
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 22px;
     }}
+    @media (max-width: 900px) {{ .cards {{ grid-template-columns: repeat(3, 1fr); }} }}
     @media (max-width: 720px) {{ .cards {{ grid-template-columns: 1fr 1fr; }} }}
     .card {{
       background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px;
@@ -1188,6 +1221,7 @@ def render_html(payload: dict) -> str:
     <div class="cards">
       <div class="card"><div class="lbl">Hits</div><div class="val">{c['hits']}</div></div>
       <div class="card"><div class="lbl">NDX100</div><div class="val">{c['ndx100']}</div></div>
+      <div class="card"><div class="lbl">DJI30</div><div class="val">{c['dji30']}</div></div>
       <div class="card"><div class="lbl">Futures</div><div class="val">{c['futures']}</div></div>
       <div class="card"><div class="lbl">Crypto</div><div class="val">{c['crypto']}</div></div>
     </div>
@@ -1245,7 +1279,7 @@ def render_html(payload: dict) -> str:
   <div class="search-overlay" id="symbolOverlay" hidden>
     <div class="search-modal" role="dialog" aria-modal="true" aria-label="搜尋掃描商品">
       <div class="search-modal-head">
-        <input id="symbolSearch" type="search" autocomplete="off" spellcheck="false" placeholder="代碼、名稱、NDX100 / Crypto / Futures…" aria-controls="symbolList" />
+        <input id="symbolSearch" type="search" autocomplete="off" spellcheck="false" placeholder="代碼、名稱、NDX100 / DJI30 / Crypto / Futures…" aria-controls="symbolList" />
         <button type="button" id="symbolSearchClose">關閉</button>
       </div>
       <ul id="symbolList" role="listbox"></ul>
@@ -1286,19 +1320,23 @@ def main() -> int:
     print("Loading universes…", flush=True)
     try:
         ndx100 = fetch_ndx100()
+        dji30 = fetch_dji30()
         crypto = fetch_top50_crypto()
     except Exception as exc:  # noqa: BLE001
         print(f"Universe load failed: {exc}", flush=True)
         ndx100 = fetch_ndx100()  # has internal fallback
+        dji30 = fetch_dji30()
         crypto = list(CRYPTO_FALLBACK)
 
     jobs = []
     for tf in TIMEFRAMES:
         jobs.extend(("ndx100", s, n, "yahoo", tf) for s, n in ndx100)
+        jobs.extend(("dji30", s, n, "yahoo", tf) for s, n in dji30)
         jobs.extend(("futures", s, n, "yahoo", tf) for s, n in FUTURES)
         jobs.extend(("crypto", s, n, "binance", tf) for s, n in crypto)
     tf_label = " + ".join(fmt_tf(tf) for tf in TIMEFRAMES)
-    print(f"Scanning {len(jobs)} jobs ({len(ndx100)+len(FUTURES)+len(crypto)} symbols × {tf_label})…", flush=True)
+    sym_n = len(ndx100) + len(dji30) + len(FUTURES) + len(crypto)
+    print(f"Scanning {len(jobs)} jobs ({sym_n} symbols × {tf_label})…", flush=True)
 
     results: list[dict] = []
     workers = 4 if os.environ.get("GITHUB_ACTIONS") else 6
@@ -1371,6 +1409,7 @@ def main() -> int:
         },
         "counts": {
             "ndx100": len(ndx100),
+            "dji30": len(dji30),
             "futures": len(FUTURES),
             "crypto": len(crypto),
             "jobs": len(jobs),

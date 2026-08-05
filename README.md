@@ -17,6 +17,7 @@ https://1mckw.github.io/AR/
 | 池 | 來源 | 說明 |
 |----|------|------|
 | **NASDAQ-100** | index-constituents CSV | 約 100 檔美股 |
+| **DJI 30** | index-constituents CSV | 道瓊 30 成分股 |
 | **期貨** | Yahoo `=F` | 金銀銅油氣、股指、債、外匯、BTC 期 |
 | **Crypto Top 50** | Binance 24h USDT 成交額 | 前 50 名現貨 |
 
