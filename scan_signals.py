@@ -4,6 +4,7 @@
 Reports only:
   - AR/DR base-level touch after >12 bars from signal (not new AR/DR within 12 bars)
   - Trend-line wick touches
+  - Latest 4 bars all with body beyond a trend line
 """
 
 from __future__ import annotations
@@ -55,11 +56,13 @@ MAX_SUPPORT = tl.MAX_SUPPORT
 MAX_LINES_PER_PIVOT = tl.MAX_LINES_PER_PIVOT
 MIN_LINE_PIVOTS = tl.MIN_LINE_PIVOTS
 SHARP_PIERCE_GRACE_BARS = tl.SHARP_PIERCE_GRACE_BARS
+TREND_EXCEED_BARS = tl.TREND_EXCEED_BARS
 find_pivots = tl.find_pivots
 line_price = tl.line_price
 build_auto_trend_lines = tl.build_auto_trend_lines
 check_line_invalidation = tl.check_line_invalidation
 find_trend_touch = tl.find_trend_touch
+find_trend_exceed = tl.find_trend_exceed
 find_line_break_index = tl.find_line_break_index
 line_end_at_break = tl.line_end_at_break
 
@@ -349,6 +352,30 @@ def collect_trend_touches(candles: list[dict], lines: list[dict]) -> list[dict]:
     return hits
 
 
+def collect_trend_exceeds(candles: list[dict], lines: list[dict]) -> list[dict]:
+    if not candles:
+        return []
+    hits = []
+    for line in lines:
+        exc = find_trend_exceed(candles, line)
+        if not exc:
+            continue
+        label = "阻力趨勢線超出" if line["type"] == "resistance" else "支撐趨勢線超出"
+        hits.append(
+            {
+                "kind": "trend_exceed",
+                "label": label,
+                "type": line["type"],
+                "time": exc["time"],
+                "index": exc["index"],
+                "level": exc["price"],
+                "close": exc["close"],
+                "exceed_bars": exc["bars"],
+            }
+        )
+    return hits
+
+
 def build_chart_pack(candles: list[dict], signals: list[dict], lines: list[dict]) -> dict:
     """Compact candles + AR/DR rays + trend lines for the HTML chart modal."""
     last_time = int(candles[-1]["time"]) if candles else 0
@@ -452,7 +479,8 @@ def scan_one(group: str, symbol: str, name: str, source: str, timeframe: str) ->
         late = collect_late_ar_dr_touches(candles, signals)
         lines = build_auto_trend_lines(candles)
         trend = collect_trend_touches(candles, lines)
-        events = late + trend
+        exceed = collect_trend_exceeds(candles, lines)
+        events = late + trend + exceed
         for ev in events:
             ev["timeframe"] = timeframe
         out = {
@@ -542,6 +570,10 @@ CHART_MODAL_SCRIPT = r"""
 
   function typeLabel(type, kind) {
     if (kind === "ar_dr_touch") return type || "AR/DR";
+    if (kind === "trend_exceed") {
+      if (type === "resistance") return "阻力超出";
+      if (type === "support") return "支撐超出";
+    }
     if (type === "resistance") return "阻力線";
     if (type === "support") return "支撐線";
     return type || "觸碰";
@@ -648,7 +680,7 @@ CHART_MODAL_SCRIPT = r"""
     if (!candles.length) throw new Error("no candles");
 
     chart = LightweightCharts.createChart(lwcEl, {
-      layout: { background: { color: "#05070b" }, textColor: "#7a93a8" },
+      layout: { background: { color: "#000000" }, textColor: "#7a93a8" },
       grid: {
         vertLines: { color: "rgba(0,240,200,0.05)" },
         horzLines: { color: "rgba(0,240,200,0.05)" },
@@ -932,6 +964,7 @@ def render_html(payload: dict) -> str:
     hits = payload["hits"]
     ar_dr = [h for h in hits if h["kind"] == "ar_dr_touch"]
     trend = [h for h in hits if h["kind"] == "trend_touch"]
+    exceed = [h for h in hits if h["kind"] == "trend_exceed"]
     errs = [r for r in payload["results"] if r.get("error")]
     c = payload["counts"]
 
@@ -992,6 +1025,26 @@ def render_html(payload: dict) -> str:
             )
         return "\n".join(out)
 
+    def rows_trend_exceed() -> str:
+        if not exceed:
+            return f'<tr><td colspan="8" class="empty">目前無最新 {TREND_EXCEED_BARS} 根超出趨勢線</td></tr>'
+        out = []
+        for h in exceed:
+            cls = "resist" if h.get("type") == "resistance" else "support"
+            out.append(
+                "<tr>"
+                f'<td><span class="tag {cls}">{html.escape(str(h.get("type", "")))}</span></td>'
+                f"<td>{html.escape(fmt_tf(h.get('timeframe', '')))}</td>"
+                f"<td>{html.escape(h.get('group', ''))}</td>"
+                f"<td>{sym_btn(h)}</td>"
+                f"<td>{html.escape(h.get('name', ''))}</td>"
+                f"<td class=\"num\">{fmt_num(float(h['level']))}</td>"
+                f"<td class=\"num\">{int(h.get('exceed_bars', TREND_EXCEED_BARS))}</td>"
+                f"<td>{html.escape(fmt_ts(int(h['time'])))}</td>"
+                "</tr>"
+            )
+        return "\n".join(out)
+
     err_block = ""
     if errs[:15]:
         items = "".join(
@@ -1014,24 +1067,41 @@ def render_html(payload: dict) -> str:
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {{
-      --bg: #05070b; --panel: #0c121c; --surface: #121a28; --border: rgba(0,240,200,.16);
-      --text: #e8f7f4; --muted: #7a93a8; --primary: #00f0c8;
+      --bg: #000000; --bg-deep: #020408;
+      --panel: rgba(8, 12, 20, 0.58); --surface: rgba(12, 18, 28, 0.68);
+      --glass-blur: blur(24px) saturate(1.45);
+      --border: rgba(0, 255, 213, 0.18); --border-strong: rgba(0, 255, 213, 0.34);
+      --text: #eefdfb; --muted: #7a93a8; --primary: #00f0c8;
       --ar: #00e896; --dr: #ff4d6d; --support: #00e896; --resist: #ff4d6d;
+      --glow: 0 0 28px rgba(0, 240, 200, 0.28);
+      --glass-shadow: inset 0 1px 0 rgba(255,255,255,0.07), 0 10px 40px rgba(0,0,0,0.55), 0 0 30px rgba(0,240,200,0.07);
     }}
     * {{ box-sizing: border-box; margin: 0; padding: 0; }}
     body {{
       font-family: "Space Grotesk", system-ui, sans-serif;
-      background:
-        radial-gradient(900px 420px at 10% -10%, rgba(0,240,200,.08), transparent 55%),
-        linear-gradient(180deg, #070b12, var(--bg));
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(900px 520px at 8% -15%, rgba(0, 240, 200, 0.14), transparent 58%),
+        radial-gradient(700px 480px at 92% 108%, rgba(255, 45, 106, 0.11), transparent 55%),
+        radial-gradient(600px 400px at 55% 42%, rgba(56, 189, 248, 0.06), transparent 60%),
+        linear-gradient(180deg, #030508 0%, #000000 100%);
       color: var(--text); min-height: 100vh; padding: 28px 18px 48px;
-      line-height: 1.45;
+      line-height: 1.45; position: relative;
     }}
-    .wrap {{ max-width: 1100px; margin: 0 auto; }}
+    body::before {{
+      content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.42;
+      background-image:
+        linear-gradient(rgba(0, 255, 213, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 213, 0.045) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse at center, black 15%, transparent 78%);
+    }}
+    .wrap {{ max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }}
     h1 {{
       font-size: 1.55rem; font-weight: 700; letter-spacing: -.03em;
       background: linear-gradient(90deg, #e8f7f4, var(--primary));
       -webkit-background-clip: text; background-clip: text; color: transparent;
+      filter: drop-shadow(0 0 18px rgba(0, 240, 200, 0.35));
     }}
     .meta {{ color: var(--muted); font-size: .9rem; margin: 8px 0 18px; }}
     .meta strong {{ color: var(--primary); font-weight: 600; }}
@@ -1041,24 +1111,37 @@ def render_html(payload: dict) -> str:
     @media (max-width: 900px) {{ .cards {{ grid-template-columns: repeat(3, 1fr); }} }}
     @media (max-width: 720px) {{ .cards {{ grid-template-columns: 1fr 1fr; }} }}
     .card {{
-      background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px;
+      background: var(--panel); border: 1px solid var(--border-strong); border-radius: 12px; padding: 12px 14px;
+      backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+      box-shadow: var(--glass-shadow);
     }}
     .card .lbl {{ font-size: .65rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }}
-    .card .val {{ font-family: "JetBrains Mono", monospace; font-size: 1.25rem; font-weight: 700; margin-top: 4px; }}
+    .card .val {{
+      font-family: "JetBrains Mono", monospace; font-size: 1.25rem; font-weight: 700; margin-top: 4px;
+      text-shadow: 0 0 16px rgba(0, 240, 200, 0.22);
+    }}
     .rules {{
-      background: rgba(0,240,200,.04); border: 1px solid var(--border); border-radius: 12px;
+      background: rgba(0, 240, 200, 0.04); border: 1px solid var(--border-strong); border-radius: 12px;
       padding: 12px 14px; margin-bottom: 22px; font-size: .85rem; color: var(--muted);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      box-shadow: var(--glass-shadow);
     }}
     .rules li {{ margin: 4px 0 4px 1.1em; }}
-    h2 {{ font-size: 1.05rem; margin: 22px 0 10px; font-weight: 650; }}
+    h2 {{
+      font-size: 1.05rem; margin: 22px 0 10px; font-weight: 650;
+      color: var(--text); text-shadow: 0 0 20px rgba(0, 240, 200, 0.28);
+    }}
     .panel {{
-      background: var(--panel); border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
+      background: var(--panel); border: 1px solid var(--border-strong); border-radius: 14px; overflow: hidden;
+      backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+      box-shadow: var(--glass-shadow);
     }}
     table {{ width: 100%; border-collapse: collapse; font-size: .84rem; }}
     th, td {{ padding: 9px 12px; text-align: left; border-bottom: 1px solid rgba(0,240,200,.08); }}
     th {{
-      background: var(--surface); color: var(--muted); font-size: .68rem;
+      background: rgba(12, 18, 28, 0.75); color: var(--muted); font-size: .68rem;
       text-transform: uppercase; letter-spacing: .06em; font-weight: 600;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     }}
     tr:hover td {{ background: rgba(0,240,200,.04); }}
     td.num, th.num {{ text-align: right; font-family: "JetBrains Mono", monospace; font-variant-numeric: tabular-nums; }}
@@ -1083,21 +1166,24 @@ def render_html(payload: dict) -> str:
     .sym-btn:focus-visible {{ outline: 2px solid var(--primary); outline-offset: 3px; }}
     .modal {{
       position: fixed; inset: 0; z-index: 80; display: flex; align-items: center; justify-content: center;
-      padding: 16px; background: rgba(2, 6, 12, .72); backdrop-filter: blur(8px);
+      padding: 16px; background: rgba(0, 0, 0, 0.62);
+      backdrop-filter: blur(14px) saturate(1.2); -webkit-backdrop-filter: blur(14px) saturate(1.2);
       opacity: 0; pointer-events: none; transition: opacity .2s ease;
     }}
     .modal.open {{ opacity: 1; pointer-events: auto; }}
     .modal-panel {{
       width: min(1100px, 100%); height: min(720px, 92vh);
-      background: var(--panel); border: 1px solid var(--border); border-radius: 16px;
+      background: rgba(8, 12, 20, 0.62); border: 1px solid var(--border-strong); border-radius: 16px;
+      backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
       display: flex; flex-direction: column; overflow: hidden;
-      box-shadow: 0 24px 80px rgba(0,0,0,.45);
+      box-shadow: var(--glass-shadow), 0 0 48px rgba(0, 240, 200, 0.12);
       transform: translateY(10px) scale(.985); transition: transform .22s ease;
     }}
     .modal.open .modal-panel {{ transform: none; }}
     .modal-head {{
       display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
-      padding: 14px 16px; border-bottom: 1px solid rgba(0,240,200,.1); background: var(--surface);
+      padding: 14px 16px; border-bottom: 1px solid rgba(0,240,200,.1);
+      background: rgba(12, 18, 28, 0.65); backdrop-filter: blur(12px);
     }}
     .modal-title {{ font-size: 1.05rem; font-weight: 650; letter-spacing: -.02em; }}
     .modal-sub {{ color: var(--muted); font-size: .82rem; margin-top: 4px; }}
@@ -1107,7 +1193,7 @@ def render_html(payload: dict) -> str:
       background: transparent; color: var(--text); font-size: 1.25rem; cursor: pointer; flex: 0 0 auto;
     }}
     .modal-close:hover {{ border-color: var(--primary); color: var(--primary); }}
-    .modal-chart {{ flex: 1; min-height: 0; position: relative; background: #05070b; }}
+    .modal-chart {{ flex: 1; min-height: 0; position: relative; background: #000000; }}
     .modal-chart iframe, .modal-chart #lwc {{ position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }}
     .modal-status {{
       position: absolute; inset: 0; display: grid; place-items: center;
@@ -1124,10 +1210,10 @@ def render_html(payload: dict) -> str:
       position: fixed; right: 18px; bottom: 22px; z-index: 70;
       display: flex; align-items: center; gap: 10px;
       padding: 12px 16px 12px 14px; border-radius: 14px;
-      border: 1px solid rgba(0,240,200,.28);
-      background: linear-gradient(145deg, rgba(12,22,34,.94), rgba(8,14,24,.9));
-      backdrop-filter: blur(14px);
-      box-shadow: 0 12px 32px rgba(0,0,0,.45), 0 0 24px rgba(0,240,200,.12);
+      border: 1px solid var(--border-strong);
+      background: rgba(6, 10, 18, 0.58);
+      backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+      box-shadow: var(--glass-shadow), var(--glow);
       color: var(--text); cursor: pointer; font: inherit;
       transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
     }}
@@ -1151,26 +1237,30 @@ def render_html(payload: dict) -> str:
     }}
     .search-overlay {{
       position: fixed; inset: 0; z-index: 85;
-      background: rgba(2,6,12,.72); backdrop-filter: blur(6px);
+      background: rgba(0, 0, 0, 0.62);
+      backdrop-filter: blur(14px) saturate(1.2); -webkit-backdrop-filter: blur(14px) saturate(1.2);
       display: flex; align-items: flex-start; justify-content: center;
       padding: 10vh 16px 16px;
     }}
     .search-overlay[hidden] {{ display: none !important; }}
     .search-modal {{
       width: min(520px, 100%); max-height: min(70vh, 560px);
-      background: var(--panel); border: 1px solid var(--border); border-radius: 16px;
-      box-shadow: 0 24px 60px rgba(0,0,0,.55);
+      background: rgba(8, 12, 20, 0.62); border: 1px solid var(--border-strong); border-radius: 16px;
+      backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+      box-shadow: var(--glass-shadow), 0 0 48px rgba(0, 240, 200, 0.12);
       display: flex; flex-direction: column; overflow: hidden;
     }}
     .search-modal-head {{
       display: flex; align-items: center; gap: 8px;
       padding: 14px; border-bottom: 1px solid rgba(0,240,200,.1);
-      background: var(--surface); flex-shrink: 0;
+      background: rgba(12, 18, 28, 0.65); flex-shrink: 0;
+      backdrop-filter: blur(12px);
     }}
     #symbolSearch {{
       flex: 1; height: 42px; padding: 8px 14px; border-radius: 10px;
-      border: 1px solid rgba(0,240,200,.2); background: #060c14; color: var(--text);
+      border: 1px solid rgba(0,240,200,.2); background: rgba(4, 8, 14, 0.55); color: var(--text);
       font-family: "JetBrains Mono", monospace; font-size: .92rem;
+      backdrop-filter: blur(12px);
     }}
     #symbolSearch:focus {{
       outline: none; border-color: var(--primary);
@@ -1221,7 +1311,7 @@ def render_html(payload: dict) -> str:
     <div class="cards">
       <div class="card"><div class="lbl">Hits</div><div class="val">{c['hits']}</div></div>
       <div class="card"><div class="lbl">NDX100</div><div class="val">{c['ndx100']}</div></div>
-      <div class="card"><div class="lbl">DJI30</div><div class="val">{c['dji30']}</div></div>
+      <div class="card"><div class="lbl">DJI30</div><div class="val">{c.get('dji30', 0)}</div></div>
       <div class="card"><div class="lbl">Futures</div><div class="val">{c['futures']}</div></div>
       <div class="card"><div class="lbl">Crypto</div><div class="val">{c['crypto']}</div></div>
     </div>
@@ -1232,6 +1322,7 @@ def render_html(payload: dict) -> str:
       <li>趨勢線須至少 <strong>{MIN_LINE_PIVOTS}</strong> 個觸點（Pivot 共線，或局部高低點影線近觸）</li>
       <li>急漲/急跌 K 實體可<strong>貫穿</strong>趨勢線（阻力←急漲、支撐←急跌）；貫穿後實體仍在线外不得超過 <strong>{SHARP_PIERCE_GRACE_BARS}</strong> 根 K</li>
       <li><strong>報告</strong> 趨勢線影線觸碰</li>
+      <li><strong>報告</strong> 最新 <strong>{TREND_EXCEED_BARS}</strong> 根 K 實體皆超出趨勢線（阻力←實體高于線、支撐←實體低于線）</li>
       <li>點擊 <strong>Symbol</strong> 開啟蠟燭圖（含 AR/DR 與趨勢線）</li>
     </ul>
 
@@ -1255,6 +1346,18 @@ def render_html(payload: dict) -> str:
         </thead>
         <tbody>
           {rows_trend()}
+        </tbody>
+      </table>
+    </div>
+
+    <h2>最新 {TREND_EXCEED_BARS} 根超出趨勢線 · {len(exceed)}</h2>
+    <div class="panel">
+      <table>
+        <thead>
+          <tr><th>Side</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th class="num">Bars</th><th>Time</th></tr>
+        </thead>
+        <tbody>
+          {rows_trend_exceed()}
         </tbody>
       </table>
     </div>
@@ -1406,6 +1509,7 @@ def main() -> int:
             "use_structure": USE_STRUCTURE,
             "pivot_high": PIVOT_HIGH,
             "pivot_low": PIVOT_LOW,
+            "trend_exceed_bars": TREND_EXCEED_BARS,
         },
         "counts": {
             "ndx100": len(ndx100),

@@ -22,6 +22,7 @@ NEAR_LINE_TOL_PCT = 0.004
 LOCAL_EXTREME_WING = 2
 MIN_TOUCH_BAR_GAP = 3
 SHARP_PIERCE_GRACE_BARS = 2
+TREND_EXCEED_BARS = 4
 
 
 def find_pivots(candles: list[dict], length: int, highs_only: bool, lows_only: bool):
@@ -285,6 +286,35 @@ def build_auto_trend_lines(candles: list[dict]) -> list[dict]:
 
 def check_line_invalidation(candles: list[dict], line: dict) -> bool:
     return find_line_break_index(candles, line) is not None
+
+
+def find_trend_exceed(
+    candles: list[dict], line: dict, n: int = TREND_EXCEED_BARS
+) -> dict | None:
+    """Return touch info if the last n bars all have body beyond the trend line."""
+    if len(candles) < n:
+        return None
+    p1 = line["p1"]
+    slope = line["slope"]
+    resistance = line["type"] == "resistance"
+    line_start = max(line["p2"]["index"], line["p1"]["index"])
+    first_i = len(candles) - n
+    if first_i <= line_start:
+        return None
+    for i in range(first_i, len(candles)):
+        lp = line_price(p1, slope, i)
+        if not body_crosses(candles, i, lp, resistance):
+            return None
+    last_i = len(candles) - 1
+    lp = line_price(p1, slope, last_i)
+    c = candles[last_i]
+    return {
+        "time": c["time"],
+        "price": lp,
+        "index": last_i,
+        "close": c["close"],
+        "bars": n,
+    }
 
 
 def find_trend_touch(candles: list[dict], line: dict) -> dict | None:
