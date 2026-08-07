@@ -48,7 +48,7 @@ https://1mckw.github.io/AR/
 
 Repo → **Actions** → **Hourly AR/DR Signals** → **Run workflow**
 
-排程：每小時 `:10` UTC。
+排程：每 **30 分鐘**（`:10`、`:40` UTC）。
 
 ## 本機跑一次
 

@@ -2,8 +2,8 @@ name: Hourly AR/DR Signals
 
 on:
   schedule:
-    # Every hour at :10 UTC (after many 1H candles close; also rescans 1D)
-    - cron: "10 * * * *"
+    # Every 30 min at :10 / :40 UTC (:10 after 1H close; ~7–15 min scan fits the gap)
+    - cron: "10,40 * * * *"
   workflow_dispatch:
 
 permissions:
