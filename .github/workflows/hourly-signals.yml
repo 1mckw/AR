@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -42,7 +44,12 @@ jobs:
             exit 0
           fi
           git commit -m "chore: update hourly touch alerts HTML"
-          git push
+          if ! git pull --rebase origin main; then
+            git checkout --theirs signals/latest.json signals/latest.html signals/index.html
+            git add signals/latest.json signals/latest.html signals/index.html
+            GIT_EDITOR=true git rebase --continue
+          fi
+          git push origin main
         env:
           GIT_AUTHOR_NAME: github-actions[bot]
           GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
