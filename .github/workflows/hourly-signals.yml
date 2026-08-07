@@ -30,7 +30,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Scan NDX100 + Futures + Top50 Crypto
+      - name: Scan NDX100 + DJI30 + Futures + FX + Top30 Crypto
         env:
           PYTHONUNBUFFERED: "1"
           PYTHONIOENCODING: utf-8

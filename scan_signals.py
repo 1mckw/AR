@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Touch scanner: NDX100 + DJI30 + futures + top 50 crypto on 1H and 1D.
+"""Touch scanner: NDX100 + DJI30 + futures + FX + top 30 crypto on 1H and 1D.
 
 Reports only:
   - AR/DR base-level touch after >12 bars from signal (not new AR/DR within 12 bars)
@@ -80,9 +80,25 @@ FUTURES = [
     ("RTY=F", "E-mini Russell"),
     ("ZB=F", "US Treasury Bond"),
     ("ZN=F", "10Y T-Note"),
-    ("6E=F", "Euro FX"),
-    ("6J=F", "Japanese Yen"),
     ("BTC=F", "Bitcoin Futures"),
+]
+
+FX = [
+    ("EURUSD=X", "EUR/USD"),
+    ("GBPUSD=X", "GBP/USD"),
+    ("USDJPY=X", "USD/JPY"),
+    ("AUDUSD=X", "AUD/USD"),
+    ("USDCAD=X", "USD/CAD"),
+    ("USDCHF=X", "USD/CHF"),
+    ("NZDUSD=X", "NZD/USD"),
+    ("EURJPY=X", "EUR/JPY"),
+    ("GBPJPY=X", "GBP/JPY"),
+    ("EURGBP=X", "EUR/GBP"),
+    ("AUDJPY=X", "AUD/JPY"),
+    ("EURCHF=X", "EUR/CHF"),
+    ("USDCNH=X", "USD/CNH"),
+    ("USDMXN=X", "USD/MXN"),
+    ("USDTRY=X", "USD/TRY"),
 ]
 
 
@@ -101,6 +117,8 @@ CRYPTO_FALLBACK = [
     ("THETAUSDT", "THETA"), ("EOSUSDT", "EOS"), ("FLOWUSDT", "FLOW"), ("XTZUSDT", "XTZ"),
     ("CHZUSDT", "CHZ"), ("LDOUSDT", "LDO"),
 ]
+
+CRYPTO_TOP_N = 30
 
 BINANCE_BASES = [
     "https://data-api.binance.vision",
@@ -174,7 +192,7 @@ def fetch_dji30() -> list[tuple[str, str]]:
     ]
 
 
-def fetch_top50_crypto() -> list[tuple[str, str]]:
+def fetch_top_crypto() -> list[tuple[str, str]]:
     skip_bases = {
         "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "EUR", "AEUR", "BFUSD", "USD1", "XUSD",
     }
@@ -192,14 +210,14 @@ def fetch_top50_crypto() -> list[tuple[str, str]]:
                     continue
                 usdt.append(t)
             usdt.sort(key=lambda t: float(t.get("quoteVolume") or 0), reverse=True)
-            out = [(t["symbol"], t["symbol"].replace("USDT", "")) for t in usdt[:50]]
+            out = [(t["symbol"], t["symbol"].replace("USDT", "")) for t in usdt[:CRYPTO_TOP_N]]
             if out:
                 print(f"Crypto universe via {base}: {len(out)}", flush=True)
                 return out
         except Exception as exc:
             print(f"Crypto ticker failed ({base}): {exc}", flush=True)
     print("Crypto universe fallback list", flush=True)
-    return list(CRYPTO_FALLBACK)
+    return list(CRYPTO_FALLBACK[:CRYPTO_TOP_N])
 
 
 def parse_binance_klines(raw: list) -> list[dict]:
@@ -530,8 +548,7 @@ CHART_MODAL_SCRIPT = r"""
     "GC=F": "COMEX:GC1!", "SI=F": "COMEX:SI1!", "HG=F": "COMEX:HG1!",
     "CL=F": "NYMEX:CL1!", "NG=F": "NYMEX:NG1!", "ES=F": "CME_MINI:ES1!",
     "NQ=F": "CME_MINI:NQ1!", "YM=F": "CBOT_MINI:YM1!", "RTY=F": "CME_MINI:RTY1!",
-    "ZB=F": "CBOT:ZB1!", "ZN=F": "CBOT:ZN1!", "6E=F": "CME:6E1!",
-    "6J=F": "CME:6J1!", "BTC=F": "CME:BTC1!",
+    "ZB=F": "CBOT:ZB1!", "ZN=F": "CBOT:ZN1!", "BTC=F": "CME:BTC1!",
   };
 
   const modal = document.getElementById("chart-modal");
@@ -554,6 +571,7 @@ CHART_MODAL_SCRIPT = r"""
   function tvSymbol(group, symbol) {
     if (group === "crypto") return "BINANCE:" + symbol;
     if (group === "futures") return FUTURES_TV[symbol] || symbol;
+    if (group === "fx") return "FX_IDC:" + symbol.replace("=X", "");
     if (group === "dji30") return symbol;
     return "NASDAQ:" + symbol;
   }
@@ -822,7 +840,7 @@ CHART_MODAL_SCRIPT = r"""
   closeBtn.addEventListener("click", closeModal);
 
   const CATALOG = window.SYMBOL_CATALOG || [];
-  const GROUP_LABEL = { ndx100: "NDX100", dji30: "DJI30", crypto: "Crypto", futures: "Futures" };
+  const GROUP_LABEL = { ndx100: "NDX100", dji30: "DJI30", crypto: "Crypto", futures: "Futures", fx: "FX" };
   const fab = document.getElementById("symbolFab");
   const searchOverlay = document.getElementById("symbolOverlay");
   const searchInput = document.getElementById("symbolSearch");
@@ -1106,9 +1124,9 @@ def render_html(payload: dict) -> str:
     .meta {{ color: var(--muted); font-size: .9rem; margin: 8px 0 18px; }}
     .meta strong {{ color: var(--primary); font-weight: 600; }}
     .cards {{
-      display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 22px;
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 22px;
     }}
-    @media (max-width: 900px) {{ .cards {{ grid-template-columns: repeat(3, 1fr); }} }}
+    @media (max-width: 1100px) {{ .cards {{ grid-template-columns: repeat(3, 1fr); }} }}
     @media (max-width: 720px) {{ .cards {{ grid-template-columns: 1fr 1fr; }} }}
     .card {{
       background: var(--panel); border: 1px solid var(--border-strong); border-radius: 12px; padding: 12px 14px;
@@ -1313,6 +1331,7 @@ def render_html(payload: dict) -> str:
       <div class="card"><div class="lbl">NDX100</div><div class="val">{c['ndx100']}</div></div>
       <div class="card"><div class="lbl">DJI30</div><div class="val">{c.get('dji30', 0)}</div></div>
       <div class="card"><div class="lbl">Futures</div><div class="val">{c['futures']}</div></div>
+      <div class="card"><div class="lbl">FX</div><div class="val">{c.get('fx', 0)}</div></div>
       <div class="card"><div class="lbl">Crypto</div><div class="val">{c['crypto']}</div></div>
     </div>
     <ul class="rules">
@@ -1382,7 +1401,7 @@ def render_html(payload: dict) -> str:
   <div class="search-overlay" id="symbolOverlay" hidden>
     <div class="search-modal" role="dialog" aria-modal="true" aria-label="搜尋掃描商品">
       <div class="search-modal-head">
-        <input id="symbolSearch" type="search" autocomplete="off" spellcheck="false" placeholder="代碼、名稱、NDX100 / DJI30 / Crypto / Futures…" aria-controls="symbolList" />
+        <input id="symbolSearch" type="search" autocomplete="off" spellcheck="false" placeholder="代碼、名稱、NDX100 / DJI30 / FX / Futures / Crypto…" aria-controls="symbolList" />
         <button type="button" id="symbolSearchClose">關閉</button>
       </div>
       <ul id="symbolList" role="listbox"></ul>
@@ -1424,21 +1443,22 @@ def main() -> int:
     try:
         ndx100 = fetch_ndx100()
         dji30 = fetch_dji30()
-        crypto = fetch_top50_crypto()
+        crypto = fetch_top_crypto()
     except Exception as exc:  # noqa: BLE001
         print(f"Universe load failed: {exc}", flush=True)
         ndx100 = fetch_ndx100()  # has internal fallback
         dji30 = fetch_dji30()
-        crypto = list(CRYPTO_FALLBACK)
+        crypto = list(CRYPTO_FALLBACK[:CRYPTO_TOP_N])
 
     jobs = []
     for tf in TIMEFRAMES:
         jobs.extend(("ndx100", s, n, "yahoo", tf) for s, n in ndx100)
         jobs.extend(("dji30", s, n, "yahoo", tf) for s, n in dji30)
         jobs.extend(("futures", s, n, "yahoo", tf) for s, n in FUTURES)
+        jobs.extend(("fx", s, n, "yahoo", tf) for s, n in FX)
         jobs.extend(("crypto", s, n, "binance", tf) for s, n in crypto)
     tf_label = " + ".join(fmt_tf(tf) for tf in TIMEFRAMES)
-    sym_n = len(ndx100) + len(dji30) + len(FUTURES) + len(crypto)
+    sym_n = len(ndx100) + len(dji30) + len(FUTURES) + len(FX) + len(crypto)
     print(f"Scanning {len(jobs)} jobs ({sym_n} symbols × {tf_label})…", flush=True)
 
     results: list[dict] = []
@@ -1515,6 +1535,7 @@ def main() -> int:
             "ndx100": len(ndx100),
             "dji30": len(dji30),
             "futures": len(FUTURES),
+            "fx": len(FX),
             "crypto": len(crypto),
             "jobs": len(jobs),
             "ok": sum(1 for r in slim_results if not r.get("error")),
