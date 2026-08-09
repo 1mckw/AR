@@ -1110,31 +1110,15 @@ GROUP_FILTER_SCRIPT = r"""
 <script>
 (function () {
   const KEY = "tv_ar_group_filter_v1";
-  const MODE_KEY = "tv_ar_view_mode_v1";
   const ALLOWED = new Set(["all", "ndx100", "sp500", "dji30"]);
   const bar = document.getElementById("groupFilters");
   const modeBar = document.getElementById("viewMode");
-  const viewLatest = document.getElementById("view-latest");
-  const viewHistory = document.getElementById("view-history");
 
   let current = "all";
-  let mode = "latest";
   try {
     const saved = localStorage.getItem(KEY);
     if (saved && ALLOWED.has(saved)) current = saved;
-    const m = localStorage.getItem(MODE_KEY);
-    if (m === "latest" || m === "history") mode = m;
   } catch (_) {}
-
-  function syncMode() {
-    if (modeBar) {
-      modeBar.querySelectorAll("button[data-mode]").forEach((btn) => {
-        btn.classList.toggle("active", btn.dataset.mode === mode);
-      });
-    }
-    if (viewLatest) viewLatest.hidden = mode !== "latest";
-    if (viewHistory) viewHistory.hidden = mode !== "history";
-  }
 
   function apply(group) {
     current = ALLOWED.has(group) ? group : "all";
@@ -1167,9 +1151,13 @@ GROUP_FILTER_SCRIPT = r"""
     modeBar.addEventListener("click", (ev) => {
       const btn = ev.target.closest("button[data-mode]");
       if (!btn) return;
-      mode = btn.dataset.mode === "history" ? "history" : "latest";
-      try { localStorage.setItem(MODE_KEY, mode); } catch (_) {}
-      syncMode();
+      const target = document.getElementById(btn.dataset.mode === "history" ? "view-history" : "view-latest");
+      modeBar.querySelectorAll("button[data-mode]").forEach((b) => {
+        const on = b === btn;
+        b.classList.toggle("active", on);
+        b.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }
   if (bar) {
@@ -1180,7 +1168,6 @@ GROUP_FILTER_SCRIPT = r"""
     });
   }
 
-  syncMode();
   apply(current);
 })();
 </script>
@@ -1409,7 +1396,12 @@ def render_html(payload: dict) -> str:
     .view-mode button .n {{
       margin-left: 6px; font-variant-numeric: tabular-nums; opacity: .85;
     }}
-    #view-latest[hidden], #view-history[hidden] {{ display: none !important; }}
+    #view-history {{
+      margin-top: 28px; padding-top: 8px;
+      border-top: 1px dashed rgba(0, 255, 213, 0.22);
+      scroll-margin-top: 18px;
+    }}
+    #view-latest {{ scroll-margin-top: 18px; }}
     .cards {{
       display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 22px;
     }}
@@ -1615,9 +1607,9 @@ def render_html(payload: dict) -> str:
       <div class="card"><div class="lbl">FX</div><div class="val">{c.get('fx', 0)}</div></div>
       <div class="card"><div class="lbl">Crypto</div><div class="val">{c['crypto']}</div></div>
     </div>
-    <div class="view-mode" id="viewMode" role="tablist" aria-label="最新與歷史">
-      <button type="button" data-mode="latest" class="active" role="tab" aria-selected="true">最新<span class="n">{len(hits)}</span></button>
-      <button type="button" data-mode="history" role="tab" aria-selected="false">歷史<span class="n">{len(hist_hits)}</span></button>
+    <div class="view-mode" id="viewMode" role="navigation" aria-label="跳至最新或歷史">
+      <button type="button" data-mode="latest" class="active">最新<span class="n">{len(hits)}</span></button>
+      <button type="button" data-mode="history">歷史<span class="n">{len(hist_hits)}</span></button>
     </div>
     <div class="group-filters" id="groupFilters" role="group" aria-label="指數篩選">
       <button type="button" data-group="all" class="active">全部</button>
@@ -1664,7 +1656,7 @@ def render_html(payload: dict) -> str:
     </div>
     </div>
 
-    <div id="view-history" hidden>
+    <div id="view-history">
     <h2 class="section-title" data-section="history" data-base="歷史紀錄" data-total="{len(hist_hits)}">歷史紀錄 · {len(hist_hits)}</h2>
     <p class="meta">歸檔自 <code>history.json</code>{(' · 更新 ' + html.escape(str(hist_payload.get('updated_at') or ''))) if hist_payload.get('updated_at') else ''} · 累積最多 {HISTORY_MAX_ENTRIES} 筆</p>
     <div class="panel">
