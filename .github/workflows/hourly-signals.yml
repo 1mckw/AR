@@ -5,6 +5,11 @@ on:
     # Every 30 min at :10 / :40 UTC (:10 after 1H close; ~7–15 min scan fits the gap)
     - cron: "10,40 * * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - ".github/workflows/hourly-signals.yml"
 
 permissions:
   contents: write
@@ -26,17 +31,20 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Python
+        if: github.event_name != 'push'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Scan NDX100 + DJI30 + Futures + FX + Top30 Crypto
+        if: github.event_name != 'push'
         env:
           PYTHONUNBUFFERED: "1"
           PYTHONIOENCODING: utf-8
         run: python -u scan_signals.py
 
       - name: Commit signal report
+        if: github.event_name != 'push'
         run: |
           git add signals/latest.json signals/latest.html signals/index.html
           if git diff --staged --quiet; then
@@ -56,11 +64,13 @@ jobs:
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
 
-      # GITHUB_TOKEN pushes do not trigger other workflows — deploy Pages here.
+      # Chart UI at / ; alerts report at /alerts.html (+ /latest.html for bookmarks)
       - name: Prepare Pages site
         run: |
           mkdir -p _site
-          cp signals/latest.html _site/index.html
+          cp index.html _site/index.html
+          cp signals/latest.html _site/alerts.html
+          cp signals/latest.html _site/latest.html
           cp signals/latest.json _site/latest.json
           touch _site/.nojekyll
 

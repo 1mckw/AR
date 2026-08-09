@@ -472,7 +472,7 @@
 <body>
   <header class="topbar">
     <div class="brand">
-      <h1>AR/DR · Trend Lines <a href="https://www.tradingview.com/script/UpsMdRXG-Simple-Auto-Trend-Lines/" target="_blank" rel="noopener">TV</a></h1>
+      <h1>AR/DR · Trend Lines <a href="alerts.html">信號</a> <a href="https://www.tradingview.com/script/UpsMdRXG-Simple-Auto-Trend-Lines/" target="_blank" rel="noopener">TV</a></h1>
     </div>
     <div class="top-controls" role="group" aria-label="商品與週期">
       <label class="field" for="timeframe">週期
@@ -887,16 +887,97 @@
       return out.length > totalBars ? out.slice(-totalBars) : out;
     }
 
-    async function fetchYahooKlines(symbol, totalBars, interval, onProgress) {
-      if (IS_PAGES) {
-        throw new Error('GitHub Pages 不支援 Yahoo 代理，請本機執行 python server.py，或選 Binance 加密貨幣');
+    const YAHOO_INTERVAL_MAP = { '1h': '60m', '4h': '60m', '1d': '1d' };
+    const PERIOD_SEC_MAP = { '1h': 3600, '4h': 14400, '1d': 86400 };
+
+    function yahooRangeForBars(interval, bars) {
+      if (interval === '1d') {
+        if (bars <= 500) return '2y';
+        if (bars <= 2000) return '5y';
+        if (bars <= 5000) return '10y';
+        return 'max';
       }
-      const url = `${API_BASE}/api/yahoo?symbol=${encodeURIComponent(symbol)}&bars=${totalBars}&interval=${interval}`;
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`Yahoo HTTP ${res.status}（請用 python server.py 啟動）`);
-      const raw = await res.json();
-      if (onProgress) onProgress(raw.length, totalBars);
-      return parseKlines(raw);
+      if (interval === '4h') {
+        const hours = bars * 4;
+        if (hours <= 24 * 90) return '3mo';
+        if (hours <= 24 * 180) return '6mo';
+        if (hours <= 24 * 365) return '1y';
+        return '730d';
+      }
+      if (bars <= 1000) return '3mo';
+      if (bars <= 2000) return '6mo';
+      if (bars <= 3000) return '1y';
+      return '730d';
+    }
+
+    function aggregateBars(rows, periodSec) {
+      const buckets = new Map();
+      for (const row of rows) {
+        const [tsMs, o, h, l, c, v] = row;
+        const key = Math.floor(tsMs / 1000 / periodSec) * periodSec;
+        const cur = buckets.get(key);
+        if (!cur) buckets.set(key, [key * 1000, o, h, l, c, v]);
+        else {
+          cur[2] = Math.max(cur[2], h);
+          cur[3] = Math.min(cur[3], l);
+          cur[4] = c;
+          cur[5] += v;
+        }
+      }
+      return [...buckets.keys()].sort((a, b) => a - b).map((k) => buckets.get(k));
+    }
+
+    async function fetchJsonCors(url) {
+      const attempts = [
+        url,
+        `https://corsproxy.io/?${encodeURIComponent(url)}`,
+        `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+      ];
+      let lastErr;
+      for (const u of attempts) {
+        try {
+          const res = await fetch(u);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          return await res.json();
+        } catch (e) {
+          lastErr = e;
+        }
+      }
+      throw lastErr || new Error('CORS fetch failed');
+    }
+
+    async function fetchYahooKlines(symbol, totalBars, interval, onProgress) {
+      if (!IS_PAGES) {
+        const url = `${API_BASE}/api/yahoo?symbol=${encodeURIComponent(symbol)}&bars=${totalBars}&interval=${interval}`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`Yahoo HTTP ${res.status}（請用 python server.py 啟動）`);
+        const raw = await res.json();
+        if (onProgress) onProgress(raw.length, totalBars);
+        return parseKlines(raw);
+      }
+
+      const fetchBars = interval === '4h' ? totalBars * 4 : totalBars;
+      const yahooIv = YAHOO_INTERVAL_MAP[interval];
+      const yrange = yahooRangeForBars(interval, fetchBars);
+      const yahooUrl =
+        `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}` +
+        `?interval=${yahooIv}&range=${yrange}&includePrePost=false`;
+      const payload = await fetchJsonCors(yahooUrl);
+      const result = payload?.chart?.result?.[0];
+      if (!result) throw new Error('Yahoo 無資料');
+      const ts = result.timestamp || [];
+      const q = result.indicators?.quote?.[0] || {};
+      let out = [];
+      for (let i = 0; i < ts.length; i++) {
+        const o = q.open?.[i], h = q.high?.[i], l = q.low?.[i], c = q.close?.[i], v = q.volume?.[i];
+        if ([o, h, l, c].some((x) => x == null)) continue;
+        out.push([ts[i] * 1000, o, h, l, c, v || 0]);
+      }
+      out.sort((a, b) => a[0] - b[0]);
+      if (interval === '4h') out = aggregateBars(out, PERIOD_SEC_MAP['4h']);
+      if (out.length > totalBars) out = out.slice(-totalBars);
+      if (onProgress) onProgress(out.length, totalBars);
+      return parseKlines(out);
     }
 
     async function fetchKlines(symbolInfo, totalBars, timeframe, onProgress) {
