@@ -18,7 +18,7 @@
       --primary: #00f0c8; --primary-dim: #00b894; --accent: #38bdf8; --neon-pink: #ff2d6a;
       --profit: #00e896; --loss: #ff4d6d; --lime: #5dffb1;
       --resist: #ff4d6d; --support: #00e896; --ring: #00f0c8;
-      --top-h: 44px; --bottom-h: 44px; --rail-w: 300px;
+      --top-h: 44px; --bottom-h: 44px; --rail-w: 280px; --hist-w: 280px;
       --radius: 10px; --ease: 200ms cubic-bezier(.2,.8,.2,1);
       --glow: 0 0 28px rgba(0, 240, 200, 0.28);
       --glass-shadow: inset 0 1px 0 rgba(255,255,255,0.07), 0 10px 40px rgba(0,0,0,0.55), 0 0 30px rgba(0,240,200,0.07);
@@ -36,11 +36,11 @@
       color: var(--text);
       display: grid;
       grid-template-rows: var(--top-h) 1fr var(--bottom-h);
-      grid-template-columns: 1fr var(--rail-w);
+      grid-template-columns: 1fr var(--rail-w) var(--hist-w);
       grid-template-areas:
-        "top top"
-        "chart rail"
-        "bottom bottom";
+        "top top top"
+        "chart rail history"
+        "bottom bottom bottom";
       overflow: hidden;
       font-size: 13px; line-height: 1.45;
       -webkit-font-smoothing: antialiased;
@@ -53,7 +53,7 @@
       background-size: 48px 48px;
       mask-image: radial-gradient(ellipse at center, black 15%, transparent 78%);
     }
-    .topbar, .rail, .bottombar, .chart-pane, .symbol-fab, .symbol-overlay {
+    .topbar, .rail, .history-rail, .bottombar, .chart-pane, .symbol-fab, .symbol-overlay {
       position: relative; z-index: 1;
     }
     :focus-visible { outline: 2px solid var(--ring); outline-offset: 1px; }
@@ -262,7 +262,8 @@
       user-select: none;
     }
     body.rail-resizing .chart-pane,
-    body.rail-resizing .rail {
+    body.rail-resizing .rail,
+    body.rail-resizing .history-rail {
       pointer-events: none;
     }
     body.rail-resizing .rail-resizer {
@@ -302,9 +303,6 @@
     }
     .rail-nav button[data-panel="touches"] .nav-dot {
       background: var(--accent); box-shadow: 0 0 8px rgba(56, 189, 248, 0.45);
-    }
-    .rail-nav button[data-panel="history"] .nav-dot {
-      background: var(--neon-pink); box-shadow: 0 0 8px rgba(255, 45, 106, 0.4);
     }
     .rail-nav .nav-label { flex: 1; letter-spacing: .03em; }
     .rail-nav .nav-count {
@@ -450,17 +448,20 @@
     }
     .sep { width: 1px; height: 22px; background: var(--border-strong); flex-shrink: 0; }
 
+    @media (max-width: 1100px) {
+      :root { --rail-w: 240px; --hist-w: 240px; }
+    }
     @media (max-width: 900px) {
       body {
         grid-template-rows: var(--top-h) 1fr var(--bottom-h);
-        grid-template-columns: 1fr minmax(220px, var(--rail-w));
+        grid-template-columns: 1fr minmax(180px, var(--rail-w)) minmax(180px, var(--hist-w));
         grid-template-areas:
-          "top top"
-          "chart rail"
-          "bottom bottom";
+          "top top top"
+          "chart rail history"
+          "bottom bottom bottom";
         overflow: hidden;
       }
-      .rail {
+      .rail, .history-rail {
         border-left: 1px solid var(--border-strong);
         border-top: none;
       }
@@ -511,10 +512,6 @@
         <span class="nav-label">觸碰</span>
         <span class="nav-count" id="fabTouchCount">0</span>
       </button>
-      <button type="button" data-panel="history" role="tab" aria-selected="false">
-        <span class="nav-dot" aria-hidden="true"></span>
-        <span class="nav-label">歷史</span>
-      </button>
     </nav>
     <div class="rail-stats" id="railStats">
       <div class="stat"><div class="val ar" id="arCount">0</div><div class="lbl">有效 AR</div></div>
@@ -527,12 +524,21 @@
       <div class="rail-panel" id="panel-touches" role="tabpanel" hidden>
         <ul class="break-list" id="breakLog"></ul>
       </div>
-      <div class="rail-panel" id="panel-history" role="tabpanel" hidden>
-        <div class="history-meta" id="historyMeta">載入掃描報告…</div>
-        <ul class="history-list" id="historyLog"></ul>
-      </div>
     </div>
     <p class="status-bar" id="status" role="status" aria-live="polite">載入中…</p>
+  </aside>
+
+  <aside class="history-rail" id="historyRail" aria-label="歷史清單">
+    <div class="history-head">
+      <div class="history-title">歷史</div>
+      <div class="history-filters" id="historyFilters" role="group" aria-label="週期篩選">
+        <button type="button" data-tf="all" class="active">全部</button>
+        <button type="button" data-tf="1h">1H</button>
+        <button type="button" data-tf="1d">1D</button>
+      </div>
+    </div>
+    <div class="history-meta" id="historyMeta">載入掃描報告…</div>
+    <ul class="history-list" id="historyLog"></ul>
   </aside>
 
   <button type="button" class="symbol-fab" id="symbolFab" aria-haspopup="dialog" aria-controls="symbolOverlay">
@@ -615,10 +621,12 @@
 
     const LS_SYMBOL = 'tv_ar_symbol_v2';
     const LS_HISTORY = 'tv_ar_history_v1';
+    const LS_HIST_TF = 'tv_ar_hist_tf_v1';
     const LS_RAIL_W = 'tv_ar_rail_w_v1';
     const RAIL_W_MIN = 220;
     const RAIL_W_MAX = 560;
-    const RAIL_W_DEFAULT = 300;
+    const RAIL_W_DEFAULT = 280;
+    const HIST_W_DEFAULT = 280;
     const MAX_LOCAL_HISTORY = 120;
     const MAX_HISTORY_DISPLAY = 60;
     const LOGO_BASE = 'https://s3-symbol-logo.tradingview.com/';
@@ -645,6 +653,8 @@
     let breakHistory = [];
     let scanReport = null;
     let historyFetchToken = 0;
+    let historyTfFilter = 'all';
+    let historyViewItems = [];
     let currentSymbol = null;
     let searchResults = [];
     let symbolHi = -1;
@@ -1636,16 +1646,52 @@
       }
     }
 
+    function normalizeHistoryTf(tf) {
+      return String(tf || '1d').toLowerCase();
+    }
+
+    function filteredHistoryEntries() {
+      const all = mergeHistoryEntries();
+      if (historyTfFilter === 'all') return all;
+      return all.filter((item) => normalizeHistoryTf(item.timeframe) === historyTfFilter);
+    }
+
+    function syncHistoryFilterButtons() {
+      document.querySelectorAll('#historyFilters button').forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.tf === historyTfFilter);
+      });
+    }
+
+    function setHistoryTfFilter(tf, { persist = true } = {}) {
+      historyTfFilter = ['all', '1h', '1d'].includes(tf) ? tf : 'all';
+      if (persist) {
+        try { localStorage.setItem(LS_HIST_TF, historyTfFilter); } catch (_) {}
+      }
+      syncHistoryFilterButtons();
+      renderHistoryLog();
+    }
+
+    function loadHistoryTfFilter() {
+      try {
+        const saved = localStorage.getItem(LS_HIST_TF);
+        if (saved && ['all', '1h', '1d'].includes(saved)) historyTfFilter = saved;
+      } catch (_) {}
+      syncHistoryFilterButtons();
+    }
+
     function renderHistoryLog() {
       const ul = document.getElementById('historyLog');
       if (!ul) return;
-      const items = mergeHistoryEntries();
+      historyViewItems = filteredHistoryEntries();
       ul.innerHTML = '';
-      if (!items.length) {
-        ul.innerHTML = '<li class="empty-hint">尚無歷史紀錄</li>';
+      if (!historyViewItems.length) {
+        const hint = historyTfFilter === 'all'
+          ? '尚無歷史紀錄'
+          : `尚無 ${historyTfFilter.toUpperCase()} 紀錄`;
+        ul.innerHTML = `<li class="empty-hint">${hint}</li>`;
         return;
       }
-      items.forEach((item, idx) => {
+      historyViewItems.forEach((item, idx) => {
         const li = document.createElement('li');
         li.className = `history-item ${item.cssType || ''}`;
         li.dataset.index = String(idx);
@@ -1974,11 +2020,16 @@
         p.classList.toggle('active', on);
         p.hidden = !on;
       });
-      if (tab === 'history') refreshHistoryPanel(true);
     }
 
     document.querySelectorAll('.rail-nav button').forEach(btn => {
       btn.addEventListener('click', () => switchRailTab(btn.dataset.panel));
+    });
+
+    document.getElementById('historyFilters')?.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-tf]');
+      if (!btn) return;
+      setHistoryTfFilter(btn.dataset.tf);
     });
 
     function clampRailWidth(w) {
@@ -2017,7 +2068,8 @@
 
       const onMove = (clientX) => {
         if (!dragging) return;
-        applyRailWidth(window.innerWidth - clientX);
+        const histW = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hist-w')) || HIST_W_DEFAULT;
+        applyRailWidth(window.innerWidth - histW - clientX);
       };
 
       handle.addEventListener('pointerdown', (e) => {
@@ -2066,8 +2118,7 @@
     document.getElementById('historyLog')?.addEventListener('click', (e) => {
       const li = e.target.closest('.history-item[data-index]');
       if (!li) return;
-      const items = mergeHistoryEntries();
-      const item = items[+li.dataset.index];
+      const item = historyViewItems[+li.dataset.index];
       if (item) openHistoryEntry(item);
     });
 
@@ -2076,9 +2127,12 @@
     loadRailWidth();
     initRailResize();
     renderBreakLog();
+    loadHistoryTfFilter();
     refreshHistoryPanel();
-    if (location.hash === '#history') switchRailTab('history');
-    else switchRailTab('signals');
+    switchRailTab('signals');
+    if (location.hash === '#history') {
+      document.getElementById('historyRail')?.scrollIntoView({ block: 'nearest' });
+    }
     run();
 
     function resizeChart() {
