@@ -26,6 +26,8 @@ import trendlines as tl
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(ROOT, "signals")
+HISTORY_PATH = os.path.join(OUT_DIR, "history.json")
+HISTORY_MAX_ENTRIES = 500
 
 LOOKBACK = ardr.LOOKBACK
 VOL_LEN = ardr.VOL_LEN
@@ -459,6 +461,86 @@ def build_chart_pack(candles: list[dict], signals: list[dict], lines: list[dict]
         "rays": rays,
         "trend_lines": trend,
     }
+
+
+def hit_archive_key(h: dict) -> str:
+    return (
+        f"{h.get('group','')}:{h.get('symbol','')}:{h.get('timeframe','')}:"
+        f"{h.get('kind','')}:{h.get('type','')}:{h.get('time','')}"
+    )
+
+
+def slim_hit_for_archive(h: dict, seen_at: str) -> dict:
+    """Persist only fields needed for the history rail / archive JSON."""
+    out = {
+        "key": hit_archive_key(h),
+        "kind": h.get("kind"),
+        "type": h.get("type"),
+        "group": h.get("group"),
+        "symbol": h.get("symbol"),
+        "name": h.get("name"),
+        "timeframe": h.get("timeframe"),
+        "level": h.get("level"),
+        "time": h.get("time"),
+        "seen_at": seen_at,
+    }
+    if h.get("kind") == "ar_dr_touch":
+        out["bars_after_signal"] = h.get("bars_after_signal")
+    if h.get("kind") == "trend_exceed":
+        out["exceed_bars"] = h.get("exceed_bars")
+    return out
+
+
+def update_history_archive(hits: list[dict], generated_at: str) -> dict:
+    """Merge scan hits into signals/history.json (deduped, newest first)."""
+    os.makedirs(OUT_DIR, exist_ok=True)
+    existing: list[dict] = []
+    if os.path.isfile(HISTORY_PATH):
+        try:
+            with open(HISTORY_PATH, encoding="utf-8") as f:
+                raw = json.load(f)
+            if isinstance(raw, dict):
+                existing = list(raw.get("hits") or [])
+            elif isinstance(raw, list):
+                existing = raw
+        except (OSError, json.JSONDecodeError, TypeError):
+            existing = []
+
+    by_key: dict[str, dict] = {}
+    for h in existing:
+        key = str(h.get("key") or hit_archive_key(h))
+        if not key or key == ":::::":
+            continue
+        entry = dict(h)
+        entry["key"] = key
+        by_key[key] = entry
+
+    for h in hits:
+        entry = slim_hit_for_archive(h, generated_at)
+        key = entry["key"]
+        prev = by_key.get(key)
+        if prev:
+            entry["first_seen"] = prev.get("first_seen") or prev.get("seen_at") or generated_at
+        else:
+            entry["first_seen"] = generated_at
+        entry["seen_at"] = generated_at
+        by_key[key] = entry
+
+    merged = sorted(
+        by_key.values(),
+        key=lambda x: (int(x.get("time") or 0), str(x.get("seen_at") or "")),
+        reverse=True,
+    )[:HISTORY_MAX_ENTRIES]
+
+    payload = {
+        "updated_at": generated_at,
+        "count": len(merged),
+        "max": HISTORY_MAX_ENTRIES,
+        "hits": merged,
+    }
+    with open(HISTORY_PATH, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+    return payload
 
 
 def chart_key(group: str, symbol: str, timeframe: str) -> str:
@@ -1469,7 +1551,8 @@ def render_html(payload: dict) -> str:
 
     <footer>
       Source: <a href="https://github.com/1mckw/AR">1mckw/AR</a> ·
-      JSON: <a href="./latest.json">latest.json</a>
+      JSON: <a href="./latest.json">latest.json</a> ·
+      History: <a href="./history.json">history.json</a>
     </footer>
   </div>
 
@@ -1646,12 +1729,20 @@ def main() -> int:
     with open(index_path, "w", encoding="utf-8") as f:
         f.write(page)
 
+    hist = update_history_archive(hits, payload["generated_at"])
+
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
         with open(summary, "a", encoding="utf-8") as f:
-            f.write(f"### Touch Alerts\n\nHits: **{len(hits)}** · OK: **{payload['counts']['ok']}**\n")
+            f.write(
+                f"### Touch Alerts\n\nHits: **{len(hits)}** · OK: **{payload['counts']['ok']}**"
+                f" · History: **{hist['count']}**\n"
+            )
 
-    print(f"Hits: {len(hits)} · wrote {html_path} and {json_path}", flush=True)
+    print(
+        f"Hits: {len(hits)} · history {hist['count']} · wrote {html_path} and {json_path}",
+        flush=True,
+    )
     return 0
 
 

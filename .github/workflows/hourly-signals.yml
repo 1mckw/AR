@@ -11,6 +11,7 @@ on:
       - ".github/workflows/hourly-signals.yml"
       - "signals/latest.html"
       - "signals/latest.json"
+      - "signals/history.json"
 
 permissions:
   contents: write
@@ -47,15 +48,15 @@ jobs:
       - name: Commit signal report
         if: github.event_name != 'push'
         run: |
-          git add signals/latest.json signals/latest.html signals/index.html
+          git add signals/latest.json signals/latest.html signals/index.html signals/history.json
           if git diff --staged --quiet; then
             echo "No signal file changes"
             exit 0
           fi
           git commit -m "chore: update hourly touch alerts HTML"
           if ! git pull --rebase origin main; then
-            git checkout --theirs signals/latest.json signals/latest.html signals/index.html
-            git add signals/latest.json signals/latest.html signals/index.html
+            git checkout --theirs signals/latest.json signals/latest.html signals/index.html signals/history.json
+            git add signals/latest.json signals/latest.html signals/index.html signals/history.json
             GIT_EDITOR=true git rebase --continue
           fi
           git push origin main
@@ -70,6 +71,7 @@ jobs:
           mkdir -p _site
           cp signals/latest.html _site/index.html
           cp signals/latest.json _site/latest.json
+          cp signals/history.json _site/history.json 2>/dev/null || true
           touch _site/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3

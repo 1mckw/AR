@@ -31,6 +31,7 @@ jobs:
           mkdir -p _site
           cp signals/latest.html _site/index.html 2>/dev/null || printf '%s\n' '<!doctype html><title>Signals</title><p>Waiting for first hourly scan.</p>' > _site/index.html
           cp signals/latest.json _site/latest.json 2>/dev/null || true
+          cp signals/history.json _site/history.json 2>/dev/null || true
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:

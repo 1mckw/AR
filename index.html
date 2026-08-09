@@ -713,6 +713,7 @@
     const LOGO_BASE = 'https://s3-symbol-logo.tradingview.com/';
     const IS_PAGES = /\.github\.io$/i.test(location.hostname);
     const REPORT_JSON = IS_PAGES ? 'https://1mckw.github.io/AR/latest.json' : '/signals/latest.json';
+    const HISTORY_JSON = IS_PAGES ? 'https://1mckw.github.io/AR/history.json' : '/signals/history.json';
     const API_BASE = ''; // same-origin proxy (python server.py); unavailable on GitHub Pages
     const DEFAULT_SYMBOL_RAW = {
       symbol: 'BTCUSDT',
@@ -733,6 +734,7 @@
     let notExceedingTrendKeys = new Set(); // 最新 2–10 根尚未連續超出趨勢線
     let breakHistory = [];
     let scanReport = null;
+    let remoteHistory = null;
     let historyFetchToken = 0;
     let historyTfFilter = 'all';
     let historyMode = 'latest';
@@ -1679,8 +1681,26 @@
 
     function scanHitToEntry(h) {
       return {
-        key: `scan:${h.group}:${h.symbol}:${h.timeframe}:${h.kind}:${h.time}`,
+        key: `scan:${h.group}:${h.symbol}:${h.timeframe}:${h.kind}:${h.type || ''}:${h.time}`,
         source: 'scan',
+        kind: h.kind,
+        cssType: hitCssType(h.kind, h.type),
+        label: hitKindLabel(h.kind, h.type),
+        symbol: h.symbol,
+        name: h.name,
+        group: h.group,
+        tfLabel: (h.timeframe || '1d').toUpperCase(),
+        timeframe: h.timeframe || '1d',
+        level: Number(h.level),
+        time: h.time,
+        hit: h,
+      };
+    }
+
+    function archiveHitToEntry(h) {
+      return {
+        key: h.key || `scan:${h.group}:${h.symbol}:${h.timeframe}:${h.kind}:${h.type || ''}:${h.time}`,
+        source: 'archive',
         kind: h.kind,
         cssType: hitCssType(h.kind, h.type),
         label: hitKindLabel(h.kind, h.type),
@@ -1722,8 +1742,10 @@
         if (token !== historyFetchToken) return scanReport;
         scanReport = data;
         if (meta) {
+          const histN = remoteHistory?.count ?? remoteHistory?.hits?.length;
           meta.innerHTML = scanReport.generated_at
-            ? `掃描報告 <strong>${scanReport.generated_at}</strong> · ${scanReport.counts?.hits ?? 0} hits`
+            ? `掃描 <strong>${scanReport.generated_at}</strong> · ${scanReport.counts?.hits ?? 0} hits`
+              + (histN != null ? ` · 歷史庫存 ${histN}` : '')
             : '掃描報告已載入';
         }
         return scanReport;
@@ -1736,6 +1758,20 @@
       }
     }
 
+    async function fetchRemoteHistory(force = false) {
+      if (!force && remoteHistory) return remoteHistory;
+      try {
+        const res = await fetch(HISTORY_JSON, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        remoteHistory = data;
+        return remoteHistory;
+      } catch (_) {
+        if (!remoteHistory) remoteHistory = { hits: [], count: 0 };
+        return remoteHistory;
+      }
+    }
+
     function normalizeHistoryTf(tf) {
       return String(tf || '1d').toLowerCase();
     }
@@ -1745,19 +1781,44 @@
       return sortLatestEntries(items.filter(matchesHistoryFilters)).slice(0, MAX_HISTORY_DISPLAY);
     }
 
+    function hitIdentityKey(h) {
+      return `${h.group || ''}:${h.symbol || ''}:${h.timeframe || ''}:${h.kind || ''}:${h.type || ''}:${h.time || ''}`;
+    }
+
     function filteredPastEntries() {
-      return loadLocalHistory()
+      const latestIds = new Set((scanReport?.hits || []).map(hitIdentityKey));
+      const seen = new Set();
+      const out = [];
+      const push = (item, identity) => {
+        const id = identity || item.key;
+        if (!id || seen.has(id) || latestIds.has(id)) return;
+        seen.add(id);
+        if (item.key) seen.add(item.key);
+        out.push(item);
+      };
+      (remoteHistory?.hits || []).forEach((h) => {
+        push(archiveHitToEntry(h), h.key || hitIdentityKey(h));
+      });
+      loadLocalHistory().forEach((item) => push(item, item.key));
+      return out
         .filter(matchesHistoryFilters)
         .sort((a, b) => Number(b.time || 0) - Number(a.time || 0))
         .slice(0, MAX_HISTORY_DISPLAY);
     }
 
-function historyItemBody(item) {
+    function historyItemBody(item) {
       const lvl = Number.isFinite(item.level)
         ? item.level.toLocaleString(undefined, { maximumFractionDigits: 4 })
         : '—';
       const gLabel = (item.group || '').toUpperCase();
       return `${item.symbol} · ${gLabel || '—'} · ${item.tfLabel} · ${lvl}`;
+    }
+
+    function historySourceLabel(item) {
+      if (item.source === 'archive') return 'GitHub';
+      if (item.source === 'live') return '即時';
+      if (item.source === 'scan') return '掃描';
+      return item.source || '';
     }
 
     function renderHistoryItems(ul, items, listKey, emptyHint) {
@@ -1772,8 +1833,11 @@ function historyItemBody(item) {
         li.className = `history-item ${item.cssType || ''}`;
         li.dataset.index = String(idx);
         li.dataset.list = listKey;
+        const src = historySourceLabel(item);
         li.innerHTML =
-          `<div class="hi-head"><span class="hi-tag">${item.label}</span></div>` +
+          `<div class="hi-head"><span class="hi-tag">${item.label}</span>` +
+          (src ? `<span class="hi-src">${src}</span>` : '') +
+          `</div>` +
           `<div class="hi-body">${historyItemBody(item)}</div>` +
           `<div class="hi-time">${fmtTime(item.time)}</div>`;
         ul.appendChild(li);
@@ -1863,7 +1927,7 @@ function historyItemBody(item) {
     }
 
     async function refreshHistoryPanel(force = false) {
-      await fetchScanReport(force);
+      await Promise.all([fetchRemoteHistory(force), fetchScanReport(force)]);
       renderHistoryLog();
     }
 
