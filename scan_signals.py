@@ -1325,7 +1325,7 @@ def render_html(payload: dict) -> str:
 <body>
   <div class="wrap">
     <h1>Touch Alerts</h1>
-    <p class="meta"><a href="./" style="color:var(--primary);text-decoration:none;font-weight:600">圖表 UI</a> · Updated <strong>{html.escape(payload['generated_at'])}</strong> · TF <strong>{html.escape(tf_meta)}</strong> · fresh last <strong>{FRESH_BARS}</strong> bar(s)</p>
+    <p class="meta">Updated <strong>{html.escape(payload['generated_at'])}</strong> · TF <strong>{html.escape(tf_meta)}</strong> · fresh last <strong>{FRESH_BARS}</strong> bar(s)</p>
     <div class="cards">
       <div class="card"><div class="lbl">Hits</div><div class="val">{c['hits']}</div></div>
       <div class="card"><div class="lbl">NDX100</div><div class="val">{c['ndx100']}</div></div>

@@ -106,7 +106,7 @@
       box-shadow: 0 4px 16px rgba(0, 240, 200, 0.25);
     }
     button.primary:hover { color: #04110e; filter: brightness(1.06); box-shadow: 0 6px 20px rgba(0, 240, 200, 0.35); }
-    #timeframe { width: 52px; }
+    #timeframe { width: 52px; } #historyBars { width: 58px; }
 
     .symbol-fab {
       position: fixed; left: 16px; bottom: calc(var(--bottom-h) + 16px); z-index: 60;
@@ -506,7 +506,7 @@
 <body>
   <header class="topbar">
     <div class="brand">
-      <h1>AR/DR · Trend Lines <a href="alerts.html">信號</a> <a href="https://www.tradingview.com/script/UpsMdRXG-Simple-Auto-Trend-Lines/" target="_blank" rel="noopener">TV</a></h1>
+      <h1>AR/DR · Trend Lines <a href="https://www.tradingview.com/script/UpsMdRXG-Simple-Auto-Trend-Lines/" target="_blank" rel="noopener">TV</a></h1>
     </div>
     <div class="top-controls" role="group" aria-label="商品與週期">
       <label class="field" for="timeframe">週期
@@ -514,6 +514,14 @@
           <option value="1h" selected>1H</option>
           <option value="4h">4H</option>
           <option value="1d">1D</option>
+        </select>
+      </label>
+      <label class="field" for="historyBars">K數
+        <select id="historyBars">
+          <option value="500">500</option>
+          <option value="1000">1000</option>
+          <option value="2000">2000</option>
+          <option value="5000" selected>5000</option>
         </select>
       </label>
       <button id="reload" type="button" class="primary">重新載入</button>
@@ -637,7 +645,6 @@
     const SHARP_PIERCE_GRACE_BARS = 2;
     const TREND_EXCEED_BARS = 4;
     const TOUCH_WINDOW_BARS = 12; // 主引線觸碰在此窗口內不報告
-    const HISTORY_BARS = 5000;
 
     const TIMEFRAMES = {
       '1h': { label: '1H', binance: '1h', yahoo: '1h', periodSec: 3600 },
@@ -1866,7 +1873,7 @@
       const market = symbolInfo.groupId;
       const timeframe = document.getElementById('timeframe').value;
       const tfLabel = TIMEFRAMES[timeframe].label;
-      const historyBars = HISTORY_BARS;
+      const historyBars = +document.getElementById('historyBars').value;
       const watchCtx = {
         market,
         symbol: symbolInfo.tvKey,
