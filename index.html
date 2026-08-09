@@ -106,7 +106,7 @@
       box-shadow: 0 4px 16px rgba(0, 240, 200, 0.25);
     }
     button.primary:hover { color: #04110e; filter: brightness(1.06); box-shadow: 0 6px 20px rgba(0, 240, 200, 0.35); }
-    #timeframe { width: 52px; } #historyBars { width: 58px; } #pollInterval { width: 52px; }
+    #timeframe { width: 52px; } #historyBars { width: 58px; }
 
     .symbol-fab {
       position: fixed; left: 16px; bottom: calc(var(--bottom-h) + 16px); z-index: 60;
@@ -490,14 +490,6 @@
           <option value="5000" selected>5000</option>
         </select>
       </label>
-      <label class="field" for="pollInterval">刷新
-        <select id="pollInterval">
-          <option value="0">關</option>
-          <option value="60" selected>1分</option>
-          <option value="120">2分</option>
-          <option value="300">5分</option>
-        </select>
-      </label>
       <button id="reload" type="button" class="primary">重新載入</button>
     </div>
   </header>
@@ -645,7 +637,6 @@
 
     let chart, candleSeries, volSeries, overlayLines = [];
     let currentCandles = [], activeTrendLines = [];
-    let pollTimer = null;
     let watchBaseline = false;
     let untouchedRayKeys = new Set(); // AR/DR 主引線尚未觸碰
     let activeExtRayKeys = new Set(); // 已延伸且仍有效的 AR/DR
@@ -1439,13 +1430,6 @@
       return touches.length;
     }
 
-    function schedulePoll() {
-      if (pollTimer) clearInterval(pollTimer);
-      pollTimer = null;
-      const sec = +document.getElementById('pollInterval').value;
-      if (sec > 0) pollTimer = setInterval(() => run({ silent: true }), sec * 1000);
-    }
-
     function fmtTime(ts) {
       if (ts == null) return '—';
       const n = Number(ts);
@@ -1827,10 +1811,8 @@
         resizeChart();
 
         const activeRays = signals.filter(s => primaryRay(s.rays || resolveSignalRays(candles, s), s.type).active).length;
-        const pollSec = +document.getElementById('pollInterval').value;
-        const pollHint = pollSec > 0 ? ` · 自動刷新 ${pollSec}s` : '';
         if (newBreaks === 0) {
-          status.textContent = `${display} · ${tfLabel} · ${candles.length} 根 · 趨勢線 ${activeTrendLines.length} · 有效 AR/DR ${activeRays}${pollHint}`;
+          status.textContent = `${display} · ${tfLabel} · ${candles.length} 根 · 趨勢線 ${activeTrendLines.length} · 有效 AR/DR ${activeRays}`;
         }
       } catch (e) {
         if (!silent) status.textContent = `載入失敗: ${e.message}`;
@@ -1844,9 +1826,8 @@
       resetWatch();
       try { await run(); } finally { btn.disabled = false; btn.textContent = '重新載入'; }
     });
-    document.getElementById('pollInterval').addEventListener('change', schedulePoll);
     document.querySelectorAll('input,select').forEach(el => {
-      if (!['symbol', 'symbolSearch', 'timeframe', 'pollInterval'].includes(el.id)) {
+      if (!['symbol', 'symbolSearch', 'timeframe'].includes(el.id)) {
         el.addEventListener('change', run);
       }
     });
@@ -2018,7 +1999,6 @@
     if (location.hash === '#history') switchRailTab('history');
     else switchRailTab('signals');
     run();
-    schedulePoll();
 
     function resizeChart() {
       if (!chart) return;
