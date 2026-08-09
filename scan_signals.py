@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Touch scanner: NDX100 + DJI30 + futures + FX + top 30 crypto on 1H and 1D.
+"""Touch scanner: NDX100 + SP500 + DJI30 + futures + FX + top 30 crypto on 1H and 1D.
 
 Reports only:
   - AR/DR base-level touch after >12 bars from signal (not new AR/DR within 12 bars)
@@ -188,6 +188,31 @@ def fetch_dji30() -> list[tuple[str, str]]:
             ("MMM", "3M"), ("PG", "Procter & Gamble"), ("WMT", "Walmart"),
             ("MRK", "Merck"), ("DIS", "Disney"), ("CSCO", "Cisco"),
             ("KO", "Coca-Cola"), ("VZ", "Verizon"), ("NKE", "Nike"),
+        ]
+    ]
+
+
+def fetch_sp500() -> list[tuple[str, str]]:
+    urls = [
+        "https://yfiua.github.io/index-constituents/constituents-sp500.csv",
+        "https://raw.githubusercontent.com/datasets/s-and-p-500-companies/master/data/constituents.csv",
+    ]
+    for url in urls:
+        try:
+            raw = http_get(url, timeout=40).decode()
+            out = _parse_constituents_csv(raw)
+            if len(out) >= 400:
+                print(f"SP500 via {url}: {len(out)}", flush=True)
+                return out
+        except Exception as exc:
+            print(f"SP500 fetch failed ({url}): {exc}", flush=True)
+    print("SP500 fallback list", flush=True)
+    return [
+        (s, s)
+        for s in [
+            "AAPL", "MSFT", "NVDA", "AMZN", "META", "GOOGL", "GOOG", "BRK-B", "AVGO", "TSLA",
+            "JPM", "V", "UNH", "XOM", "MA", "PG", "JNJ", "HD", "COST", "ABBV",
+            "CRM", "CVX", "WMT", "MRK", "KO", "PEP", "BAC", "LIN", "TMO", "CSCO",
         ]
     ]
 
@@ -572,7 +597,7 @@ CHART_MODAL_SCRIPT = r"""
     if (group === "crypto") return "BINANCE:" + symbol;
     if (group === "futures") return FUTURES_TV[symbol] || symbol;
     if (group === "fx") return "FX_IDC:" + symbol.replace("=X", "");
-    if (group === "dji30") return symbol;
+    if (group === "dji30" || group === "sp500") return symbol;
     return "NASDAQ:" + symbol;
   }
 
@@ -840,7 +865,7 @@ CHART_MODAL_SCRIPT = r"""
   closeBtn.addEventListener("click", closeModal);
 
   const CATALOG = window.SYMBOL_CATALOG || [];
-  const GROUP_LABEL = { ndx100: "NDX100", dji30: "DJI30", crypto: "Crypto", futures: "Futures", fx: "FX" };
+  const GROUP_LABEL = { ndx100: "NDX100", sp500: "SP500", dji30: "DJI30", crypto: "Crypto", futures: "Futures", fx: "FX" };
   const fab = document.getElementById("symbolFab");
   const searchOverlay = document.getElementById("symbolOverlay");
   const searchInput = document.getElementById("symbolSearch");
@@ -1124,9 +1149,9 @@ def render_html(payload: dict) -> str:
     .meta {{ color: var(--muted); font-size: .9rem; margin: 8px 0 18px; }}
     .meta strong {{ color: var(--primary); font-weight: 600; }}
     .cards {{
-      display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 22px;
+      display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 22px;
     }}
-    @media (max-width: 1100px) {{ .cards {{ grid-template-columns: repeat(3, 1fr); }} }}
+    @media (max-width: 1100px) {{ .cards {{ grid-template-columns: repeat(4, 1fr); }} }}
     @media (max-width: 720px) {{ .cards {{ grid-template-columns: 1fr 1fr; }} }}
     .card {{
       background: var(--panel); border: 1px solid var(--border-strong); border-radius: 12px; padding: 12px 14px;
@@ -1329,6 +1354,7 @@ def render_html(payload: dict) -> str:
     <div class="cards">
       <div class="card"><div class="lbl">Hits</div><div class="val">{c['hits']}</div></div>
       <div class="card"><div class="lbl">NDX100</div><div class="val">{c['ndx100']}</div></div>
+      <div class="card"><div class="lbl">SP500</div><div class="val">{c.get('sp500', 0)}</div></div>
       <div class="card"><div class="lbl">DJI30</div><div class="val">{c.get('dji30', 0)}</div></div>
       <div class="card"><div class="lbl">Futures</div><div class="val">{c['futures']}</div></div>
       <div class="card"><div class="lbl">FX</div><div class="val">{c.get('fx', 0)}</div></div>
@@ -1401,7 +1427,7 @@ def render_html(payload: dict) -> str:
   <div class="search-overlay" id="symbolOverlay" hidden>
     <div class="search-modal" role="dialog" aria-modal="true" aria-label="搜尋掃描商品">
       <div class="search-modal-head">
-        <input id="symbolSearch" type="search" autocomplete="off" spellcheck="false" placeholder="代碼、名稱、NDX100 / DJI30 / FX / Futures / Crypto…" aria-controls="symbolList" />
+        <input id="symbolSearch" type="search" autocomplete="off" spellcheck="false" placeholder="代碼、名稱、NDX100 / SP500 / DJI30 / FX / Futures / Crypto…" aria-controls="symbolList" />
         <button type="button" id="symbolSearchClose">關閉</button>
       </div>
       <ul id="symbolList" role="listbox"></ul>
@@ -1442,23 +1468,26 @@ def main() -> int:
     print("Loading universes…", flush=True)
     try:
         ndx100 = fetch_ndx100()
+        sp500 = fetch_sp500()
         dji30 = fetch_dji30()
         crypto = fetch_top_crypto()
     except Exception as exc:  # noqa: BLE001
         print(f"Universe load failed: {exc}", flush=True)
         ndx100 = fetch_ndx100()  # has internal fallback
+        sp500 = fetch_sp500()
         dji30 = fetch_dji30()
         crypto = list(CRYPTO_FALLBACK[:CRYPTO_TOP_N])
 
     jobs = []
     for tf in TIMEFRAMES:
         jobs.extend(("ndx100", s, n, "yahoo", tf) for s, n in ndx100)
+        jobs.extend(("sp500", s, n, "yahoo", tf) for s, n in sp500)
         jobs.extend(("dji30", s, n, "yahoo", tf) for s, n in dji30)
         jobs.extend(("futures", s, n, "yahoo", tf) for s, n in FUTURES)
         jobs.extend(("fx", s, n, "yahoo", tf) for s, n in FX)
         jobs.extend(("crypto", s, n, "binance", tf) for s, n in crypto)
     tf_label = " + ".join(fmt_tf(tf) for tf in TIMEFRAMES)
-    sym_n = len(ndx100) + len(dji30) + len(FUTURES) + len(FX) + len(crypto)
+    sym_n = len(ndx100) + len(sp500) + len(dji30) + len(FUTURES) + len(FX) + len(crypto)
     print(f"Scanning {len(jobs)} jobs ({sym_n} symbols × {tf_label})…", flush=True)
 
     results: list[dict] = []
@@ -1533,6 +1562,7 @@ def main() -> int:
         },
         "counts": {
             "ndx100": len(ndx100),
+            "sp500": len(sp500),
             "dji30": len(dji30),
             "futures": len(FUTURES),
             "fx": len(FX),

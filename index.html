@@ -1599,7 +1599,7 @@
           source: 'yahoo', value: symbol, fetchSymbol: symbol,
         };
       }
-      const exchange = group === 'dji30' ? 'NYSE' : 'NASDAQ';
+      const exchange = (group === 'dji30' || group === 'sp500') ? 'NYSE' : 'NASDAQ';
       return resolveDataSource({ symbol, exchange, type: 'stock', description: name });
     }
 
