@@ -569,6 +569,12 @@
         <button type="button" data-tf="1h">1H</button>
         <button type="button" data-tf="1d">1D</button>
       </div>
+      <div class="history-filters" id="historyGroupFilters" role="group" aria-label="指數篩選">
+        <button type="button" data-group="all" class="active">全部</button>
+        <button type="button" data-group="ndx100">NDX</button>
+        <button type="button" data-group="sp500">SPX</button>
+        <button type="button" data-group="dji30">DJI</button>
+      </div>
     </div>
     <div class="history-meta" id="historyMeta">載入掃描報告…</div>
     <ul class="history-list" id="historyLog"></ul>
@@ -655,6 +661,7 @@
     const LS_SYMBOL = 'tv_ar_symbol_v2';
     const LS_HISTORY = 'tv_ar_history_v1';
     const LS_HIST_TF = 'tv_ar_hist_tf_v1';
+    const LS_HIST_GROUP = 'tv_ar_hist_group_v1';
     const LS_RAIL_W = 'tv_ar_rail_w_v1';
     const RAIL_W_MIN = 220;
     const RAIL_W_MAX = 560;
@@ -687,6 +694,7 @@
     let scanReport = null;
     let historyFetchToken = 0;
     let historyTfFilter = 'all';
+    let historyGroupFilter = 'all';
     let historyViewItems = [];
     let currentSymbol = null;
     let searchResults = [];
@@ -1685,13 +1693,20 @@
 
     function filteredHistoryEntries() {
       const all = mergeHistoryEntries();
-      if (historyTfFilter === 'all') return all;
-      return all.filter((item) => normalizeHistoryTf(item.timeframe) === historyTfFilter);
+      return all.filter((item) => {
+        const tfOk = historyTfFilter === 'all' || normalizeHistoryTf(item.timeframe) === historyTfFilter;
+        const g = String(item.group || '').toLowerCase();
+        const groupOk = historyGroupFilter === 'all' || g === historyGroupFilter;
+        return tfOk && groupOk;
+      });
     }
 
     function syncHistoryFilterButtons() {
       document.querySelectorAll('#historyFilters button').forEach((btn) => {
         btn.classList.toggle('active', btn.dataset.tf === historyTfFilter);
+      });
+      document.querySelectorAll('#historyGroupFilters button').forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.group === historyGroupFilter);
       });
     }
 
@@ -1704,10 +1719,21 @@
       renderHistoryLog();
     }
 
+    function setHistoryGroupFilter(group, { persist = true } = {}) {
+      historyGroupFilter = ['all', 'ndx100', 'sp500', 'dji30'].includes(group) ? group : 'all';
+      if (persist) {
+        try { localStorage.setItem(LS_HIST_GROUP, historyGroupFilter); } catch (_) {}
+      }
+      syncHistoryFilterButtons();
+      renderHistoryLog();
+    }
+
     function loadHistoryTfFilter() {
       try {
         const saved = localStorage.getItem(LS_HIST_TF);
         if (saved && ['all', '1h', '1d'].includes(saved)) historyTfFilter = saved;
+        const g = localStorage.getItem(LS_HIST_GROUP);
+        if (g && ['all', 'ndx100', 'sp500', 'dji30'].includes(g)) historyGroupFilter = g;
       } catch (_) {}
       syncHistoryFilterButtons();
     }
@@ -1718,9 +1744,10 @@
       historyViewItems = filteredHistoryEntries();
       ul.innerHTML = '';
       if (!historyViewItems.length) {
-        const hint = historyTfFilter === 'all'
-          ? '尚無歷史紀錄'
-          : `尚無 ${historyTfFilter.toUpperCase()} 紀錄`;
+        const bits = [];
+        if (historyGroupFilter !== 'all') bits.push(historyGroupFilter.toUpperCase());
+        if (historyTfFilter !== 'all') bits.push(historyTfFilter.toUpperCase());
+        const hint = bits.length ? `尚無 ${bits.join(' · ')} 紀錄` : '尚無歷史紀錄';
         ul.innerHTML = `<li class="empty-hint">${hint}</li>`;
         return;
       }
@@ -1731,10 +1758,11 @@
         const lvl = Number.isFinite(item.level)
           ? item.level.toLocaleString(undefined, { maximumFractionDigits: 4 })
           : '—';
+        const gLabel = (item.group || '').toUpperCase();
         li.innerHTML =
           `<div class="hi-head"><span class="hi-tag">${item.label}</span>` +
           `<span class="hi-src">${item.source === 'scan' ? '掃描' : '即時'}</span></div>` +
-          `<div class="hi-body">${item.symbol} · ${item.tfLabel} · ${lvl}</div>` +
+          `<div class="hi-body">${item.symbol} · ${gLabel || '—'} · ${item.tfLabel} · ${lvl}</div>` +
           `<div class="hi-time">${fmtTime(item.time)}</div>`;
         ul.appendChild(li);
       });
@@ -2063,6 +2091,11 @@
       const btn = e.target.closest('button[data-tf]');
       if (!btn) return;
       setHistoryTfFilter(btn.dataset.tf);
+    });
+    document.getElementById('historyGroupFilters')?.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-group]');
+      if (!btn) return;
+      setHistoryGroupFilter(btn.dataset.group);
     });
 
     function clampRailWidth(w) {

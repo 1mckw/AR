@@ -1002,6 +1002,56 @@ CHART_MODAL_SCRIPT = r"""
 </script>
 """
 
+GROUP_FILTER_SCRIPT = r"""
+<script>
+(function () {
+  const KEY = "tv_ar_group_filter_v1";
+  const ALLOWED = new Set(["all", "ndx100", "sp500", "dji30"]);
+  const bar = document.getElementById("groupFilters");
+  if (!bar) return;
+
+  let current = "all";
+  try {
+    const saved = localStorage.getItem(KEY);
+    if (saved && ALLOWED.has(saved)) current = saved;
+  } catch (_) {}
+
+  function apply(group) {
+    current = ALLOWED.has(group) ? group : "all";
+    try { localStorage.setItem(KEY, current); } catch (_) {}
+    bar.querySelectorAll("button[data-group]").forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.group === current);
+    });
+    document.querySelectorAll("tbody[data-section]").forEach((tbody) => {
+      let visible = 0;
+      tbody.querySelectorAll("tr[data-group]").forEach((tr) => {
+        const on = current === "all" || tr.dataset.group === current;
+        tr.hidden = !on;
+        if (on) visible += 1;
+      });
+      const empty = tbody.querySelector("tr:not([data-group])");
+      if (empty) empty.hidden = visible > 0;
+      const title = document.querySelector(`.section-title[data-section="${tbody.dataset.section}"]`);
+      if (title) {
+        const base = title.dataset.base || title.textContent.split(" · ")[0];
+        title.textContent = current === "all"
+          ? `${base} · ${title.dataset.total || visible}`
+          : `${base} · ${visible}`;
+      }
+    });
+  }
+
+  bar.addEventListener("click", (ev) => {
+    const btn = ev.target.closest("button[data-group]");
+    if (!btn) return;
+    apply(btn.dataset.group);
+  });
+
+  apply(current);
+})();
+</script>
+"""
+
 
 def render_html(payload: dict) -> str:
     hits = payload["hits"]
@@ -1036,7 +1086,7 @@ def render_html(payload: dict) -> str:
         for h in ar_dr:
             cls = "ar" if h.get("type") == "AR" else "dr"
             out.append(
-                "<tr>"
+                f'<tr data-group="{html.escape(str(h.get("group", "")), quote=True)}">'
                 f'<td><span class="tag {cls}">{html.escape(str(h.get("type", "")))}</span></td>'
                 f"<td>{html.escape(fmt_tf(h.get('timeframe', '')))}</td>"
                 f"<td>{html.escape(h.get('group', ''))}</td>"
@@ -1056,7 +1106,7 @@ def render_html(payload: dict) -> str:
         for h in trend:
             cls = "resist" if h.get("type") == "resistance" else "support"
             out.append(
-                "<tr>"
+                f'<tr data-group="{html.escape(str(h.get("group", "")), quote=True)}">'
                 f'<td><span class="tag {cls}">{html.escape(str(h.get("type", "")))}</span></td>'
                 f"<td>{html.escape(fmt_tf(h.get('timeframe', '')))}</td>"
                 f"<td>{html.escape(h.get('group', ''))}</td>"
@@ -1075,7 +1125,7 @@ def render_html(payload: dict) -> str:
         for h in exceed:
             cls = "resist" if h.get("type") == "resistance" else "support"
             out.append(
-                "<tr>"
+                f'<tr data-group="{html.escape(str(h.get("group", "")), quote=True)}">'
                 f'<td><span class="tag {cls}">{html.escape(str(h.get("type", "")))}</span></td>'
                 f"<td>{html.escape(fmt_tf(h.get('timeframe', '')))}</td>"
                 f"<td>{html.escape(h.get('group', ''))}</td>"
@@ -1148,6 +1198,21 @@ def render_html(payload: dict) -> str:
     }}
     .meta {{ color: var(--muted); font-size: .9rem; margin: 8px 0 18px; }}
     .meta strong {{ color: var(--primary); font-weight: 600; }}
+    .group-filters {{
+      display: flex; flex-wrap: wrap; gap: 6px; margin: -6px 0 18px;
+    }}
+    .group-filters button {{
+      font-family: inherit; cursor: pointer; height: 30px; padding: 0 12px;
+      border-radius: 999px; border: 1px solid var(--border-strong);
+      background: rgba(6, 10, 18, 0.55); color: var(--muted); font-size: .78rem; font-weight: 600;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    }}
+    .group-filters button:hover {{ color: var(--text); border-color: var(--primary); }}
+    .group-filters button.active {{
+      color: #04110e; border-color: transparent;
+      background: linear-gradient(135deg, #00f0c8, #00b894);
+      box-shadow: 0 2px 12px rgba(0, 240, 200, 0.28);
+    }}
     .cards {{
       display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 22px;
     }}
@@ -1360,6 +1425,12 @@ def render_html(payload: dict) -> str:
       <div class="card"><div class="lbl">FX</div><div class="val">{c.get('fx', 0)}</div></div>
       <div class="card"><div class="lbl">Crypto</div><div class="val">{c['crypto']}</div></div>
     </div>
+    <div class="group-filters" id="groupFilters" role="group" aria-label="指數篩選">
+      <button type="button" data-group="all" class="active">全部</button>
+      <button type="button" data-group="ndx100">NDX100</button>
+      <button type="button" data-group="sp500">SP500</button>
+      <button type="button" data-group="dji30">DJI30</button>
+    </div>
     <ul class="rules">
       <li><strong>AR/DR</strong> 信號 K 的<strong>上引線（高）</strong>與<strong>下引線（低）</strong>皆向右延伸</li>
       <li>任一侧影線被碰到即<strong>停止</strong>該射線（不再延伸）</li>
@@ -1371,37 +1442,37 @@ def render_html(payload: dict) -> str:
       <li>點擊 <strong>Symbol</strong> 開啟蠟燭圖（含 AR/DR 與趨勢線）</li>
     </ul>
 
-    <h2>AR/DR 晚觸碰（&gt;{TOUCH_WINDOW_BARS} 根後） · {len(ar_dr)}</h2>
+    <h2 class="section-title" data-section="ar_dr" data-base="AR/DR 晚觸碰（&gt;{TOUCH_WINDOW_BARS} 根後）" data-total="{len(ar_dr)}">AR/DR 晚觸碰（&gt;{TOUCH_WINDOW_BARS} 根後） · {len(ar_dr)}</h2>
     <div class="panel">
       <table>
         <thead>
           <tr><th>Type</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th class="num">Bars after</th><th>Time</th></tr>
         </thead>
-        <tbody>
+        <tbody data-section="ar_dr">
           {rows_ar_dr()}
         </tbody>
       </table>
     </div>
 
-    <h2>趨勢線觸碰 · {len(trend)}</h2>
+    <h2 class="section-title" data-section="trend" data-base="趨勢線觸碰" data-total="{len(trend)}">趨勢線觸碰 · {len(trend)}</h2>
     <div class="panel">
       <table>
         <thead>
           <tr><th>Side</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th>Time</th></tr>
         </thead>
-        <tbody>
+        <tbody data-section="trend">
           {rows_trend()}
         </tbody>
       </table>
     </div>
 
-    <h2>最新 {TREND_EXCEED_BARS} 根超出趨勢線 · {len(exceed)}</h2>
+    <h2 class="section-title" data-section="exceed" data-base="最新 {TREND_EXCEED_BARS} 根超出趨勢線" data-total="{len(exceed)}">最新 {TREND_EXCEED_BARS} 根超出趨勢線 · {len(exceed)}</h2>
     <div class="panel">
       <table>
         <thead>
           <tr><th>Side</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th class="num">Bars</th><th>Time</th></tr>
         </thead>
-        <tbody>
+        <tbody data-section="exceed">
           {rows_trend_exceed()}
         </tbody>
       </table>
@@ -1460,7 +1531,7 @@ def render_html(payload: dict) -> str:
         + json.dumps(catalog, ensure_ascii=False, separators=(",", ":"))
         + ";</script>\n"
     )
-    return page_head + embed_js + CHART_MODAL_SCRIPT + "\n</body>\n</html>\n"
+    return page_head + embed_js + CHART_MODAL_SCRIPT + GROUP_FILTER_SCRIPT + "\n</body>\n</html>\n"
 
 
 def main() -> int:

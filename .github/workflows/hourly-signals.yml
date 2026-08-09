@@ -9,6 +9,8 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/hourly-signals.yml"
+      - "signals/latest.html"
+      - "signals/latest.json"
 
 permissions:
   contents: write

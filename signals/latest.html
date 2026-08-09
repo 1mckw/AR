@@ -48,9 +48,30 @@
     }
     .meta { color: var(--muted); font-size: .9rem; margin: 8px 0 18px; }
     .meta strong { color: var(--primary); font-weight: 600; }
+<<<<<<< HEAD
     .cards {
       display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 22px;
     }
+=======
+    .group-filters {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: -6px 0 18px;
+    }
+    .group-filters button {
+      font-family: inherit; cursor: pointer; height: 30px; padding: 0 12px;
+      border-radius: 999px; border: 1px solid var(--border-strong);
+      background: rgba(6, 10, 18, 0.55); color: var(--muted); font-size: .78rem; font-weight: 600;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    }
+    .group-filters button:hover { color: var(--text); border-color: var(--primary); }
+    .group-filters button.active {
+      color: #04110e; border-color: transparent;
+      background: linear-gradient(135deg, #00f0c8, #00b894);
+      box-shadow: 0 2px 12px rgba(0, 240, 200, 0.28);
+    }
+    .cards {
+      display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 22px;
+    }
+>>>>>>> 51353ea (Add NDX100 / SP500 / DJI30 filters on the AR alerts and history panels.)
     @media (max-width: 1100px) { .cards { grid-template-columns: repeat(4, 1fr); } }
     @media (max-width: 720px) { .cards { grid-template-columns: 1fr 1fr; } }
     .card {
@@ -260,6 +281,12 @@
       <div class="card"><div class="lbl">FX</div><div class="val">15</div></div>
       <div class="card"><div class="lbl">Crypto</div><div class="val">30</div></div>
     </div>
+    <div class="group-filters" id="groupFilters" role="group" aria-label="指數篩選">
+      <button type="button" data-group="all" class="active">全部</button>
+      <button type="button" data-group="ndx100">NDX100</button>
+      <button type="button" data-group="sp500">SP500</button>
+      <button type="button" data-group="dji30">DJI30</button>
+    </div>
     <ul class="rules">
       <li><strong>AR/DR</strong> 信號 K 的<strong>上引線（高）</strong>與<strong>下引線（低）</strong>皆向右延伸</li>
       <li>任一侧影線被碰到即<strong>停止</strong>該射線（不再延伸）</li>
@@ -271,24 +298,29 @@
       <li>點擊 <strong>Symbol</strong> 開啟蠟燭圖（含 AR/DR 與趨勢線）</li>
     </ul>
 
-    <h2>AR/DR 晚觸碰（&gt;12 根後） · 0</h2>
+    <h2 class="section-title" data-section="ar_dr" data-base="AR/DR 晚觸碰（&gt;12 根後）" data-total="0">AR/DR 晚觸碰（&gt;12 根後） · 0</h2>
     <div class="panel">
       <table>
         <thead>
           <tr><th>Type</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th class="num">Bars after</th><th>Time</th></tr>
         </thead>
-        <tbody>
+        <tbody data-section="ar_dr">
           <tr><td colspan="8" class="empty">目前無 AR/DR 觸碰</td></tr>
         </tbody>
       </table>
     </div>
 
+<<<<<<< HEAD
     <h2>趨勢線觸碰 · 23</h2>
+=======
+    <h2 class="section-title" data-section="trend" data-base="趨勢線觸碰" data-total="23">趨勢線觸碰 · 23</h2>
+>>>>>>> 51353ea (Add NDX100 / SP500 / DJI30 filters on the AR alerts and history panels.)
     <div class="panel">
       <table>
         <thead>
           <tr><th>Side</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th>Time</th></tr>
         </thead>
+<<<<<<< HEAD
         <tbody>
           <tr><td><span class="tag support">support</span></td><td>1H</td><td>dji30</td><td><button type="button" class="sym-btn" data-symbol="CVX" data-group="dji30" data-name="Chevron Corporation" data-tf="1h" data-level="186.01037223384066" data-type="support" data-kind="trend_touch" data-time="1786131000" title="開啟蠟燭圖"><code>CVX</code></button></td><td>Chevron Corporation</td><td class="num">186.01</td><td>2026-08-07 19:30 UTC</td></tr>
 <tr><td><span class="tag support">support</span></td><td>1H</td><td>fx</td><td><button type="button" class="sym-btn" data-symbol="EURGBP=X" data-group="fx" data-name="EUR/GBP" data-tf="1h" data-level="0.8563588976219136" data-type="support" data-kind="trend_touch" data-time="1786132800" title="開啟蠟燭圖"><code>EURGBP=X</code></button></td><td>EUR/GBP</td><td class="num">0.856359</td><td>2026-08-07 20:00 UTC</td></tr>
@@ -313,18 +345,53 @@
 <tr><td><span class="tag support">support</span></td><td>1D</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="UDR" data-group="sp500" data-name="UDR, Inc." data-tf="1d" data-level="37.88470526302562" data-type="support" data-kind="trend_touch" data-time="1786109400" title="開啟蠟燭圖"><code>UDR</code></button></td><td>UDR, Inc.</td><td class="num">37.8847</td><td>2026-08-07 13:30 UTC</td></tr>
 <tr><td><span class="tag support">support</span></td><td>1D</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="WEC" data-group="sp500" data-name="WEC Energy Group" data-tf="1d" data-level="107.26445560372032" data-type="support" data-kind="trend_touch" data-time="1786109400" title="開啟蠟燭圖"><code>WEC</code></button></td><td>WEC Energy Group</td><td class="num">107.264</td><td>2026-08-07 13:30 UTC</td></tr>
 <tr><td><span class="tag resist">resistance</span></td><td>1D</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="WMT" data-group="sp500" data-name="Walmart" data-tf="1d" data-level="114.30249786376953" data-type="resistance" data-kind="trend_touch" data-time="1786023000" title="開啟蠟燭圖"><code>WMT</code></button></td><td>Walmart</td><td class="num">114.302</td><td>2026-08-06 13:30 UTC</td></tr>
+=======
+        <tbody data-section="trend">
+          <tr data-group="dji30"><td><span class="tag support">support</span></td><td>1H</td><td>dji30</td><td><button type="button" class="sym-btn" data-symbol="CVX" data-group="dji30" data-name="Chevron Corporation" data-tf="1h" data-level="186.01037223384066" data-type="support" data-kind="trend_touch" data-time="1786131000" title="開啟蠟燭圖"><code>CVX</code></button></td><td>Chevron Corporation</td><td class="num">186.01</td><td>2026-08-07 19:30 UTC</td></tr>
+<tr data-group="fx"><td><span class="tag support">support</span></td><td>1H</td><td>fx</td><td><button type="button" class="sym-btn" data-symbol="EURGBP=X" data-group="fx" data-name="EUR/GBP" data-tf="1h" data-level="0.8563588976219136" data-type="support" data-kind="trend_touch" data-time="1786132800" title="開啟蠟燭圖"><code>EURGBP=X</code></button></td><td>EUR/GBP</td><td class="num">0.856359</td><td>2026-08-07 20:00 UTC</td></tr>
+<tr data-group="ndx100"><td><span class="tag resist">resistance</span></td><td>1H</td><td>ndx100</td><td><button type="button" class="sym-btn" data-symbol="META" data-group="ndx100" data-name="Meta Platforms" data-tf="1h" data-level="595.0390780174126" data-type="resistance" data-kind="trend_touch" data-time="1786131000" title="開啟蠟燭圖"><code>META</code></button></td><td>Meta Platforms</td><td class="num">595.039</td><td>2026-08-07 19:30 UTC</td></tr>
+<tr data-group="sp500"><td><span class="tag support">support</span></td><td>1H</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="CVX" data-group="sp500" data-name="Chevron Corporation" data-tf="1h" data-level="186.01037223384066" data-type="support" data-kind="trend_touch" data-time="1786131000" title="開啟蠟燭圖"><code>CVX</code></button></td><td>Chevron Corporation</td><td class="num">186.01</td><td>2026-08-07 19:30 UTC</td></tr>
+<tr data-group="sp500"><td><span class="tag support">support</span></td><td>1H</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="HST" data-group="sp500" data-name="Host Hotels &amp; Resorts" data-tf="1h" data-level="23.24152081945668" data-type="support" data-kind="trend_touch" data-time="1786131000" title="開啟蠟燭圖"><code>HST</code></button></td><td>Host Hotels &amp; Resorts</td><td class="num">23.2415</td><td>2026-08-07 19:30 UTC</td></tr>
+<tr data-group="sp500"><td><span class="tag resist">resistance</span></td><td>1H</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="LULU" data-group="sp500" data-name="Lululemon Athletica" data-tf="1h" data-level="128.34296497002447" data-type="resistance" data-kind="trend_touch" data-time="1786131000" title="開啟蠟燭圖"><code>LULU</code></button></td><td>Lululemon Athletica</td><td class="num">128.343</td><td>2026-08-07 19:30 UTC</td></tr>
+<tr data-group="sp500"><td><span class="tag resist">resistance</span></td><td>1H</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="META" data-group="sp500" data-name="Meta Platforms" data-tf="1h" data-level="595.0390780174126" data-type="resistance" data-kind="trend_touch" data-time="1786131000" title="開啟蠟燭圖"><code>META</code></button></td><td>Meta Platforms</td><td class="num">595.039</td><td>2026-08-07 19:30 UTC</td></tr>
+<tr data-group="sp500"><td><span class="tag support">support</span></td><td>1H</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="ROK" data-group="sp500" data-name="Rockwell Automation" data-tf="1h" data-level="440.0473853359703" data-type="support" data-kind="trend_touch" data-time="1786131000" title="開啟蠟燭圖"><code>ROK</code></button></td><td>Rockwell Automation</td><td class="num">440.047</td><td>2026-08-07 19:30 UTC</td></tr>
+<tr data-group="sp500"><td><span class="tag resist">resistance</span></td><td>1H</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="WELL" data-group="sp500" data-name="Welltower" data-tf="1h" data-level="237.76068184592506" data-type="resistance" data-kind="trend_touch" data-time="1786131000" title="開啟蠟燭圖"><code>WELL</code></button></td><td>Welltower</td><td class="num">237.761</td><td>2026-08-07 19:30 UTC</td></tr>
+<tr data-group="crypto"><td><span class="tag resist">resistance</span></td><td>1D</td><td>crypto</td><td><button type="button" class="sym-btn" data-symbol="BICOUSDT" data-group="crypto" data-name="BICO" data-tf="1d" data-level="0.059519999999999997" data-type="resistance" data-kind="trend_touch" data-time="1786147200" title="開啟蠟燭圖"><code>BICOUSDT</code></button></td><td>BICO</td><td class="num">0.05952</td><td>2026-08-08 00:00 UTC</td></tr>
+<tr data-group="crypto"><td><span class="tag resist">resistance</span></td><td>1D</td><td>crypto</td><td><button type="button" class="sym-btn" data-symbol="UTKUSDT" data-group="crypto" data-name="UTK" data-tf="1d" data-level="0.008904606741573035" data-type="resistance" data-kind="trend_touch" data-time="1776124800" title="開啟蠟燭圖"><code>UTKUSDT</code></button></td><td>UTK</td><td class="num">0.00890461</td><td>2026-04-14 00:00 UTC</td></tr>
+<tr data-group="dji30"><td><span class="tag resist">resistance</span></td><td>1D</td><td>dji30</td><td><button type="button" class="sym-btn" data-symbol="WMT" data-group="dji30" data-name="Walmart Inc." data-tf="1d" data-level="114.30249786376953" data-type="resistance" data-kind="trend_touch" data-time="1786023000" title="開啟蠟燭圖"><code>WMT</code></button></td><td>Walmart Inc.</td><td class="num">114.302</td><td>2026-08-06 13:30 UTC</td></tr>
+<tr data-group="ndx100"><td><span class="tag resist">resistance</span></td><td>1D</td><td>ndx100</td><td><button type="button" class="sym-btn" data-symbol="BKNG" data-group="ndx100" data-name="Booking Holdings" data-tf="1d" data-level="215.66487473707932" data-type="resistance" data-kind="trend_touch" data-time="1786109400" title="開啟蠟燭圖"><code>BKNG</code></button></td><td>Booking Holdings</td><td class="num">215.665</td><td>2026-08-07 13:30 UTC</td></tr>
+<tr data-group="ndx100"><td><span class="tag resist">resistance</span></td><td>1D</td><td>ndx100</td><td><button type="button" class="sym-btn" data-symbol="TEAM" data-group="ndx100" data-name="Atlassian" data-tf="1d" data-level="135.16925635704627" data-type="resistance" data-kind="trend_touch" data-time="1786109400" title="開啟蠟燭圖"><code>TEAM</code></button></td><td>Atlassian</td><td class="num">135.169</td><td>2026-08-07 13:30 UTC</td></tr>
+<tr data-group="ndx100"><td><span class="tag resist">resistance</span></td><td>1D</td><td>ndx100</td><td><button type="button" class="sym-btn" data-symbol="WMT" data-group="ndx100" data-name="Walmart" data-tf="1d" data-level="114.30249786376953" data-type="resistance" data-kind="trend_touch" data-time="1786023000" title="開啟蠟燭圖"><code>WMT</code></button></td><td>Walmart</td><td class="num">114.302</td><td>2026-08-06 13:30 UTC</td></tr>
+<tr data-group="sp500"><td><span class="tag support">support</span></td><td>1D</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="AES" data-group="sp500" data-name="AES Corporation" data-tf="1d" data-level="14.682046399479024" data-type="support" data-kind="trend_touch" data-time="1786023000" title="開啟蠟燭圖"><code>AES</code></button></td><td>AES Corporation</td><td class="num">14.682</td><td>2026-08-06 13:30 UTC</td></tr>
+<tr data-group="sp500"><td><span class="tag support">support</span></td><td>1D</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="ALGN" data-group="sp500" data-name="Align Technology" data-tf="1d" data-level="165.24114227294922" data-type="support" data-kind="trend_touch" data-time="1786109400" title="開啟蠟燭圖"><code>ALGN</code></button></td><td>Align Technology</td><td class="num">165.241</td><td>2026-08-07 13:30 UTC</td></tr>
+<tr data-group="sp500"><td><span class="tag support">support</span></td><td>1D</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="AVB" data-group="sp500" data-name="AvalonBay Communities" data-tf="1d" data-level="186.1403539321002" data-type="support" data-kind="trend_touch" data-time="1786109400" title="開啟蠟燭圖"><code>AVB</code></button></td><td>AvalonBay Communities</td><td class="num">186.14</td><td>2026-08-07 13:30 UTC</td></tr>
+<tr data-group="sp500"><td><span class="tag resist">resistance</span></td><td>1D</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="BKNG" data-group="sp500" data-name="Booking Holdings" data-tf="1d" data-level="215.66487473707932" data-type="resistance" data-kind="trend_touch" data-time="1786109400" title="開啟蠟燭圖"><code>BKNG</code></button></td><td>Booking Holdings</td><td class="num">215.665</td><td>2026-08-07 13:30 UTC</td></tr>
+<tr data-group="sp500"><td><span class="tag resist">resistance</span></td><td>1D</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="UBER" data-group="sp500" data-name="Uber" data-tf="1d" data-level="75.25196897066556" data-type="resistance" data-kind="trend_touch" data-time="1786109400" title="開啟蠟燭圖"><code>UBER</code></button></td><td>Uber</td><td class="num">75.252</td><td>2026-08-07 13:30 UTC</td></tr>
+<tr data-group="sp500"><td><span class="tag support">support</span></td><td>1D</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="UDR" data-group="sp500" data-name="UDR, Inc." data-tf="1d" data-level="37.88470526302562" data-type="support" data-kind="trend_touch" data-time="1786109400" title="開啟蠟燭圖"><code>UDR</code></button></td><td>UDR, Inc.</td><td class="num">37.8847</td><td>2026-08-07 13:30 UTC</td></tr>
+<tr data-group="sp500"><td><span class="tag support">support</span></td><td>1D</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="WEC" data-group="sp500" data-name="WEC Energy Group" data-tf="1d" data-level="107.26445560372032" data-type="support" data-kind="trend_touch" data-time="1786109400" title="開啟蠟燭圖"><code>WEC</code></button></td><td>WEC Energy Group</td><td class="num">107.264</td><td>2026-08-07 13:30 UTC</td></tr>
+<tr data-group="sp500"><td><span class="tag resist">resistance</span></td><td>1D</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="WMT" data-group="sp500" data-name="Walmart" data-tf="1d" data-level="114.30249786376953" data-type="resistance" data-kind="trend_touch" data-time="1786023000" title="開啟蠟燭圖"><code>WMT</code></button></td><td>Walmart</td><td class="num">114.302</td><td>2026-08-06 13:30 UTC</td></tr>
+>>>>>>> 51353ea (Add NDX100 / SP500 / DJI30 filters on the AR alerts and history panels.)
         </tbody>
       </table>
     </div>
 
+<<<<<<< HEAD
     <h2>最新 4 根超出趨勢線 · 1</h2>
+=======
+    <h2 class="section-title" data-section="exceed" data-base="最新 4 根超出趨勢線" data-total="1">最新 4 根超出趨勢線 · 1</h2>
+>>>>>>> 51353ea (Add NDX100 / SP500 / DJI30 filters on the AR alerts and history panels.)
     <div class="panel">
       <table>
         <thead>
           <tr><th>Side</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th class="num">Bars</th><th>Time</th></tr>
         </thead>
+<<<<<<< HEAD
         <tbody>
           <tr><td><span class="tag resist">resistance</span></td><td>1H</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="MRNA" data-group="sp500" data-name="Moderna" data-tf="1h" data-level="57.53194011341442" data-type="resistance" data-kind="trend_exceed" data-time="1786132800" title="開啟蠟燭圖"><code>MRNA</code></button></td><td>Moderna</td><td class="num">57.5319</td><td class="num">4</td><td>2026-08-07 20:00 UTC</td></tr>
+=======
+        <tbody data-section="exceed">
+          <tr data-group="sp500"><td><span class="tag resist">resistance</span></td><td>1H</td><td>sp500</td><td><button type="button" class="sym-btn" data-symbol="MRNA" data-group="sp500" data-name="Moderna" data-tf="1h" data-level="57.53194011341442" data-type="resistance" data-kind="trend_exceed" data-time="1786132800" title="開啟蠟燭圖"><code>MRNA</code></button></td><td>Moderna</td><td class="num">57.5319</td><td class="num">4</td><td>2026-08-07 20:00 UTC</td></tr>
+>>>>>>> 51353ea (Add NDX100 / SP500 / DJI30 filters on the AR alerts and history panels.)
         </tbody>
       </table>
     </div>
@@ -807,6 +874,54 @@
       if (modal.classList.contains("open")) closeModal();
     }
   });
+})();
+</script>
+
+<script>
+(function () {
+  const KEY = "tv_ar_group_filter_v1";
+  const ALLOWED = new Set(["all", "ndx100", "sp500", "dji30"]);
+  const bar = document.getElementById("groupFilters");
+  if (!bar) return;
+
+  let current = "all";
+  try {
+    const saved = localStorage.getItem(KEY);
+    if (saved && ALLOWED.has(saved)) current = saved;
+  } catch (_) {}
+
+  function apply(group) {
+    current = ALLOWED.has(group) ? group : "all";
+    try { localStorage.setItem(KEY, current); } catch (_) {}
+    bar.querySelectorAll("button[data-group]").forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.group === current);
+    });
+    document.querySelectorAll("tbody[data-section]").forEach((tbody) => {
+      let visible = 0;
+      tbody.querySelectorAll("tr[data-group]").forEach((tr) => {
+        const on = current === "all" || tr.dataset.group === current;
+        tr.hidden = !on;
+        if (on) visible += 1;
+      });
+      const empty = tbody.querySelector("tr:not([data-group])");
+      if (empty) empty.hidden = visible > 0;
+      const title = document.querySelector(`.section-title[data-section="${tbody.dataset.section}"]`);
+      if (title) {
+        const base = title.dataset.base || title.textContent.split(" · ")[0];
+        title.textContent = current === "all"
+          ? `${base} · ${title.dataset.total || visible}`
+          : `${base} · ${visible}`;
+      }
+    });
+  }
+
+  bar.addEventListener("click", (ev) => {
+    const btn = ev.target.closest("button[data-group]");
+    if (!btn) return;
+    apply(btn.dataset.group);
+  });
+
+  apply(current);
 })();
 </script>
 
