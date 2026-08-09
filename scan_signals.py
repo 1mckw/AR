@@ -1230,13 +1230,6 @@ def render_html(payload: dict) -> str:
       font-family: "JetBrains Mono", monospace; font-size: 1.25rem; font-weight: 700; margin-top: 4px;
       text-shadow: 0 0 16px rgba(0, 240, 200, 0.22);
     }}
-    .rules {{
-      background: rgba(0, 240, 200, 0.04); border: 1px solid var(--border-strong); border-radius: 12px;
-      padding: 12px 14px; margin-bottom: 22px; font-size: .85rem; color: var(--muted);
-      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-      box-shadow: var(--glass-shadow);
-    }}
-    .rules li {{ margin: 4px 0 4px 1.1em; }}
     h2 {{
       font-size: 1.05rem; margin: 22px 0 10px; font-weight: 650;
       color: var(--text); text-shadow: 0 0 20px rgba(0, 240, 200, 0.28);
@@ -1433,16 +1426,6 @@ def render_html(payload: dict) -> str:
       <button type="button" data-group="sp500">SP500</button>
       <button type="button" data-group="dji30">DJI30</button>
     </div>
-    <ul class="rules">
-      <li><strong>AR/DR</strong> 信號 K 的<strong>上引線（高）</strong>與<strong>下引線（低）</strong>皆向右延伸</li>
-      <li>任一侧影線被碰到即<strong>停止</strong>該射線（不再延伸）</li>
-      <li><strong>報告</strong> AR 上引線 / DR 下引線 超過 {TOUCH_WINDOW_BARS} 根後的晚觸碰</li>
-      <li>趨勢線須至少 <strong>{MIN_LINE_PIVOTS}</strong> 個觸點（Pivot 共線，或局部高低點影線近觸）</li>
-      <li>急漲/急跌 K 實體可<strong>貫穿</strong>趨勢線（阻力←急漲、支撐←急跌）；貫穿後實體仍在线外不得超過 <strong>{SHARP_PIERCE_GRACE_BARS}</strong> 根 K</li>
-      <li><strong>報告</strong> 趨勢線影線觸碰</li>
-      <li><strong>報告</strong> 最新 <strong>{TREND_EXCEED_MIN_BARS}–{TREND_EXCEED_MAX_BARS}</strong> 根 K 實體連續超出趨勢線（阻力←實體高于線、支撐←實體低于線）</li>
-      <li>點擊 <strong>Symbol</strong> 開啟蠟燭圖（含 AR/DR 與趨勢線）</li>
-    </ul>
 
     <h2 class="section-title" data-section="exceed" data-base="最新 {TREND_EXCEED_MIN_BARS}–{TREND_EXCEED_MAX_BARS} 根超出趨勢線" data-total="{len(exceed)}">最新 {TREND_EXCEED_MIN_BARS}–{TREND_EXCEED_MAX_BARS} 根超出趨勢線 · {len(exceed)}</h2>
     <div class="panel">
