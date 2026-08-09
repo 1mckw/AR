@@ -1444,6 +1444,18 @@ def render_html(payload: dict) -> str:
       <li>點擊 <strong>Symbol</strong> 開啟蠟燭圖（含 AR/DR 與趨勢線）</li>
     </ul>
 
+    <h2 class="section-title" data-section="exceed" data-base="最新 {TREND_EXCEED_MIN_BARS}–{TREND_EXCEED_MAX_BARS} 根超出趨勢線" data-total="{len(exceed)}">最新 {TREND_EXCEED_MIN_BARS}–{TREND_EXCEED_MAX_BARS} 根超出趨勢線 · {len(exceed)}</h2>
+    <div class="panel">
+      <table>
+        <thead>
+          <tr><th>Side</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th class="num">Bars</th><th>Time</th></tr>
+        </thead>
+        <tbody data-section="exceed">
+          {rows_trend_exceed()}
+        </tbody>
+      </table>
+    </div>
+
     <h2 class="section-title" data-section="ar_dr" data-base="AR/DR 晚觸碰（&gt;{TOUCH_WINDOW_BARS} 根後）" data-total="{len(ar_dr)}">AR/DR 晚觸碰（&gt;{TOUCH_WINDOW_BARS} 根後） · {len(ar_dr)}</h2>
     <div class="panel">
       <table>
@@ -1464,18 +1476,6 @@ def render_html(payload: dict) -> str:
         </thead>
         <tbody data-section="trend">
           {rows_trend()}
-        </tbody>
-      </table>
-    </div>
-
-    <h2 class="section-title" data-section="exceed" data-base="最新 {TREND_EXCEED_MIN_BARS}–{TREND_EXCEED_MAX_BARS} 根超出趨勢線" data-total="{len(exceed)}">最新 {TREND_EXCEED_MIN_BARS}–{TREND_EXCEED_MAX_BARS} 根超出趨勢線 · {len(exceed)}</h2>
-    <div class="panel">
-      <table>
-        <thead>
-          <tr><th>Side</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th class="num">Bars</th><th>Time</th></tr>
-        </thead>
-        <tbody data-section="exceed">
-          {rows_trend_exceed()}
         </tbody>
       </table>
     </div>
