@@ -414,6 +414,23 @@
       background: linear-gradient(135deg, #00f0c8, #00b894);
       box-shadow: 0 2px 10px rgba(0, 240, 200, 0.25);
     }
+    .history-mode {
+      display: flex; gap: 4px;
+    }
+    .history-mode button {
+      flex: 1; height: 30px; padding: 0 8px; font-size: 0.72rem; font-weight: 700;
+      border-radius: 8px; color: var(--muted); background: rgba(6, 10, 18, 0.55);
+    }
+    .history-mode button.active {
+      color: #04110e; border-color: transparent;
+      background: linear-gradient(135deg, #00f0c8, #00b894);
+      box-shadow: 0 2px 10px rgba(0, 240, 200, 0.25);
+    }
+    .history-mode button .mode-count {
+      margin-left: 4px; font-variant-numeric: tabular-nums; opacity: 0.85;
+    }
+    .history-section[hidden] { display: none !important; }
+    .history-section-title { display: none; }
     .history-rail .history-meta { padding: 8px 10px 0; flex-shrink: 0; }
     .history-scroll {
       flex: 1; min-height: 0; overflow: auto;
@@ -573,7 +590,11 @@
 
   <aside class="history-rail" id="historyRail" aria-label="最新與歷史清單">
     <div class="history-head">
-      <div class="history-title">最新 / 歷史</div>
+      <div class="history-title">紀錄</div>
+      <div class="history-mode" id="historyMode" role="tablist" aria-label="最新與歷史">
+        <button type="button" data-mode="latest" class="active" role="tab" aria-selected="true">最新<span class="mode-count" id="latestCount">0</span></button>
+        <button type="button" data-mode="history" role="tab" aria-selected="false">歷史<span class="mode-count" id="historyCount">0</span></button>
+      </div>
       <div class="history-filters" id="historyFilters" role="group" aria-label="週期篩選">
         <button type="button" data-tf="all" class="active">全部</button>
         <button type="button" data-tf="1h">1H</button>
@@ -588,12 +609,10 @@
     </div>
     <div class="history-meta" id="historyMeta">載入掃描報告…</div>
     <div class="history-scroll">
-      <section class="history-section" aria-label="最新掃描">
-        <h3 class="history-section-title">最新 <span id="latestCount">0</span></h3>
+      <section class="history-section" id="section-latest" aria-label="最新掃描">
         <ul class="history-list" id="latestLog"></ul>
       </section>
-      <section class="history-section" aria-label="歷史紀錄">
-        <h3 class="history-section-title">歷史 <span id="historyCount">0</span></h3>
+      <section class="history-section" id="section-history" aria-label="歷史紀錄" hidden>
         <ul class="history-list" id="historyLog"></ul>
       </section>
     </div>
@@ -682,6 +701,7 @@
     const LS_HISTORY = 'tv_ar_history_v1';
     const LS_HIST_TF = 'tv_ar_hist_tf_v1';
     const LS_HIST_GROUP = 'tv_ar_hist_group_v1';
+    const LS_HIST_MODE = 'tv_ar_hist_mode_v1';
     const LS_RAIL_W = 'tv_ar_rail_w_v1';
     const RAIL_W_MIN = 220;
     const RAIL_W_MAX = 560;
@@ -715,6 +735,7 @@
     let scanReport = null;
     let historyFetchToken = 0;
     let historyTfFilter = 'all';
+    let historyMode = 'latest';
     let historyGroupFilter = 'all';
     let latestViewItems = [];
     let historyViewItems = [];
@@ -1759,6 +1780,26 @@ function historyItemBody(item) {
       });
     }
 
+    function syncHistoryModeButtons() {
+      document.querySelectorAll('#historyMode button').forEach((btn) => {
+        const on = btn.dataset.mode === historyMode;
+        btn.classList.toggle('active', on);
+        btn.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      const latestSec = document.getElementById('section-latest');
+      const histSec = document.getElementById('section-history');
+      if (latestSec) latestSec.hidden = historyMode !== 'latest';
+      if (histSec) histSec.hidden = historyMode !== 'history';
+    }
+
+    function setHistoryMode(mode, { persist = true } = {}) {
+      historyMode = mode === 'history' ? 'history' : 'latest';
+      if (persist) {
+        try { localStorage.setItem(LS_HIST_MODE, historyMode); } catch (_) {}
+      }
+      syncHistoryModeButtons();
+    }
+
     function syncHistoryFilterButtons() {
       document.querySelectorAll('#historyFilters button').forEach((btn) => {
         btn.classList.toggle('active', btn.dataset.tf === historyTfFilter);
@@ -1792,8 +1833,11 @@ function historyItemBody(item) {
         if (saved && ['all', '1h', '1d'].includes(saved)) historyTfFilter = saved;
         const g = localStorage.getItem(LS_HIST_GROUP);
         if (g && ['all', 'ndx100', 'sp500', 'dji30'].includes(g)) historyGroupFilter = g;
+        const mode = localStorage.getItem(LS_HIST_MODE);
+        if (mode === 'latest' || mode === 'history') historyMode = mode;
       } catch (_) {}
       syncHistoryFilterButtons();
+      syncHistoryModeButtons();
     }
 
     function filterEmptyHint(prefix) {
@@ -2135,6 +2179,12 @@ function historyItemBody(item) {
 
     document.querySelectorAll('.rail-nav button').forEach(btn => {
       btn.addEventListener('click', () => switchRailTab(btn.dataset.panel));
+    });
+
+    document.getElementById('historyMode')?.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-mode]');
+      if (!btn) return;
+      setHistoryMode(btn.dataset.mode);
     });
 
     document.getElementById('historyFilters')?.addEventListener('click', (e) => {
