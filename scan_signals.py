@@ -4,7 +4,7 @@
 Reports only:
   - AR/DR base-level touch after >12 bars from signal (not new AR/DR within 12 bars)
   - Trend-line wick touches
-  - Latest 4 bars all with body beyond a trend line
+  - Latest 2–10 consecutive bars with body beyond a trend line
 """
 
 from __future__ import annotations
@@ -57,6 +57,8 @@ MAX_LINES_PER_PIVOT = tl.MAX_LINES_PER_PIVOT
 MIN_LINE_PIVOTS = tl.MIN_LINE_PIVOTS
 SHARP_PIERCE_GRACE_BARS = tl.SHARP_PIERCE_GRACE_BARS
 TREND_EXCEED_BARS = tl.TREND_EXCEED_BARS
+TREND_EXCEED_MIN_BARS = tl.TREND_EXCEED_MIN_BARS
+TREND_EXCEED_MAX_BARS = tl.TREND_EXCEED_MAX_BARS
 find_pivots = tl.find_pivots
 line_price = tl.line_price
 build_auto_trend_lines = tl.build_auto_trend_lines
@@ -1120,7 +1122,7 @@ def render_html(payload: dict) -> str:
 
     def rows_trend_exceed() -> str:
         if not exceed:
-            return f'<tr><td colspan="8" class="empty">目前無最新 {TREND_EXCEED_BARS} 根超出趨勢線</td></tr>'
+            return f'<tr><td colspan="8" class="empty">目前無最新 {TREND_EXCEED_MIN_BARS}–{TREND_EXCEED_MAX_BARS} 根超出趨勢線</td></tr>'
         out = []
         for h in exceed:
             cls = "resist" if h.get("type") == "resistance" else "support"
@@ -1438,7 +1440,7 @@ def render_html(payload: dict) -> str:
       <li>趨勢線須至少 <strong>{MIN_LINE_PIVOTS}</strong> 個觸點（Pivot 共線，或局部高低點影線近觸）</li>
       <li>急漲/急跌 K 實體可<strong>貫穿</strong>趨勢線（阻力←急漲、支撐←急跌）；貫穿後實體仍在线外不得超過 <strong>{SHARP_PIERCE_GRACE_BARS}</strong> 根 K</li>
       <li><strong>報告</strong> 趨勢線影線觸碰</li>
-      <li><strong>報告</strong> 最新 <strong>{TREND_EXCEED_BARS}</strong> 根 K 實體皆超出趨勢線（阻力←實體高于線、支撐←實體低于線）</li>
+      <li><strong>報告</strong> 最新 <strong>{TREND_EXCEED_MIN_BARS}–{TREND_EXCEED_MAX_BARS}</strong> 根 K 實體連續超出趨勢線（阻力←實體高于線、支撐←實體低于線）</li>
       <li>點擊 <strong>Symbol</strong> 開啟蠟燭圖（含 AR/DR 與趨勢線）</li>
     </ul>
 
@@ -1466,7 +1468,7 @@ def render_html(payload: dict) -> str:
       </table>
     </div>
 
-    <h2 class="section-title" data-section="exceed" data-base="最新 {TREND_EXCEED_BARS} 根超出趨勢線" data-total="{len(exceed)}">最新 {TREND_EXCEED_BARS} 根超出趨勢線 · {len(exceed)}</h2>
+    <h2 class="section-title" data-section="exceed" data-base="最新 {TREND_EXCEED_MIN_BARS}–{TREND_EXCEED_MAX_BARS} 根超出趨勢線" data-total="{len(exceed)}">最新 {TREND_EXCEED_MIN_BARS}–{TREND_EXCEED_MAX_BARS} 根超出趨勢線 · {len(exceed)}</h2>
     <div class="panel">
       <table>
         <thead>
@@ -1630,6 +1632,8 @@ def main() -> int:
             "pivot_high": PIVOT_HIGH,
             "pivot_low": PIVOT_LOW,
             "trend_exceed_bars": TREND_EXCEED_BARS,
+            "trend_exceed_min_bars": TREND_EXCEED_MIN_BARS,
+            "trend_exceed_max_bars": TREND_EXCEED_MAX_BARS,
         },
         "counts": {
             "ndx100": len(ndx100),

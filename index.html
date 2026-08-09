@@ -649,7 +649,8 @@
     const LOCAL_EXTREME_WING = 2;
     const MIN_TOUCH_BAR_GAP = 3;
     const SHARP_PIERCE_GRACE_BARS = 2;
-    const TREND_EXCEED_BARS = 4;
+    const TREND_EXCEED_MIN_BARS = 2;
+    const TREND_EXCEED_MAX_BARS = 10;
     const TOUCH_WINDOW_BARS = 12; // 主引線觸碰在此窗口內不報告
 
     const TIMEFRAMES = {
@@ -689,7 +690,7 @@
     let untouchedRayKeys = new Set(); // AR/DR 主引線尚未觸碰
     let activeExtRayKeys = new Set(); // 已延伸且仍有效的 AR/DR
     let untouchedTrendKeys = new Set(); // 趨勢線尚未觸碰
-    let notExceedingTrendKeys = new Set(); // 最新 N 根尚未全部超出趨勢線
+    let notExceedingTrendKeys = new Set(); // 最新 2–10 根尚未連續超出趨勢線
     let breakHistory = [];
     let scanReport = null;
     let historyFetchToken = 0;
@@ -1442,21 +1443,24 @@
       return null;
     }
 
-    /** 最新 N 根 K 實體皆超出趨勢線 */
-    function findTrendExceed(candles, line, n = TREND_EXCEED_BARS) {
-      if (candles.length < n) return null;
+    /** 最新 2–10 根連續實體超出趨勢線 */
+    function findTrendExceed(candles, line, minN = TREND_EXCEED_MIN_BARS, maxN = TREND_EXCEED_MAX_BARS) {
+      if (candles.length < minN) return null;
       const lineStart = Math.max(line.p2.index, line.p1.index);
-      const firstI = candles.length - n;
-      if (firstI <= lineStart) return null;
       const resistance = line.type === 'resistance';
-      for (let i = firstI; i < candles.length; i++) {
+      let streak = 0;
+      for (let i = candles.length - 1; i >= 0; i--) {
+        if (i <= lineStart) break;
         const lp = linePrice(line.p1, line.slope, i);
-        if (!bodyCrosses(candles, i, lp, resistance)) return null;
+        if (!bodyCrosses(candles, i, lp, resistance)) break;
+        streak += 1;
+        if (streak >= maxN) break;
       }
+      if (streak < minN) return null;
       const lastI = candles.length - 1;
       const lp = linePrice(line.p1, line.slope, lastI);
       const c = candles[lastI];
-      return { time: c.time, price: lp, index: lastI };
+      return { time: c.time, price: lp, index: lastI, bars: streak };
     }
 
     function checkTouchNotifications(signals, trendLines, candles, ctx, sharpOpts) {
