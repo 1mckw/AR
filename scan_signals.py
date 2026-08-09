@@ -491,6 +491,26 @@ def slim_hit_for_archive(h: dict, seen_at: str) -> dict:
     return out
 
 
+def load_history_archive() -> dict:
+    if not os.path.isfile(HISTORY_PATH):
+        return {"updated_at": "", "count": 0, "hits": []}
+    try:
+        with open(HISTORY_PATH, encoding="utf-8") as f:
+            raw = json.load(f)
+        if isinstance(raw, dict):
+            hits = list(raw.get("hits") or [])
+            return {
+                "updated_at": str(raw.get("updated_at") or ""),
+                "count": int(raw.get("count") or len(hits)),
+                "hits": hits,
+            }
+        if isinstance(raw, list):
+            return {"updated_at": "", "count": len(raw), "hits": raw}
+    except (OSError, json.JSONDecodeError, TypeError, ValueError):
+        pass
+    return {"updated_at": "", "count": 0, "hits": []}
+
+
 def update_history_archive(hits: list[dict], generated_at: str) -> dict:
     """Merge scan hits into signals/history.json (deduped, newest first)."""
     os.makedirs(OUT_DIR, exist_ok=True)
@@ -1090,22 +1110,40 @@ GROUP_FILTER_SCRIPT = r"""
 <script>
 (function () {
   const KEY = "tv_ar_group_filter_v1";
+  const MODE_KEY = "tv_ar_view_mode_v1";
   const ALLOWED = new Set(["all", "ndx100", "sp500", "dji30"]);
   const bar = document.getElementById("groupFilters");
-  if (!bar) return;
+  const modeBar = document.getElementById("viewMode");
+  const viewLatest = document.getElementById("view-latest");
+  const viewHistory = document.getElementById("view-history");
 
   let current = "all";
+  let mode = "latest";
   try {
     const saved = localStorage.getItem(KEY);
     if (saved && ALLOWED.has(saved)) current = saved;
+    const m = localStorage.getItem(MODE_KEY);
+    if (m === "latest" || m === "history") mode = m;
   } catch (_) {}
+
+  function syncMode() {
+    if (modeBar) {
+      modeBar.querySelectorAll("button[data-mode]").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.mode === mode);
+      });
+    }
+    if (viewLatest) viewLatest.hidden = mode !== "latest";
+    if (viewHistory) viewHistory.hidden = mode !== "history";
+  }
 
   function apply(group) {
     current = ALLOWED.has(group) ? group : "all";
     try { localStorage.setItem(KEY, current); } catch (_) {}
-    bar.querySelectorAll("button[data-group]").forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.group === current);
-    });
+    if (bar) {
+      bar.querySelectorAll("button[data-group]").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.group === current);
+      });
+    }
     document.querySelectorAll("tbody[data-section]").forEach((tbody) => {
       let visible = 0;
       tbody.querySelectorAll("tr[data-group]").forEach((tr) => {
@@ -1125,12 +1163,24 @@ GROUP_FILTER_SCRIPT = r"""
     });
   }
 
-  bar.addEventListener("click", (ev) => {
-    const btn = ev.target.closest("button[data-group]");
-    if (!btn) return;
-    apply(btn.dataset.group);
-  });
+  if (modeBar) {
+    modeBar.addEventListener("click", (ev) => {
+      const btn = ev.target.closest("button[data-mode]");
+      if (!btn) return;
+      mode = btn.dataset.mode === "history" ? "history" : "latest";
+      try { localStorage.setItem(MODE_KEY, mode); } catch (_) {}
+      syncMode();
+    });
+  }
+  if (bar) {
+    bar.addEventListener("click", (ev) => {
+      const btn = ev.target.closest("button[data-group]");
+      if (!btn) return;
+      apply(btn.dataset.group);
+    });
+  }
 
+  syncMode();
   apply(current);
 })();
 </script>
@@ -1144,6 +1194,8 @@ def render_html(payload: dict) -> str:
     exceed = [h for h in hits if h["kind"] == "trend_exceed"]
     errs = [r for r in payload["results"] if r.get("error")]
     c = payload["counts"]
+    hist_payload = load_history_archive()
+    hist_hits = list(hist_payload.get("hits") or [])
 
     def sym_btn(h: dict) -> str:
         sym = str(h.get("symbol", ""))
@@ -1218,6 +1270,48 @@ def render_html(payload: dict) -> str:
                 f"<td class=\"num\">{fmt_num(float(h['level']))}</td>"
                 f"<td class=\"num\">{int(h.get('exceed_bars', TREND_EXCEED_BARS))}</td>"
                 f"<td>{html.escape(fmt_ts(int(h['time'])))}</td>"
+                "</tr>"
+            )
+        return "\n".join(out)
+
+    def kind_label(h: dict) -> tuple[str, str]:
+        kind = h.get("kind")
+        typ = str(h.get("type") or "")
+        if kind == "ar_dr_touch":
+            cls = "ar" if typ == "AR" else "dr"
+            return cls, f"{typ} 晚觸碰" if typ else "AR/DR 晚觸碰"
+        if kind == "trend_exceed":
+            cls = "resist" if typ == "resistance" else "support"
+            return cls, "阻力超出" if typ == "resistance" else "支撐超出"
+        if kind == "trend_touch":
+            cls = "resist" if typ == "resistance" else "support"
+            return cls, "阻力觸碰" if typ == "resistance" else "支撐觸碰"
+        return "ar", str(kind or "事件")
+
+    def rows_history() -> str:
+        if not hist_hits:
+            return '<tr><td colspan="8" class="empty">尚無歷史紀錄</td></tr>'
+        out = []
+        for h in hist_hits[:200]:
+            cls, label = kind_label(h)
+            try:
+                level = fmt_num(float(h["level"]))
+            except (TypeError, ValueError, KeyError):
+                level = "—"
+            try:
+                tstr = fmt_ts(int(h["time"]))
+            except (TypeError, ValueError, KeyError):
+                tstr = "—"
+            out.append(
+                f'<tr data-group="{html.escape(str(h.get("group", "")), quote=True)}">'
+                f'<td><span class="tag {cls}">{html.escape(label)}</span></td>'
+                f"<td>{html.escape(fmt_tf(h.get('timeframe', '')))}</td>"
+                f"<td>{html.escape(str(h.get('group', '')))}</td>"
+                f"<td>{sym_btn(h)}</td>"
+                f"<td>{html.escape(str(h.get('name', '')))}</td>"
+                f'<td class="num">{level}</td>'
+                f"<td>{html.escape(tstr)}</td>"
+                f"<td>{html.escape(str(h.get('seen_at', '') or '—'))}</td>"
                 "</tr>"
             )
         return "\n".join(out)
@@ -1297,6 +1391,25 @@ def render_html(payload: dict) -> str:
       background: linear-gradient(135deg, #00f0c8, #00b894);
       box-shadow: 0 2px 12px rgba(0, 240, 200, 0.28);
     }}
+    .view-mode {{
+      display: flex; gap: 8px; margin: 0 0 14px;
+    }}
+    .view-mode button {{
+      flex: 1; max-width: 180px; height: 40px; padding: 0 16px; border-radius: 12px; cursor: pointer;
+      border: 1px solid var(--border-strong); background: rgba(6, 10, 18, 0.55);
+      color: var(--muted); font: inherit; font-size: .95rem; font-weight: 700;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    }}
+    .view-mode button:hover {{ color: var(--text); border-color: var(--primary); }}
+    .view-mode button.active {{
+      color: #04110e; border-color: transparent;
+      background: linear-gradient(135deg, #00f0c8, #00b894);
+      box-shadow: 0 2px 12px rgba(0, 240, 200, 0.28);
+    }}
+    .view-mode button .n {{
+      margin-left: 6px; font-variant-numeric: tabular-nums; opacity: .85;
+    }}
+    #view-latest[hidden], #view-history[hidden] {{ display: none !important; }}
     .cards {{
       display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 22px;
     }}
@@ -1502,6 +1615,10 @@ def render_html(payload: dict) -> str:
       <div class="card"><div class="lbl">FX</div><div class="val">{c.get('fx', 0)}</div></div>
       <div class="card"><div class="lbl">Crypto</div><div class="val">{c['crypto']}</div></div>
     </div>
+    <div class="view-mode" id="viewMode" role="tablist" aria-label="最新與歷史">
+      <button type="button" data-mode="latest" class="active" role="tab" aria-selected="true">最新<span class="n">{len(hits)}</span></button>
+      <button type="button" data-mode="history" role="tab" aria-selected="false">歷史<span class="n">{len(hist_hits)}</span></button>
+    </div>
     <div class="group-filters" id="groupFilters" role="group" aria-label="指數篩選">
       <button type="button" data-group="all" class="active">全部</button>
       <button type="button" data-group="ndx100">NDX100</button>
@@ -1509,6 +1626,7 @@ def render_html(payload: dict) -> str:
       <button type="button" data-group="dji30">DJI30</button>
     </div>
 
+    <div id="view-latest">
     <h2 class="section-title" data-section="exceed" data-base="最新 {TREND_EXCEED_MIN_BARS}–{TREND_EXCEED_MAX_BARS} 根超出趨勢線" data-total="{len(exceed)}">最新 {TREND_EXCEED_MIN_BARS}–{TREND_EXCEED_MAX_BARS} 根超出趨勢線 · {len(exceed)}</h2>
     <div class="panel">
       <table>
@@ -1543,6 +1661,22 @@ def render_html(payload: dict) -> str:
           {rows_trend()}
         </tbody>
       </table>
+    </div>
+    </div>
+
+    <div id="view-history" hidden>
+    <h2 class="section-title" data-section="history" data-base="歷史紀錄" data-total="{len(hist_hits)}">歷史紀錄 · {len(hist_hits)}</h2>
+    <p class="meta">歸檔自 <code>history.json</code>{(' · 更新 ' + html.escape(str(hist_payload.get('updated_at') or ''))) if hist_payload.get('updated_at') else ''} · 累積最多 {HISTORY_MAX_ENTRIES} 筆</p>
+    <div class="panel">
+      <table>
+        <thead>
+          <tr><th>Kind</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th>Time</th><th>Seen</th></tr>
+        </thead>
+        <tbody data-section="history">
+          {rows_history()}
+        </tbody>
+      </table>
+    </div>
     </div>
 
     <h2>Scan stats</h2>
@@ -1723,13 +1857,12 @@ def main() -> int:
     index_path = os.path.join(OUT_DIR, "index.html")
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
+    hist = update_history_archive(hits, payload["generated_at"])
     page = render_html(payload)
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(page)
     with open(index_path, "w", encoding="utf-8") as f:
         f.write(page)
-
-    hist = update_history_archive(hits, payload["generated_at"])
 
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
