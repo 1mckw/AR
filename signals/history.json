@@ -1,8 +1,116 @@
 {
-  "updated_at": "2026-08-10 14:28:50 UTC",
-  "count": 87,
+  "updated_at": "2026-08-10 15:29:15 UTC",
+  "count": 98,
   "max": 500,
   "hits": [
+    {
+      "key": "dji30:CRM:1h:trend_exceed:resistance:1786375103",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "dji30",
+      "symbol": "CRM",
+      "name": "Salesforce, Inc.",
+      "timeframe": "1h",
+      "level": 194.29039696326623,
+      "time": 1786375103,
+      "seen_at": "2026-08-10 15:29:15 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-08-10 15:29:15 UTC"
+    },
+    {
+      "key": "sp500:LMT:1h:trend_exceed:resistance:1786374958",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "LMT",
+      "name": "Lockheed Martin",
+      "timeframe": "1h",
+      "level": 591.9069548171348,
+      "time": 1786374958,
+      "seen_at": "2026-08-10 15:29:15 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-08-10 15:29:15 UTC"
+    },
+    {
+      "key": "sp500:CRM:1h:trend_exceed:resistance:1786374947",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "CRM",
+      "name": "Salesforce",
+      "timeframe": "1h",
+      "level": 194.29039696326623,
+      "time": 1786374947,
+      "seen_at": "2026-08-10 15:29:15 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-08-10 15:29:15 UTC"
+    },
+    {
+      "key": "sp500:DHR:1h:trend_exceed:resistance:1786374924",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "DHR",
+      "name": "Danaher Corporation",
+      "timeframe": "1h",
+      "level": 205.60060853432057,
+      "time": 1786374924,
+      "seen_at": "2026-08-10 15:29:15 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-08-10 15:29:15 UTC"
+    },
+    {
+      "key": "ndx100:ADBE:1h:trend_touch:resistance:1786372200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "ndx100",
+      "symbol": "ADBE",
+      "name": "Adobe Inc.",
+      "timeframe": "1h",
+      "level": 270.01813716634115,
+      "time": 1786372200,
+      "seen_at": "2026-08-10 15:29:15 UTC",
+      "first_seen": "2026-08-10 15:29:15 UTC"
+    },
+    {
+      "key": "sp500:EQR:1h:trend_touch:support:1786372200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "EQR",
+      "name": "Equity Residential",
+      "timeframe": "1h",
+      "level": 65.75431969052269,
+      "time": 1786372200,
+      "seen_at": "2026-08-10 15:29:15 UTC",
+      "first_seen": "2026-08-10 15:29:15 UTC"
+    },
+    {
+      "key": "sp500:EXR:1h:trend_touch:support:1786372200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "EXR",
+      "name": "Extra Space Storage",
+      "timeframe": "1h",
+      "level": 145.42473315248395,
+      "time": 1786372200,
+      "seen_at": "2026-08-10 15:29:15 UTC",
+      "first_seen": "2026-08-10 15:29:15 UTC"
+    },
+    {
+      "key": "sp500:JBHT:1h:trend_touch:support:1786372200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "JBHT",
+      "name": "J.B. Hunt",
+      "timeframe": "1h",
+      "level": 265.9098595544233,
+      "time": 1786372200,
+      "seen_at": "2026-08-10 15:29:15 UTC",
+      "first_seen": "2026-08-10 15:29:15 UTC"
+    },
     {
       "key": "sp500:YUM:1h:trend_exceed:support:1786370875",
       "kind": "trend_exceed",
@@ -46,20 +154,6 @@
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
     {
-      "key": "sp500:ALLE:1h:ar_dr_touch:DR:1786368600",
-      "kind": "ar_dr_touch",
-      "type": "DR",
-      "group": "sp500",
-      "symbol": "ALLE",
-      "name": "Allegion",
-      "timeframe": "1h",
-      "level": 165.8800048828125,
-      "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
-      "bars_after_signal": 20,
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
       "key": "ndx100:TEAM:1d:trend_exceed:resistance:1786368600",
       "kind": "trend_exceed",
       "type": "resistance",
@@ -69,7 +163,7 @@
       "timeframe": "1d",
       "level": 134.97233346792368,
       "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
+      "seen_at": "2026-08-10 15:29:15 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
@@ -83,7 +177,7 @@
       "timeframe": "1d",
       "level": 82.42812916148793,
       "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
+      "seen_at": "2026-08-10 15:29:15 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
@@ -97,7 +191,7 @@
       "timeframe": "1d",
       "level": 215.9594035429113,
       "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
+      "seen_at": "2026-08-10 15:29:15 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
@@ -111,7 +205,7 @@
       "timeframe": "1d",
       "level": 546.8336447536356,
       "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
+      "seen_at": "2026-08-10 15:29:15 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
@@ -125,8 +219,100 @@
       "timeframe": "1d",
       "level": 73.85522195567255,
       "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
+      "seen_at": "2026-08-10 15:29:15 UTC",
       "exceed_bars": 2,
+      "first_seen": "2026-08-10 14:28:50 UTC"
+    },
+    {
+      "key": "sp500:AEP:1d:trend_touch:support:1786368600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "AEP",
+      "name": "American Electric Power",
+      "timeframe": "1d",
+      "level": 122.70859774076021,
+      "time": 1786368600,
+      "seen_at": "2026-08-10 15:29:15 UTC",
+      "first_seen": "2026-08-10 14:28:50 UTC"
+    },
+    {
+      "key": "sp500:PEG:1d:trend_touch:support:1786368600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "PEG",
+      "name": "Public Service Enterprise Group",
+      "timeframe": "1d",
+      "level": 74.30963358946886,
+      "time": 1786368600,
+      "seen_at": "2026-08-10 15:29:15 UTC",
+      "first_seen": "2026-08-10 14:28:50 UTC"
+    },
+    {
+      "key": "sp500:PFE:1d:trend_touch:resistance:1786368600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "PFE",
+      "name": "Pfizer",
+      "timeframe": "1d",
+      "level": 27.006645751029517,
+      "time": 1786368600,
+      "seen_at": "2026-08-10 15:29:15 UTC",
+      "first_seen": "2026-08-10 14:28:50 UTC"
+    },
+    {
+      "key": "ndx100:AEP:1d:trend_touch:support:1786368600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "AEP",
+      "name": "American Electric Power",
+      "timeframe": "1d",
+      "level": 122.70859774076021,
+      "time": 1786368600,
+      "seen_at": "2026-08-10 15:29:15 UTC",
+      "first_seen": "2026-08-10 15:29:15 UTC"
+    },
+    {
+      "key": "sp500:DUK:1d:trend_touch:support:1786368600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "DUK",
+      "name": "Duke Energy",
+      "timeframe": "1d",
+      "level": 121.79382123080167,
+      "time": 1786368600,
+      "seen_at": "2026-08-10 15:29:15 UTC",
+      "first_seen": "2026-08-10 15:29:15 UTC"
+    },
+    {
+      "key": "sp500:NDAQ:1d:trend_touch:resistance:1786368600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "NDAQ",
+      "name": "Nasdaq, Inc.",
+      "timeframe": "1d",
+      "level": 96.57182103937322,
+      "time": 1786368600,
+      "seen_at": "2026-08-10 15:29:15 UTC",
+      "first_seen": "2026-08-10 15:29:15 UTC"
+    },
+    {
+      "key": "sp500:ALLE:1h:ar_dr_touch:DR:1786368600",
+      "kind": "ar_dr_touch",
+      "type": "DR",
+      "group": "sp500",
+      "symbol": "ALLE",
+      "name": "Allegion",
+      "timeframe": "1h",
+      "level": 165.8800048828125,
+      "time": 1786368600,
+      "seen_at": "2026-08-10 14:28:50 UTC",
+      "bars_after_signal": 20,
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
     {
@@ -559,19 +745,6 @@
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
     {
-      "key": "sp500:AEP:1d:trend_touch:support:1786368600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "AEP",
-      "name": "American Electric Power",
-      "timeframe": "1d",
-      "level": 122.70859774076021,
-      "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
       "key": "sp500:CPT:1d:trend_touch:support:1786368600",
       "kind": "trend_touch",
       "type": "support",
@@ -593,32 +766,6 @@
       "name": "EQT Corporation",
       "timeframe": "1d",
       "level": 52.90666856436894,
-      "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
-      "key": "sp500:PEG:1d:trend_touch:support:1786368600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "PEG",
-      "name": "Public Service Enterprise Group",
-      "timeframe": "1d",
-      "level": 74.30963358946886,
-      "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
-      "key": "sp500:PFE:1d:trend_touch:resistance:1786368600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "PFE",
-      "name": "Pfizer",
-      "timeframe": "1d",
-      "level": 27.006645751029517,
       "time": 1786368600,
       "seen_at": "2026-08-10 14:28:50 UTC",
       "first_seen": "2026-08-10 14:28:50 UTC"
@@ -751,7 +898,7 @@
       "timeframe": "1d",
       "level": 0.023037008310249303,
       "time": 1786233600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
+      "seen_at": "2026-08-10 15:29:15 UTC",
       "first_seen": "2026-08-09 19:23:17 UTC"
     },
     {
@@ -950,7 +1097,7 @@
       "timeframe": "1d",
       "level": 215.66487473707932,
       "time": 1786109400,
-      "seen_at": "2026-08-10 14:28:50 UTC",
+      "seen_at": "2026-08-10 15:29:15 UTC",
       "first_seen": "2026-08-09 16:08:29 UTC"
     },
     {
@@ -963,7 +1110,7 @@
       "timeframe": "1d",
       "level": 135.16925635704627,
       "time": 1786109400,
-      "seen_at": "2026-08-10 14:28:50 UTC",
+      "seen_at": "2026-08-10 15:29:15 UTC",
       "first_seen": "2026-08-09 16:08:29 UTC"
     },
     {
@@ -976,7 +1123,7 @@
       "timeframe": "1d",
       "level": 165.24114227294922,
       "time": 1786109400,
-      "seen_at": "2026-08-10 14:28:50 UTC",
+      "seen_at": "2026-08-10 15:29:15 UTC",
       "first_seen": "2026-08-09 16:08:29 UTC"
     },
     {
@@ -989,7 +1136,7 @@
       "timeframe": "1d",
       "level": 215.66487473707932,
       "time": 1786109400,
-      "seen_at": "2026-08-10 14:28:50 UTC",
+      "seen_at": "2026-08-10 15:29:15 UTC",
       "first_seen": "2026-08-09 16:08:29 UTC"
     },
     {
