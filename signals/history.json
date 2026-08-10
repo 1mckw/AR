@@ -1,8 +1,145 @@
 {
-  "updated_at": "2026-08-10 16:53:35 UTC",
-  "count": 113,
+  "updated_at": "2026-08-10 17:57:13 UTC",
+  "count": 125,
   "max": 500,
   "hits": [
+    {
+      "key": "dji30:CRM:1h:trend_exceed:resistance:1786383572",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "dji30",
+      "symbol": "CRM",
+      "name": "Salesforce, Inc.",
+      "timeframe": "1h",
+      "level": 194.13679696890023,
+      "time": 1786383572,
+      "seen_at": "2026-08-10 17:57:13 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-08-10 17:57:13 UTC"
+    },
+    {
+      "key": "sp500:DVN:1h:trend_exceed:resistance:1786383457",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "DVN",
+      "name": "Devon Energy",
+      "timeframe": "1h",
+      "level": 44.87107068064345,
+      "time": 1786383457,
+      "seen_at": "2026-08-10 17:57:13 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-08-10 17:57:13 UTC"
+    },
+    {
+      "key": "sp500:YUM:1h:trend_exceed:support:1786383425",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "YUM",
+      "name": "Yum! Brands",
+      "timeframe": "1h",
+      "level": 147.4828094482422,
+      "time": 1786383425,
+      "seen_at": "2026-08-10 17:57:13 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-08-10 17:57:13 UTC"
+    },
+    {
+      "key": "sp500:VLO:1h:trend_exceed:resistance:1786383373",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "VLO",
+      "name": "Valero Energy",
+      "timeframe": "1h",
+      "level": 313.0537179129464,
+      "time": 1786383373,
+      "seen_at": "2026-08-10 17:57:13 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-08-10 17:57:13 UTC"
+    },
+    {
+      "key": "sp500:PSX:1h:trend_exceed:resistance:1786383350",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "PSX",
+      "name": "Phillips 66",
+      "timeframe": "1h",
+      "level": 211.98531512824857,
+      "time": 1786383350,
+      "seen_at": "2026-08-10 17:57:13 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-08-10 17:57:13 UTC"
+    },
+    {
+      "key": "sp500:CRM:1h:trend_exceed:resistance:1786383334",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "CRM",
+      "name": "Salesforce",
+      "timeframe": "1h",
+      "level": 194.13679696890023,
+      "time": 1786383334,
+      "seen_at": "2026-08-10 17:57:13 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-08-10 17:57:13 UTC"
+    },
+    {
+      "key": "sp500:XOM:1h:trend_exceed:resistance:1786383310",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "XOM",
+      "name": "ExxonMobil",
+      "timeframe": "1h",
+      "level": 158.28597414341007,
+      "time": 1786383310,
+      "seen_at": "2026-08-10 17:57:13 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-08-10 17:57:13 UTC"
+    },
+    {
+      "key": "sp500:CPT:1h:trend_touch:support:1786383000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "CPT",
+      "name": "Camden Property Trust",
+      "timeframe": "1h",
+      "level": 109.05219380448504,
+      "time": 1786383000,
+      "seen_at": "2026-08-10 17:57:13 UTC",
+      "first_seen": "2026-08-10 17:57:13 UTC"
+    },
+    {
+      "key": "sp500:HII:1h:trend_touch:resistance:1786383000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "HII",
+      "name": "Huntington Ingalls Industries",
+      "timeframe": "1h",
+      "level": 334.22683431935866,
+      "time": 1786383000,
+      "seen_at": "2026-08-10 17:57:13 UTC",
+      "first_seen": "2026-08-10 17:57:13 UTC"
+    },
+    {
+      "key": "crypto:EPICUSDT:1h:trend_touch:support:1786381200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "crypto",
+      "symbol": "EPICUSDT",
+      "name": "EPIC",
+      "timeframe": "1h",
+      "level": 0.4372567567567568,
+      "time": 1786381200,
+      "seen_at": "2026-08-10 17:57:13 UTC",
+      "first_seen": "2026-08-10 17:57:13 UTC"
+    },
     {
       "key": "dji30:CRM:1h:trend_exceed:resistance:1786379698",
       "kind": "trend_exceed",
@@ -368,7 +505,7 @@
       "timeframe": "1d",
       "level": 134.97233346792368,
       "time": 1786368600,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
@@ -382,7 +519,7 @@
       "timeframe": "1d",
       "level": 82.42812916148793,
       "time": 1786368600,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
@@ -396,7 +533,7 @@
       "timeframe": "1d",
       "level": 215.9594035429113,
       "time": 1786368600,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
@@ -410,7 +547,7 @@
       "timeframe": "1d",
       "level": 546.8336447536356,
       "time": 1786368600,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
@@ -424,7 +561,7 @@
       "timeframe": "1d",
       "level": 73.85522195567255,
       "time": 1786368600,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
@@ -438,7 +575,7 @@
       "timeframe": "1d",
       "level": 122.70859774076021,
       "time": 1786368600,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
     {
@@ -451,7 +588,7 @@
       "timeframe": "1d",
       "level": 74.30963358946886,
       "time": 1786368600,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
     {
@@ -464,7 +601,7 @@
       "timeframe": "1d",
       "level": 27.006645751029517,
       "time": 1786368600,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
     {
@@ -477,7 +614,7 @@
       "timeframe": "1d",
       "level": 122.70859774076021,
       "time": 1786368600,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "first_seen": "2026-08-10 15:29:15 UTC"
     },
     {
@@ -490,7 +627,7 @@
       "timeframe": "1d",
       "level": 121.79382123080167,
       "time": 1786368600,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "first_seen": "2026-08-10 15:29:15 UTC"
     },
     {
@@ -503,8 +640,34 @@
       "timeframe": "1d",
       "level": 96.57182103937322,
       "time": 1786368600,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "first_seen": "2026-08-10 15:29:15 UTC"
+    },
+    {
+      "key": "ndx100:ROP:1d:trend_touch:resistance:1786368600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "ndx100",
+      "symbol": "ROP",
+      "name": "Roper Technologies",
+      "timeframe": "1d",
+      "level": 405.3009083494265,
+      "time": 1786368600,
+      "seen_at": "2026-08-10 17:57:13 UTC",
+      "first_seen": "2026-08-10 17:57:13 UTC"
+    },
+    {
+      "key": "sp500:ROP:1d:trend_touch:resistance:1786368600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "ROP",
+      "name": "Roper Technologies",
+      "timeframe": "1d",
+      "level": 405.3009083494265,
+      "time": 1786368600,
+      "seen_at": "2026-08-10 17:57:13 UTC",
+      "first_seen": "2026-08-10 17:57:13 UTC"
     },
     {
       "key": "sp500:ALLE:1h:ar_dr_touch:DR:1786368600",
@@ -1103,7 +1266,7 @@
       "timeframe": "1d",
       "level": 0.023037008310249303,
       "time": 1786233600,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "first_seen": "2026-08-09 19:23:17 UTC"
     },
     {
@@ -1302,7 +1465,7 @@
       "timeframe": "1d",
       "level": 215.66487473707932,
       "time": 1786109400,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "first_seen": "2026-08-09 16:08:29 UTC"
     },
     {
@@ -1315,7 +1478,7 @@
       "timeframe": "1d",
       "level": 135.16925635704627,
       "time": 1786109400,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "first_seen": "2026-08-09 16:08:29 UTC"
     },
     {
@@ -1328,7 +1491,7 @@
       "timeframe": "1d",
       "level": 165.24114227294922,
       "time": 1786109400,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "first_seen": "2026-08-09 16:08:29 UTC"
     },
     {
@@ -1341,7 +1504,7 @@
       "timeframe": "1d",
       "level": 215.66487473707932,
       "time": 1786109400,
-      "seen_at": "2026-08-10 16:53:35 UTC",
+      "seen_at": "2026-08-10 17:57:13 UTC",
       "first_seen": "2026-08-09 16:08:29 UTC"
     },
     {
