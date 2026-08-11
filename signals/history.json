@@ -1,8 +1,92 @@
 {
-  "updated_at": "2026-08-11 15:40:07 UTC",
-  "count": 229,
+  "updated_at": "2026-08-11 16:58:24 UTC",
+  "count": 238,
   "max": 500,
   "hits": [
+    {
+      "key": "sp500:LYB:1h:trend_exceed:resistance:1786466286",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "LYB",
+      "name": "LyondellBasell",
+      "timeframe": "1h",
+      "level": 63.571105051848846,
+      "time": 1786466286,
+      "seen_at": "2026-08-11 16:58:24 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-08-11 16:58:24 UTC"
+    },
+    {
+      "key": "sp500:DOW:1h:trend_exceed:resistance:1786466269",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "DOW",
+      "name": "Dow Inc.",
+      "timeframe": "1h",
+      "level": 30.579002697381945,
+      "time": 1786466269,
+      "seen_at": "2026-08-11 16:58:24 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-08-11 16:58:24 UTC"
+    },
+    {
+      "key": "sp500:PSX:1h:trend_exceed:resistance:1786466165",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "PSX",
+      "name": "Phillips 66",
+      "timeframe": "1h",
+      "level": 211.7293972093232,
+      "time": 1786466165,
+      "seen_at": "2026-08-11 16:58:24 UTC",
+      "exceed_bars": 9,
+      "first_seen": "2026-08-11 16:58:24 UTC"
+    },
+    {
+      "key": "sp500:CDNS:1h:trend_exceed:support:1786466142",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "CDNS",
+      "name": "Cadence Design Systems",
+      "timeframe": "1h",
+      "level": 328.00998786305695,
+      "time": 1786466142,
+      "seen_at": "2026-08-11 16:58:24 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-08-11 16:58:24 UTC"
+    },
+    {
+      "key": "ndx100:CDNS:1h:trend_exceed:support:1786466074",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "CDNS",
+      "name": "Cadence Design Systems",
+      "timeframe": "1h",
+      "level": 328.00998786305695,
+      "time": 1786466074,
+      "seen_at": "2026-08-11 16:58:24 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-08-11 16:58:24 UTC"
+    },
+    {
+      "key": "crypto:ZECUSDT:1h:trend_exceed:support:1786464000",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "crypto",
+      "symbol": "ZECUSDT",
+      "name": "ZEC",
+      "timeframe": "1h",
+      "level": 475.9966002656043,
+      "time": 1786464000,
+      "seen_at": "2026-08-11 16:58:24 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-08-11 16:58:24 UTC"
+    },
     {
       "key": "sp500:LYB:1h:trend_exceed:resistance:1786461582",
       "kind": "trend_exceed",
@@ -72,6 +156,19 @@
       "seen_at": "2026-08-11 15:40:07 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
+      "key": "crypto:ETHUSDT:1h:trend_touch:support:1786460400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "crypto",
+      "symbol": "ETHUSDT",
+      "name": "ETH",
+      "timeframe": "1h",
+      "level": 1860.591750902527,
+      "time": 1786460400,
+      "seen_at": "2026-08-11 16:58:24 UTC",
+      "first_seen": "2026-08-11 16:58:24 UTC"
     },
     {
       "key": "fx:USDCHF=X:1h:trend_touch:resistance:1786460400",
@@ -255,7 +352,7 @@
       "timeframe": "1d",
       "level": 134.7754105788011,
       "time": 1786455000,
-      "seen_at": "2026-08-11 15:40:07 UTC",
+      "seen_at": "2026-08-11 16:58:24 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-11 14:29:06 UTC"
     },
@@ -269,7 +366,7 @@
       "timeframe": "1d",
       "level": 215.14155266083867,
       "time": 1786455000,
-      "seen_at": "2026-08-11 15:40:07 UTC",
+      "seen_at": "2026-08-11 16:58:24 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-11 14:29:06 UTC"
     },
@@ -283,9 +380,35 @@
       "timeframe": "1d",
       "level": 544.7684960695776,
       "time": 1786455000,
-      "seen_at": "2026-08-11 15:40:07 UTC",
+      "seen_at": "2026-08-11 16:58:24 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-11 14:29:06 UTC"
+    },
+    {
+      "key": "dji30:CVX:1d:trend_touch:resistance:1786455000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "dji30",
+      "symbol": "CVX",
+      "name": "Chevron Corporation",
+      "timeframe": "1d",
+      "level": 197.36520416259765,
+      "time": 1786455000,
+      "seen_at": "2026-08-11 16:58:24 UTC",
+      "first_seen": "2026-08-11 16:58:24 UTC"
+    },
+    {
+      "key": "sp500:CVX:1d:trend_touch:resistance:1786455000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "CVX",
+      "name": "Chevron Corporation",
+      "timeframe": "1d",
+      "level": 197.36520416259765,
+      "time": 1786455000,
+      "seen_at": "2026-08-11 16:58:24 UTC",
+      "first_seen": "2026-08-11 16:58:24 UTC"
     },
     {
       "key": "dji30:HD:1h:trend_touch:resistance:1786455000",
@@ -886,7 +1009,7 @@
       "timeframe": "1d",
       "level": 2.9,
       "time": 1786406400,
-      "seen_at": "2026-08-11 15:40:07 UTC",
+      "seen_at": "2026-08-11 16:58:24 UTC",
       "bars_after_signal": 202,
       "first_seen": "2026-08-11 06:58:11 UTC"
     },
@@ -900,7 +1023,7 @@
       "timeframe": "1d",
       "level": 0.013353403693931384,
       "time": 1786406400,
-      "seen_at": "2026-08-11 15:40:07 UTC",
+      "seen_at": "2026-08-11 16:58:24 UTC",
       "first_seen": "2026-08-11 05:39:05 UTC"
     },
     {
@@ -1881,7 +2004,7 @@
       "timeframe": "1d",
       "level": 74.30963358946886,
       "time": 1786368600,
-      "seen_at": "2026-08-11 15:40:07 UTC",
+      "seen_at": "2026-08-11 16:58:24 UTC",
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
     {
@@ -1894,7 +2017,7 @@
       "timeframe": "1d",
       "level": 27.006645751029517,
       "time": 1786368600,
-      "seen_at": "2026-08-11 15:40:07 UTC",
+      "seen_at": "2026-08-11 16:58:24 UTC",
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
     {
@@ -1907,7 +2030,7 @@
       "timeframe": "1d",
       "level": 96.57182103937322,
       "time": 1786368600,
-      "seen_at": "2026-08-11 15:40:07 UTC",
+      "seen_at": "2026-08-11 16:58:24 UTC",
       "first_seen": "2026-08-10 15:29:15 UTC"
     },
     {
@@ -1920,7 +2043,7 @@
       "timeframe": "1d",
       "level": 405.3009083494265,
       "time": 1786368600,
-      "seen_at": "2026-08-11 15:40:07 UTC",
+      "seen_at": "2026-08-11 16:58:24 UTC",
       "first_seen": "2026-08-10 17:57:13 UTC"
     },
     {
@@ -1933,7 +2056,7 @@
       "timeframe": "1d",
       "level": 405.3009083494265,
       "time": 1786368600,
-      "seen_at": "2026-08-11 15:40:07 UTC",
+      "seen_at": "2026-08-11 16:58:24 UTC",
       "first_seen": "2026-08-10 17:57:13 UTC"
     },
     {
@@ -1946,7 +2069,7 @@
       "timeframe": "1d",
       "level": 121.12081572863521,
       "time": 1786368600,
-      "seen_at": "2026-08-11 15:40:07 UTC",
+      "seen_at": "2026-08-11 16:58:24 UTC",
       "first_seen": "2026-08-10 15:29:15 UTC"
     },
     {
