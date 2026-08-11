@@ -1,8 +1,182 @@
 {
-  "updated_at": "2026-08-11 14:29:06 UTC",
-  "count": 214,
+  "updated_at": "2026-08-11 15:40:07 UTC",
+  "count": 229,
   "max": 500,
   "hits": [
+    {
+      "key": "sp500:LYB:1h:trend_exceed:resistance:1786461582",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "LYB",
+      "name": "LyondellBasell",
+      "timeframe": "1h",
+      "level": 63.600766068798,
+      "time": 1786461582,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
+      "key": "sp500:DOW:1h:trend_exceed:resistance:1786461567",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "DOW",
+      "name": "Dow Inc.",
+      "timeframe": "1h",
+      "level": 30.61052623548006,
+      "time": 1786461567,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
+      "key": "sp500:PSX:1h:trend_exceed:resistance:1786461477",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "PSX",
+      "name": "Phillips 66",
+      "timeframe": "1h",
+      "level": 211.8147031822983,
+      "time": 1786461477,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "exceed_bars": 7,
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
+      "key": "sp500:CDNS:1h:trend_exceed:support:1786461470",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "CDNS",
+      "name": "Cadence Design Systems",
+      "timeframe": "1h",
+      "level": 327.95998795066726,
+      "time": 1786461470,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
+      "key": "ndx100:CDNS:1h:trend_exceed:support:1786461367",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "CDNS",
+      "name": "Cadence Design Systems",
+      "timeframe": "1h",
+      "level": 327.95998795066726,
+      "time": 1786461367,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
+      "key": "fx:USDCHF=X:1h:trend_touch:resistance:1786460400",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "fx",
+      "symbol": "USDCHF=X",
+      "name": "USD/CHF",
+      "timeframe": "1h",
+      "level": 0.8112616038903957,
+      "time": 1786460400,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
+      "key": "ndx100:CMCSA:1h:trend_touch:resistance:1786458600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "ndx100",
+      "symbol": "CMCSA",
+      "name": "Comcast",
+      "timeframe": "1h",
+      "level": 25.443232334021367,
+      "time": 1786458600,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
+      "key": "ndx100:CSX:1h:trend_touch:support:1786458600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "CSX",
+      "name": "CSX Corporation",
+      "timeframe": "1h",
+      "level": 49.86109697949755,
+      "time": 1786458600,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
+      "key": "sp500:ALB:1h:trend_touch:resistance:1786458600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "ALB",
+      "name": "Albemarle Corporation",
+      "timeframe": "1h",
+      "level": 131.6525012425014,
+      "time": 1786458600,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
+      "key": "sp500:FICO:1h:trend_touch:support:1786458600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "FICO",
+      "name": "Fair Isaac",
+      "timeframe": "1h",
+      "level": 1025.947784012223,
+      "time": 1786458600,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
+      "key": "sp500:KVUE:1h:trend_touch:support:1786458600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "KVUE",
+      "name": "Kenvue",
+      "timeframe": "1h",
+      "level": 18.895530683804402,
+      "time": 1786458600,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
+      "key": "sp500:NOC:1h:trend_touch:resistance:1786458600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "NOC",
+      "name": "Northrop Grumman",
+      "timeframe": "1h",
+      "level": 580.5160271895559,
+      "time": 1786458600,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
+      "key": "sp500:SCHW:1h:trend_touch:support:1786458600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "SCHW",
+      "name": "Charles Schwab Corporation",
+      "timeframe": "1h",
+      "level": 107.4698960357511,
+      "time": 1786458600,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
     {
       "key": "sp500:DOW:1h:trend_exceed:resistance:1786457321",
       "kind": "trend_exceed",
@@ -46,6 +220,32 @@
       "first_seen": "2026-08-11 14:29:06 UTC"
     },
     {
+      "key": "crypto:ETHUSDT:1h:trend_touch:support:1786456800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "crypto",
+      "symbol": "ETHUSDT",
+      "name": "ETH",
+      "timeframe": "1h",
+      "level": 1872.5535649819494,
+      "time": 1786456800,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
+      "key": "crypto:ZECUSDT:1h:trend_touch:support:1786456800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "crypto",
+      "symbol": "ZECUSDT",
+      "name": "ZEC",
+      "timeframe": "1h",
+      "level": 475.8241168658699,
+      "time": 1786456800,
+      "seen_at": "2026-08-11 15:40:07 UTC",
+      "first_seen": "2026-08-11 15:40:07 UTC"
+    },
+    {
       "key": "ndx100:TEAM:1d:trend_exceed:resistance:1786455000",
       "kind": "trend_exceed",
       "type": "resistance",
@@ -55,7 +255,7 @@
       "timeframe": "1d",
       "level": 134.7754105788011,
       "time": 1786455000,
-      "seen_at": "2026-08-11 14:29:06 UTC",
+      "seen_at": "2026-08-11 15:40:07 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-11 14:29:06 UTC"
     },
@@ -69,7 +269,7 @@
       "timeframe": "1d",
       "level": 215.14155266083867,
       "time": 1786455000,
-      "seen_at": "2026-08-11 14:29:06 UTC",
+      "seen_at": "2026-08-11 15:40:07 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-11 14:29:06 UTC"
     },
@@ -83,7 +283,7 @@
       "timeframe": "1d",
       "level": 544.7684960695776,
       "time": 1786455000,
-      "seen_at": "2026-08-11 14:29:06 UTC",
+      "seen_at": "2026-08-11 15:40:07 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-11 14:29:06 UTC"
     },
@@ -686,7 +886,7 @@
       "timeframe": "1d",
       "level": 2.9,
       "time": 1786406400,
-      "seen_at": "2026-08-11 14:29:06 UTC",
+      "seen_at": "2026-08-11 15:40:07 UTC",
       "bars_after_signal": 202,
       "first_seen": "2026-08-11 06:58:11 UTC"
     },
@@ -700,7 +900,7 @@
       "timeframe": "1d",
       "level": 0.013353403693931384,
       "time": 1786406400,
-      "seen_at": "2026-08-11 14:29:06 UTC",
+      "seen_at": "2026-08-11 15:40:07 UTC",
       "first_seen": "2026-08-11 05:39:05 UTC"
     },
     {
@@ -1681,7 +1881,7 @@
       "timeframe": "1d",
       "level": 74.30963358946886,
       "time": 1786368600,
-      "seen_at": "2026-08-11 14:29:06 UTC",
+      "seen_at": "2026-08-11 15:40:07 UTC",
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
     {
@@ -1694,7 +1894,7 @@
       "timeframe": "1d",
       "level": 27.006645751029517,
       "time": 1786368600,
-      "seen_at": "2026-08-11 14:29:06 UTC",
+      "seen_at": "2026-08-11 15:40:07 UTC",
       "first_seen": "2026-08-10 14:28:50 UTC"
     },
     {
@@ -1707,7 +1907,7 @@
       "timeframe": "1d",
       "level": 96.57182103937322,
       "time": 1786368600,
-      "seen_at": "2026-08-11 14:29:06 UTC",
+      "seen_at": "2026-08-11 15:40:07 UTC",
       "first_seen": "2026-08-10 15:29:15 UTC"
     },
     {
@@ -1720,7 +1920,7 @@
       "timeframe": "1d",
       "level": 405.3009083494265,
       "time": 1786368600,
-      "seen_at": "2026-08-11 14:29:06 UTC",
+      "seen_at": "2026-08-11 15:40:07 UTC",
       "first_seen": "2026-08-10 17:57:13 UTC"
     },
     {
@@ -1733,7 +1933,7 @@
       "timeframe": "1d",
       "level": 405.3009083494265,
       "time": 1786368600,
-      "seen_at": "2026-08-11 14:29:06 UTC",
+      "seen_at": "2026-08-11 15:40:07 UTC",
       "first_seen": "2026-08-10 17:57:13 UTC"
     },
     {
@@ -1746,7 +1946,7 @@
       "timeframe": "1d",
       "level": 121.12081572863521,
       "time": 1786368600,
-      "seen_at": "2026-08-11 14:29:06 UTC",
+      "seen_at": "2026-08-11 15:40:07 UTC",
       "first_seen": "2026-08-10 15:29:15 UTC"
     },
     {
