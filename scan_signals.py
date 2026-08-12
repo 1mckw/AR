@@ -3,6 +3,7 @@
 
 Reports only:
   - AR/DR base-level touch after >12 bars from signal (not new AR/DR within 12 bars)
+  - AR/DR near-miss after >12 bars: wick within 0.4% of primary ray, no touch
   - Trend-line wick touches
   - Latest 2–10 consecutive bars with body beyond a trend line
 """
@@ -36,6 +37,7 @@ MIN_STREAK = ardr.MIN_STREAK
 VOL_MULT = ardr.VOL_MULT
 USE_STRUCTURE = ardr.USE_STRUCTURE
 TOUCH_WINDOW_BARS = ardr.TOUCH_WINDOW_BARS
+NEAR_MISS_TOL_PCT = ardr.NEAR_MISS_TOL_PCT
 FRESH_BARS = ardr.FRESH_BARS
 BARS = 2000
 CHART_BARS = 2000
@@ -48,6 +50,7 @@ BINANCE_INTERVAL = {"1h": "1h", "1d": "1d"}
 detect_signals = ardr.detect_signals
 resolve_signal_rays = ardr.resolve_signal_rays
 collect_late_ar_dr_touches = ardr.collect_late_ar_dr_touches
+collect_late_ar_dr_near_misses = ardr.collect_late_ar_dr_near_misses
 fresh_range = ardr.fresh_range
 
 PIVOT_HIGH = tl.PIVOT_HIGH
@@ -486,6 +489,9 @@ def slim_hit_for_archive(h: dict, seen_at: str) -> dict:
     }
     if h.get("kind") == "ar_dr_touch":
         out["bars_after_signal"] = h.get("bars_after_signal")
+    if h.get("kind") == "ar_dr_near":
+        out["bars_after_signal"] = h.get("bars_after_signal")
+        out["gap_pct"] = h.get("gap_pct")
     if h.get("kind") == "trend_exceed":
         out["exceed_bars"] = h.get("exceed_bars")
     return out
@@ -624,10 +630,11 @@ def scan_one(group: str, symbol: str, name: str, source: str, timeframe: str) ->
             candles = with_retries(lambda: fetch_yahoo(symbol, timeframe))
         signals = detect_signals(candles)
         late = collect_late_ar_dr_touches(candles, signals)
+        near = collect_late_ar_dr_near_misses(candles, signals)
         lines = build_auto_trend_lines(candles)
         trend = collect_trend_touches(candles, lines)
         exceed = collect_trend_exceeds(candles, lines)
-        events = late + trend + exceed
+        events = late + near + trend + exceed
         for ev in events:
             ev["timeframe"] = timeframe
         out = {
@@ -717,6 +724,7 @@ CHART_MODAL_SCRIPT = r"""
 
   function typeLabel(type, kind) {
     if (kind === "ar_dr_touch") return type || "AR/DR";
+    if (kind === "ar_dr_near") return (type || "AR/DR") + " 接近未觸";
     if (kind === "trend_exceed") {
       if (type === "resistance") return "阻力超出";
       if (type === "support") return "支撐超出";
@@ -1177,6 +1185,7 @@ GROUP_FILTER_SCRIPT = r"""
 def render_html(payload: dict) -> str:
     hits = payload["hits"]
     ar_dr = [h for h in hits if h["kind"] == "ar_dr_touch"]
+    ar_near = [h for h in hits if h["kind"] == "ar_dr_near"]
     trend = [h for h in hits if h["kind"] == "trend_touch"]
     exceed = [h for h in hits if h["kind"] == "trend_exceed"]
     errs = [r for r in payload["results"] if r.get("error")]
@@ -1216,6 +1225,30 @@ def render_html(payload: dict) -> str:
                 f"<td>{sym_btn(h)}</td>"
                 f"<td>{html.escape(h.get('name', ''))}</td>"
                 f"<td class=\"num\">{fmt_num(float(h['level']))}</td>"
+                f"<td class=\"num\">{int(h.get('bars_after_signal', 0))}</td>"
+                f"<td>{html.escape(fmt_ts(int(h['time'])))}</td>"
+                "</tr>"
+            )
+        return "\n".join(out)
+
+    def rows_ar_near() -> str:
+        if not ar_near:
+            return (
+                f'<tr><td colspan="9" class="empty">目前無 AR/DR 接近未觸'
+                f"（&gt;{TOUCH_WINDOW_BARS} 根後）</td></tr>"
+            )
+        out = []
+        for h in ar_near:
+            cls = "ar" if h.get("type") == "AR" else "dr"
+            out.append(
+                f'<tr data-group="{html.escape(str(h.get("group", "")), quote=True)}">'
+                f'<td><span class="tag {cls}">{html.escape(str(h.get("type", "")))}</span></td>'
+                f"<td>{html.escape(fmt_tf(h.get('timeframe', '')))}</td>"
+                f"<td>{html.escape(h.get('group', ''))}</td>"
+                f"<td>{sym_btn(h)}</td>"
+                f"<td>{html.escape(h.get('name', ''))}</td>"
+                f"<td class=\"num\">{fmt_num(float(h['level']))}</td>"
+                f"<td class=\"num\">{float(h.get('gap_pct', 0)):.3g}%</td>"
                 f"<td class=\"num\">{int(h.get('bars_after_signal', 0))}</td>"
                 f"<td>{html.escape(fmt_ts(int(h['time'])))}</td>"
                 "</tr>"
@@ -1267,6 +1300,9 @@ def render_html(payload: dict) -> str:
         if kind == "ar_dr_touch":
             cls = "ar" if typ == "AR" else "dr"
             return cls, f"{typ} 晚觸碰" if typ else "AR/DR 晚觸碰"
+        if kind == "ar_dr_near":
+            cls = "ar" if typ == "AR" else "dr"
+            return cls, f"{typ} 接近未觸" if typ else "AR/DR 接近未觸"
         if kind == "trend_exceed":
             cls = "resist" if typ == "resistance" else "support"
             return cls, "阻力超出" if typ == "resistance" else "支撐超出"
@@ -1643,6 +1679,19 @@ def render_html(payload: dict) -> str:
       </table>
     </div>
 
+    <h2 class="section-title" data-section="ar_near" data-base="AR/DR 接近未觸（&gt;{TOUCH_WINDOW_BARS} 根後）" data-total="{len(ar_near)}">AR/DR 接近未觸（&gt;{TOUCH_WINDOW_BARS} 根後） · {len(ar_near)}</h2>
+    <p class="meta">主引線仍有效 · 影線距離 ≤ {NEAR_MISS_TOL_PCT * 100:g}% · 未觸碰</p>
+    <div class="panel">
+      <table>
+        <thead>
+          <tr><th>Type</th><th>TF</th><th>Group</th><th>Symbol</th><th>Name</th><th class="num">Level</th><th class="num">Gap</th><th class="num">Bars after</th><th>Time</th></tr>
+        </thead>
+        <tbody data-section="ar_near">
+          {rows_ar_near()}
+        </tbody>
+      </table>
+    </div>
+
     <h2 class="section-title" data-section="trend" data-base="趨勢線觸碰" data-total="{len(trend)}">趨勢線觸碰 · {len(trend)}</h2>
     <div class="panel">
       <table>
@@ -1816,6 +1865,7 @@ def main() -> int:
         "params": {
             "bars": BARS,
             "touch_window_bars": TOUCH_WINDOW_BARS,
+            "near_miss_tol_pct": NEAR_MISS_TOL_PCT,
             "fresh_bars": FRESH_BARS,
             "drop_pct": DROP_PCT,
             "min_streak": MIN_STREAK,

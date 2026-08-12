@@ -12,6 +12,7 @@ Ray rules
   Each AR/DR signal bar draws two horizontal wick rays (upper=high, lower=low).
   Both extend right from the signal bar; each stops at its first wick touch.
   Scanner reports primary wick late touch: AR→high, DR→low, only after >12 bars.
+  Near-miss: primary wick still active, >12 bars, fresh bar wick within tolerance but no touch.
 """
 
 from __future__ import annotations
@@ -26,6 +27,7 @@ VOL_MULT = 1.2
 USE_STRUCTURE = True
 TOUCH_WINDOW_BARS = 12
 FRESH_BARS = 2
+NEAR_MISS_TOL_PCT = 0.004  # wick within 0.4% of ray level, no touch
 
 
 def bear_bar(c: list[dict], i: int) -> bool:
@@ -208,6 +210,63 @@ def collect_late_ar_dr_touches(candles: list[dict], signals: list[dict]) -> list
                 "close": candles[ti]["close"],
             }
         )
+    return hits
+
+
+def wick_near_miss(bar: dict, level: float, is_upper: bool) -> tuple[bool, float]:
+    """Return (is_near_miss, gap_pct) when wick is close but did not touch the ray."""
+    if not level:
+        return False, 0.0
+    tol = abs(level) * NEAR_MISS_TOL_PCT
+    if is_upper:
+        gap = level - bar["high"]
+        if gap <= 0 or gap > tol:
+            return False, 0.0
+        return True, gap / level * 100
+    gap = bar["low"] - level
+    if gap <= 0 or gap > tol:
+        return False, 0.0
+    return True, gap / level * 100
+
+
+def collect_late_ar_dr_near_misses(candles: list[dict], signals: list[dict]) -> list[dict]:
+    """Report fresh bars after >TOUCH_WINDOW where primary wick nears but does not touch."""
+    if not candles:
+        return []
+    lo, last = fresh_range(len(candles))
+    hits: list[dict] = []
+    for sig in signals:
+        rays = resolve_signal_rays(candles, sig)
+        ray = primary_wick_ray(rays, sig["type"])
+        if not ray.get("active"):
+            continue
+        level = float(ray["level"])
+        is_upper = sig["type"] == "AR"
+        best: dict | None = None
+        for i in range(last, lo - 1, -1):
+            bars_after = i - sig["index"]
+            if bars_after <= TOUCH_WINDOW_BARS:
+                continue
+            near, gap_pct = wick_near_miss(candles[i], level, is_upper)
+            if not near:
+                continue
+            best = {
+                "kind": "ar_dr_near",
+                "label": f"{sig['type']} 接近未觸",
+                "type": sig["type"],
+                "wick": ray["side"],
+                "signal_time": sig["time"],
+                "signal_index": sig["index"],
+                "bars_after_signal": bars_after,
+                "gap_pct": gap_pct,
+                "time": candles[i]["time"],
+                "index": i,
+                "level": level,
+                "close": candles[i]["close"],
+            }
+            break
+        if best:
+            hits.append(best)
     return hits
 
 
