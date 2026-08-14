@@ -1,8 +1,89 @@
 {
-  "updated_at": "2026-08-14 16:28:40 UTC",
+  "updated_at": "2026-08-14 17:31:22 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "sp500:SLB:1h:trend_exceed:resistance:1786727461",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "SLB",
+      "name": "Schlumberger",
+      "timeframe": "1h",
+      "level": 53.780609130859375,
+      "time": 1786727461,
+      "seen_at": "2026-08-14 17:31:22 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-08-14 17:31:22 UTC"
+    },
+    {
+      "key": "sp500:ORCL:1h:ar_dr_near:DR:1786727405",
+      "kind": "ar_dr_near",
+      "type": "DR",
+      "group": "sp500",
+      "symbol": "ORCL",
+      "name": "Oracle Corporation",
+      "timeframe": "1h",
+      "level": 151.77000427246094,
+      "time": 1786727405,
+      "seen_at": "2026-08-14 17:31:22 UTC",
+      "bars_after_signal": 13,
+      "gap_pct": 0.23060607160440677,
+      "first_seen": "2026-08-14 17:31:22 UTC"
+    },
+    {
+      "key": "ndx100:BKR:1h:trend_touch:resistance:1786725000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "ndx100",
+      "symbol": "BKR",
+      "name": "Baker Hughes",
+      "timeframe": "1h",
+      "level": 65.08859289145168,
+      "time": 1786725000,
+      "seen_at": "2026-08-14 17:31:22 UTC",
+      "first_seen": "2026-08-14 17:31:22 UTC"
+    },
+    {
+      "key": "ndx100:ORLY:1h:trend_touch:support:1786725000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "ORLY",
+      "name": "O'Reilly Automotive",
+      "timeframe": "1h",
+      "level": 91.38973948830052,
+      "time": 1786725000,
+      "seen_at": "2026-08-14 17:31:22 UTC",
+      "first_seen": "2026-08-14 17:31:22 UTC"
+    },
+    {
+      "key": "sp500:BKR:1h:trend_touch:resistance:1786725000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "BKR",
+      "name": "Baker Hughes",
+      "timeframe": "1h",
+      "level": 65.08859289145168,
+      "time": 1786725000,
+      "seen_at": "2026-08-14 17:31:22 UTC",
+      "first_seen": "2026-08-14 17:31:22 UTC"
+    },
+    {
+      "key": "sp500:ORLY:1h:trend_touch:support:1786725000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "ORLY",
+      "name": "O'Reilly Auto Parts",
+      "timeframe": "1h",
+      "level": 91.38973948830052,
+      "time": 1786725000,
+      "seen_at": "2026-08-14 17:31:22 UTC",
+      "first_seen": "2026-08-14 17:31:22 UTC"
+    },
     {
       "key": "ndx100:MNST:1h:trend_touch:resistance:1786721400",
       "kind": "trend_touch",
@@ -104,7 +185,7 @@
       "timeframe": "1d",
       "level": 123.89308420817058,
       "time": 1786714200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -118,7 +199,7 @@
       "timeframe": "1d",
       "level": 134.1846419114333,
       "time": 1786714200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "exceed_bars": 6,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -132,7 +213,7 @@
       "timeframe": "1d",
       "level": 27.21666932106018,
       "time": 1786714200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -146,7 +227,7 @@
       "timeframe": "1d",
       "level": 215.00384162994752,
       "time": 1786714200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -160,7 +241,7 @@
       "timeframe": "1d",
       "level": 53.91514980431759,
       "time": 1786714200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -174,7 +255,7 @@
       "timeframe": "1d",
       "level": 123.89308420817058,
       "time": 1786714200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -188,7 +269,7 @@
       "timeframe": "1d",
       "level": 79.84123574870907,
       "time": 1786714200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -202,7 +283,7 @@
       "timeframe": "1d",
       "level": 27.21666932106018,
       "time": 1786714200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -216,7 +297,7 @@
       "timeframe": "1d",
       "level": 166.35730794270833,
       "time": 1786714200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
     {
@@ -229,7 +310,7 @@
       "timeframe": "1d",
       "level": 61.162104757208574,
       "time": 1786714200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
     {
@@ -242,7 +323,7 @@
       "timeframe": "1d",
       "level": 57.76595120816617,
       "time": 1786714200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 15:04:28 UTC"
     },
@@ -256,7 +337,7 @@
       "timeframe": "1d",
       "level": 67.24452964381167,
       "time": 1786714200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "first_seen": "2026-08-14 15:04:28 UTC"
     },
     {
@@ -269,7 +350,7 @@
       "timeframe": "1d",
       "level": 166.35730794270833,
       "time": 1786714200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "first_seen": "2026-08-14 15:04:28 UTC"
     },
     {
@@ -282,7 +363,7 @@
       "timeframe": "1d",
       "level": 182.63220400559274,
       "time": 1786714200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-14 16:28:40 UTC"
     },
@@ -911,7 +992,7 @@
       "timeframe": "1d",
       "level": 0.243,
       "time": 1786665600,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "bars_after_signal": 184,
       "first_seen": "2026-08-14 12:20:03 UTC"
     },
@@ -1797,7 +1878,7 @@
       "timeframe": "1d",
       "level": 53.924392237807766,
       "time": 1786627800,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "first_seen": "2026-08-13 14:30:26 UTC"
     },
     {
@@ -1810,7 +1891,7 @@
       "timeframe": "1d",
       "level": 91.54000091552734,
       "time": 1786627800,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "bars_after_signal": 109,
       "first_seen": "2026-08-13 15:37:09 UTC"
     },
@@ -1824,7 +1905,7 @@
       "timeframe": "1d",
       "level": 79.84603024835457,
       "time": 1786627800,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "first_seen": "2026-08-13 14:30:26 UTC"
     },
     {
@@ -1837,7 +1918,7 @@
       "timeframe": "1d",
       "level": 123.96366034613715,
       "time": 1786627800,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -1850,7 +1931,7 @@
       "timeframe": "1d",
       "level": 226.35289181945146,
       "time": 1786627800,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -1863,7 +1944,7 @@
       "timeframe": "1d",
       "level": 123.96366034613715,
       "time": 1786627800,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -1876,7 +1957,7 @@
       "timeframe": "1d",
       "level": 226.35289181945146,
       "time": 1786627800,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -1889,7 +1970,7 @@
       "timeframe": "1d",
       "level": 289.00895243326823,
       "time": 1786627800,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -2644,7 +2725,7 @@
       "timeframe": "1d",
       "level": 73.74,
       "time": 1786579200,
-      "seen_at": "2026-08-14 16:28:40 UTC",
+      "seen_at": "2026-08-14 17:31:22 UTC",
       "bars_after_signal": 34,
       "first_seen": "2026-08-13 21:51:40 UTC"
     },
@@ -6601,87 +6682,6 @@
       "time": 1786368600,
       "seen_at": "2026-08-11 12:51:42 UTC",
       "exceed_bars": 4,
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
-      "key": "sp500:LOW:1d:trend_exceed:resistance:1786368600",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "LOW",
-      "name": "Lowe's",
-      "timeframe": "1d",
-      "level": 215.9594035429113,
-      "time": 1786368600,
-      "seen_at": "2026-08-11 12:51:42 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
-      "key": "sp500:NOC:1d:trend_exceed:resistance:1786368600",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "NOC",
-      "name": "Northrop Grumman",
-      "timeframe": "1d",
-      "level": 546.8336447536356,
-      "time": 1786368600,
-      "seen_at": "2026-08-11 12:51:42 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
-      "key": "ndx100:AEP:1d:trend_touch:support:1786368600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "AEP",
-      "name": "American Electric Power",
-      "timeframe": "1d",
-      "level": 122.70859774076021,
-      "time": 1786368600,
-      "seen_at": "2026-08-11 12:51:42 UTC",
-      "first_seen": "2026-08-10 15:29:15 UTC"
-    },
-    {
-      "key": "sp500:TFC:1d:trend_touch:support:1786368600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "TFC",
-      "name": "Truist Financial",
-      "timeframe": "1d",
-      "level": 51.770001547677175,
-      "time": 1786368600,
-      "seen_at": "2026-08-11 12:51:42 UTC",
-      "first_seen": "2026-08-10 20:01:07 UTC"
-    },
-    {
-      "key": "sp500:AEP:1d:trend_touch:support:1786368600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "AEP",
-      "name": "American Electric Power",
-      "timeframe": "1d",
-      "level": 122.70859774076021,
-      "time": 1786368600,
-      "seen_at": "2026-08-11 12:51:42 UTC",
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
-      "key": "sp500:ALLE:1h:ar_dr_touch:DR:1786368600",
-      "kind": "ar_dr_touch",
-      "type": "DR",
-      "group": "sp500",
-      "symbol": "ALLE",
-      "name": "Allegion",
-      "timeframe": "1h",
-      "level": 165.8800048828125,
-      "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
-      "bars_after_signal": 20,
       "first_seen": "2026-08-10 14:28:50 UTC"
     }
   ]
