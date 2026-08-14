@@ -1,21 +1,46 @@
 {
-  "updated_at": "2026-08-14 14:03:16 UTC",
+  "updated_at": "2026-08-14 15:04:28 UTC",
   "count": 500,
   "max": 500,
   "hits": [
     {
-      "key": "sp500:WSM:1h:ar_dr_touch:DR:1786714200",
-      "kind": "ar_dr_touch",
-      "type": "DR",
+      "key": "sp500:DVN:1h:trend_touch:resistance:1786717800",
+      "kind": "trend_touch",
+      "type": "resistance",
       "group": "sp500",
-      "symbol": "WSM",
-      "name": "Williams-Sonoma",
+      "symbol": "DVN",
+      "name": "Devon Energy",
       "timeframe": "1h",
-      "level": 239.61000061035156,
-      "time": 1786714200,
-      "seen_at": "2026-08-14 14:03:16 UTC",
-      "bars_after_signal": 57,
-      "first_seen": "2026-08-14 14:03:16 UTC"
+      "level": 45.66718148713065,
+      "time": 1786717800,
+      "seen_at": "2026-08-14 15:04:28 UTC",
+      "first_seen": "2026-08-14 15:04:28 UTC"
+    },
+    {
+      "key": "sp500:SLB:1h:trend_touch:resistance:1786717800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "SLB",
+      "name": "Schlumberger",
+      "timeframe": "1h",
+      "level": 53.74648209622032,
+      "time": 1786717800,
+      "seen_at": "2026-08-14 15:04:28 UTC",
+      "first_seen": "2026-08-14 15:04:28 UTC"
+    },
+    {
+      "key": "crypto:ETHUSDT:1h:trend_touch:support:1786716000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "crypto",
+      "symbol": "ETHUSDT",
+      "name": "ETH",
+      "timeframe": "1h",
+      "level": 1864.5374841972186,
+      "time": 1786716000,
+      "seen_at": "2026-08-14 15:04:28 UTC",
+      "first_seen": "2026-08-14 15:04:28 UTC"
     },
     {
       "key": "ndx100:PAYX:1d:trend_exceed:resistance:1786714200",
@@ -27,7 +52,7 @@
       "timeframe": "1d",
       "level": 123.89308420817058,
       "time": 1786714200,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -41,7 +66,7 @@
       "timeframe": "1d",
       "level": 134.1846419114333,
       "time": 1786714200,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "exceed_bars": 6,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -55,7 +80,7 @@
       "timeframe": "1d",
       "level": 27.21666932106018,
       "time": 1786714200,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -69,7 +94,7 @@
       "timeframe": "1d",
       "level": 215.00384162994752,
       "time": 1786714200,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -83,7 +108,7 @@
       "timeframe": "1d",
       "level": 53.91514980431759,
       "time": 1786714200,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -97,7 +122,7 @@
       "timeframe": "1d",
       "level": 123.89308420817058,
       "time": 1786714200,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -109,9 +134,9 @@
       "symbol": "SYF",
       "name": "Synchrony Financial",
       "timeframe": "1d",
-      "level": 79.83644124906357,
+      "level": 79.84123574870907,
       "time": 1786714200,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -125,8 +150,101 @@
       "timeframe": "1d",
       "level": 27.21666932106018,
       "time": 1786714200,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "exceed_bars": 3,
+      "first_seen": "2026-08-14 14:03:16 UTC"
+    },
+    {
+      "key": "ndx100:QCOM:1d:trend_touch:resistance:1786714200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "ndx100",
+      "symbol": "QCOM",
+      "name": "Qualcomm",
+      "timeframe": "1d",
+      "level": 166.35730794270833,
+      "time": 1786714200,
+      "seen_at": "2026-08-14 15:04:28 UTC",
+      "first_seen": "2026-08-14 14:03:16 UTC"
+    },
+    {
+      "key": "sp500:BALL:1d:trend_touch:support:1786714200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "BALL",
+      "name": "Ball Corporation",
+      "timeframe": "1d",
+      "level": 61.162104757208574,
+      "time": 1786714200,
+      "seen_at": "2026-08-14 15:04:28 UTC",
+      "first_seen": "2026-08-14 14:03:16 UTC"
+    },
+    {
+      "key": "sp500:UDR:1d:trend_touch:resistance:1786714200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "UDR",
+      "name": "UDR, Inc.",
+      "timeframe": "1d",
+      "level": 38.01636227694425,
+      "time": 1786714200,
+      "seen_at": "2026-08-14 15:04:28 UTC",
+      "first_seen": "2026-08-14 14:03:16 UTC"
+    },
+    {
+      "key": "sp500:FOX:1d:trend_exceed:resistance:1786714200",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "FOX",
+      "name": "Fox Corporation (Class B)",
+      "timeframe": "1d",
+      "level": 57.76595120816617,
+      "time": 1786714200,
+      "seen_at": "2026-08-14 15:04:28 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-08-14 15:04:28 UTC"
+    },
+    {
+      "key": "sp500:FOXA:1d:trend_touch:resistance:1786714200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "FOXA",
+      "name": "Fox Corporation (Class A)",
+      "timeframe": "1d",
+      "level": 67.24452964381167,
+      "time": 1786714200,
+      "seen_at": "2026-08-14 15:04:28 UTC",
+      "first_seen": "2026-08-14 15:04:28 UTC"
+    },
+    {
+      "key": "sp500:QCOM:1d:trend_touch:resistance:1786714200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "QCOM",
+      "name": "Qualcomm",
+      "timeframe": "1d",
+      "level": 166.35730794270833,
+      "time": 1786714200,
+      "seen_at": "2026-08-14 15:04:28 UTC",
+      "first_seen": "2026-08-14 15:04:28 UTC"
+    },
+    {
+      "key": "sp500:WSM:1h:ar_dr_touch:DR:1786714200",
+      "kind": "ar_dr_touch",
+      "type": "DR",
+      "group": "sp500",
+      "symbol": "WSM",
+      "name": "Williams-Sonoma",
+      "timeframe": "1h",
+      "level": 239.61000061035156,
+      "time": 1786714200,
+      "seen_at": "2026-08-14 14:03:16 UTC",
+      "bars_after_signal": 57,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
     {
@@ -533,45 +651,6 @@
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
     {
-      "key": "ndx100:QCOM:1d:trend_touch:resistance:1786714200",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "QCOM",
-      "name": "Qualcomm",
-      "timeframe": "1d",
-      "level": 166.35730794270833,
-      "time": 1786714200,
-      "seen_at": "2026-08-14 14:03:16 UTC",
-      "first_seen": "2026-08-14 14:03:16 UTC"
-    },
-    {
-      "key": "sp500:BALL:1d:trend_touch:support:1786714200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "BALL",
-      "name": "Ball Corporation",
-      "timeframe": "1d",
-      "level": 61.162104757208574,
-      "time": 1786714200,
-      "seen_at": "2026-08-14 14:03:16 UTC",
-      "first_seen": "2026-08-14 14:03:16 UTC"
-    },
-    {
-      "key": "sp500:UDR:1d:trend_touch:resistance:1786714200",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "UDR",
-      "name": "UDR, Inc.",
-      "timeframe": "1d",
-      "level": 38.01636227694425,
-      "time": 1786714200,
-      "seen_at": "2026-08-14 14:03:16 UTC",
-      "first_seen": "2026-08-14 14:03:16 UTC"
-    },
-    {
       "key": "crypto:BTCUSDT:1h:trend_touch:support:1786712400",
       "kind": "trend_touch",
       "type": "support",
@@ -766,7 +845,7 @@
       "timeframe": "1d",
       "level": 0.243,
       "time": 1786665600,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "bars_after_signal": 184,
       "first_seen": "2026-08-14 12:20:03 UTC"
     },
@@ -1652,7 +1731,7 @@
       "timeframe": "1d",
       "level": 53.924392237807766,
       "time": 1786627800,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "first_seen": "2026-08-13 14:30:26 UTC"
     },
     {
@@ -1665,7 +1744,7 @@
       "timeframe": "1d",
       "level": 91.54000091552734,
       "time": 1786627800,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "bars_after_signal": 109,
       "first_seen": "2026-08-13 15:37:09 UTC"
     },
@@ -1677,9 +1756,9 @@
       "symbol": "SYF",
       "name": "Synchrony Financial",
       "timeframe": "1d",
-      "level": 79.84123574870907,
+      "level": 79.84603024835457,
       "time": 1786627800,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "first_seen": "2026-08-13 14:30:26 UTC"
     },
     {
@@ -1692,7 +1771,7 @@
       "timeframe": "1d",
       "level": 123.96366034613715,
       "time": 1786627800,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -1705,7 +1784,7 @@
       "timeframe": "1d",
       "level": 226.35289181945146,
       "time": 1786627800,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -1718,7 +1797,7 @@
       "timeframe": "1d",
       "level": 123.96366034613715,
       "time": 1786627800,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -1731,7 +1810,7 @@
       "timeframe": "1d",
       "level": 226.35289181945146,
       "time": 1786627800,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -1744,7 +1823,7 @@
       "timeframe": "1d",
       "level": 289.00895243326823,
       "time": 1786627800,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -2499,7 +2578,7 @@
       "timeframe": "1d",
       "level": 73.74,
       "time": 1786579200,
-      "seen_at": "2026-08-14 14:03:16 UTC",
+      "seen_at": "2026-08-14 15:04:28 UTC",
       "bars_after_signal": 34,
       "first_seen": "2026-08-13 21:51:40 UTC"
     },
@@ -6600,84 +6679,6 @@
       "name": "DoorDash",
       "timeframe": "1h",
       "level": 211.30059062900827,
-      "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
-      "key": "ndx100:LIN:1h:trend_touch:support:1786368600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "LIN",
-      "name": "Linde plc",
-      "timeframe": "1h",
-      "level": 488.9435192871094,
-      "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
-      "key": "ndx100:NFLX:1h:trend_touch:support:1786368600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "NFLX",
-      "name": "Netflix",
-      "timeframe": "1h",
-      "level": 73.6481836492365,
-      "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
-      "key": "ndx100:PDD:1h:trend_touch:resistance:1786368600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "PDD",
-      "name": "PDD Holdings",
-      "timeframe": "1h",
-      "level": 92.06069335128015,
-      "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
-      "key": "sp500:ADSK:1h:trend_touch:resistance:1786368600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "ADSK",
-      "name": "Autodesk",
-      "timeframe": "1h",
-      "level": 252.84820098876952,
-      "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
-      "key": "sp500:AEE:1h:trend_touch:support:1786368600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "AEE",
-      "name": "Ameren",
-      "timeframe": "1h",
-      "level": 107.08854675292969,
-      "time": 1786368600,
-      "seen_at": "2026-08-10 14:28:50 UTC",
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
-      "key": "sp500:ALB:1h:trend_touch:resistance:1786368600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "ALB",
-      "name": "Albemarle Corporation",
-      "timeframe": "1h",
-      "level": 132.75704277886285,
       "time": 1786368600,
       "seen_at": "2026-08-10 14:28:50 UTC",
       "first_seen": "2026-08-10 14:28:50 UTC"
