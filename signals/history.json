@@ -1,8 +1,74 @@
 {
-  "updated_at": "2026-08-14 17:31:22 UTC",
+  "updated_at": "2026-08-14 18:24:55 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "sp500:ORCL:1h:ar_dr_touch:DR:1786728600",
+      "kind": "ar_dr_touch",
+      "type": "DR",
+      "group": "sp500",
+      "symbol": "ORCL",
+      "name": "Oracle Corporation",
+      "timeframe": "1h",
+      "level": 151.77000427246094,
+      "time": 1786728600,
+      "seen_at": "2026-08-14 18:24:55 UTC",
+      "bars_after_signal": 13,
+      "first_seen": "2026-08-14 18:24:55 UTC"
+    },
+    {
+      "key": "dji30:JPM:1h:trend_touch:support:1786728600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "dji30",
+      "symbol": "JPM",
+      "name": "JPMorgan Chase & Co.",
+      "timeframe": "1h",
+      "level": 362.35616674178686,
+      "time": 1786728600,
+      "seen_at": "2026-08-14 18:24:55 UTC",
+      "first_seen": "2026-08-14 18:24:55 UTC"
+    },
+    {
+      "key": "sp500:CRH:1h:trend_touch:support:1786728600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "CRH",
+      "name": "CRH plc",
+      "timeframe": "1h",
+      "level": 96.6476742381781,
+      "time": 1786728600,
+      "seen_at": "2026-08-14 18:24:55 UTC",
+      "first_seen": "2026-08-14 18:24:55 UTC"
+    },
+    {
+      "key": "sp500:GILD:1h:trend_touch:resistance:1786728600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "GILD",
+      "name": "Gilead Sciences",
+      "timeframe": "1h",
+      "level": 138.19849147353062,
+      "time": 1786728600,
+      "seen_at": "2026-08-14 18:24:55 UTC",
+      "first_seen": "2026-08-14 18:24:55 UTC"
+    },
+    {
+      "key": "sp500:JPM:1h:trend_touch:support:1786728600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "JPM",
+      "name": "JPMorgan Chase",
+      "timeframe": "1h",
+      "level": 362.35616674178686,
+      "time": 1786728600,
+      "seen_at": "2026-08-14 18:24:55 UTC",
+      "first_seen": "2026-08-14 18:24:55 UTC"
+    },
     {
       "key": "sp500:SLB:1h:trend_exceed:resistance:1786727461",
       "kind": "trend_exceed",
@@ -31,6 +97,19 @@
       "bars_after_signal": 13,
       "gap_pct": 0.23060607160440677,
       "first_seen": "2026-08-14 17:31:22 UTC"
+    },
+    {
+      "key": "crypto:XRPUSDT:1h:trend_touch:support:1786726800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "crypto",
+      "symbol": "XRPUSDT",
+      "name": "XRP",
+      "timeframe": "1h",
+      "level": 1.00045,
+      "time": 1786726800,
+      "seen_at": "2026-08-14 18:24:55 UTC",
+      "first_seen": "2026-08-14 18:24:55 UTC"
     },
     {
       "key": "ndx100:BKR:1h:trend_touch:resistance:1786725000",
@@ -185,7 +264,7 @@
       "timeframe": "1d",
       "level": 123.89308420817058,
       "time": 1786714200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -199,7 +278,7 @@
       "timeframe": "1d",
       "level": 134.1846419114333,
       "time": 1786714200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "exceed_bars": 6,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -213,7 +292,7 @@
       "timeframe": "1d",
       "level": 27.21666932106018,
       "time": 1786714200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -227,7 +306,7 @@
       "timeframe": "1d",
       "level": 215.00384162994752,
       "time": 1786714200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -241,7 +320,7 @@
       "timeframe": "1d",
       "level": 53.91514980431759,
       "time": 1786714200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -255,7 +334,7 @@
       "timeframe": "1d",
       "level": 123.89308420817058,
       "time": 1786714200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -269,7 +348,7 @@
       "timeframe": "1d",
       "level": 79.84123574870907,
       "time": 1786714200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -283,7 +362,7 @@
       "timeframe": "1d",
       "level": 27.21666932106018,
       "time": 1786714200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -297,7 +376,7 @@
       "timeframe": "1d",
       "level": 166.35730794270833,
       "time": 1786714200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
     {
@@ -310,7 +389,7 @@
       "timeframe": "1d",
       "level": 61.162104757208574,
       "time": 1786714200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
     {
@@ -323,7 +402,7 @@
       "timeframe": "1d",
       "level": 57.76595120816617,
       "time": 1786714200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 15:04:28 UTC"
     },
@@ -337,7 +416,7 @@
       "timeframe": "1d",
       "level": 67.24452964381167,
       "time": 1786714200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "first_seen": "2026-08-14 15:04:28 UTC"
     },
     {
@@ -350,7 +429,7 @@
       "timeframe": "1d",
       "level": 166.35730794270833,
       "time": 1786714200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "first_seen": "2026-08-14 15:04:28 UTC"
     },
     {
@@ -363,7 +442,7 @@
       "timeframe": "1d",
       "level": 182.63220400559274,
       "time": 1786714200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-14 16:28:40 UTC"
     },
@@ -377,8 +456,21 @@
       "timeframe": "1d",
       "level": 38.01636227694425,
       "time": 1786714200,
-      "seen_at": "2026-08-14 15:04:28 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "first_seen": "2026-08-14 14:03:16 UTC"
+    },
+    {
+      "key": "sp500:IRM:1d:trend_touch:resistance:1786714200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "IRM",
+      "name": "Iron Mountain",
+      "timeframe": "1d",
+      "level": 128.12551143251616,
+      "time": 1786714200,
+      "seen_at": "2026-08-14 18:24:55 UTC",
+      "first_seen": "2026-08-14 18:24:55 UTC"
     },
     {
       "key": "sp500:WSM:1h:ar_dr_touch:DR:1786714200",
@@ -992,7 +1084,7 @@
       "timeframe": "1d",
       "level": 0.243,
       "time": 1786665600,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "bars_after_signal": 184,
       "first_seen": "2026-08-14 12:20:03 UTC"
     },
@@ -1878,7 +1970,7 @@
       "timeframe": "1d",
       "level": 53.924392237807766,
       "time": 1786627800,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "first_seen": "2026-08-13 14:30:26 UTC"
     },
     {
@@ -1891,7 +1983,7 @@
       "timeframe": "1d",
       "level": 91.54000091552734,
       "time": 1786627800,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "bars_after_signal": 109,
       "first_seen": "2026-08-13 15:37:09 UTC"
     },
@@ -1905,7 +1997,7 @@
       "timeframe": "1d",
       "level": 79.84603024835457,
       "time": 1786627800,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "first_seen": "2026-08-13 14:30:26 UTC"
     },
     {
@@ -1918,7 +2010,7 @@
       "timeframe": "1d",
       "level": 123.96366034613715,
       "time": 1786627800,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -1931,7 +2023,7 @@
       "timeframe": "1d",
       "level": 226.35289181945146,
       "time": 1786627800,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -1944,7 +2036,7 @@
       "timeframe": "1d",
       "level": 123.96366034613715,
       "time": 1786627800,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -1957,7 +2049,7 @@
       "timeframe": "1d",
       "level": 226.35289181945146,
       "time": 1786627800,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -1970,7 +2062,7 @@
       "timeframe": "1d",
       "level": 289.00895243326823,
       "time": 1786627800,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -2725,7 +2817,7 @@
       "timeframe": "1d",
       "level": 73.74,
       "time": 1786579200,
-      "seen_at": "2026-08-14 17:31:22 UTC",
+      "seen_at": "2026-08-14 18:24:55 UTC",
       "bars_after_signal": 34,
       "first_seen": "2026-08-13 21:51:40 UTC"
     },
@@ -6589,100 +6681,6 @@
       "time": 1786368600,
       "seen_at": "2026-08-12 12:23:18 UTC",
       "first_seen": "2026-08-10 15:29:15 UTC"
-    },
-    {
-      "key": "ndx100:ROP:1d:trend_touch:resistance:1786368600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "ROP",
-      "name": "Roper Technologies",
-      "timeframe": "1d",
-      "level": 405.3009083494265,
-      "time": 1786368600,
-      "seen_at": "2026-08-12 12:23:18 UTC",
-      "first_seen": "2026-08-10 17:57:13 UTC"
-    },
-    {
-      "key": "sp500:DUK:1d:trend_touch:support:1786368600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "DUK",
-      "name": "Duke Energy",
-      "timeframe": "1d",
-      "level": 121.12081572863521,
-      "time": 1786368600,
-      "seen_at": "2026-08-12 12:23:18 UTC",
-      "first_seen": "2026-08-10 15:29:15 UTC"
-    },
-    {
-      "key": "sp500:AES:1d:trend_touch:support:1786368600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "AES",
-      "name": "AES Corporation",
-      "timeframe": "1d",
-      "level": 14.692413395848767,
-      "time": 1786368600,
-      "seen_at": "2026-08-12 12:23:18 UTC",
-      "first_seen": "2026-08-11 21:20:15 UTC"
-    },
-    {
-      "key": "sp500:ROP:1d:trend_touch:resistance:1786368600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "ROP",
-      "name": "Roper Technologies",
-      "timeframe": "1d",
-      "level": 405.3009083494265,
-      "time": 1786368600,
-      "seen_at": "2026-08-12 12:23:18 UTC",
-      "first_seen": "2026-08-10 17:57:13 UTC"
-    },
-    {
-      "key": "ndx100:TEAM:1d:trend_exceed:resistance:1786368600",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "TEAM",
-      "name": "Atlassian",
-      "timeframe": "1d",
-      "level": 134.97233346792368,
-      "time": 1786368600,
-      "seen_at": "2026-08-12 11:33:34 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
-      "key": "sp500:ZTS:1d:trend_exceed:support:1786368600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "ZTS",
-      "name": "Zoetis",
-      "timeframe": "1d",
-      "level": 73.85522195567255,
-      "time": 1786368600,
-      "seen_at": "2026-08-12 11:33:34 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-08-10 14:28:50 UTC"
-    },
-    {
-      "key": "sp500:IFF:1d:trend_exceed:resistance:1786368600",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "IFF",
-      "name": "International Flavors & Fragrances",
-      "timeframe": "1d",
-      "level": 82.42812916148793,
-      "time": 1786368600,
-      "seen_at": "2026-08-11 12:51:42 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-08-10 14:28:50 UTC"
     }
   ]
 }
