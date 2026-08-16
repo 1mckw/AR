@@ -1,8 +1,35 @@
 {
-  "updated_at": "2026-08-16 16:57:19 UTC",
+  "updated_at": "2026-08-16 17:16:17 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "crypto:WLDUSDT:1h:trend_exceed:resistance:1786899600",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "WLDUSDT",
+      "name": "WLD",
+      "timeframe": "1h",
+      "level": 0.36862307692307766,
+      "time": 1786899600,
+      "seen_at": "2026-08-16 17:16:17 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-08-16 17:16:17 UTC"
+    },
+    {
+      "key": "crypto:WLDUSDT:1h:trend_touch:resistance:1786896000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "WLDUSDT",
+      "name": "WLD",
+      "timeframe": "1h",
+      "level": 0.36883461538461615,
+      "time": 1786896000,
+      "seen_at": "2026-08-16 17:16:17 UTC",
+      "first_seen": "2026-08-16 17:16:17 UTC"
+    },
     {
       "key": "crypto:XRPUSDT:1h:trend_touch:resistance:1786892400",
       "kind": "trend_touch",
@@ -238,7 +265,7 @@
       "timeframe": "1d",
       "level": 0.007278256880733944,
       "time": 1786752000,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-15 18:19:42 UTC"
     },
     {
@@ -342,7 +369,7 @@
       "timeframe": "1h",
       "level": 509.14843976056136,
       "time": 1786737600,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
@@ -356,7 +383,7 @@
       "timeframe": "1h",
       "level": 509.14843976056136,
       "time": 1786737600,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
@@ -370,7 +397,7 @@
       "timeframe": "1h",
       "level": 7799.958333333333,
       "time": 1786737600,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 21:25:24 UTC"
     },
     {
@@ -396,7 +423,7 @@
       "timeframe": "1h",
       "level": 44.0,
       "time": 1786735800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "bars_after_signal": 307,
       "gap_pct": 0.22954940795898438,
       "first_seen": "2026-08-14 20:36:36 UTC"
@@ -411,7 +438,7 @@
       "timeframe": "1h",
       "level": 509.53565150131413,
       "time": 1786735800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -424,7 +451,7 @@
       "timeframe": "1h",
       "level": 199.06525744422007,
       "time": 1786735800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -437,7 +464,7 @@
       "timeframe": "1h",
       "level": 46.883001556396486,
       "time": 1786735800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -450,7 +477,7 @@
       "timeframe": "1h",
       "level": 28.05782659584877,
       "time": 1786735800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -463,7 +490,7 @@
       "timeframe": "1h",
       "level": 509.53565150131413,
       "time": 1786735800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -476,7 +503,7 @@
       "timeframe": "1h",
       "level": 184.75285121372767,
       "time": 1786735800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -489,7 +516,7 @@
       "timeframe": "1h",
       "level": 199.06525744422007,
       "time": 1786735800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -502,7 +529,7 @@
       "timeframe": "1h",
       "level": 89.6456372347745,
       "time": 1786735800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -515,7 +542,7 @@
       "timeframe": "1h",
       "level": 24.433186457707333,
       "time": 1786735800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -528,7 +555,7 @@
       "timeframe": "1h",
       "level": 46.883001556396486,
       "time": 1786735800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -541,7 +568,7 @@
       "timeframe": "1h",
       "level": 31.920203072684153,
       "time": 1786735800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -554,7 +581,7 @@
       "timeframe": "1h",
       "level": 28.05782659584877,
       "time": 1786735800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -947,9 +974,9 @@
       "symbol": "PAYX",
       "name": "Paychex",
       "timeframe": "1d",
-      "level": 123.89308420817058,
+      "level": 123.88958456496562,
       "time": 1786714200,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -963,7 +990,7 @@
       "timeframe": "1d",
       "level": 134.1846419114333,
       "time": 1786714200,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "exceed_bars": 6,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -977,7 +1004,7 @@
       "timeframe": "1d",
       "level": 27.21666932106018,
       "time": 1786714200,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -989,9 +1016,9 @@
       "symbol": "DRI",
       "name": "Darden Restaurants",
       "timeframe": "1d",
-      "level": 215.00384162994752,
+      "level": 215.09564898387495,
       "time": 1786714200,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -1003,9 +1030,9 @@
       "symbol": "MKC",
       "name": "McCormick & Company",
       "timeframe": "1d",
-      "level": 53.91514980431759,
+      "level": 53.93363467129794,
       "time": 1786714200,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -1017,9 +1044,9 @@
       "symbol": "PAYX",
       "name": "Paychex",
       "timeframe": "1d",
-      "level": 123.89308420817058,
+      "level": 123.88958456496562,
       "time": 1786714200,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -1031,9 +1058,9 @@
       "symbol": "SYF",
       "name": "Synchrony Financial",
       "timeframe": "1d",
-      "level": 79.84123574870907,
+      "level": 79.83549585476727,
       "time": 1786714200,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -1047,7 +1074,7 @@
       "timeframe": "1d",
       "level": 27.21666932106018,
       "time": 1786714200,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
@@ -1061,7 +1088,7 @@
       "timeframe": "1d",
       "level": 166.35730794270833,
       "time": 1786714200,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
     {
@@ -1072,9 +1099,9 @@
       "symbol": "BALL",
       "name": "Ball Corporation",
       "timeframe": "1d",
-      "level": 61.162104757208574,
+      "level": 61.20470540663775,
       "time": 1786714200,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
     {
@@ -1087,7 +1114,7 @@
       "timeframe": "1d",
       "level": 166.35730794270833,
       "time": 1786714200,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 15:04:28 UTC"
     },
     {
@@ -1100,7 +1127,7 @@
       "timeframe": "1d",
       "level": 182.63220400559274,
       "time": 1786714200,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-14 16:28:40 UTC"
     },
@@ -1114,8 +1141,21 @@
       "timeframe": "1d",
       "level": 128.12551143251616,
       "time": 1786714200,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-14 18:24:55 UTC"
+    },
+    {
+      "key": "sp500:XYL:1d:trend_touch:support:1786714200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "XYL",
+      "name": "Xylem Inc.",
+      "timeframe": "1d",
+      "level": 119.35000371932983,
+      "time": 1786714200,
+      "seen_at": "2026-08-16 17:16:17 UTC",
+      "first_seen": "2026-08-14 21:25:24 UTC"
     },
     {
       "key": "sp500:UDR:1d:trend_touch:resistance:1786714200",
@@ -1156,19 +1196,6 @@
       "time": 1786714200,
       "seen_at": "2026-08-16 16:57:19 UTC",
       "first_seen": "2026-08-14 15:04:28 UTC"
-    },
-    {
-      "key": "sp500:XYL:1d:trend_touch:support:1786714200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "XYL",
-      "name": "Xylem Inc.",
-      "timeframe": "1d",
-      "level": 119.35000371932983,
-      "time": 1786714200,
-      "seen_at": "2026-08-16 13:22:06 UTC",
-      "first_seen": "2026-08-14 21:25:24 UTC"
     },
     {
       "key": "sp500:WSM:1h:ar_dr_touch:DR:1786714200",
@@ -2666,9 +2693,9 @@
       "symbol": "MKC",
       "name": "McCormick & Company",
       "timeframe": "1d",
-      "level": 53.924392237807766,
+      "level": 53.94287710478812,
       "time": 1786627800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-13 14:30:26 UTC"
     },
     {
@@ -2681,8 +2708,8 @@
       "timeframe": "1d",
       "level": 91.54000091552734,
       "time": 1786627800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
-      "bars_after_signal": 109,
+      "seen_at": "2026-08-16 17:16:17 UTC",
+      "bars_after_signal": 108,
       "first_seen": "2026-08-13 15:37:09 UTC"
     },
     {
@@ -2693,9 +2720,9 @@
       "symbol": "SYF",
       "name": "Synchrony Financial",
       "timeframe": "1d",
-      "level": 79.84603024835457,
+      "level": 79.8404254107408,
       "time": 1786627800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-13 14:30:26 UTC"
     },
     {
@@ -2706,9 +2733,9 @@
       "symbol": "PAYX",
       "name": "Paychex",
       "timeframe": "1d",
-      "level": 123.96366034613715,
+      "level": 123.96045233986595,
       "time": 1786627800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -2721,7 +2748,7 @@
       "timeframe": "1d",
       "level": 226.35289181945146,
       "time": 1786627800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -2732,9 +2759,9 @@
       "symbol": "PAYX",
       "name": "Paychex",
       "timeframe": "1d",
-      "level": 123.96366034613715,
+      "level": 123.96045233986595,
       "time": 1786627800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
     },
     {
@@ -2747,8 +2774,34 @@
       "timeframe": "1d",
       "level": 226.35289181945146,
       "time": 1786627800,
-      "seen_at": "2026-08-16 16:57:19 UTC",
+      "seen_at": "2026-08-16 17:16:17 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
+    },
+    {
+      "key": "sp500:TROW:1d:trend_touch:support:1786627800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "TROW",
+      "name": "T. Rowe Price",
+      "timeframe": "1d",
+      "level": 110.0727310180664,
+      "time": 1786627800,
+      "seen_at": "2026-08-16 17:16:17 UTC",
+      "first_seen": "2026-08-13 16:56:14 UTC"
+    },
+    {
+      "key": "sp500:COO:1d:trend_touch:resistance:1786627800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "COO",
+      "name": "Cooper Companies (The)",
+      "timeframe": "1d",
+      "level": 77.48993918950083,
+      "time": 1786627800,
+      "seen_at": "2026-08-16 17:16:17 UTC",
+      "first_seen": "2026-08-13 14:30:26 UTC"
     },
     {
       "key": "sp500:FDS:1d:trend_touch:resistance:1786627800",
@@ -2762,32 +2815,6 @@
       "time": 1786627800,
       "seen_at": "2026-08-16 16:57:19 UTC",
       "first_seen": "2026-08-13 19:42:27 UTC"
-    },
-    {
-      "key": "sp500:TROW:1d:trend_touch:support:1786627800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "TROW",
-      "name": "T. Rowe Price",
-      "timeframe": "1d",
-      "level": 110.0727310180664,
-      "time": 1786627800,
-      "seen_at": "2026-08-16 15:48:13 UTC",
-      "first_seen": "2026-08-13 16:56:14 UTC"
-    },
-    {
-      "key": "sp500:COO:1d:trend_touch:resistance:1786627800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "COO",
-      "name": "Cooper Companies (The)",
-      "timeframe": "1d",
-      "level": 77.48993918950083,
-      "time": 1786627800,
-      "seen_at": "2026-08-16 15:48:13 UTC",
-      "first_seen": "2026-08-13 14:30:26 UTC"
     },
     {
       "key": "sp500:DPZ:1d:trend_touch:support:1786627800",
@@ -6632,32 +6659,6 @@
       "time": 1786390200,
       "seen_at": "2026-08-11 12:51:42 UTC",
       "first_seen": "2026-08-10 21:23:52 UTC"
-    },
-    {
-      "key": "dji30:NKE:1h:trend_touch:resistance:1786390200",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "dji30",
-      "symbol": "NKE",
-      "name": "Nike, Inc.",
-      "timeframe": "1h",
-      "level": 42.114956604191136,
-      "time": 1786390200,
-      "seen_at": "2026-08-10 20:01:07 UTC",
-      "first_seen": "2026-08-10 20:01:07 UTC"
-    },
-    {
-      "key": "ndx100:FER:1h:trend_touch:support:1786390200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "FER",
-      "name": "Ferrovial SE",
-      "timeframe": "1h",
-      "level": 65.43692720853366,
-      "time": 1786390200,
-      "seen_at": "2026-08-10 20:01:07 UTC",
-      "first_seen": "2026-08-10 20:01:07 UTC"
     }
   ]
 }
