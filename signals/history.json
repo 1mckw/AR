@@ -1,8 +1,48 @@
 {
-  "updated_at": "2026-08-18 00:15:35 UTC",
+  "updated_at": "2026-08-18 02:11:26 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "crypto:WLDUSDT:1h:trend_exceed:support:1787014800",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "crypto",
+      "symbol": "WLDUSDT",
+      "name": "WLD",
+      "timeframe": "1h",
+      "level": 0.349915,
+      "time": 1787014800,
+      "seen_at": "2026-08-18 02:11:26 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-08-18 02:11:26 UTC"
+    },
+    {
+      "key": "crypto:XRPUSDT:1d:trend_touch:resistance:1787011200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "XRPUSDT",
+      "name": "XRP",
+      "timeframe": "1d",
+      "level": 1.0038464419475657,
+      "time": 1787011200,
+      "seen_at": "2026-08-18 02:11:26 UTC",
+      "first_seen": "2026-08-18 00:15:35 UTC"
+    },
+    {
+      "key": "crypto:XAUTUSDT:1d:trend_touch:resistance:1787011200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "XAUTUSDT",
+      "name": "XAUT",
+      "timeframe": "1d",
+      "level": 4408.948050847457,
+      "time": 1787011200,
+      "seen_at": "2026-08-18 02:11:26 UTC",
+      "first_seen": "2026-08-18 02:11:26 UTC"
+    },
     {
       "key": "crypto:WLDUSDT:1h:trend_exceed:support:1787011200",
       "kind": "trend_exceed",
@@ -15,19 +55,6 @@
       "time": 1787011200,
       "seen_at": "2026-08-18 00:15:35 UTC",
       "exceed_bars": 3,
-      "first_seen": "2026-08-18 00:15:35 UTC"
-    },
-    {
-      "key": "crypto:XRPUSDT:1d:trend_touch:resistance:1787011200",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "XRPUSDT",
-      "name": "XRP",
-      "timeframe": "1d",
-      "level": 1.0038464419475657,
-      "time": 1787011200,
-      "seen_at": "2026-08-18 00:15:35 UTC",
       "first_seen": "2026-08-18 00:15:35 UTC"
     },
     {
@@ -80,7 +107,7 @@
       "timeframe": "1h",
       "level": 335.62959693170365,
       "time": 1786996800,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
@@ -94,7 +121,7 @@
       "timeframe": "1h",
       "level": 73.19620303449959,
       "time": 1786996800,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-17 21:04:44 UTC"
     },
@@ -108,7 +135,7 @@
       "timeframe": "1h",
       "level": 18.403999107762388,
       "time": 1786996800,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-17 21:04:44 UTC"
     },
@@ -135,7 +162,7 @@
       "timeframe": "1h",
       "level": 223.98999492938702,
       "time": 1786995000,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
     {
@@ -148,7 +175,7 @@
       "timeframe": "1h",
       "level": 25.54675684748469,
       "time": 1786995000,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
     {
@@ -161,7 +188,7 @@
       "timeframe": "1h",
       "level": 80.8259275387495,
       "time": 1786995000,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
     {
@@ -174,7 +201,7 @@
       "timeframe": "1h",
       "level": 25.54675684748469,
       "time": 1786995000,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
     {
@@ -187,7 +214,7 @@
       "timeframe": "1h",
       "level": 68.85691950871394,
       "time": 1786995000,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
     {
@@ -200,7 +227,7 @@
       "timeframe": "1h",
       "level": 335.46608099168344,
       "time": 1786995000,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
     {
@@ -213,7 +240,7 @@
       "timeframe": "1h",
       "level": 68.6962496439616,
       "time": 1786995000,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
     {
@@ -226,7 +253,7 @@
       "timeframe": "1h",
       "level": 149.50500121371437,
       "time": 1786995000,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
     {
@@ -239,7 +266,7 @@
       "timeframe": "1h",
       "level": 417.5712471008301,
       "time": 1786995000,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
     {
@@ -252,7 +279,7 @@
       "timeframe": "1h",
       "level": 80.8259275387495,
       "time": 1786995000,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
     {
@@ -265,7 +292,7 @@
       "timeframe": "1h",
       "level": 32.65936042100955,
       "time": 1786995000,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
     {
@@ -278,7 +305,7 @@
       "timeframe": "1h",
       "level": 28.662222739977715,
       "time": 1786995000,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
     {
@@ -291,7 +318,7 @@
       "timeframe": "1h",
       "level": 31.68228634425572,
       "time": 1786995000,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
     {
@@ -304,7 +331,7 @@
       "timeframe": "1h",
       "level": 53.92752029304218,
       "time": 1786995000,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 20:21:52 UTC"
     },
     {
@@ -764,7 +791,7 @@
       "timeframe": "1d",
       "level": 133.9877190223107,
       "time": 1786973400,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "exceed_bars": 7,
       "first_seen": "2026-08-17 14:14:40 UTC"
     },
@@ -778,7 +805,7 @@
       "timeframe": "1d",
       "level": 27.200002670288086,
       "time": 1786973400,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-17 14:14:40 UTC"
     },
@@ -792,7 +819,7 @@
       "timeframe": "1d",
       "level": 214.9579379529838,
       "time": 1786973400,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "exceed_bars": 6,
       "first_seen": "2026-08-17 14:14:40 UTC"
     },
@@ -806,7 +833,7 @@
       "timeframe": "1d",
       "level": 127.94344250909214,
       "time": 1786973400,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-17 14:14:40 UTC"
     },
@@ -820,7 +847,7 @@
       "timeframe": "1d",
       "level": 53.905907370827414,
       "time": 1786973400,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-17 14:14:40 UTC"
     },
@@ -834,7 +861,7 @@
       "timeframe": "1d",
       "level": 79.83644124906357,
       "time": 1786973400,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-17 14:14:40 UTC"
     },
@@ -848,7 +875,7 @@
       "timeframe": "1d",
       "level": 27.200002670288086,
       "time": 1786973400,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-17 14:14:40 UTC"
     },
@@ -862,7 +889,7 @@
       "timeframe": "1d",
       "level": 72.47564453774311,
       "time": 1786973400,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 16:23:18 UTC"
     },
     {
@@ -875,7 +902,7 @@
       "timeframe": "1d",
       "level": 90.09249782562256,
       "time": 1786973400,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-17 18:06:37 UTC"
     },
     {
@@ -888,7 +915,7 @@
       "timeframe": "1d",
       "level": 57.70635666718354,
       "time": 1786973400,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-17 14:14:40 UTC"
     },
@@ -1940,7 +1967,7 @@
       "timeframe": "1h",
       "level": 184.75285121372767,
       "time": 1786735800,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -2493,7 +2520,7 @@
       "timeframe": "1d",
       "level": 128.12551143251616,
       "time": 1786714200,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-14 18:24:55 UTC"
     },
     {
@@ -2506,7 +2533,7 @@
       "timeframe": "1d",
       "level": 38.01636227694425,
       "time": 1786714200,
-      "seen_at": "2026-08-18 00:15:35 UTC",
+      "seen_at": "2026-08-18 02:11:26 UTC",
       "first_seen": "2026-08-14 14:03:16 UTC"
     },
     {
@@ -6622,34 +6649,6 @@
       "time": 1786482000,
       "seen_at": "2026-08-11 22:25:13 UTC",
       "first_seen": "2026-08-11 22:25:13 UTC"
-    },
-    {
-      "key": "sp500:PSX:1h:trend_exceed:resistance:1786478400",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "PSX",
-      "name": "Phillips 66",
-      "timeframe": "1h",
-      "level": 211.60143824986048,
-      "time": 1786478400,
-      "seen_at": "2026-08-12 12:23:18 UTC",
-      "exceed_bars": 10,
-      "first_seen": "2026-08-11 21:20:15 UTC"
-    },
-    {
-      "key": "sp500:PSX:1h:trend_exceed:resistance:1786477614",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "PSX",
-      "name": "Phillips 66",
-      "timeframe": "1h",
-      "level": 211.60143824986048,
-      "time": 1786477614,
-      "seen_at": "2026-08-11 19:59:45 UTC",
-      "exceed_bars": 10,
-      "first_seen": "2026-08-11 19:59:45 UTC"
     }
   ]
 }
