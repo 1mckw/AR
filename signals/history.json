@@ -1,8 +1,62 @@
 {
-  "updated_at": "2026-08-18 17:11:40 UTC",
+  "updated_at": "2026-08-18 18:04:58 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "sp500:FANG:1h:trend_exceed:resistance:1787075012",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "FANG",
+      "name": "Diamondback Energy",
+      "timeframe": "1h",
+      "level": 209.30427683954653,
+      "time": 1787075012,
+      "seen_at": "2026-08-18 18:04:58 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-08-18 18:04:58 UTC"
+    },
+    {
+      "key": "ndx100:FANG:1h:trend_exceed:resistance:1787074821",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "ndx100",
+      "symbol": "FANG",
+      "name": "Diamondback Energy",
+      "timeframe": "1h",
+      "level": 209.30427683954653,
+      "time": 1787074821,
+      "seen_at": "2026-08-18 18:04:58 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-08-18 18:04:58 UTC"
+    },
+    {
+      "key": "sp500:DTE:1h:trend_touch:support:1787074200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "DTE",
+      "name": "DTE Energy",
+      "timeframe": "1h",
+      "level": 140.95102981041217,
+      "time": 1787074200,
+      "seen_at": "2026-08-18 18:04:58 UTC",
+      "first_seen": "2026-08-18 18:04:58 UTC"
+    },
+    {
+      "key": "sp500:MGM:1h:trend_touch:support:1787074200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "MGM",
+      "name": "MGM Resorts",
+      "timeframe": "1h",
+      "level": 43.50346892220633,
+      "time": 1787074200,
+      "seen_at": "2026-08-18 18:04:58 UTC",
+      "first_seen": "2026-08-18 18:04:58 UTC"
+    },
     {
       "key": "sp500:LDOS:1h:trend_touch:resistance:1787070600",
       "kind": "trend_touch",
@@ -185,7 +239,7 @@
       "timeframe": "1d",
       "level": 133.7907961331881,
       "time": 1787059800,
-      "seen_at": "2026-08-18 17:11:40 UTC",
+      "seen_at": "2026-08-18 18:04:58 UTC",
       "exceed_bars": 8,
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
@@ -199,7 +253,7 @@
       "timeframe": "1d",
       "level": 127.76137358566811,
       "time": 1787059800,
-      "seen_at": "2026-08-18 17:11:40 UTC",
+      "seen_at": "2026-08-18 18:04:58 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
@@ -211,9 +265,9 @@
       "symbol": "MKC",
       "name": "McCormick & Company",
       "timeframe": "1d",
-      "level": 53.91514980431759,
+      "level": 53.89666493733724,
       "time": 1787059800,
-      "seen_at": "2026-08-18 17:11:40 UTC",
+      "seen_at": "2026-08-18 18:04:58 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
@@ -227,7 +281,7 @@
       "timeframe": "1d",
       "level": 79.82563674282021,
       "time": 1787059800,
-      "seen_at": "2026-08-18 17:11:40 UTC",
+      "seen_at": "2026-08-18 18:04:58 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
@@ -241,7 +295,7 @@
       "timeframe": "1d",
       "level": 94.85898507379852,
       "time": 1787059800,
-      "seen_at": "2026-08-18 17:11:40 UTC",
+      "seen_at": "2026-08-18 18:04:58 UTC",
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
     {
@@ -254,8 +308,34 @@
       "timeframe": "1d",
       "level": 148.66189545820103,
       "time": 1787059800,
-      "seen_at": "2026-08-18 17:11:40 UTC",
+      "seen_at": "2026-08-18 18:04:58 UTC",
       "first_seen": "2026-08-18 14:19:51 UTC"
+    },
+    {
+      "key": "sp500:TFC:1d:trend_touch:support:1787059800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "TFC",
+      "name": "Truist Financial",
+      "timeframe": "1d",
+      "level": 52.26437465349833,
+      "time": 1787059800,
+      "seen_at": "2026-08-18 18:04:58 UTC",
+      "first_seen": "2026-08-18 16:08:31 UTC"
+    },
+    {
+      "key": "sp500:VRT:1d:trend_touch:support:1787059800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "VRT",
+      "name": "Vertiv Holdings Co",
+      "timeframe": "1d",
+      "level": 271.98916646879013,
+      "time": 1787059800,
+      "seen_at": "2026-08-18 18:04:58 UTC",
+      "first_seen": "2026-08-18 18:04:58 UTC"
     },
     {
       "key": "sp500:PPL:1d:trend_touch:resistance:1787059800",
@@ -269,19 +349,6 @@
       "time": 1787059800,
       "seen_at": "2026-08-18 17:11:40 UTC",
       "first_seen": "2026-08-18 14:19:51 UTC"
-    },
-    {
-      "key": "sp500:TFC:1d:trend_touch:support:1787059800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "TFC",
-      "name": "Truist Financial",
-      "timeframe": "1d",
-      "level": 52.1782135282244,
-      "time": 1787059800,
-      "seen_at": "2026-08-18 17:11:40 UTC",
-      "first_seen": "2026-08-18 16:08:31 UTC"
     },
     {
       "key": "ndx100:WBD:1d:trend_exceed:resistance:1787059800",
@@ -1018,7 +1085,7 @@
       "timeframe": "1d",
       "level": 1.0038464419475657,
       "time": 1787011200,
-      "seen_at": "2026-08-18 17:11:40 UTC",
+      "seen_at": "2026-08-18 18:04:58 UTC",
       "first_seen": "2026-08-18 00:15:35 UTC"
     },
     {
@@ -1031,7 +1098,7 @@
       "timeframe": "1d",
       "level": 4408.948050847457,
       "time": 1787011200,
-      "seen_at": "2026-08-18 17:11:40 UTC",
+      "seen_at": "2026-08-18 18:04:58 UTC",
       "first_seen": "2026-08-18 02:11:26 UTC"
     },
     {
@@ -1780,9 +1847,9 @@
       "symbol": "TECH",
       "name": "Bio-Techne",
       "timeframe": "1d",
-      "level": 72.52894235164561,
+      "level": 72.47564453774311,
       "time": 1786973400,
-      "seen_at": "2026-08-18 17:11:40 UTC",
+      "seen_at": "2026-08-18 18:04:58 UTC",
       "first_seen": "2026-08-17 16:23:18 UTC"
     },
     {
@@ -1793,9 +1860,9 @@
       "symbol": "CL",
       "name": "Colgate-Palmolive",
       "timeframe": "1d",
-      "level": 90.09249782562256,
+      "level": 90.10549077853351,
       "time": 1786973400,
-      "seen_at": "2026-08-18 17:11:40 UTC",
+      "seen_at": "2026-08-18 18:04:58 UTC",
       "first_seen": "2026-08-17 18:06:37 UTC"
     },
     {
@@ -2958,7 +3025,7 @@
       "timeframe": "1h",
       "level": 184.75285121372767,
       "time": 1786735800,
-      "seen_at": "2026-08-18 17:11:40 UTC",
+      "seen_at": "2026-08-18 18:04:58 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -6582,73 +6649,6 @@
       "seen_at": "2026-08-12 15:11:17 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-12 15:11:17 UTC"
-    },
-    {
-      "key": "sp500:KLAC:1h:trend_exceed:resistance:1786546124",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "KLAC",
-      "name": "KLA Corporation",
-      "timeframe": "1h",
-      "level": 200.67135970785012,
-      "time": 1786546124,
-      "seen_at": "2026-08-12 15:11:17 UTC",
-      "exceed_bars": 3,
-      "first_seen": "2026-08-12 15:11:17 UTC"
-    },
-    {
-      "key": "ndx100:KLAC:1h:trend_exceed:resistance:1786546056",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "KLAC",
-      "name": "KLA Corporation",
-      "timeframe": "1h",
-      "level": 200.67135970785012,
-      "time": 1786546056,
-      "seen_at": "2026-08-12 15:11:17 UTC",
-      "exceed_bars": 3,
-      "first_seen": "2026-08-12 15:11:17 UTC"
-    },
-    {
-      "key": "sp500:ABBV:1h:trend_touch:resistance:1786545000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "ABBV",
-      "name": "AbbVie",
-      "timeframe": "1h",
-      "level": 250.0056811246005,
-      "time": 1786545000,
-      "seen_at": "2026-08-12 15:37:28 UTC",
-      "first_seen": "2026-08-12 15:11:17 UTC"
-    },
-    {
-      "key": "sp500:UPS:1h:trend_touch:support:1786545000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "UPS",
-      "name": "United Parcel Service",
-      "timeframe": "1h",
-      "level": 102.88628091617507,
-      "time": 1786545000,
-      "seen_at": "2026-08-12 15:37:28 UTC",
-      "first_seen": "2026-08-12 15:11:17 UTC"
-    },
-    {
-      "key": "sp500:CRH:1h:trend_touch:support:1786545000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "CRH",
-      "name": "CRH plc",
-      "timeframe": "1h",
-      "level": 98.75043801700367,
-      "time": 1786545000,
-      "seen_at": "2026-08-12 15:37:28 UTC",
-      "first_seen": "2026-08-12 15:37:28 UTC"
     }
   ]
 }
