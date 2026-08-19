@@ -1,8 +1,74 @@
 {
-  "updated_at": "2026-08-19 00:17:30 UTC",
+  "updated_at": "2026-08-19 02:15:18 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "crypto:ALLOUSDT:1h:trend_touch:resistance:1787101200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "ALLOUSDT",
+      "name": "ALLO",
+      "timeframe": "1h",
+      "level": 0.3057033898305085,
+      "time": 1787101200,
+      "seen_at": "2026-08-19 02:15:18 UTC",
+      "first_seen": "2026-08-19 02:15:18 UTC"
+    },
+    {
+      "key": "fx:AUDUSD=X:1h:trend_touch:support:1787101200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "fx",
+      "symbol": "AUDUSD=X",
+      "name": "AUD/USD",
+      "timeframe": "1h",
+      "level": 0.7076599604409674,
+      "time": 1787101200,
+      "seen_at": "2026-08-19 02:15:18 UTC",
+      "first_seen": "2026-08-19 02:15:18 UTC"
+    },
+    {
+      "key": "fx:USDCNH=X:1h:trend_touch:support:1787101200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "fx",
+      "symbol": "USDCNH=X",
+      "name": "USD/CNH",
+      "timeframe": "1h",
+      "level": 6.743572905256942,
+      "time": 1787101200,
+      "seen_at": "2026-08-19 02:15:18 UTC",
+      "first_seen": "2026-08-19 02:15:18 UTC"
+    },
+    {
+      "key": "fx:USDMXN=X:1h:trend_touch:resistance:1787101200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "fx",
+      "symbol": "USDMXN=X",
+      "name": "USD/MXN",
+      "timeframe": "1h",
+      "level": 17.070473476264716,
+      "time": 1787101200,
+      "seen_at": "2026-08-19 02:15:18 UTC",
+      "first_seen": "2026-08-19 02:15:18 UTC"
+    },
+    {
+      "key": "crypto:SNDKBUSDT:1h:ar_dr_touch:DR:1787097600",
+      "kind": "ar_dr_touch",
+      "type": "DR",
+      "group": "crypto",
+      "symbol": "SNDKBUSDT",
+      "name": "SNDKB",
+      "timeframe": "1h",
+      "level": 1568.55,
+      "time": 1787097600,
+      "seen_at": "2026-08-19 02:15:18 UTC",
+      "bars_after_signal": 107,
+      "first_seen": "2026-08-19 02:15:18 UTC"
+    },
     {
       "key": "crypto:SNXXBUSDT:1h:trend_exceed:support:1787097600",
       "kind": "trend_exceed",
@@ -69,7 +135,7 @@
       "timeframe": "1h",
       "level": 209.28402112877887,
       "time": 1787083200,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
@@ -83,7 +149,7 @@
       "timeframe": "1h",
       "level": 209.28402112877887,
       "time": 1787083200,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-18 20:58:26 UTC"
     },
@@ -124,7 +190,7 @@
       "timeframe": "1h",
       "level": 47.48246220179966,
       "time": 1787081400,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
     {
@@ -137,7 +203,7 @@
       "timeframe": "1h",
       "level": 73.98879195704605,
       "time": 1787081400,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
     {
@@ -150,7 +216,7 @@
       "timeframe": "1h",
       "level": 47.48246220179966,
       "time": 1787081400,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
     {
@@ -163,7 +229,7 @@
       "timeframe": "1h",
       "level": 179.11785125732422,
       "time": 1787081400,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
     {
@@ -176,7 +242,7 @@
       "timeframe": "1h",
       "level": 13.368541896343231,
       "time": 1787081400,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
     {
@@ -547,7 +613,7 @@
       "timeframe": "1d",
       "level": 133.7907961331881,
       "time": 1787059800,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "exceed_bars": 8,
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
@@ -559,9 +625,9 @@
       "symbol": "IRM",
       "name": "Iron Mountain",
       "timeframe": "1d",
-      "level": 127.63999430338542,
+      "level": 127.76137358566811,
       "time": 1787059800,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
@@ -573,9 +639,9 @@
       "symbol": "MKC",
       "name": "McCormick & Company",
       "timeframe": "1d",
-      "level": 53.91514980431759,
+      "level": 53.89666493733724,
       "time": 1787059800,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
@@ -587,9 +653,9 @@
       "symbol": "SYF",
       "name": "Synchrony Financial",
       "timeframe": "1d",
-      "level": 79.82563674282021,
+      "level": 79.83164674941807,
       "time": 1787059800,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
@@ -601,9 +667,9 @@
       "symbol": "CRH",
       "name": "CRH plc",
       "timeframe": "1d",
-      "level": 94.85898507379852,
+      "level": 94.85735376623293,
       "time": 1787059800,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
     {
@@ -616,7 +682,7 @@
       "timeframe": "1d",
       "level": 148.66189545820103,
       "time": 1787059800,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
     {
@@ -629,7 +695,7 @@
       "timeframe": "1d",
       "level": 52.26437465349833,
       "time": 1787059800,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-18 16:08:31 UTC"
     },
     {
@@ -642,7 +708,7 @@
       "timeframe": "1d",
       "level": 271.98916646879013,
       "time": 1787059800,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-18 18:04:58 UTC"
     },
     {
@@ -655,7 +721,7 @@
       "timeframe": "1d",
       "level": 32.50000311198988,
       "time": 1787059800,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
     {
@@ -668,8 +734,36 @@
       "timeframe": "1d",
       "level": 32.50000311198988,
       "time": 1787059800,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
+    },
+    {
+      "key": "sp500:FOX:1d:trend_exceed:resistance:1787059800",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "FOX",
+      "name": "Fox Corporation (Class B)",
+      "timeframe": "1d",
+      "level": 57.64676212620091,
+      "time": 1787059800,
+      "seen_at": "2026-08-19 02:15:18 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-08-18 14:19:51 UTC"
+    },
+    {
+      "key": "sp500:FOXA:1d:trend_exceed:resistance:1787059800",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "FOXA",
+      "name": "Fox Corporation (Class A)",
+      "timeframe": "1d",
+      "level": 67.15474018297698,
+      "time": 1787059800,
+      "seen_at": "2026-08-19 02:15:18 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-08-18 14:19:51 UTC"
     },
     {
       "key": "sp500:PPL:1d:trend_touch:resistance:1787059800",
@@ -696,34 +790,6 @@
       "time": 1787059800,
       "seen_at": "2026-08-19 00:17:30 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
-    },
-    {
-      "key": "sp500:FOX:1d:trend_exceed:resistance:1787059800",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "FOX",
-      "name": "Fox Corporation (Class B)",
-      "timeframe": "1d",
-      "level": 57.64676212620091,
-      "time": 1787059800,
-      "seen_at": "2026-08-18 23:26:00 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-08-18 14:19:51 UTC"
-    },
-    {
-      "key": "sp500:FOXA:1d:trend_exceed:resistance:1787059800",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "FOXA",
-      "name": "Fox Corporation (Class A)",
-      "timeframe": "1d",
-      "level": 67.15474018297698,
-      "time": 1787059800,
-      "seen_at": "2026-08-18 23:26:00 UTC",
-      "exceed_bars": 3,
-      "first_seen": "2026-08-18 14:19:51 UTC"
     },
     {
       "key": "sp500:RF:1d:trend_touch:support:1787059800",
@@ -1458,7 +1524,7 @@
       "timeframe": "1d",
       "level": 4408.948050847457,
       "time": 1787011200,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-18 02:11:26 UTC"
     },
     {
@@ -1471,7 +1537,7 @@
       "timeframe": "1d",
       "level": 77.408,
       "time": 1787011200,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
     {
@@ -2233,9 +2299,9 @@
       "symbol": "TECH",
       "name": "Bio-Techne",
       "timeframe": "1d",
-      "level": 72.52894235164561,
+      "level": 72.47564453774311,
       "time": 1786973400,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-17 16:23:18 UTC"
     },
     {
@@ -2246,9 +2312,9 @@
       "symbol": "CL",
       "name": "Colgate-Palmolive",
       "timeframe": "1d",
-      "level": 90.10549077853351,
+      "level": 90.09249782562256,
       "time": 1786973400,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-17 18:06:37 UTC"
     },
     {
@@ -3411,7 +3477,7 @@
       "timeframe": "1h",
       "level": 184.75285121372767,
       "time": 1786735800,
-      "seen_at": "2026-08-19 00:17:30 UTC",
+      "seen_at": "2026-08-19 02:15:18 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -6573,73 +6639,6 @@
       "time": 1786564800,
       "seen_at": "2026-08-13 12:55:15 UTC",
       "exceed_bars": 8,
-      "first_seen": "2026-08-12 21:18:36 UTC"
-    },
-    {
-      "key": "sp500:MRNA:1h:trend_exceed:resistance:1786564285",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "MRNA",
-      "name": "Moderna",
-      "timeframe": "1h",
-      "level": 60.61849453024668,
-      "time": 1786564285,
-      "seen_at": "2026-08-12 20:06:02 UTC",
-      "exceed_bars": 8,
-      "first_seen": "2026-08-12 20:06:02 UTC"
-    },
-    {
-      "key": "sp500:EBAY:1h:trend_exceed:support:1786564229",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "EBAY",
-      "name": "eBay",
-      "timeframe": "1h",
-      "level": 103.12158425071023,
-      "time": 1786564229,
-      "seen_at": "2026-08-12 20:06:02 UTC",
-      "exceed_bars": 6,
-      "first_seen": "2026-08-12 20:06:02 UTC"
-    },
-    {
-      "key": "sp500:ITW:1h:trend_touch:resistance:1786563000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "ITW",
-      "name": "Illinois Tool Works",
-      "timeframe": "1h",
-      "level": 293.6203347482989,
-      "time": 1786563000,
-      "seen_at": "2026-08-13 12:55:15 UTC",
-      "first_seen": "2026-08-12 20:06:02 UTC"
-    },
-    {
-      "key": "sp500:TECH:1h:trend_touch:resistance:1786563000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "TECH",
-      "name": "Bio-Techne",
-      "timeframe": "1h",
-      "level": 72.34059518070545,
-      "time": 1786563000,
-      "seen_at": "2026-08-13 12:55:15 UTC",
-      "first_seen": "2026-08-12 20:06:02 UTC"
-    },
-    {
-      "key": "ndx100:CHTR:1h:trend_touch:support:1786563000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "CHTR",
-      "name": "Charter Communications",
-      "timeframe": "1h",
-      "level": 149.95959659498564,
-      "time": 1786563000,
-      "seen_at": "2026-08-13 12:55:15 UTC",
       "first_seen": "2026-08-12 21:18:36 UTC"
     }
   ]
