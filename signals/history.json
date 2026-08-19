@@ -1,8 +1,115 @@
 {
-  "updated_at": "2026-08-19 18:25:01 UTC",
+  "updated_at": "2026-08-19 19:14:26 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "sp500:BF-B:1h:trend_exceed:resistance:1787165761",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "BF-B",
+      "name": "BrownâForman",
+      "timeframe": "1h",
+      "level": 28.304703880758847,
+      "time": 1787165761,
+      "seen_at": "2026-08-19 19:14:26 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-08-19 19:14:26 UTC"
+    },
+    {
+      "key": "sp500:KEY:1h:trend_exceed:support:1787165727",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "KEY",
+      "name": "KeyCorp",
+      "timeframe": "1h",
+      "level": 22.324756837660267,
+      "time": 1787165727,
+      "seen_at": "2026-08-19 19:14:26 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-08-19 19:14:26 UTC"
+    },
+    {
+      "key": "sp500:PGR:1h:trend_exceed:resistance:1787165573",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "PGR",
+      "name": "Progressive Corporation",
+      "timeframe": "1h",
+      "level": 216.68378963985958,
+      "time": 1787165573,
+      "seen_at": "2026-08-19 19:14:26 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-08-19 19:14:26 UTC"
+    },
+    {
+      "key": "dji30:IBM:1h:trend_touch:resistance:1787164200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "dji30",
+      "symbol": "IBM",
+      "name": "International Business Machines Corporation",
+      "timeframe": "1h",
+      "level": 237.39358450797607,
+      "time": 1787164200,
+      "seen_at": "2026-08-19 19:14:26 UTC",
+      "first_seen": "2026-08-19 19:14:26 UTC"
+    },
+    {
+      "key": "sp500:EG:1h:trend_touch:support:1787164200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "EG",
+      "name": "Everest Group",
+      "timeframe": "1h",
+      "level": 365.9083477300909,
+      "time": 1787164200,
+      "seen_at": "2026-08-19 19:14:26 UTC",
+      "first_seen": "2026-08-19 19:14:26 UTC"
+    },
+    {
+      "key": "sp500:IBM:1h:trend_touch:resistance:1787164200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "IBM",
+      "name": "IBM",
+      "timeframe": "1h",
+      "level": 237.39358450797607,
+      "time": 1787164200,
+      "seen_at": "2026-08-19 19:14:26 UTC",
+      "first_seen": "2026-08-19 19:14:26 UTC"
+    },
+    {
+      "key": "sp500:PGR:1h:trend_touch:resistance:1787164200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "PGR",
+      "name": "Progressive Corporation",
+      "timeframe": "1h",
+      "level": 216.73482561541033,
+      "time": 1787164200,
+      "seen_at": "2026-08-19 19:14:26 UTC",
+      "first_seen": "2026-08-19 19:14:26 UTC"
+    },
+    {
+      "key": "sp500:SPG:1h:trend_touch:resistance:1787164200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "SPG",
+      "name": "Simon Property Group",
+      "timeframe": "1h",
+      "level": 223.39349728538878,
+      "time": 1787164200,
+      "seen_at": "2026-08-19 19:14:26 UTC",
+      "first_seen": "2026-08-19 19:14:26 UTC"
+    },
     {
       "key": "sp500:BF-B:1h:trend_exceed:resistance:1787162745",
       "kind": "trend_exceed",
@@ -83,7 +190,7 @@
       "timeframe": "1h",
       "level": 66618.30948275862,
       "time": 1787162400,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-19 18:25:01 UTC"
     },
@@ -97,8 +204,22 @@
       "timeframe": "1h",
       "level": 0.4647081632653062,
       "time": 1787162400,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "exceed_bars": 3,
+      "first_seen": "2026-08-19 18:25:01 UTC"
+    },
+    {
+      "key": "crypto:XRPUSDT:1h:trend_exceed:resistance:1787162400",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "XRPUSDT",
+      "name": "XRP",
+      "timeframe": "1h",
+      "level": 1.059209287429944,
+      "time": 1787162400,
+      "seen_at": "2026-08-19 19:14:26 UTC",
+      "exceed_bars": 4,
       "first_seen": "2026-08-19 18:25:01 UTC"
     },
     {
@@ -113,20 +234,6 @@
       "time": 1787162400,
       "seen_at": "2026-08-19 18:25:01 UTC",
       "exceed_bars": 5,
-      "first_seen": "2026-08-19 18:25:01 UTC"
-    },
-    {
-      "key": "crypto:XRPUSDT:1h:trend_exceed:resistance:1787162400",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "XRPUSDT",
-      "name": "XRP",
-      "timeframe": "1h",
-      "level": 1.059209287429944,
-      "time": 1787162400,
-      "seen_at": "2026-08-19 18:25:01 UTC",
-      "exceed_bars": 4,
       "first_seen": "2026-08-19 18:25:01 UTC"
     },
     {
@@ -706,7 +813,7 @@
       "timeframe": "1d",
       "level": 94.91879968453716,
       "time": 1787146200,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
@@ -720,7 +827,7 @@
       "timeframe": "1d",
       "level": 148.6595532096006,
       "time": 1787146200,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
@@ -734,7 +841,7 @@
       "timeframe": "1d",
       "level": 53.905907370827414,
       "time": 1787146200,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
@@ -748,7 +855,7 @@
       "timeframe": "1d",
       "level": 26.86796984486141,
       "time": 1787146200,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
@@ -762,7 +869,7 @@
       "timeframe": "1d",
       "level": 79.82070718684666,
       "time": 1787146200,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
@@ -776,7 +883,7 @@
       "timeframe": "1d",
       "level": 210.5055546000626,
       "time": 1787146200,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
     {
@@ -789,7 +896,7 @@
       "timeframe": "1d",
       "level": 210.5055546000626,
       "time": 1787146200,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
     {
@@ -802,7 +909,7 @@
       "timeframe": "1d",
       "level": 115.3926054058653,
       "time": 1787146200,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "first_seen": "2026-08-19 15:11:45 UTC"
     },
     {
@@ -813,9 +920,9 @@
       "symbol": "BMY",
       "name": "Bristol Myers Squibb",
       "timeframe": "1d",
-      "level": 68.05711036985102,
+      "level": 68.05716191805325,
       "time": 1787146200,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "first_seen": "2026-08-19 15:11:45 UTC"
     },
     {
@@ -828,7 +935,7 @@
       "timeframe": "1d",
       "level": 582.7917170120497,
       "time": 1787146200,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "first_seen": "2026-08-19 15:11:45 UTC"
     },
     {
@@ -839,9 +946,9 @@
       "symbol": "AXON",
       "name": "Axon Enterprise Inc.",
       "timeframe": "1d",
-      "level": 637.9292116165161,
+      "level": 642.4261186626595,
       "time": 1787146200,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
     {
@@ -852,10 +959,63 @@
       "symbol": "AXON",
       "name": "Axon Enterprise",
       "timeframe": "1d",
-      "level": 637.8728782442719,
+      "level": 642.4261186626595,
       "time": 1787146200,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "first_seen": "2026-08-19 14:19:34 UTC"
+    },
+    {
+      "key": "ndx100:BKNG:1d:trend_touch:resistance:1787146200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "ndx100",
+      "symbol": "BKNG",
+      "name": "Booking Holdings",
+      "timeframe": "1d",
+      "level": 215.4175060956906,
+      "time": 1787146200,
+      "seen_at": "2026-08-19 19:14:26 UTC",
+      "first_seen": "2026-08-19 16:07:26 UTC"
+    },
+    {
+      "key": "sp500:IRM:1d:trend_exceed:resistance:1787146200",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "IRM",
+      "name": "Iron Mountain",
+      "timeframe": "1d",
+      "level": 127.44443879304109,
+      "time": 1787146200,
+      "seen_at": "2026-08-19 19:14:26 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-08-19 15:11:45 UTC"
+    },
+    {
+      "key": "sp500:AOS:1d:trend_touch:resistance:1787146200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "AOS",
+      "name": "A. O. Smith",
+      "timeframe": "1d",
+      "level": 63.268037100818674,
+      "time": 1787146200,
+      "seen_at": "2026-08-19 19:14:26 UTC",
+      "first_seen": "2026-08-19 16:07:26 UTC"
+    },
+    {
+      "key": "sp500:IRM:1d:trend_touch:support:1787146200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "IRM",
+      "name": "Iron Mountain",
+      "timeframe": "1d",
+      "level": 121.57222493489584,
+      "time": 1787146200,
+      "seen_at": "2026-08-19 19:14:26 UTC",
+      "first_seen": "2026-08-19 15:11:45 UTC"
     },
     {
       "key": "sp500:SPGI:1d:trend_touch:resistance:1787146200",
@@ -869,19 +1029,6 @@
       "time": 1787146200,
       "seen_at": "2026-08-19 18:25:01 UTC",
       "first_seen": "2026-08-19 17:09:28 UTC"
-    },
-    {
-      "key": "ndx100:BKNG:1d:trend_touch:resistance:1787146200",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "BKNG",
-      "name": "Booking Holdings",
-      "timeframe": "1d",
-      "level": 215.4175060956906,
-      "time": 1787146200,
-      "seen_at": "2026-08-19 18:25:01 UTC",
-      "first_seen": "2026-08-19 16:07:26 UTC"
     },
     {
       "key": "sp500:BKNG:1d:trend_touch:resistance:1787146200",
@@ -949,46 +1096,6 @@
       "time": 1787146200,
       "seen_at": "2026-08-19 17:09:28 UTC",
       "first_seen": "2026-08-19 17:09:28 UTC"
-    },
-    {
-      "key": "sp500:IRM:1d:trend_exceed:resistance:1787146200",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "IRM",
-      "name": "Iron Mountain",
-      "timeframe": "1d",
-      "level": 127.44443879304109,
-      "time": 1787146200,
-      "seen_at": "2026-08-19 16:07:26 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-08-19 15:11:45 UTC"
-    },
-    {
-      "key": "sp500:AOS:1d:trend_touch:resistance:1787146200",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "AOS",
-      "name": "A. O. Smith",
-      "timeframe": "1d",
-      "level": 63.268037100818674,
-      "time": 1787146200,
-      "seen_at": "2026-08-19 16:07:26 UTC",
-      "first_seen": "2026-08-19 16:07:26 UTC"
-    },
-    {
-      "key": "sp500:IRM:1d:trend_touch:support:1787146200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "IRM",
-      "name": "Iron Mountain",
-      "timeframe": "1d",
-      "level": 121.57222493489584,
-      "time": 1787146200,
-      "seen_at": "2026-08-19 15:11:45 UTC",
-      "first_seen": "2026-08-19 15:11:45 UTC"
     },
     {
       "key": "sp500:HII:1h:ar_dr_touch:DR:1787146200",
@@ -1807,7 +1914,7 @@
       "timeframe": "1d",
       "level": 0.18229159663865546,
       "time": 1787097600,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "first_seen": "2026-08-19 16:07:26 UTC"
     },
     {
@@ -1820,7 +1927,7 @@
       "timeframe": "1d",
       "level": 1.000475,
       "time": 1787097600,
-      "seen_at": "2026-08-19 17:09:28 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "first_seen": "2026-08-19 17:09:28 UTC"
     },
     {
@@ -2381,7 +2488,7 @@
       "timeframe": "1d",
       "level": 94.85735376623293,
       "time": 1787059800,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
     {
@@ -2394,7 +2501,7 @@
       "timeframe": "1d",
       "level": 148.66189545820103,
       "time": 1787059800,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
     {
@@ -2407,7 +2514,7 @@
       "timeframe": "1d",
       "level": 36.5189457943565,
       "time": 1787059800,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
     {
@@ -5245,7 +5352,7 @@
       "timeframe": "1h",
       "level": 184.75285121372767,
       "time": 1786735800,
-      "seen_at": "2026-08-19 18:25:01 UTC",
+      "seen_at": "2026-08-19 19:14:26 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -6528,112 +6635,6 @@
       "seen_at": "2026-08-14 08:56:35 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-14 08:56:35 UTC"
-    },
-    {
-      "key": "crypto:PLUMEUSDT:1h:trend_touch:resistance:1786690800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "PLUMEUSDT",
-      "name": "PLUME",
-      "timeframe": "1h",
-      "level": 0.013174154411764706,
-      "time": 1786690800,
-      "seen_at": "2026-08-14 08:56:35 UTC",
-      "first_seen": "2026-08-14 08:56:35 UTC"
-    },
-    {
-      "key": "crypto:SNDKBUSDT:1h:trend_touch:resistance:1786690800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "SNDKBUSDT",
-      "name": "SNDKB",
-      "timeframe": "1h",
-      "level": 1565.88143220339,
-      "time": 1786690800,
-      "seen_at": "2026-08-14 07:21:34 UTC",
-      "first_seen": "2026-08-14 07:21:34 UTC"
-    },
-    {
-      "key": "crypto:HOMEUSDT:1h:trend_exceed:resistance:1786683600",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "HOMEUSDT",
-      "name": "HOME",
-      "timeframe": "1h",
-      "level": 0.011136190119760478,
-      "time": 1786683600,
-      "seen_at": "2026-08-14 05:42:34 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-08-14 05:42:34 UTC"
-    },
-    {
-      "key": "crypto:SPCXBUSDT:1h:trend_touch:support:1786683600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "crypto",
-      "symbol": "SPCXBUSDT",
-      "name": "SPCXB",
-      "timeframe": "1h",
-      "level": 142.01644444444446,
-      "time": 1786683600,
-      "seen_at": "2026-08-14 05:42:34 UTC",
-      "first_seen": "2026-08-14 05:42:34 UTC"
-    },
-    {
-      "key": "crypto:AVAXUSDT:1h:trend_touch:support:1786676400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "crypto",
-      "symbol": "AVAXUSDT",
-      "name": "AVAX",
-      "timeframe": "1h",
-      "level": 6.423469387755102,
-      "time": 1786676400,
-      "seen_at": "2026-08-14 03:51:59 UTC",
-      "first_seen": "2026-08-14 03:51:59 UTC"
-    },
-    {
-      "key": "crypto:CRCLBUSDT:1h:trend_touch:resistance:1786676400",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "CRCLBUSDT",
-      "name": "CRCLB",
-      "timeframe": "1h",
-      "level": 76.05483606557377,
-      "time": 1786676400,
-      "seen_at": "2026-08-14 03:51:59 UTC",
-      "first_seen": "2026-08-14 03:51:59 UTC"
-    },
-    {
-      "key": "fx:USDCNH=X:1h:trend_touch:resistance:1786676400",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "fx",
-      "symbol": "USDCNH=X",
-      "name": "USD/CNH",
-      "timeframe": "1h",
-      "level": 6.745736721718665,
-      "time": 1786676400,
-      "seen_at": "2026-08-14 03:51:59 UTC",
-      "first_seen": "2026-08-14 03:51:59 UTC"
-    },
-    {
-      "key": "crypto:ACEUSDT:1d:ar_dr_touch:AR:1786665600",
-      "kind": "ar_dr_touch",
-      "type": "AR",
-      "group": "crypto",
-      "symbol": "ACEUSDT",
-      "name": "ACE",
-      "timeframe": "1d",
-      "level": 0.243,
-      "time": 1786665600,
-      "seen_at": "2026-08-15 23:22:10 UTC",
-      "bars_after_signal": 184,
-      "first_seen": "2026-08-14 12:20:03 UTC"
     }
   ]
 }
