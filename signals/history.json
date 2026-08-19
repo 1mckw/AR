@@ -1,8 +1,21 @@
 {
-  "updated_at": "2026-08-19 11:59:36 UTC",
+  "updated_at": "2026-08-19 12:23:05 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "crypto:DOGEUSDT:1h:trend_touch:resistance:1787140800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "DOGEUSDT",
+      "name": "DOGE",
+      "timeframe": "1h",
+      "level": 0.07024695819935692,
+      "time": 1787140800,
+      "seen_at": "2026-08-19 12:23:05 UTC",
+      "first_seen": "2026-08-19 12:23:05 UTC"
+    },
     {
       "key": "fx:EURUSD=X:1h:trend_touch:resistance:1787133600",
       "kind": "trend_touch",
@@ -265,7 +278,7 @@
       "timeframe": "1h",
       "level": 209.28402112877887,
       "time": 1787083200,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
@@ -279,7 +292,7 @@
       "timeframe": "1h",
       "level": 209.28402112877887,
       "time": 1787083200,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-18 20:58:26 UTC"
     },
@@ -320,7 +333,7 @@
       "timeframe": "1h",
       "level": 47.48246220179966,
       "time": 1787081400,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
     {
@@ -333,7 +346,7 @@
       "timeframe": "1h",
       "level": 73.98879195704605,
       "time": 1787081400,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
     {
@@ -346,7 +359,7 @@
       "timeframe": "1h",
       "level": 47.48246220179966,
       "time": 1787081400,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
     {
@@ -359,7 +372,7 @@
       "timeframe": "1h",
       "level": 179.11785125732422,
       "time": 1787081400,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
     {
@@ -743,7 +756,7 @@
       "timeframe": "1d",
       "level": 133.7907961331881,
       "time": 1787059800,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "exceed_bars": 8,
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
@@ -757,7 +770,7 @@
       "timeframe": "1d",
       "level": 53.91514980431759,
       "time": 1787059800,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
@@ -769,9 +782,9 @@
       "symbol": "SYF",
       "name": "Synchrony Financial",
       "timeframe": "1d",
-      "level": 79.82685224977259,
+      "level": 79.82563674282021,
       "time": 1787059800,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
@@ -783,9 +796,9 @@
       "symbol": "CRH",
       "name": "CRH plc",
       "timeframe": "1d",
-      "level": 94.85735376623293,
+      "level": 94.85898507379852,
       "time": 1787059800,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
     {
@@ -798,7 +811,7 @@
       "timeframe": "1d",
       "level": 271.98916646879013,
       "time": 1787059800,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "first_seen": "2026-08-18 18:04:58 UTC"
     },
     {
@@ -811,7 +824,7 @@
       "timeframe": "1d",
       "level": 148.66189545820103,
       "time": 1787059800,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
     {
@@ -822,9 +835,9 @@
       "symbol": "IRM",
       "name": "Iron Mountain",
       "timeframe": "1d",
-      "level": 127.63999430338542,
+      "level": 127.76137358566811,
       "time": 1787059800,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
@@ -838,7 +851,7 @@
       "timeframe": "1d",
       "level": 32.50000311198988,
       "time": 1787059800,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
     {
@@ -849,9 +862,9 @@
       "symbol": "TFC",
       "name": "Truist Financial",
       "timeframe": "1d",
-      "level": 52.287608353987984,
+      "level": 52.26437465349833,
       "time": 1787059800,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "first_seen": "2026-08-18 16:08:31 UTC"
     },
     {
@@ -864,7 +877,7 @@
       "timeframe": "1d",
       "level": 32.50000311198988,
       "time": 1787059800,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "first_seen": "2026-08-18 20:12:35 UTC"
     },
     {
@@ -1654,7 +1667,7 @@
       "timeframe": "1d",
       "level": 4408.948050847457,
       "time": 1787011200,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "first_seen": "2026-08-18 02:11:26 UTC"
     },
     {
@@ -2431,7 +2444,7 @@
       "timeframe": "1d",
       "level": 72.47564453774311,
       "time": 1786973400,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "first_seen": "2026-08-17 16:23:18 UTC"
     },
     {
@@ -2444,7 +2457,7 @@
       "timeframe": "1d",
       "level": 90.10549077853351,
       "time": 1786973400,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "first_seen": "2026-08-17 18:06:37 UTC"
     },
     {
@@ -3607,7 +3620,7 @@
       "timeframe": "1h",
       "level": 184.75285121372767,
       "time": 1786735800,
-      "seen_at": "2026-08-19 11:59:36 UTC",
+      "seen_at": "2026-08-19 12:23:05 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -6620,19 +6633,6 @@
       "timeframe": "1h",
       "level": 70.55857413155692,
       "time": 1786627800,
-      "seen_at": "2026-08-13 14:30:26 UTC",
-      "first_seen": "2026-08-13 14:30:26 UTC"
-    },
-    {
-      "key": "crypto:SNDKBUSDT:1h:trend_touch:resistance:1786626000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "SNDKBUSDT",
-      "name": "SNDKB",
-      "timeframe": "1h",
-      "level": 1413.5783561643836,
-      "time": 1786626000,
       "seen_at": "2026-08-13 14:30:26 UTC",
       "first_seen": "2026-08-13 14:30:26 UTC"
     }
