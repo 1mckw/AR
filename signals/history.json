@@ -1,8 +1,34 @@
 {
-  "updated_at": "2026-08-20 06:02:59 UTC",
+  "updated_at": "2026-08-20 07:29:26 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "crypto:BCHUSDT:1h:trend_touch:resistance:1787209200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "BCHUSDT",
+      "name": "BCH",
+      "timeframe": "1h",
+      "level": 214.17862903225807,
+      "time": 1787209200,
+      "seen_at": "2026-08-20 07:29:26 UTC",
+      "first_seen": "2026-08-20 07:29:26 UTC"
+    },
+    {
+      "key": "crypto:BTCUSDT:1h:trend_touch:resistance:1787209200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "BTCUSDT",
+      "name": "BTC",
+      "timeframe": "1h",
+      "level": 69977.96051546391,
+      "time": 1787209200,
+      "seen_at": "2026-08-20 07:29:26 UTC",
+      "first_seen": "2026-08-20 07:29:26 UTC"
+    },
     {
       "key": "crypto:TRUMPUSDT:1h:trend_exceed:resistance:1787187600",
       "kind": "trend_exceed",
@@ -115,20 +141,6 @@
       "first_seen": "2026-08-19 22:24:51 UTC"
     },
     {
-      "key": "ndx100:CPRT:1h:trend_exceed:resistance:1787169600",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "CPRT",
-      "name": "Copart",
-      "timeframe": "1h",
-      "level": 33.68862581253052,
-      "time": 1787169600,
-      "seen_at": "2026-08-20 06:02:59 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-08-19 20:22:43 UTC"
-    },
-    {
       "key": "sp500:BF-B:1h:trend_exceed:resistance:1787169600",
       "kind": "trend_exceed",
       "type": "resistance",
@@ -138,7 +150,7 @@
       "timeframe": "1h",
       "level": 28.297645007862766,
       "time": 1787169600,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-19 20:22:43 UTC"
     },
@@ -152,7 +164,7 @@
       "timeframe": "1h",
       "level": 33.68862581253052,
       "time": 1787169600,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-19 20:22:43 UTC"
     },
@@ -166,7 +178,7 @@
       "timeframe": "1h",
       "level": 22.3266116726783,
       "time": 1787169600,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "exceed_bars": 6,
       "first_seen": "2026-08-19 20:22:43 UTC"
     },
@@ -180,7 +192,7 @@
       "timeframe": "1h",
       "level": 63.59272731434215,
       "time": 1787169600,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-19 21:08:02 UTC"
     },
@@ -194,7 +206,7 @@
       "timeframe": "1h",
       "level": 216.29724135765662,
       "time": 1787169600,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-19 21:08:02 UTC"
     },
@@ -208,9 +220,23 @@
       "timeframe": "1h",
       "level": 230.0087989358341,
       "time": 1787169600,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-19 21:08:02 UTC"
+    },
+    {
+      "key": "ndx100:CPRT:1h:trend_exceed:resistance:1787169600",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "ndx100",
+      "symbol": "CPRT",
+      "name": "Copart",
+      "timeframe": "1h",
+      "level": 33.68862581253052,
+      "time": 1787169600,
+      "seen_at": "2026-08-20 06:02:59 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-08-19 20:22:43 UTC"
     },
     {
       "key": "crypto:REUSDT:1h:trend_exceed:resistance:1787169600",
@@ -266,19 +292,6 @@
       "first_seen": "2026-08-19 21:08:02 UTC"
     },
     {
-      "key": "ndx100:BKR:1h:trend_touch:support:1787167800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "BKR",
-      "name": "Baker Hughes",
-      "timeframe": "1h",
-      "level": 64.17985160752099,
-      "time": 1787167800,
-      "seen_at": "2026-08-20 06:02:59 UTC",
-      "first_seen": "2026-08-19 20:22:43 UTC"
-    },
-    {
       "key": "sp500:ABBV:1h:trend_touch:resistance:1787167800",
       "kind": "trend_touch",
       "type": "resistance",
@@ -288,7 +301,7 @@
       "timeframe": "1h",
       "level": 266.3482562315117,
       "time": 1787167800,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 20:22:43 UTC"
     },
     {
@@ -301,7 +314,7 @@
       "timeframe": "1h",
       "level": 63.60393940318715,
       "time": 1787167800,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 20:22:43 UTC"
     },
     {
@@ -314,7 +327,7 @@
       "timeframe": "1h",
       "level": 64.17985160752099,
       "time": 1787167800,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 20:22:43 UTC"
     },
     {
@@ -327,7 +340,7 @@
       "timeframe": "1h",
       "level": 363.65775175433856,
       "time": 1787167800,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 20:22:43 UTC"
     },
     {
@@ -340,7 +353,7 @@
       "timeframe": "1h",
       "level": 392.16211419356495,
       "time": 1787167800,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 20:22:43 UTC"
     },
     {
@@ -353,7 +366,7 @@
       "timeframe": "1h",
       "level": 95.91871181150682,
       "time": 1787167800,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 20:22:43 UTC"
     },
     {
@@ -366,7 +379,7 @@
       "timeframe": "1h",
       "level": 62.991485698803054,
       "time": 1787167800,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 20:22:43 UTC"
     },
     {
@@ -379,7 +392,7 @@
       "timeframe": "1h",
       "level": 91.69166946411133,
       "time": 1787167800,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 20:22:43 UTC"
     },
     {
@@ -392,8 +405,21 @@
       "timeframe": "1h",
       "level": 93.35494225324985,
       "time": 1787167800,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 21:08:02 UTC"
+    },
+    {
+      "key": "ndx100:BKR:1h:trend_touch:support:1787167800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "BKR",
+      "name": "Baker Hughes",
+      "timeframe": "1h",
+      "level": 64.17985160752099,
+      "time": 1787167800,
+      "seen_at": "2026-08-20 06:02:59 UTC",
+      "first_seen": "2026-08-19 20:22:43 UTC"
     },
     {
       "key": "sp500:COF:1h:trend_touch:support:1787167800",
@@ -1388,9 +1414,9 @@
       "symbol": "CRH",
       "name": "CRH plc",
       "timeframe": "1d",
-      "level": 94.9205669343999,
+      "level": 94.91879968453716,
       "time": 1787146200,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
@@ -1404,7 +1430,7 @@
       "timeframe": "1d",
       "level": 148.6595532096006,
       "time": 1787146200,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
@@ -1416,9 +1442,9 @@
       "symbol": "MKC",
       "name": "McCormick & Company",
       "timeframe": "1d",
-      "level": 53.88742250384706,
+      "level": 53.905907370827414,
       "time": 1787146200,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
@@ -1432,7 +1458,7 @@
       "timeframe": "1d",
       "level": 26.86796984486141,
       "time": 1787146200,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
@@ -1446,7 +1472,7 @@
       "timeframe": "1d",
       "level": 79.82070718684666,
       "time": 1787146200,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
@@ -1460,7 +1486,7 @@
       "timeframe": "1d",
       "level": 210.5055546000626,
       "time": 1787146200,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
     {
@@ -1473,7 +1499,7 @@
       "timeframe": "1d",
       "level": 210.5055546000626,
       "time": 1787146200,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
     {
@@ -1486,7 +1512,7 @@
       "timeframe": "1d",
       "level": 115.3926054058653,
       "time": 1787146200,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 15:11:45 UTC"
     },
     {
@@ -1497,9 +1523,9 @@
       "symbol": "BMY",
       "name": "Bristol Myers Squibb",
       "timeframe": "1d",
-      "level": 68.05711036985102,
+      "level": 68.05716191805325,
       "time": 1787146200,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 15:11:45 UTC"
     },
     {
@@ -1512,7 +1538,7 @@
       "timeframe": "1d",
       "level": 582.7917170120497,
       "time": 1787146200,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 15:11:45 UTC"
     },
     {
@@ -1525,7 +1551,7 @@
       "timeframe": "1d",
       "level": 127.44443879304109,
       "time": 1787146200,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-19 15:11:45 UTC"
     },
@@ -1539,7 +1565,7 @@
       "timeframe": "1d",
       "level": 215.4175060956906,
       "time": 1787146200,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 18:25:01 UTC"
     },
     {
@@ -1552,8 +1578,21 @@
       "timeframe": "1d",
       "level": 215.4175060956906,
       "time": 1787146200,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 16:07:26 UTC"
+    },
+    {
+      "key": "sp500:SPGI:1d:trend_touch:resistance:1787146200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "SPGI",
+      "name": "S&P Global",
+      "timeframe": "1d",
+      "level": 432.6758893427958,
+      "time": 1787146200,
+      "seen_at": "2026-08-20 07:29:26 UTC",
+      "first_seen": "2026-08-19 17:09:28 UTC"
     },
     {
       "key": "ndx100:HON:1d:trend_touch:support:1787146200",
@@ -1580,19 +1619,6 @@
       "time": 1787146200,
       "seen_at": "2026-08-20 06:02:59 UTC",
       "first_seen": "2026-08-19 21:08:02 UTC"
-    },
-    {
-      "key": "sp500:SPGI:1d:trend_touch:resistance:1787146200",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "SPGI",
-      "name": "S&P Global",
-      "timeframe": "1d",
-      "level": 432.6758893427958,
-      "time": 1787146200,
-      "seen_at": "2026-08-20 05:13:58 UTC",
-      "first_seen": "2026-08-19 17:09:28 UTC"
     },
     {
       "key": "sp500:FOX:1d:trend_exceed:resistance:1787146200",
@@ -2543,7 +2569,7 @@
       "timeframe": "1d",
       "level": 1.00053,
       "time": 1787097600,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-19 17:09:28 UTC"
     },
     {
@@ -3115,9 +3141,9 @@
       "symbol": "CRH",
       "name": "CRH plc",
       "timeframe": "1d",
-      "level": 94.85898507379852,
+      "level": 94.85735376623293,
       "time": 1787059800,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
     {
@@ -3130,7 +3156,7 @@
       "timeframe": "1d",
       "level": 148.66189545820103,
       "time": 1787059800,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-18 14:19:51 UTC"
     },
     {
@@ -5981,7 +6007,7 @@
       "timeframe": "1h",
       "level": 184.75285121372767,
       "time": 1786735800,
-      "seen_at": "2026-08-20 06:02:59 UTC",
+      "seen_at": "2026-08-20 07:29:26 UTC",
       "first_seen": "2026-08-14 20:36:36 UTC"
     },
     {
@@ -6614,34 +6640,6 @@
       "time": 1786714200,
       "seen_at": "2026-08-18 13:29:15 UTC",
       "exceed_bars": 2,
-      "first_seen": "2026-08-14 14:03:16 UTC"
-    },
-    {
-      "key": "ndx100:TEAM:1d:trend_exceed:resistance:1786714200",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "TEAM",
-      "name": "Atlassian",
-      "timeframe": "1d",
-      "level": 134.1846419114333,
-      "time": 1786714200,
-      "seen_at": "2026-08-18 13:29:15 UTC",
-      "exceed_bars": 6,
-      "first_seen": "2026-08-14 14:03:16 UTC"
-    },
-    {
-      "key": "ndx100:WBD:1d:trend_exceed:resistance:1786714200",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "WBD",
-      "name": "Warner Bros. Discovery",
-      "timeframe": "1d",
-      "level": 27.21666932106018,
-      "time": 1786714200,
-      "seen_at": "2026-08-18 13:29:15 UTC",
-      "exceed_bars": 3,
       "first_seen": "2026-08-14 14:03:16 UTC"
     }
   ]
