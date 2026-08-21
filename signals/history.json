@@ -1,8 +1,21 @@
 {
-  "updated_at": "2026-08-21 05:40:29 UTC",
+  "updated_at": "2026-08-21 06:25:34 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "crypto:SUIUSDT:1h:trend_touch:resistance:1787292000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "SUIUSDT",
+      "name": "SUI",
+      "timeframe": "1h",
+      "level": 0.7743285382830625,
+      "time": 1787292000,
+      "seen_at": "2026-08-21 06:25:34 UTC",
+      "first_seen": "2026-08-21 06:25:34 UTC"
+    },
     {
       "key": "crypto:AVAXUSDT:1h:trend_touch:resistance:1787284800",
       "kind": "trend_touch",
@@ -67,7 +80,7 @@
       "timeframe": "1d",
       "level": 0.11439230769230771,
       "time": 1787270400,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 02:08:17 UTC"
     },
@@ -108,7 +121,7 @@
       "timeframe": "1h",
       "level": 229.87332153320312,
       "time": 1787256000,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-20 21:08:39 UTC"
     },
@@ -122,7 +135,7 @@
       "timeframe": "1h",
       "level": 353.72535062683414,
       "time": 1787256000,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "exceed_bars": 8,
       "first_seen": "2026-08-20 21:08:39 UTC"
     },
@@ -164,7 +177,7 @@
       "timeframe": "1h",
       "level": 404.7853306361607,
       "time": 1787254200,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 20:07:30 UTC"
     },
     {
@@ -177,7 +190,7 @@
       "timeframe": "1h",
       "level": 222.74467926564571,
       "time": 1787254200,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 21:08:39 UTC"
     },
     {
@@ -190,7 +203,7 @@
       "timeframe": "1h",
       "level": 99.5668056591137,
       "time": 1787254200,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 21:08:39 UTC"
     },
     {
@@ -203,7 +216,7 @@
       "timeframe": "1h",
       "level": 89.60737330187364,
       "time": 1787254200,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 21:08:39 UTC"
     },
     {
@@ -216,7 +229,7 @@
       "timeframe": "1h",
       "level": 23.20513801052146,
       "time": 1787254200,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 21:08:39 UTC"
     },
     {
@@ -229,7 +242,7 @@
       "timeframe": "1h",
       "level": 222.74467926564571,
       "time": 1787254200,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 21:08:39 UTC"
     },
     {
@@ -242,7 +255,7 @@
       "timeframe": "1h",
       "level": 140.5983662507972,
       "time": 1787254200,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 21:08:39 UTC"
     },
     {
@@ -255,7 +268,7 @@
       "timeframe": "1h",
       "level": 270.6308752972147,
       "time": 1787254200,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 21:08:39 UTC"
     },
     {
@@ -1040,7 +1053,7 @@
       "timeframe": "1d",
       "level": 210.5030852416351,
       "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
@@ -1052,9 +1065,9 @@
       "symbol": "CRH",
       "name": "CRH plc",
       "timeframe": "1d",
-      "level": 94.98214879500128,
+      "level": 94.98024560284142,
       "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
@@ -1068,7 +1081,7 @@
       "timeframe": "1d",
       "level": 148.65721096100017,
       "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
@@ -1082,7 +1095,7 @@
       "timeframe": "1d",
       "level": 210.5030852416351,
       "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
@@ -1096,7 +1109,7 @@
       "timeframe": "1d",
       "level": 26.848159001123108,
       "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
@@ -1110,7 +1123,7 @@
       "timeframe": "1d",
       "level": 926.863791692275,
       "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -1121,9 +1134,9 @@
       "symbol": "AZO",
       "name": "AutoZone",
       "timeframe": "1d",
-      "level": 2923.932656114255,
+      "level": 2925.039133250957,
       "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -1136,7 +1149,7 @@
       "timeframe": "1d",
       "level": 926.863791692275,
       "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -1147,9 +1160,9 @@
       "symbol": "KR",
       "name": "Kroger",
       "timeframe": "1d",
-      "level": 55.254720805327565,
+      "level": 55.25455283839392,
       "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -1160,9 +1173,9 @@
       "symbol": "LUV",
       "name": "Southwest Airlines",
       "timeframe": "1d",
-      "level": 40.36967163398617,
+      "level": 40.41950769893459,
       "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -1173,9 +1186,9 @@
       "symbol": "PCG",
       "name": "PG&E Corporation",
       "timeframe": "1d",
-      "level": 18.31881253081973,
+      "level": 18.320000648498535,
       "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -1186,9 +1199,9 @@
       "symbol": "TDG",
       "name": "TransDigm Group",
       "timeframe": "1d",
-      "level": 1188.5140524791,
+      "level": 1190.662339529816,
       "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 19:20:30 UTC"
     },
     {
@@ -1199,9 +1212,9 @@
       "symbol": "ADP",
       "name": "ADP",
       "timeframe": "1d",
-      "level": 279.5382431536489,
+      "level": 279.54811877040237,
       "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -1212,9 +1225,49 @@
       "symbol": "ADP",
       "name": "Automatic Data Processing",
       "timeframe": "1d",
-      "level": 279.5382431536489,
+      "level": 279.54811877040237,
       "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
+      "first_seen": "2026-08-20 14:24:40 UTC"
+    },
+    {
+      "key": "sp500:INVH:1d:trend_touch:resistance:1787232600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "INVH",
+      "name": "Invitation Homes",
+      "timeframe": "1d",
+      "level": 30.42404946036961,
+      "time": 1787232600,
+      "seen_at": "2026-08-21 06:25:34 UTC",
+      "first_seen": "2026-08-20 19:20:30 UTC"
+    },
+    {
+      "key": "sp500:WAT:1d:trend_touch:resistance:1787232600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "WAT",
+      "name": "Waters Corporation",
+      "timeframe": "1d",
+      "level": 420.2278351841574,
+      "time": 1787232600,
+      "seen_at": "2026-08-21 06:25:34 UTC",
+      "first_seen": "2026-08-20 16:09:55 UTC"
+    },
+    {
+      "key": "sp500:TJX:1d:trend_exceed:support:1787232600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "TJX",
+      "name": "TJX Companies",
+      "timeframe": "1d",
+      "level": 144.39416918708284,
+      "time": 1787232600,
+      "seen_at": "2026-08-21 06:25:34 UTC",
+      "exceed_bars": 2,
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -1283,32 +1336,6 @@
       "first_seen": "2026-08-20 13:33:31 UTC"
     },
     {
-      "key": "sp500:INVH:1d:trend_touch:resistance:1787232600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "INVH",
-      "name": "Invitation Homes",
-      "timeframe": "1d",
-      "level": 30.42363727092743,
-      "time": 1787232600,
-      "seen_at": "2026-08-21 05:40:29 UTC",
-      "first_seen": "2026-08-20 19:20:30 UTC"
-    },
-    {
-      "key": "sp500:WAT:1d:trend_touch:resistance:1787232600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "WAT",
-      "name": "Waters Corporation",
-      "timeframe": "1d",
-      "level": 420.2278351841574,
-      "time": 1787232600,
-      "seen_at": "2026-08-21 03:36:43 UTC",
-      "first_seen": "2026-08-20 16:09:55 UTC"
-    },
-    {
       "key": "ndx100:SBUX:1d:trend_touch:support:1787232600",
       "kind": "trend_touch",
       "type": "support",
@@ -1360,20 +1387,6 @@
       "time": 1787232600,
       "seen_at": "2026-08-21 03:36:43 UTC",
       "exceed_bars": 5,
-      "first_seen": "2026-08-20 14:24:40 UTC"
-    },
-    {
-      "key": "sp500:TJX:1d:trend_exceed:support:1787232600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "TJX",
-      "name": "TJX Companies",
-      "timeframe": "1d",
-      "level": 144.39416918708284,
-      "time": 1787232600,
-      "seen_at": "2026-08-21 03:36:43 UTC",
-      "exceed_bars": 2,
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -3613,7 +3626,7 @@
       "timeframe": "1d",
       "level": 210.5055546000626,
       "time": 1787146200,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
     {
@@ -3626,7 +3639,7 @@
       "timeframe": "1d",
       "level": 210.5055546000626,
       "time": 1787146200,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-19 14:19:34 UTC"
     },
     {
@@ -3639,7 +3652,7 @@
       "timeframe": "1d",
       "level": 115.3926054058653,
       "time": 1787146200,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-19 15:11:45 UTC"
     },
     {
@@ -3650,9 +3663,9 @@
       "symbol": "BMY",
       "name": "Bristol Myers Squibb",
       "timeframe": "1d",
-      "level": 68.05711036985102,
+      "level": 68.05716191805325,
       "time": 1787146200,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-19 15:11:45 UTC"
     },
     {
@@ -3665,8 +3678,87 @@
       "timeframe": "1d",
       "level": 582.7917170120497,
       "time": 1787146200,
-      "seen_at": "2026-08-21 05:40:29 UTC",
+      "seen_at": "2026-08-21 06:25:34 UTC",
       "first_seen": "2026-08-19 15:11:45 UTC"
+    },
+    {
+      "key": "dji30:HON:1d:trend_touch:support:1787146200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "dji30",
+      "symbol": "HON",
+      "name": "Honeywell International Inc.",
+      "timeframe": "1d",
+      "level": 221.59551693144297,
+      "time": 1787146200,
+      "seen_at": "2026-08-21 06:25:34 UTC",
+      "first_seen": "2026-08-19 21:08:02 UTC"
+    },
+    {
+      "key": "sp500:ALGN:1d:trend_touch:support:1787146200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "ALGN",
+      "name": "Align Technology",
+      "timeframe": "1d",
+      "level": 162.83129087108776,
+      "time": 1787146200,
+      "seen_at": "2026-08-21 06:25:34 UTC",
+      "first_seen": "2026-08-19 21:08:02 UTC"
+    },
+    {
+      "key": "sp500:HON:1d:trend_touch:support:1787146200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "HON",
+      "name": "Honeywell",
+      "timeframe": "1d",
+      "level": 221.59551693144297,
+      "time": 1787146200,
+      "seen_at": "2026-08-21 06:25:34 UTC",
+      "first_seen": "2026-08-19 21:08:02 UTC"
+    },
+    {
+      "key": "ndx100:HON:1d:trend_touch:support:1787146200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "HON",
+      "name": "Honeywell",
+      "timeframe": "1d",
+      "level": 221.59551693144297,
+      "time": 1787146200,
+      "seen_at": "2026-08-21 06:25:34 UTC",
+      "first_seen": "2026-08-19 21:08:02 UTC"
+    },
+    {
+      "key": "sp500:TJX:1d:trend_touch:support:1787146200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "TJX",
+      "name": "TJX Companies",
+      "timeframe": "1d",
+      "level": 144.3052047927017,
+      "time": 1787146200,
+      "seen_at": "2026-08-21 06:25:34 UTC",
+      "first_seen": "2026-08-20 14:24:40 UTC"
+    },
+    {
+      "key": "sp500:EQR:1d:trend_exceed:support:1787146200",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "EQR",
+      "name": "Equity Residential",
+      "timeframe": "1d",
+      "level": 65.92476054600307,
+      "time": 1787146200,
+      "seen_at": "2026-08-21 06:25:34 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-08-21 06:25:34 UTC"
     },
     {
       "key": "sp500:BKNG:1d:trend_touch:resistance:1787146200",
@@ -3706,71 +3798,6 @@
       "time": 1787146200,
       "seen_at": "2026-08-21 05:40:29 UTC",
       "first_seen": "2026-08-19 15:11:45 UTC"
-    },
-    {
-      "key": "dji30:HON:1d:trend_touch:support:1787146200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "dji30",
-      "symbol": "HON",
-      "name": "Honeywell International Inc.",
-      "timeframe": "1d",
-      "level": 221.59551693144297,
-      "time": 1787146200,
-      "seen_at": "2026-08-21 03:36:43 UTC",
-      "first_seen": "2026-08-19 21:08:02 UTC"
-    },
-    {
-      "key": "sp500:ALGN:1d:trend_touch:support:1787146200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "ALGN",
-      "name": "Align Technology",
-      "timeframe": "1d",
-      "level": 162.83129087108776,
-      "time": 1787146200,
-      "seen_at": "2026-08-21 03:36:43 UTC",
-      "first_seen": "2026-08-19 21:08:02 UTC"
-    },
-    {
-      "key": "sp500:HON:1d:trend_touch:support:1787146200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "HON",
-      "name": "Honeywell",
-      "timeframe": "1d",
-      "level": 221.59551693144297,
-      "time": 1787146200,
-      "seen_at": "2026-08-21 03:36:43 UTC",
-      "first_seen": "2026-08-19 21:08:02 UTC"
-    },
-    {
-      "key": "ndx100:HON:1d:trend_touch:support:1787146200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "HON",
-      "name": "Honeywell",
-      "timeframe": "1d",
-      "level": 221.59551693144297,
-      "time": 1787146200,
-      "seen_at": "2026-08-21 03:36:43 UTC",
-      "first_seen": "2026-08-19 21:08:02 UTC"
-    },
-    {
-      "key": "sp500:TJX:1d:trend_touch:support:1787146200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "TJX",
-      "name": "TJX Companies",
-      "timeframe": "1d",
-      "level": 144.3052047927017,
-      "time": 1787146200,
-      "seen_at": "2026-08-21 03:36:43 UTC",
-      "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
       "key": "sp500:SPGI:1d:trend_touch:resistance:1787146200",
@@ -6624,34 +6651,6 @@
       "seen_at": "2026-08-17 20:21:52 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-17 20:21:52 UTC"
-    },
-    {
-      "key": "sp500:NCLH:1h:trend_exceed:support:1786993268",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "NCLH",
-      "name": "Norwegian Cruise Line Holdings",
-      "timeframe": "1h",
-      "level": 18.401999112179404,
-      "time": 1786993268,
-      "seen_at": "2026-08-17 19:19:49 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-08-17 19:19:49 UTC"
-    },
-    {
-      "key": "sp500:CVNA:1h:trend_exceed:support:1786993124",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "CVNA",
-      "name": "Carvana Co.",
-      "timeframe": "1h",
-      "level": 73.08930653539197,
-      "time": 1786993124,
-      "seen_at": "2026-08-17 19:19:49 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-08-17 19:19:49 UTC"
     }
   ]
 }
