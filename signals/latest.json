@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21 04:46:56 UTC",
+  "generated_at": "2026-08-21 05:40:29 UTC",
   "timeframes": [
     "1h",
     "1d"
@@ -68,7 +68,7 @@
       "time": 1787270400,
       "index": 1999,
       "level": 0.11439230769230771,
-      "close": 0.13617,
+      "close": 0.14232,
       "exceed_bars": 2,
       "timeframe": "1d",
       "group": "crypto",
@@ -150,9 +150,9 @@
       "label": "阻力趨勢線觸碰",
       "type": "resistance",
       "time": 1787284800,
-      "index": 1999,
+      "index": 1998,
       "level": 7.353467078189301,
-      "close": 7.317,
+      "close": 7.313,
       "timeframe": "1h",
       "group": "crypto",
       "symbol": "AVAXUSDT",
@@ -69029,13 +69029,6 @@
     "crypto|AVAXUSDT|1h": {
       "candles": [
         {
-          "time": 1780088400,
-          "open": 8.815,
-          "high": 8.854,
-          "low": 8.791,
-          "close": 8.791
-        },
-        {
           "time": 1780092000,
           "open": 8.791,
           "high": 8.833,
@@ -83025,8 +83018,15 @@
           "time": 1787284800,
           "open": 7.304,
           "high": 7.356,
-          "low": 7.293,
-          "close": 7.317
+          "low": 7.27,
+          "close": 7.313
+        },
+        {
+          "time": 1787288400,
+          "open": 7.312,
+          "high": 7.346,
+          "low": 7.279,
+          "close": 7.325
         }
       ],
       "rays": [
@@ -83296,7 +83296,7 @@
             },
             {
               "t0": 1786464000,
-              "t1": 1787284800,
+              "t1": 1787288400,
               "price": 6.189,
               "active": true,
               "side": "lower"
@@ -83336,8 +83336,8 @@
             "time": 1787270400,
             "price": 7.357
           },
-          "endTime": 1787284800,
-          "endPrice": 7.353467078189301,
+          "endTime": 1787288400,
+          "endPrice": 7.352583847736626,
           "invalidated": false
         },
         {
@@ -83350,8 +83350,8 @@
             "time": 1786460400,
             "price": 6.11
           },
-          "endTime": 1787284800,
-          "endPrice": 6.18747712933754,
+          "endTime": 1787288400,
+          "endPrice": 6.187815457413249,
           "invalidated": false
         }
       ]
@@ -333254,7 +333254,7 @@
           "open": 0.11468,
           "high": 0.18501,
           "low": 0.11278,
-          "close": 0.13617
+          "close": 0.14232
         }
       ],
       "rays": [
@@ -333742,6 +333742,16 @@
   "results": [
     {
       "group": "ndx100",
+      "symbol": "AMZN",
+      "name": "Amazon",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "MSFT",
       "name": "Microsoft",
       "source": "yahoo",
@@ -333772,26 +333782,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "AMZN",
-      "name": "Amazon",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "AVGO",
-      "name": "Broadcom Inc.",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "GOOG",
       "name": "Alphabet Inc. (Class C)",
       "source": "yahoo",
@@ -333812,8 +333802,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "TSLA",
-      "name": "Tesla, Inc.",
+      "symbol": "AVGO",
+      "name": "Broadcom Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -333832,6 +333822,16 @@
     },
     {
       "group": "ndx100",
+      "symbol": "WMT",
+      "name": "Walmart",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "ASML",
       "name": "ASML Holding",
       "source": "yahoo",
@@ -333842,8 +333842,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "WMT",
-      "name": "Walmart",
+      "symbol": "TSLA",
+      "name": "Tesla, Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -333882,8 +333882,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "AMD",
-      "name": "Advanced Micro Devices Inc.",
+      "symbol": "PLTR",
+      "name": "Palantir Technologies",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -333892,8 +333892,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "PLTR",
-      "name": "Palantir Technologies",
+      "symbol": "AMD",
+      "name": "Advanced Micro Devices Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -333922,16 +333922,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "TMUS",
-      "name": "T-Mobile US",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "LRCX",
       "name": "Lam Research",
       "source": "yahoo",
@@ -333942,8 +333932,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "LIN",
-      "name": "Linde plc",
+      "symbol": "TMUS",
+      "name": "T-Mobile US",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -333962,8 +333952,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "PEP",
-      "name": "PepsiCo",
+      "symbol": "LIN",
+      "name": "Linde plc",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -333974,6 +333964,16 @@
       "group": "ndx100",
       "symbol": "KLAC",
       "name": "KLA Corporation",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "PEP",
+      "name": "PepsiCo",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334002,8 +334002,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ISRG",
-      "name": "Intuitive Surgical",
+      "symbol": "GILD",
+      "name": "Gilead Sciences",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334012,8 +334012,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "GILD",
-      "name": "Gilead Sciences",
+      "symbol": "ISRG",
+      "name": "Intuitive Surgical",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334052,8 +334052,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "HON",
-      "name": "Honeywell",
+      "symbol": "ADI",
+      "name": "Analog Devices",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334062,8 +334062,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ADI",
-      "name": "Analog Devices",
+      "symbol": "HON",
+      "name": "Honeywell",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334082,16 +334082,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "BKNG",
-      "name": "Booking Holdings",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "APP",
       "name": "Applovin Corp",
       "source": "yahoo",
@@ -334102,8 +334092,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "PANW",
-      "name": "Palo Alto Networks",
+      "symbol": "BKNG",
+      "name": "Booking Holdings",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334114,6 +334104,16 @@
       "group": "ndx100",
       "symbol": "INTU",
       "name": "Intuit",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "PANW",
+      "name": "Palo Alto Networks",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334142,16 +334142,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CMCSA",
-      "name": "Comcast",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "CEG",
       "name": "Constellation Energy",
       "source": "yahoo",
@@ -334164,6 +334154,16 @@
       "group": "ndx100",
       "symbol": "CRWD",
       "name": "CrowdStrike",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "CMCSA",
+      "name": "Comcast",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334192,21 +334192,21 @@
     },
     {
       "group": "ndx100",
-      "symbol": "STX",
-      "name": "Seagate Technology Holdings",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 875,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "MRVL",
       "name": "Marvell Technology",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "STX",
+      "name": "Seagate Technology Holdings",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 875,
       "events": [],
       "error": null
     },
@@ -334242,16 +334242,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ADP",
-      "name": "ADP",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 875,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "CDNS",
       "name": "Cadence Design Systems",
       "source": "yahoo",
@@ -334262,8 +334252,28 @@
     },
     {
       "group": "ndx100",
+      "symbol": "ADP",
+      "name": "ADP",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 875,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "SNPS",
       "name": "Synopsys",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "CSX",
+      "name": "CSX Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334284,16 +334294,6 @@
       "group": "ndx100",
       "symbol": "ABNB",
       "name": "Airbnb",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "CSX",
-      "name": "CSX Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334352,8 +334352,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "DASH",
-      "name": "DoorDash",
+      "symbol": "CTAS",
+      "name": "Cintas",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334362,8 +334362,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CTAS",
-      "name": "Cintas",
+      "symbol": "DASH",
+      "name": "DoorDash",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334402,16 +334402,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "BKR",
-      "name": "Baker Hughes",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "EA",
       "name": "Electronic Arts",
       "source": "yahoo",
@@ -334422,8 +334412,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "FANG",
-      "name": "Diamondback Energy",
+      "symbol": "BKR",
+      "name": "Baker Hughes",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334434,6 +334424,16 @@
       "group": "ndx100",
       "symbol": "FAST",
       "name": "Fastenal",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "FANG",
+      "name": "Diamondback Energy",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334473,8 +334473,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "EXC",
-      "name": "Exelon",
+      "symbol": "XEL",
+      "name": "Xcel Energy",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334483,8 +334483,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "XEL",
-      "name": "Xcel Energy",
+      "symbol": "EXC",
+      "name": "Exelon",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334503,8 +334503,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "IDXX",
-      "name": "Idexx Laboratories",
+      "symbol": "MSTR",
+      "name": "MicroStrategy Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334513,8 +334513,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MSTR",
-      "name": "MicroStrategy Inc.",
+      "symbol": "IDXX",
+      "name": "Idexx Laboratories",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334545,8 +334545,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "DDOG",
-      "name": "Datadog",
+      "symbol": "ODFL",
+      "name": "Old Dominion Freight Line",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334565,8 +334565,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ODFL",
-      "name": "Old Dominion Freight Line",
+      "symbol": "DDOG",
+      "name": "Datadog",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334605,6 +334605,16 @@
     },
     {
       "group": "ndx100",
+      "symbol": "ROP",
+      "name": "Roper Technologies",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "KDP",
       "name": "Keurig Dr Pepper",
       "source": "yahoo",
@@ -334625,26 +334635,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ROP",
-      "name": "Roper Technologies",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "MCHP",
-      "name": "Microchip Technology",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "AXON",
       "name": "Axon Enterprise Inc.",
       "source": "yahoo",
@@ -334655,8 +334645,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "PAYX",
-      "name": "Paychex",
+      "symbol": "MCHP",
+      "name": "Microchip Technology",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334685,8 +334675,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CTSH",
-      "name": "Cognizant",
+      "symbol": "PAYX",
+      "name": "Paychex",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334697,6 +334687,16 @@
       "group": "ndx100",
       "symbol": "CPRT",
       "name": "Copart",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "CTSH",
+      "name": "Cognizant",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334755,16 +334755,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "TEAM",
-      "name": "Atlassian",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "CSGP",
       "name": "CoStar Group",
       "source": "yahoo",
@@ -334774,9 +334764,9 @@
       "error": null
     },
     {
-      "group": "sp500",
-      "symbol": "AAPL",
-      "name": "Apple Inc.",
+      "group": "ndx100",
+      "symbol": "TEAM",
+      "name": "Atlassian",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334795,8 +334785,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "AMZN",
-      "name": "Amazon",
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334815,8 +334805,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "GOOGL",
-      "name": "Alphabet Inc. (Class A)",
+      "symbol": "AMZN",
+      "name": "Amazon",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334825,8 +334815,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "META",
-      "name": "Meta Platforms",
+      "symbol": "GOOGL",
+      "name": "Alphabet Inc. (Class A)",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334845,6 +334835,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "META",
+      "name": "Meta Platforms",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "AVGO",
       "name": "Broadcom",
       "source": "yahoo",
@@ -334855,8 +334855,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "BRK-B",
-      "name": "Berkshire Hathaway",
+      "symbol": "TSLA",
+      "name": "Tesla, Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334865,8 +334865,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "TSLA",
-      "name": "Tesla, Inc.",
+      "symbol": "BRK-B",
+      "name": "Berkshire Hathaway",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334925,8 +334925,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "V",
-      "name": "Visa Inc.",
+      "symbol": "MA",
+      "name": "Mastercard",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -334935,8 +334935,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "MA",
-      "name": "Mastercard",
+      "symbol": "V",
+      "name": "Visa Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335005,8 +335005,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PLTR",
-      "name": "Palantir Technologies",
+      "symbol": "BAC",
+      "name": "Bank of America",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335015,8 +335015,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "BAC",
-      "name": "Bank of America",
+      "symbol": "PLTR",
+      "name": "Palantir Technologies",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335065,8 +335065,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CSCO",
-      "name": "Cisco",
+      "symbol": "KO",
+      "name": "Coca-Cola Company (The)",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335075,8 +335075,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "KO",
-      "name": "Coca-Cola Company (The)",
+      "symbol": "CSCO",
+      "name": "Cisco",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335127,6 +335127,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "MS",
+      "name": "Morgan Stanley",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "LRCX",
       "name": "Lam Research",
       "source": "yahoo",
@@ -335147,28 +335157,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "MS",
-      "name": "Morgan Stanley",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "PM",
       "name": "Philip Morris International",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "GS",
-      "name": "Goldman Sachs",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335187,8 +335177,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "UNH",
-      "name": "UnitedHealth Group",
+      "symbol": "GS",
+      "name": "Goldman Sachs",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335217,8 +335207,28 @@
     },
     {
       "group": "sp500",
+      "symbol": "UNH",
+      "name": "UnitedHealth Group",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "LIN",
       "name": "Linde plc",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "INTC",
+      "name": "Intel",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335247,28 +335257,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "INTC",
-      "name": "Intel",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "PEP",
       "name": "PepsiCo",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "AXP",
-      "name": "American Express",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335287,8 +335277,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "T",
-      "name": "AT&T",
+      "symbol": "AXP",
+      "name": "American Express",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335297,8 +335287,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "C",
-      "name": "Citigroup",
+      "symbol": "T",
+      "name": "AT&T",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335317,8 +335307,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "NEE",
-      "name": "NextEra Energy",
+      "symbol": "C",
+      "name": "Citigroup",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335337,11 +335327,31 @@
     },
     {
       "group": "sp500",
+      "symbol": "NEE",
+      "name": "NextEra Energy",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "TMO",
       "name": "Thermo Fisher Scientific",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 875,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "TXN",
+      "name": "Texas Instruments",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
       "events": [],
       "error": null
     },
@@ -335367,16 +335377,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "TXN",
-      "name": "Texas Instruments",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "CRM",
       "name": "Salesforce",
       "source": "yahoo",
@@ -335387,8 +335387,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "DIS",
-      "name": "Walt Disney Company (The)",
+      "symbol": "GILD",
+      "name": "Gilead Sciences",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335397,8 +335397,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "GILD",
-      "name": "Gilead Sciences",
+      "symbol": "DIS",
+      "name": "Walt Disney Company (The)",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335427,16 +335427,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "BA",
-      "name": "Boeing",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "PFE",
       "name": "Pfizer",
       "source": "yahoo",
@@ -335449,6 +335439,16 @@
       "group": "sp500",
       "symbol": "APH",
       "name": "Amphenol",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "BA",
+      "name": "Boeing",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335477,8 +335477,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ADI",
-      "name": "Analog Devices",
+      "symbol": "DE",
+      "name": "Deere & Company",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335487,8 +335487,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "DE",
-      "name": "Deere & Company",
+      "symbol": "ADI",
+      "name": "Analog Devices",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335547,16 +335547,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "QCOM",
-      "name": "Qualcomm",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "LMT",
       "name": "Lockheed Martin",
       "source": "yahoo",
@@ -335569,6 +335559,16 @@
       "group": "sp500",
       "symbol": "WELL",
       "name": "Welltower",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "QCOM",
+      "name": "Qualcomm",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335607,8 +335607,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PANW",
-      "name": "Palo Alto Networks",
+      "symbol": "LOW",
+      "name": "Lowe's",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335617,8 +335617,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "LOW",
-      "name": "Lowe's",
+      "symbol": "PANW",
+      "name": "Palo Alto Networks",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335647,6 +335647,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "SYK",
+      "name": "Stryker Corporation",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "PLD",
       "name": "Prologis",
       "source": "yahoo",
@@ -335664,16 +335674,6 @@
           "timeframe": "1h"
         }
       ],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "SYK",
-      "name": "Stryker Corporation",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
       "error": null
     },
     {
@@ -335718,16 +335718,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "GLW",
-      "name": "Corning Inc.",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "PGR",
       "name": "Progressive Corporation",
       "source": "yahoo",
@@ -335738,8 +335728,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "COF",
-      "name": "Capital One",
+      "symbol": "GLW",
+      "name": "Corning Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335750,6 +335740,16 @@
       "group": "sp500",
       "symbol": "PH",
       "name": "Parker Hannifin",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "COF",
+      "name": "Capital One",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335778,16 +335778,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "MO",
-      "name": "Altria",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "NOW",
       "name": "ServiceNow",
       "source": "yahoo",
@@ -335798,8 +335788,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "SO",
-      "name": "Southern Company",
+      "symbol": "MO",
+      "name": "Altria",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335810,6 +335800,16 @@
       "group": "sp500",
       "symbol": "CME",
       "name": "CME Group",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "SO",
+      "name": "Southern Company",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335839,6 +335839,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "MCK",
+      "name": "McKesson Corporation",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "DELL",
       "name": "Dell Technologies",
       "source": "yahoo",
@@ -335851,16 +335861,6 @@
       "group": "sp500",
       "symbol": "SBUX",
       "name": "Starbucks",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "MCK",
-      "name": "McKesson Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -335929,16 +335929,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "NOC",
-      "name": "Northrop Grumman",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "SNDK",
       "name": "Sandisk Corporation",
       "source": "yahoo",
@@ -335951,6 +335941,16 @@
       "group": "sp500",
       "symbol": "EQIX",
       "name": "Equinix",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "NOC",
+      "name": "Northrop Grumman",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336049,16 +336049,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "MAR",
-      "name": "Marriott International",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "STX",
       "name": "Seagate Technology",
       "source": "yahoo",
@@ -336079,8 +336069,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PNC",
-      "name": "PNC Financial Services",
+      "symbol": "MAR",
+      "name": "Marriott International",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336099,6 +336089,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "UPS",
+      "name": "United Parcel Service",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "FDX",
       "name": "FedEx",
       "source": "yahoo",
@@ -336109,8 +336109,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "UPS",
-      "name": "United Parcel Service",
+      "symbol": "PNC",
+      "name": "PNC Financial Services",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336129,6 +336129,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "PWR",
+      "name": "Quanta Services",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "KKR",
       "name": "KKR",
       "source": "yahoo",
@@ -336139,8 +336149,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PWR",
-      "name": "Quanta Services",
+      "symbol": "REGN",
+      "name": "Regeneron Pharmaceuticals",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336159,28 +336169,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "REGN",
-      "name": "Regeneron Pharmaceuticals",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "USB",
       "name": "U.S. Bancorp",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "AMT",
-      "name": "American Tower",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336199,8 +336189,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "MCO",
-      "name": "Moody's Corporation",
+      "symbol": "AMT",
+      "name": "American Tower",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336219,8 +336209,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CDNS",
-      "name": "Cadence Design Systems",
+      "symbol": "MCO",
+      "name": "Moody's Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336229,18 +336219,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "BK",
-      "name": "BNY Mellon",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "group": "sp500",
-      "symbol": "CSX",
-      "name": "CSX Corporation",
+      "symbol": "CDNS",
+      "name": "Cadence Design Systems",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336259,8 +336239,28 @@
     },
     {
       "group": "sp500",
-      "symbol": "ABNB",
-      "name": "Airbnb",
+      "symbol": "CSX",
+      "name": "CSX Corporation",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "BK",
+      "name": "BNY Mellon",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "group": "sp500",
+      "symbol": "ORLY",
+      "name": "O'Reilly Auto Parts",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336279,8 +336279,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ORLY",
-      "name": "O'Reilly Auto Parts",
+      "symbol": "CMI",
+      "name": "Cummins",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336289,8 +336289,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "CMI",
-      "name": "Cummins",
+      "symbol": "ABNB",
+      "name": "Airbnb",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "RCL",
+      "name": "Royal Caribbean Group",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336319,26 +336329,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "RCL",
-      "name": "Royal Caribbean Group",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "ITW",
-      "name": "Illinois Tool Works",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "EOG",
       "name": "EOG Resources",
       "source": "yahoo",
@@ -336351,6 +336341,16 @@
       "group": "sp500",
       "symbol": "EMR",
       "name": "Emerson Electric",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "ITW",
+      "name": "Illinois Tool Works",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336379,8 +336379,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "MSI",
-      "name": "Motorola Solutions",
+      "symbol": "VLO",
+      "name": "Valero Energy",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336389,8 +336389,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "VLO",
-      "name": "Valero Energy",
+      "symbol": "MSI",
+      "name": "Motorola Solutions",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336419,6 +336419,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "PSX",
+      "name": "Phillips 66",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "CRH",
       "name": "CRH plc",
       "source": "yahoo",
@@ -336439,16 +336449,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "HLT",
-      "name": "Hilton Worldwide",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "MPC",
       "name": "Marathon Petroleum",
       "source": "yahoo",
@@ -336459,8 +336459,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PSX",
-      "name": "Phillips 66",
+      "symbol": "AON",
+      "name": "Aon",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336469,8 +336469,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "NKE",
-      "name": "Nike, Inc.",
+      "symbol": "HLT",
+      "name": "Hilton Worldwide",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336481,16 +336481,6 @@
       "group": "sp500",
       "symbol": "ROST",
       "name": "Ross Stores",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "AON",
-      "name": "Aon",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336530,6 +336520,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "NKE",
+      "name": "Nike, Inc.",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "CTAS",
       "name": "Cintas",
       "source": "yahoo",
@@ -336550,8 +336550,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "RSG",
-      "name": "Republic Services",
+      "symbol": "TDG",
+      "name": "TransDigm Group",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336560,8 +336560,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "DASH",
-      "name": "DoorDash",
+      "symbol": "RSG",
+      "name": "Republic Services",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336580,8 +336580,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "TDG",
-      "name": "TransDigm Group",
+      "symbol": "APD",
+      "name": "Air Products",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "DASH",
+      "name": "DoorDash",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336600,28 +336610,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "APD",
-      "name": "Air Products",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "NSC",
       "name": "Norfolk Southern Railway",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "HOOD",
-      "name": "Robinhood Markets, Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336640,6 +336630,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "HOOD",
+      "name": "Robinhood Markets, Inc.",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "SRE",
       "name": "Sempra",
       "source": "yahoo",
@@ -336650,8 +336650,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "OXY",
-      "name": "Occidental Petroleum",
+      "symbol": "TRV",
+      "name": "Travelers Companies (The)",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336660,8 +336660,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "TRV",
-      "name": "Travelers Companies (The)",
+      "symbol": "OXY",
+      "name": "Occidental Petroleum",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336700,16 +336700,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "PCAR",
-      "name": "Paccar",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "SPG",
       "name": "Simon Property Group",
       "source": "yahoo",
@@ -336730,8 +336720,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "BKR",
-      "name": "Baker Hughes",
+      "symbol": "PCAR",
+      "name": "Paccar",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336750,28 +336740,18 @@
     },
     {
       "group": "sp500",
+      "symbol": "BKR",
+      "name": "Baker Hughes",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "AFL",
       "name": "Aflac",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "O",
-      "name": "Realty Income",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "OKE",
-      "name": "ONEOK",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336800,8 +336780,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "AZO",
-      "name": "AutoZone",
+      "symbol": "O",
+      "name": "Realty Income",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "OKE",
+      "name": "ONEOK",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336820,6 +336810,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "AZO",
+      "name": "AutoZone",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "AJG",
       "name": "Arthur J. Gallagher & Co.",
       "source": "yahoo",
@@ -336830,28 +336830,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "MPWR",
-      "name": "Monolithic Power Systems",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "TRGP",
-      "name": "Targa Resources",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "FANG",
       "name": "Diamondback Energy",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "MPWR",
+      "name": "Monolithic Power Systems",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336880,8 +336870,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "LITE",
-      "name": "Lumentum Holdings Inc.",
+      "symbol": "ALL",
+      "name": "Allstate",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336890,8 +336880,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "ALL",
-      "name": "Allstate",
+      "symbol": "TRGP",
+      "name": "Targa Resources",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "LITE",
+      "name": "Lumentum Holdings Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336920,16 +336920,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "ETR",
-      "name": "Entergy",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "GWW",
       "name": "W. W. Grainger",
       "source": "yahoo",
@@ -336940,18 +336930,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "KEYS",
-      "name": "Keysight Technologies",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "ADSK",
-      "name": "Autodesk",
+      "symbol": "ETR",
+      "name": "Entergy",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336970,8 +336950,38 @@
     },
     {
       "group": "sp500",
+      "symbol": "ADSK",
+      "name": "Autodesk",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "KEYS",
+      "name": "Keysight Technologies",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "EXC",
       "name": "Exelon",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "XEL",
+      "name": "Xcel Energy",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -336997,16 +337007,6 @@
           "timeframe": "1h"
         }
       ],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "XEL",
-      "name": "Xcel Energy",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
       "error": null
     },
     {
@@ -337041,8 +337041,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "NDAQ",
-      "name": "Nasdaq, Inc.",
+      "symbol": "TER",
+      "name": "Teradyne",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337051,8 +337051,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "TER",
-      "name": "Teradyne",
+      "symbol": "NDAQ",
+      "name": "Nasdaq, Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337071,8 +337071,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "COIN",
-      "name": "Coinbase Global",
+      "symbol": "CARR",
+      "name": "Carrier Global",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337081,8 +337081,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CARR",
-      "name": "Carrier Global",
+      "symbol": "COIN",
+      "name": "Coinbase Global",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337111,8 +337111,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "URI",
-      "name": "United Rentals",
+      "symbol": "MET",
+      "name": "MetLife",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337131,8 +337131,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "MET",
-      "name": "MetLife",
+      "symbol": "URI",
+      "name": "United Rentals",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "CVNA",
+      "name": "Carvana Co.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337153,16 +337163,6 @@
       "group": "sp500",
       "symbol": "GRMN",
       "name": "Garmin",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "CVNA",
-      "name": "Carvana Co.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337221,8 +337221,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "FITB",
-      "name": "Fifth Third Bancorp",
+      "symbol": "DDOG",
+      "name": "Datadog",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337231,8 +337231,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "DDOG",
-      "name": "Datadog",
+      "symbol": "FITB",
+      "name": "Fifth Third Bancorp",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337281,8 +337281,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PEG",
-      "name": "Public Service Enterprise Group",
+      "symbol": "EBAY",
+      "name": "eBay",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337301,8 +337301,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "EBAY",
-      "name": "eBay",
+      "symbol": "PEG",
+      "name": "Public Service Enterprise Group",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "ROK",
+      "name": "Rockwell Automation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337331,8 +337341,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ROK",
-      "name": "Rockwell Automation",
+      "symbol": "CBRE",
+      "name": "CBRE Group",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337341,8 +337351,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CBRE",
-      "name": "CBRE Group",
+      "symbol": "DHI",
+      "name": "D. R. Horton",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337371,8 +337381,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "DHI",
-      "name": "D. R. Horton",
+      "symbol": "VTR",
+      "name": "Ventas",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337391,26 +337401,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "PCG",
-      "name": "PG&E Corporation",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "VTR",
-      "name": "Ventas",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "WEC",
       "name": "WEC Energy Group",
       "source": "yahoo",
@@ -337421,8 +337411,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "HIG",
-      "name": "Hartford (The)",
+      "symbol": "PCG",
+      "name": "PG&E Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337433,6 +337423,16 @@
       "group": "sp500",
       "symbol": "TTWO",
       "name": "Take-Two Interactive",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "HIG",
+      "name": "Hartford (The)",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337461,16 +337461,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "CCL",
-      "name": "Carnival",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "LYV",
       "name": "Live Nation Entertainment",
       "source": "yahoo",
@@ -337481,8 +337471,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "KDP",
-      "name": "Keurig Dr Pepper",
+      "symbol": "CCL",
+      "name": "Carnival",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337532,21 +337522,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "STT",
-      "name": "State Street Corporation",
+      "symbol": "KDP",
+      "name": "Keurig Dr Pepper",
       "source": "yahoo",
       "timeframe": "1h",
-      "bars": 875,
+      "bars": 876,
       "events": [],
       "error": null
     },
     {
       "group": "sp500",
-      "symbol": "MCHP",
-      "name": "Microchip Technology",
+      "symbol": "STT",
+      "name": "State Street Corporation",
       "source": "yahoo",
       "timeframe": "1h",
-      "bars": 876,
+      "bars": 875,
       "events": [],
       "error": null
     },
@@ -337562,11 +337552,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "SATS",
-      "name": "EchoStar Corporation",
+      "symbol": "MCHP",
+      "name": "Microchip Technology",
       "source": "yahoo",
       "timeframe": "1h",
-      "bars": 0,
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "AXON",
+      "name": "Axon Enterprise",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
       "events": [],
       "error": null
     },
@@ -337582,8 +337582,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "AXON",
-      "name": "Axon Enterprise",
+      "symbol": "SATS",
+      "name": "EchoStar Corporation",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "PRU",
+      "name": "Prudential Financial",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337623,28 +337633,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PRU",
-      "name": "Prudential Financial",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "WDAY",
       "name": "Workday, Inc.",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "RMD",
-      "name": "ResMed",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337663,8 +337653,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "KVUE",
-      "name": "Kenvue",
+      "symbol": "RMD",
+      "name": "ResMed",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337675,6 +337665,16 @@
       "group": "sp500",
       "symbol": "PAYX",
       "name": "Paychex",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "KVUE",
+      "name": "Kenvue",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337703,8 +337703,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CPRT",
-      "name": "Copart",
+      "symbol": "HBAN",
+      "name": "Huntington Bancshares",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337723,8 +337723,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "HBAN",
-      "name": "Huntington Bancshares",
+      "symbol": "CPRT",
+      "name": "Copart",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337735,6 +337735,16 @@
       "group": "sp500",
       "symbol": "KMB",
       "name": "Kimberly-Clark",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "IR",
+      "name": "Ingersoll Rand",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337763,38 +337773,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "MTB",
-      "name": "M&T Bank",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "NRG",
       "name": "NRG Energy",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "IR",
-      "name": "Ingersoll Rand",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "DVN",
-      "name": "Devon Energy",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337813,6 +337793,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "MTB",
+      "name": "M&T Bank",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "ATO",
       "name": "Atmos Energy",
       "source": "yahoo",
@@ -337823,8 +337813,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "AEE",
-      "name": "Ameren",
+      "symbol": "DVN",
+      "name": "Devon Energy",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337833,8 +337823,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "IBKR",
-      "name": "Interactive Brokers Group",
+      "symbol": "AEE",
+      "name": "Ameren",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337855,6 +337845,16 @@
       "group": "sp500",
       "symbol": "UAL",
       "name": "United Airlines Holdings",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "IBKR",
+      "name": "Interactive Brokers Group",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337943,6 +337943,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "PPL",
+      "name": "PPL Corporation",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "DOW",
       "name": "Dow Inc.",
       "source": "yahoo",
@@ -337963,8 +337973,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PPL",
-      "name": "PPL Corporation",
+      "symbol": "EXPE",
+      "name": "Expedia Group",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -337993,16 +338003,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "EXPE",
-      "name": "Expedia Group",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "RJF",
       "name": "Raymond James Financial",
       "source": "yahoo",
@@ -338013,8 +338013,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "EIX",
-      "name": "Edison International",
+      "symbol": "TDY",
+      "name": "Teledyne Technologies",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338033,8 +338033,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "TDY",
-      "name": "Teledyne Technologies",
+      "symbol": "EIX",
+      "name": "Edison International",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338063,16 +338063,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "WTW",
-      "name": "Willis Towers Watson",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "BIIB",
       "name": "Biogen",
       "source": "yahoo",
@@ -338083,8 +338073,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CHTR",
-      "name": "Charter Communications",
+      "symbol": "WTW",
+      "name": "Willis Towers Watson",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338093,8 +338083,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "AWK",
-      "name": "American Water Works",
+      "symbol": "CHTR",
+      "name": "Charter Communications",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338115,6 +338105,16 @@
       "group": "sp500",
       "symbol": "KHC",
       "name": "Kraft Heinz",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "AWK",
+      "name": "American Water Works",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338203,8 +338203,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CFG",
-      "name": "Citizens Financial Group",
+      "symbol": "NTRS",
+      "name": "Northern Trust",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338213,8 +338213,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "NTRS",
-      "name": "Northern Trust",
+      "symbol": "CFG",
+      "name": "Citizens Financial Group",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338243,8 +338243,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ARES",
-      "name": "Ares Management Corporation",
+      "symbol": "LYB",
+      "name": "LyondellBasell",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338253,8 +338253,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "LYB",
-      "name": "LyondellBasell",
+      "symbol": "ARES",
+      "name": "Ares Management Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338270,6 +338270,16 @@
       "bars": 876,
       "events": [],
       "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "CTRA",
+      "name": "Coterra",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 0,
+      "events": [],
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "group": "sp500",
@@ -338293,16 +338303,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "CTRA",
-      "name": "Coterra",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 0,
-      "events": [],
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "group": "sp500",
       "symbol": "ON",
       "name": "ON Semiconductor",
       "source": "yahoo",
@@ -338313,8 +338313,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CINF",
-      "name": "Cincinnati Financial",
+      "symbol": "FIS",
+      "name": "Fidelity National Information Services",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338323,8 +338323,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "FIS",
-      "name": "Fidelity National Information Services",
+      "symbol": "CINF",
+      "name": "Cincinnati Financial",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338414,6 +338414,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "VRSN",
+      "name": "Verisign",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "DRI",
       "name": "Darden Restaurants",
       "source": "yahoo",
@@ -338426,16 +338436,6 @@
       "group": "sp500",
       "symbol": "PHM",
       "name": "PulteGroup",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "VRSN",
-      "name": "Verisign",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338464,6 +338464,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "LH",
+      "name": "LabCorp",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "TSN",
       "name": "Tyson Foods",
       "source": "yahoo",
@@ -338474,8 +338484,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "LH",
-      "name": "LabCorp",
+      "symbol": "BRO",
+      "name": "Brown & Brown",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338489,16 +338499,6 @@
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 854,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "BRO",
-      "name": "Brown & Brown",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
       "events": [],
       "error": null
     },
@@ -338544,8 +338544,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "VLTO",
-      "name": "Veralto",
+      "symbol": "LEN",
+      "name": "Lennar",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338554,8 +338554,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "LEN",
-      "name": "Lennar",
+      "symbol": "VLTO",
+      "name": "Veralto",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338624,21 +338624,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "WSM",
-      "name": "Williams-Sonoma",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 875,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "RL",
       "name": "Ralph Lauren Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "WSM",
+      "name": "Williams-Sonoma",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 875,
       "events": [],
       "error": null
     },
@@ -338684,8 +338684,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CHRW",
-      "name": "C.H. Robinson",
+      "symbol": "JBHT",
+      "name": "J.B. Hunt",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338694,8 +338694,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "JBHT",
-      "name": "J.B. Hunt",
+      "symbol": "CHRW",
+      "name": "C.H. Robinson",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338714,16 +338714,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "TROW",
-      "name": "T. Rowe Price",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "CPAY",
       "name": "Corpay",
       "source": "yahoo",
@@ -338734,8 +338724,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "LDOS",
-      "name": "Leidos",
+      "symbol": "TROW",
+      "name": "T. Rowe Price",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338746,6 +338736,16 @@
       "group": "sp500",
       "symbol": "CF",
       "name": "CF Industries",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "LDOS",
+      "name": "Leidos",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338774,6 +338774,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "BR",
+      "name": "Broadridge Financial Solutions",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "DD",
       "name": "DuPont",
       "source": "yahoo",
@@ -338794,16 +338804,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "BR",
-      "name": "Broadridge Financial Solutions",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "SNA",
       "name": "Snap-on",
       "source": "yahoo",
@@ -338814,8 +338814,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PKG",
-      "name": "Packaging Corporation of America",
+      "symbol": "INCY",
+      "name": "Incyte",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338834,8 +338834,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "INCY",
-      "name": "Incyte",
+      "symbol": "PKG",
+      "name": "Packaging Corporation of America",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338904,16 +338904,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "WST",
-      "name": "West Pharmaceutical Services",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "SBAC",
       "name": "SBA Communications",
       "source": "yahoo",
@@ -338924,8 +338914,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "WY",
-      "name": "Weyerhaeuser",
+      "symbol": "WST",
+      "name": "West Pharmaceutical Services",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338936,6 +338926,16 @@
       "group": "sp500",
       "symbol": "ZBH",
       "name": "Zimmer Biomet",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "WY",
+      "name": "Weyerhaeuser",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338974,8 +338974,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PTC",
-      "name": "PTC Inc.",
+      "symbol": "CSGP",
+      "name": "CoStar Group",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -338984,8 +338984,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CSGP",
-      "name": "CoStar Group",
+      "symbol": "PTC",
+      "name": "PTC Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339094,8 +339094,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "TXT",
-      "name": "Textron",
+      "symbol": "TRMB",
+      "name": "Trimble Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339104,8 +339104,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "TRMB",
-      "name": "Trimble Inc.",
+      "symbol": "TXT",
+      "name": "Textron",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339124,16 +339124,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "NDSN",
-      "name": "Nordson Corporation",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "KIM",
       "name": "Kimco Realty",
       "source": "yahoo",
@@ -339144,8 +339134,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PODD",
-      "name": "Insulet Corporation",
+      "symbol": "NDSN",
+      "name": "Nordson Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339164,8 +339154,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "HII",
-      "name": "Huntington Ingalls Industries",
+      "symbol": "PODD",
+      "name": "Insulet Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339174,8 +339164,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "GPC",
-      "name": "Genuine Parts Company",
+      "symbol": "HII",
+      "name": "Huntington Ingalls Industries",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339204,6 +339194,26 @@
     },
     {
       "group": "sp500",
+      "symbol": "GPC",
+      "name": "Genuine Parts Company",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "PNR",
+      "name": "Pentair",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "MAA",
       "name": "Mid-America Apartment Communities",
       "source": "yahoo",
@@ -339224,8 +339234,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PNR",
-      "name": "Pentair",
+      "symbol": "SMCI",
+      "name": "Supermicro",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339254,8 +339264,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "SMCI",
-      "name": "Supermicro",
+      "symbol": "BBY",
+      "name": "Best Buy",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339266,16 +339276,6 @@
       "group": "sp500",
       "symbol": "COO",
       "name": "Cooper Companies (The)",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "BBY",
-      "name": "Best Buy",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339365,16 +339365,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "APTV",
-      "name": "Aptiv",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "CLX",
       "name": "Clorox",
       "source": "yahoo",
@@ -339395,8 +339385,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "BEN",
-      "name": "Franklin Resources",
+      "symbol": "APTV",
+      "name": "Aptiv",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339405,8 +339395,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ALGN",
-      "name": "Align Technology",
+      "symbol": "BEN",
+      "name": "Franklin Resources",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339425,8 +339415,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "BF-B",
-      "name": "BrownâForman",
+      "symbol": "ALGN",
+      "name": "Align Technology",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339445,8 +339435,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PNW",
-      "name": "Pinnacle West",
+      "symbol": "BF-B",
+      "name": "BrownâForman",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339457,6 +339447,16 @@
       "group": "sp500",
       "symbol": "FOX",
       "name": "Fox Corporation (Class B)",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "PNW",
+      "name": "Pinnacle West",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339505,16 +339505,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "JKHY",
-      "name": "Jack Henry & Associates",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "IT",
       "name": "Gartner",
       "source": "yahoo",
@@ -339525,8 +339515,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "SWK",
-      "name": "Stanley Black & Decker",
+      "symbol": "SOLV",
+      "name": "Solventum",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339535,8 +339525,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "SOLV",
-      "name": "Solventum",
+      "symbol": "JKHY",
+      "name": "Jack Henry & Associates",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "SWK",
+      "name": "Stanley Black & Decker",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339565,8 +339565,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "IVZ",
-      "name": "Invesco",
+      "symbol": "UHS",
+      "name": "Universal Health Services",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339575,8 +339575,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "UHS",
-      "name": "Universal Health Services",
+      "symbol": "IVZ",
+      "name": "Invesco",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339725,8 +339725,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "AOS",
-      "name": "A. O. Smith",
+      "symbol": "FRT",
+      "name": "Federal Realty Investment Trust",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339735,8 +339735,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "FRT",
-      "name": "Federal Realty Investment Trust",
+      "symbol": "AOS",
+      "name": "A. O. Smith",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339835,28 +339835,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ARE",
-      "name": "Alexandria Real Estate Equities",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "MOS",
       "name": "Mosaic Company (The)",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "POOL",
-      "name": "Pool Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339875,8 +339855,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "EPAM",
-      "name": "EPAM Systems",
+      "symbol": "ARE",
+      "name": "Alexandria Real Estate Equities",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "POOL",
+      "name": "Pool Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339895,28 +339885,18 @@
     },
     {
       "group": "sp500",
+      "symbol": "EPAM",
+      "name": "EPAM Systems",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "NWS",
       "name": "News Corp (Class B)",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "dji30",
-      "symbol": "GS",
-      "name": "The Goldman Sachs Group, Inc.",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "dji30",
-      "symbol": "MSFT",
-      "name": "Microsoft Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339935,6 +339915,26 @@
     },
     {
       "group": "dji30",
+      "symbol": "MSFT",
+      "name": "Microsoft Corporation",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "dji30",
+      "symbol": "GS",
+      "name": "The Goldman Sachs Group, Inc.",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "dji30",
       "symbol": "AMGN",
       "name": "Amgen Inc.",
       "source": "yahoo",
@@ -339945,8 +339945,8 @@
     },
     {
       "group": "dji30",
-      "symbol": "HD",
-      "name": "The Home Depot, Inc.",
+      "symbol": "SHW",
+      "name": "Sherwin-Williams",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -339955,8 +339955,8 @@
     },
     {
       "group": "dji30",
-      "symbol": "SHW",
-      "name": "Sherwin-Williams",
+      "symbol": "HD",
+      "name": "The Home Depot, Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -340015,16 +340015,6 @@
     },
     {
       "group": "dji30",
-      "symbol": "AAPL",
-      "name": "Apple Inc.",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 876,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "dji30",
       "symbol": "UNH",
       "name": "UnitedHealth Group Incorporated",
       "source": "yahoo",
@@ -340035,8 +340025,8 @@
     },
     {
       "group": "dji30",
-      "symbol": "JNJ",
-      "name": "Johnson & Johnson",
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -340047,6 +340037,16 @@
       "group": "dji30",
       "symbol": "IBM",
       "name": "International Business Machines Corporation",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 876,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "dji30",
+      "symbol": "JNJ",
+      "name": "Johnson & Johnson",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -340075,8 +340075,8 @@
     },
     {
       "group": "dji30",
-      "symbol": "CVX",
-      "name": "Chevron Corporation",
+      "symbol": "BA",
+      "name": "The Boeing Company",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -340085,8 +340085,8 @@
     },
     {
       "group": "dji30",
-      "symbol": "BA",
-      "name": "The Boeing Company",
+      "symbol": "CVX",
+      "name": "Chevron Corporation",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -340105,8 +340105,8 @@
     },
     {
       "group": "dji30",
-      "symbol": "NVDA",
-      "name": "Nvidia",
+      "symbol": "MMM",
+      "name": "3M Company",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -340115,8 +340115,8 @@
     },
     {
       "group": "dji30",
-      "symbol": "MMM",
-      "name": "3M Company",
+      "symbol": "NVDA",
+      "name": "Nvidia",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -340135,8 +340135,8 @@
     },
     {
       "group": "dji30",
-      "symbol": "WMT",
-      "name": "Walmart Inc.",
+      "symbol": "MRK",
+      "name": "Merck & Co., Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -340145,8 +340145,8 @@
     },
     {
       "group": "dji30",
-      "symbol": "MRK",
-      "name": "Merck & Co., Inc.",
+      "symbol": "WMT",
+      "name": "Walmart Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -340175,8 +340175,8 @@
     },
     {
       "group": "dji30",
-      "symbol": "KO",
-      "name": "The Coca-Cola Company",
+      "symbol": "VZ",
+      "name": "Verizon Communications Inc.",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -340185,8 +340185,8 @@
     },
     {
       "group": "dji30",
-      "symbol": "VZ",
-      "name": "Verizon Communications Inc.",
+      "symbol": "KO",
+      "name": "The Coca-Cola Company",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 876,
@@ -340205,8 +340205,8 @@
     },
     {
       "group": "futures",
-      "symbol": "HG=F",
-      "name": "Copper",
+      "symbol": "SI=F",
+      "name": "Silver",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -340225,18 +340225,8 @@
     },
     {
       "group": "futures",
-      "symbol": "SI=F",
-      "name": "Silver",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 2000,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "futures",
-      "symbol": "ES=F",
-      "name": "E-mini S&P 500",
+      "symbol": "HG=F",
+      "name": "Copper",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -340247,6 +340237,16 @@
       "group": "futures",
       "symbol": "CL=F",
       "name": "Crude Oil",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "futures",
+      "symbol": "ES=F",
+      "name": "E-mini S&P 500",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -340295,8 +340295,8 @@
     },
     {
       "group": "futures",
-      "symbol": "RTY=F",
-      "name": "E-mini Russell",
+      "symbol": "ZN=F",
+      "name": "10Y T-Note",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -340305,8 +340305,8 @@
     },
     {
       "group": "futures",
-      "symbol": "ZN=F",
-      "name": "10Y T-Note",
+      "symbol": "RTY=F",
+      "name": "E-mini Russell",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -340317,16 +340317,6 @@
       "group": "fx",
       "symbol": "EURUSD=X",
       "name": "EUR/USD",
-      "source": "yahoo",
-      "timeframe": "1h",
-      "bars": 2000,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "fx",
-      "symbol": "GBPUSD=X",
-      "name": "GBP/USD",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -340345,8 +340335,8 @@
     },
     {
       "group": "fx",
-      "symbol": "USDJPY=X",
-      "name": "USD/JPY",
+      "symbol": "GBPUSD=X",
+      "name": "GBP/USD",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -340357,6 +340347,16 @@
       "group": "fx",
       "symbol": "AUDUSD=X",
       "name": "AUD/USD",
+      "source": "yahoo",
+      "timeframe": "1h",
+      "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "fx",
+      "symbol": "USDJPY=X",
+      "name": "USD/JPY",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -340405,8 +340405,8 @@
     },
     {
       "group": "fx",
-      "symbol": "EURGBP=X",
-      "name": "EUR/GBP",
+      "symbol": "GBPJPY=X",
+      "name": "GBP/JPY",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -340415,8 +340415,8 @@
     },
     {
       "group": "fx",
-      "symbol": "GBPJPY=X",
-      "name": "GBP/JPY",
+      "symbol": "EURGBP=X",
+      "name": "EUR/GBP",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -340435,8 +340435,8 @@
     },
     {
       "group": "fx",
-      "symbol": "USDMXN=X",
-      "name": "USD/MXN",
+      "symbol": "USDTRY=X",
+      "name": "USD/TRY",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -340455,8 +340455,8 @@
     },
     {
       "group": "fx",
-      "symbol": "USDTRY=X",
-      "name": "USD/TRY",
+      "symbol": "EURCHF=X",
+      "name": "EUR/CHF",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -340465,8 +340465,8 @@
     },
     {
       "group": "fx",
-      "symbol": "EURCHF=X",
-      "name": "EUR/CHF",
+      "symbol": "USDMXN=X",
+      "name": "USD/MXN",
       "source": "yahoo",
       "timeframe": "1h",
       "bars": 2000,
@@ -340525,28 +340525,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "DOGEUSDT",
-      "name": "DOGE",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 2000,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
       "symbol": "BNBUSDT",
       "name": "BNB",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 2000,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "PLUMEUSDT",
-      "name": "PLUME",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -340565,8 +340545,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "PEPEUSDT",
-      "name": "PEPE",
+      "symbol": "XPLUSDT",
+      "name": "XPL",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -340575,8 +340555,18 @@
     },
     {
       "group": "crypto",
-      "symbol": "XPLUSDT",
-      "name": "XPL",
+      "symbol": "DOGEUSDT",
+      "name": "DOGE",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "PEPEUSDT",
+      "name": "PEPE",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -340589,7 +340579,17 @@
       "name": "RE",
       "source": "binance",
       "timeframe": "1h",
-      "bars": 1527,
+      "bars": 1528,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "PLUMEUSDT",
+      "name": "PLUME",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 2000,
       "events": [],
       "error": null
     },
@@ -340605,8 +340605,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "ADAUSDT",
-      "name": "ADA",
+      "symbol": "ENAUSDT",
+      "name": "ENA",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -340615,8 +340615,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "ENAUSDT",
-      "name": "ENA",
+      "symbol": "ADAUSDT",
+      "name": "ADA",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -340649,14 +340649,14 @@
       "name": "SNDKB",
       "source": "binance",
       "timeframe": "1h",
-      "bars": 1691,
+      "bars": 1692,
       "events": [],
       "error": null
     },
     {
       "group": "crypto",
-      "symbol": "UUSDT",
-      "name": "U",
+      "symbol": "PUMPUSDT",
+      "name": "PUMP",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -340665,8 +340665,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "PUMPUSDT",
-      "name": "PUMP",
+      "symbol": "UUSDT",
+      "name": "U",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -340685,8 +340685,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "XLMUSDT",
-      "name": "XLM",
+      "symbol": "BOMEUSDT",
+      "name": "BOME",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -340695,8 +340695,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "BOMEUSDT",
-      "name": "BOME",
+      "symbol": "XLMUSDT",
+      "name": "XLM",
       "source": "binance",
       "timeframe": "1h",
       "bars": 2000,
@@ -340726,22 +340726,12 @@
           "label": "阻力趨勢線觸碰",
           "type": "resistance",
           "time": 1787284800,
-          "index": 1999,
+          "index": 1998,
           "level": 7.353467078189301,
-          "close": 7.317,
+          "close": 7.313,
           "timeframe": "1h"
         }
       ],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "SPCXBUSDT",
-      "name": "SPCXB",
-      "source": "binance",
-      "timeframe": "1h",
-      "bars": 1668,
-      "events": [],
       "error": null
     },
     {
@@ -340755,19 +340745,19 @@
       "error": null
     },
     {
-      "group": "ndx100",
-      "symbol": "NVDA",
-      "name": "Nvidia",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
+      "group": "crypto",
+      "symbol": "SPCXBUSDT",
+      "name": "SPCXB",
+      "source": "binance",
+      "timeframe": "1h",
+      "bars": 1669,
       "events": [],
       "error": null
     },
     {
       "group": "ndx100",
-      "symbol": "AAPL",
-      "name": "Apple Inc.",
+      "symbol": "NVDA",
+      "name": "Nvidia",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -340796,8 +340786,28 @@
     },
     {
       "group": "ndx100",
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "MSFT",
       "name": "Microsoft",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "AMZN",
+      "name": "Amazon",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -340818,16 +340828,6 @@
       "group": "ndx100",
       "symbol": "GOOGL",
       "name": "Alphabet Inc. (Class A)",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "AMZN",
-      "name": "Amazon",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -340886,16 +340886,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ASML",
-      "name": "ASML Holding",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1253,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "COST",
       "name": "Costco",
       "source": "yahoo",
@@ -340917,8 +340907,28 @@
     },
     {
       "group": "ndx100",
+      "symbol": "ASML",
+      "name": "ASML Holding",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1253,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "NFLX",
       "name": "Netflix",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "AMD",
+      "name": "Advanced Micro Devices Inc.",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -340939,16 +340949,6 @@
       "group": "ndx100",
       "symbol": "PLTR",
       "name": "Palantir Technologies",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "AMD",
-      "name": "Advanced Micro Devices Inc.",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -340987,21 +340987,21 @@
     },
     {
       "group": "ndx100",
-      "symbol": "TMUS",
-      "name": "T-Mobile US",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "LIN",
       "name": "Linde plc",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "TMUS",
+      "name": "T-Mobile US",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -341047,26 +341047,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "TXN",
-      "name": "Texas Instruments",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "GILD",
-      "name": "Gilead Sciences",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "ARM",
       "name": "Arm Holdings",
       "source": "yahoo",
@@ -341077,8 +341057,28 @@
     },
     {
       "group": "ndx100",
+      "symbol": "TXN",
+      "name": "Texas Instruments",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "ISRG",
       "name": "Intuitive Surgical",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "GILD",
+      "name": "Gilead Sciences",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -341138,27 +341138,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "BKNG",
-      "name": "Booking Holdings",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1253,
-      "events": [
-        {
-          "kind": "trend_touch",
-          "label": "阻力趨勢線觸碰",
-          "type": "resistance",
-          "time": 1787146200,
-          "index": 1251,
-          "level": 215.4175060956906,
-          "close": 213.0,
-          "timeframe": "1d"
-        }
-      ],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "QCOM",
       "name": "Qualcomm",
       "source": "yahoo",
@@ -341179,12 +341158,23 @@
     },
     {
       "group": "ndx100",
-      "symbol": "VRTX",
-      "name": "Vertex Pharmaceuticals",
+      "symbol": "BKNG",
+      "name": "Booking Holdings",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1253,
-      "events": [],
+      "events": [
+        {
+          "kind": "trend_touch",
+          "label": "阻力趨勢線觸碰",
+          "type": "resistance",
+          "time": 1787146200,
+          "index": 1251,
+          "level": 215.4175060956906,
+          "close": 213.0,
+          "timeframe": "1d"
+        }
+      ],
       "error": null
     },
     {
@@ -341209,8 +341199,18 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CMCSA",
-      "name": "Comcast",
+      "symbol": "VRTX",
+      "name": "Vertex Pharmaceuticals",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1253,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "SBUX",
+      "name": "Starbucks",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -341219,8 +341219,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "SBUX",
-      "name": "Starbucks",
+      "symbol": "CMCSA",
+      "name": "Comcast",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -341249,8 +341249,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "WDC",
-      "name": "Western Digital",
+      "symbol": "ADBE",
+      "name": "Adobe Inc.",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -341259,8 +341259,8 @@
     },
     {
       "group": "ndx100",
-      "symbol": "ADBE",
-      "name": "Adobe Inc.",
+      "symbol": "WDC",
+      "name": "Western Digital",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -341289,21 +341289,21 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MAR",
-      "name": "Marriott International",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "MELI",
       "name": "MercadoLibre",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "MAR",
+      "name": "Marriott International",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -341330,6 +341330,16 @@
     },
     {
       "group": "ndx100",
+      "symbol": "REGN",
+      "name": "Regeneron Pharmaceuticals",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "SNPS",
       "name": "Synopsys",
       "source": "yahoo",
@@ -341350,18 +341360,18 @@
     },
     {
       "group": "ndx100",
-      "symbol": "REGN",
-      "name": "Regeneron Pharmaceuticals",
+      "symbol": "CSX",
+      "name": "CSX Corporation",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1251,
+      "bars": 1254,
       "events": [],
       "error": null
     },
     {
       "group": "ndx100",
-      "symbol": "CSX",
-      "name": "CSX Corporation",
+      "symbol": "MDLZ",
+      "name": "Mondelez International",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -341390,11 +341400,11 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MDLZ",
-      "name": "Mondelez International",
+      "symbol": "MNST",
+      "name": "Monster Beverage",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1254,
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -341420,21 +341430,21 @@
     },
     {
       "group": "ndx100",
-      "symbol": "WBD",
-      "name": "Warner Bros. Discovery",
+      "symbol": "PCAR",
+      "name": "Paccar",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1254,
+      "bars": 1253,
       "events": [],
       "error": null
     },
     {
       "group": "ndx100",
-      "symbol": "MNST",
-      "name": "Monster Beverage",
+      "symbol": "WBD",
+      "name": "Warner Bros. Discovery",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1251,
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -341460,26 +341470,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "PCAR",
-      "name": "Paccar",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1253,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "FTNT",
-      "name": "Fortinet",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "BKR",
       "name": "Baker Hughes",
       "source": "yahoo",
@@ -341495,6 +341485,16 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "FTNT",
+      "name": "Fortinet",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -341562,31 +341562,11 @@
     },
     {
       "group": "ndx100",
-      "symbol": "FER",
-      "name": "Ferrovial SE",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "NXPI",
       "name": "NXP Semiconductors",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "XEL",
-      "name": "Xcel Energy",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1253,
       "events": [],
       "error": null
     },
@@ -341602,21 +341582,21 @@
     },
     {
       "group": "ndx100",
-      "symbol": "MSTR",
-      "name": "MicroStrategy Inc.",
+      "symbol": "FER",
+      "name": "Ferrovial SE",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1254,
+      "bars": 1251,
       "events": [],
       "error": null
     },
     {
       "group": "ndx100",
-      "symbol": "ALNY",
-      "name": "Alnylam Pharmaceuticals",
+      "symbol": "XEL",
+      "name": "Xcel Energy",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1252,
+      "bars": 1253,
       "events": [],
       "error": null
     },
@@ -341632,11 +341612,41 @@
     },
     {
       "group": "ndx100",
+      "symbol": "ALNY",
+      "name": "Alnylam Pharmaceuticals",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "MSTR",
+      "name": "MicroStrategy Inc.",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "DDOG",
       "name": "Datadog",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "ODFL",
+      "name": "Old Dominion Freight Line",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -341654,16 +341664,6 @@
       "group": "ndx100",
       "symbol": "CCEP",
       "name": "Coca-Cola Europacific Partners",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
-      "symbol": "ODFL",
-      "name": "Old Dominion Freight Line",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -341702,16 +341702,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "INSM",
-      "name": "Insmed Incorporated",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "KDP",
       "name": "Keurig Dr Pepper",
       "source": "yahoo",
@@ -341722,11 +341712,11 @@
     },
     {
       "group": "ndx100",
-      "symbol": "WDAY",
-      "name": "Workday, Inc.",
+      "symbol": "INSM",
+      "name": "Insmed Incorporated",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1254,
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -341752,11 +341742,11 @@
     },
     {
       "group": "ndx100",
-      "symbol": "GEHC",
-      "name": "GE HealthCare",
+      "symbol": "WDAY",
+      "name": "Workday, Inc.",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 922,
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -341772,11 +341762,11 @@
     },
     {
       "group": "ndx100",
-      "symbol": "CPRT",
-      "name": "Copart",
+      "symbol": "GEHC",
+      "name": "GE HealthCare",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1254,
+      "bars": 922,
       "events": [],
       "error": null
     },
@@ -341787,6 +341777,16 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
+      "symbol": "CPRT",
+      "name": "Copart",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -341822,16 +341822,6 @@
     },
     {
       "group": "ndx100",
-      "symbol": "TEAM",
-      "name": "Atlassian",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "ndx100",
       "symbol": "DXCM",
       "name": "DexCom",
       "source": "yahoo",
@@ -341852,11 +341842,31 @@
     },
     {
       "group": "ndx100",
+      "symbol": "TEAM",
+      "name": "Atlassian",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "ndx100",
       "symbol": "CSGP",
       "name": "CoStar Group",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "NVDA",
+      "name": "Nvidia",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -341882,26 +341892,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "NVDA",
-      "name": "Nvidia",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "GOOGL",
-      "name": "Alphabet Inc. (Class A)",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "AMZN",
       "name": "Amazon",
       "source": "yahoo",
@@ -341912,8 +341902,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "META",
-      "name": "Meta Platforms",
+      "symbol": "GOOGL",
+      "name": "Alphabet Inc. (Class A)",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -341942,8 +341932,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "TSLA",
-      "name": "Tesla, Inc.",
+      "symbol": "META",
+      "name": "Meta Platforms",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -341957,6 +341947,16 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1253,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "TSLA",
+      "name": "Tesla, Inc.",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -342064,8 +342064,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ORCL",
-      "name": "Oracle Corporation",
+      "symbol": "NFLX",
+      "name": "Netflix",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342074,8 +342074,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "NFLX",
-      "name": "Netflix",
+      "symbol": "ORCL",
+      "name": "Oracle Corporation",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342094,8 +342094,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "MU",
-      "name": "Micron Technology",
+      "symbol": "ABBV",
+      "name": "AbbVie",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342104,8 +342104,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ABBV",
-      "name": "AbbVie",
+      "symbol": "MU",
+      "name": "Micron Technology",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342144,8 +342144,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PG",
-      "name": "Procter & Gamble",
+      "symbol": "CAT",
+      "name": "Caterpillar Inc.",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342154,8 +342154,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CAT",
-      "name": "Caterpillar Inc.",
+      "symbol": "PG",
+      "name": "Procter & Gamble",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342169,26 +342169,6 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1253,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "CSCO",
-      "name": "Cisco",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "KO",
-      "name": "Coca-Cola Company (The)",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -342214,8 +342194,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "LRCX",
-      "name": "Lam Research",
+      "symbol": "CSCO",
+      "name": "Cisco",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "KO",
+      "name": "Coca-Cola Company (The)",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342234,8 +342224,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "GS",
-      "name": "Goldman Sachs",
+      "symbol": "RTX",
+      "name": "RTX Corporation",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342244,8 +342234,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "RTX",
-      "name": "RTX Corporation",
+      "symbol": "LRCX",
+      "name": "Lam Research",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342266,6 +342256,16 @@
       "group": "sp500",
       "symbol": "PM",
       "name": "Philip Morris International",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "GS",
+      "name": "Goldman Sachs",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342324,8 +342324,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "INTC",
-      "name": "Intel",
+      "symbol": "IBM",
+      "name": "IBM",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342334,8 +342334,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "IBM",
-      "name": "IBM",
+      "symbol": "INTC",
+      "name": "Intel",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342349,6 +342349,16 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "AXP",
+      "name": "American Express",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1253,
       "events": [],
       "error": null
     },
@@ -342374,11 +342384,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "AXP",
-      "name": "American Express",
+      "symbol": "C",
+      "name": "Citigroup",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1253,
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -342394,8 +342404,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "C",
-      "name": "Citigroup",
+      "symbol": "KLAC",
+      "name": "KLA Corporation",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342406,16 +342416,6 @@
       "group": "sp500",
       "symbol": "NEE",
       "name": "NextEra Energy",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "KLAC",
-      "name": "KLA Corporation",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342444,6 +342444,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "TJX",
+      "name": "TJX Companies",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "ABT",
       "name": "Abbott Laboratories",
       "source": "yahoo",
@@ -342461,16 +342471,6 @@
           "timeframe": "1d"
         }
       ],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "TJX",
-      "name": "TJX Companies",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
       "error": null
     },
     {
@@ -342535,8 +342535,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ANET",
-      "name": "Arista Networks",
+      "symbol": "BA",
+      "name": "Boeing",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342567,8 +342567,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "BA",
-      "name": "Boeing",
+      "symbol": "ANET",
+      "name": "Arista Networks",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342627,21 +342627,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "UBER",
-      "name": "Uber",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "UNP",
       "name": "Union Pacific Corporation",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1253,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "UBER",
+      "name": "Uber",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -342678,8 +342678,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "LMT",
-      "name": "Lockheed Martin",
+      "symbol": "QCOM",
+      "name": "Qualcomm",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342688,8 +342688,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "QCOM",
-      "name": "Qualcomm",
+      "symbol": "LMT",
+      "name": "Lockheed Martin",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342708,8 +342708,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "DHR",
-      "name": "Danaher Corporation",
+      "symbol": "APP",
+      "name": "AppLovin Corporation",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342718,8 +342718,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "APP",
-      "name": "AppLovin Corporation",
+      "symbol": "DHR",
+      "name": "Danaher Corporation",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342749,6 +342749,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "PANW",
+      "name": "Palo Alto Networks",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "LOW",
       "name": "Lowe's",
       "source": "yahoo",
@@ -342764,16 +342774,6 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "PANW",
-      "name": "Palo Alto Networks",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -342860,11 +342860,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "GLW",
-      "name": "Corning Inc.",
+      "symbol": "PH",
+      "name": "Parker Hannifin",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1254,
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -342880,11 +342880,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "PH",
-      "name": "Parker Hannifin",
+      "symbol": "GLW",
+      "name": "Corning Inc.",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1251,
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -342900,8 +342900,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "MDT",
-      "name": "Medtronic",
+      "symbol": "VRTX",
+      "name": "Vertex Pharmaceuticals",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1253,
@@ -342910,8 +342910,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "VRTX",
-      "name": "Vertex Pharmaceuticals",
+      "symbol": "MDT",
+      "name": "Medtronic",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1253,
@@ -342930,8 +342930,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "MO",
-      "name": "Altria",
+      "symbol": "CME",
+      "name": "CME Group",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342940,8 +342940,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CME",
-      "name": "CME Group",
+      "symbol": "MO",
+      "name": "Altria",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -342960,21 +342960,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "HCA",
-      "name": "HCA Healthcare",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "DELL",
       "name": "Dell Technologies",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "HCA",
+      "name": "HCA Healthcare",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -343000,21 +343000,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "DUK",
-      "name": "Duke Energy",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "CMCSA",
       "name": "Comcast",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "DUK",
+      "name": "Duke Energy",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -343030,8 +343030,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CRWD",
-      "name": "CrowdStrike",
+      "symbol": "ADBE",
+      "name": "Adobe Inc.",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -343040,8 +343040,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ADBE",
-      "name": "Adobe Inc.",
+      "symbol": "CRWD",
+      "name": "CrowdStrike",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -343150,16 +343150,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "CVS",
-      "name": "CVS Health",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "BX",
       "name": "Blackstone Inc.",
       "source": "yahoo",
@@ -343180,8 +343170,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "STX",
-      "name": "Seagate Technology",
+      "symbol": "CVS",
+      "name": "CVS Health",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -343210,18 +343200,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "FCX",
-      "name": "Freeport-McMoRan",
+      "symbol": "STX",
+      "name": "Seagate Technology",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1253,
+      "bars": 1254,
       "events": [],
       "error": null
     },
     {
       "group": "sp500",
-      "symbol": "PNC",
-      "name": "PNC Financial Services",
+      "symbol": "FCX",
+      "name": "Freeport-McMoRan",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1253,
@@ -343250,11 +343240,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "KKR",
-      "name": "KKR",
+      "symbol": "PNC",
+      "name": "PNC Financial Services",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1252,
+      "bars": 1253,
       "events": [],
       "error": null
     },
@@ -343280,11 +343270,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "REGN",
-      "name": "Regeneron Pharmaceuticals",
+      "symbol": "KKR",
+      "name": "KKR",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1251,
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -343311,11 +343301,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "USB",
-      "name": "U.S. Bancorp",
+      "symbol": "REGN",
+      "name": "Regeneron Pharmaceuticals",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1252,
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -343341,8 +343331,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "AMT",
-      "name": "American Tower",
+      "symbol": "USB",
+      "name": "U.S. Bancorp",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
@@ -343351,11 +343341,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "SHW",
-      "name": "Sherwin-Williams",
+      "symbol": "AMT",
+      "name": "American Tower",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1251,
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -343381,6 +343371,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "SHW",
+      "name": "Sherwin-Williams",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "SNPS",
       "name": "Synopsys",
       "source": "yahoo",
@@ -343401,16 +343401,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "ORLY",
-      "name": "O'Reilly Auto Parts",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1253,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "ABNB",
       "name": "Airbnb",
       "source": "yahoo",
@@ -343421,28 +343411,18 @@
     },
     {
       "group": "sp500",
+      "symbol": "ORLY",
+      "name": "O'Reilly Auto Parts",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1253,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "MMM",
       "name": "3M",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "ECL",
-      "name": "Ecolab",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "SLB",
-      "name": "Schlumberger",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -343461,11 +343441,31 @@
     },
     {
       "group": "sp500",
+      "symbol": "ECL",
+      "name": "Ecolab",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "RCL",
       "name": "Royal Caribbean Group",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "SLB",
+      "name": "Schlumberger",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -343493,8 +343493,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ITW",
-      "name": "Illinois Tool Works",
+      "symbol": "EMR",
+      "name": "Emerson Electric",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
@@ -343503,11 +343503,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "KMI",
-      "name": "Kinder Morgan",
+      "symbol": "ITW",
+      "name": "Illinois Tool Works",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1254,
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -343533,11 +343533,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "EMR",
-      "name": "Emerson Electric",
+      "symbol": "KMI",
+      "name": "Kinder Morgan",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1252,
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -343548,36 +343548,6 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "CI",
-      "name": "Cigna",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "AEP",
-      "name": "American Electric Power",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1253,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "MNST",
-      "name": "Monster Beverage",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -343605,8 +343575,28 @@
     },
     {
       "group": "sp500",
-      "symbol": "PSX",
-      "name": "Phillips 66",
+      "symbol": "CI",
+      "name": "Cigna",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "MNST",
+      "name": "Monster Beverage",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "MPC",
+      "name": "Marathon Petroleum",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -343615,8 +343605,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "MPC",
-      "name": "Marathon Petroleum",
+      "symbol": "AEP",
+      "name": "American Electric Power",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1253,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "PSX",
+      "name": "Phillips 66",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -343635,8 +343635,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ROST",
-      "name": "Ross Stores",
+      "symbol": "AON",
+      "name": "Aon",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
@@ -343645,8 +343645,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "AON",
-      "name": "Aon",
+      "symbol": "ROST",
+      "name": "Ross Stores",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
@@ -343660,16 +343660,6 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "CL",
-      "name": "Colgate-Palmolive",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1253,
       "events": [],
       "error": null
     },
@@ -343695,6 +343685,36 @@
     },
     {
       "group": "sp500",
+      "symbol": "CL",
+      "name": "Colgate-Palmolive",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1253,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "CTAS",
+      "name": "Cintas",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "RSG",
+      "name": "Republic Services",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1250,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "TDG",
       "name": "TransDigm Group",
       "source": "yahoo",
@@ -343712,26 +343732,6 @@
           "timeframe": "1d"
         }
       ],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "RSG",
-      "name": "Republic Services",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1250,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "CTAS",
-      "name": "Cintas",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
       "error": null
     },
     {
@@ -343776,21 +343776,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "NSC",
-      "name": "Norfolk Southern Railway",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "ELV",
       "name": "Elevance Health",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "NSC",
+      "name": "Norfolk Southern Railway",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -343806,16 +343806,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "TRV",
-      "name": "Travelers Companies (The)",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1253,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "SRE",
       "name": "Sempra",
       "source": "yahoo",
@@ -343826,11 +343816,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "OXY",
-      "name": "Occidental Petroleum",
+      "symbol": "TRV",
+      "name": "Travelers Companies (The)",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1254,
+      "bars": 1253,
       "events": [],
       "error": null
     },
@@ -343846,11 +343836,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "TEL",
-      "name": "TE Connectivity",
+      "symbol": "OXY",
+      "name": "Occidental Petroleum",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1253,
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -343861,6 +343851,16 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "TEL",
+      "name": "TE Connectivity",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1253,
       "events": [],
       "error": null
     },
@@ -343966,16 +343966,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "AJG",
-      "name": "Arthur J. Gallagher & Co.",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "AZO",
       "name": "AutoZone",
       "source": "yahoo",
@@ -343993,6 +343983,16 @@
           "timeframe": "1d"
         }
       ],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "AJG",
+      "name": "Arthur J. Gallagher & Co.",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
+      "events": [],
       "error": null
     },
     {
@@ -344059,8 +344059,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "TRGP",
-      "name": "Targa Resources",
+      "symbol": "ALL",
+      "name": "Allstate",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -344069,8 +344069,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ALL",
-      "name": "Allstate",
+      "symbol": "TRGP",
+      "name": "Targa Resources",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -344099,16 +344099,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "EA",
-      "name": "Electronic Arts",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 6,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "VST",
       "name": "Vistra Corp.",
       "source": "yahoo",
@@ -344119,11 +344109,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "GWW",
-      "name": "W. W. Grainger",
+      "symbol": "EA",
+      "name": "Electronic Arts",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1251,
+      "bars": 6,
       "events": [],
       "error": null
     },
@@ -344134,6 +344124,16 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "GWW",
+      "name": "W. W. Grainger",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -344179,21 +344179,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "NXPI",
-      "name": "NXP Semiconductors",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "XEL",
       "name": "Xcel Energy",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1253,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "NXPI",
+      "name": "NXP Semiconductors",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -344239,21 +344239,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "TER",
-      "name": "Teradyne",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "PSA",
       "name": "Public Storage",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "TER",
+      "name": "Teradyne",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -344329,21 +344329,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "MET",
-      "name": "MetLife",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "CVNA",
       "name": "Carvana Co.",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "MET",
+      "name": "MetLife",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -344369,6 +344369,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "DAL",
+      "name": "Delta Air Lines",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "KR",
       "name": "Kroger",
       "source": "yahoo",
@@ -344386,16 +344396,6 @@
           "timeframe": "1d"
         }
       ],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "DAL",
-      "name": "Delta Air Lines",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
       "error": null
     },
     {
@@ -344480,21 +344480,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "ED",
-      "name": "Consolidated Edison",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "EBAY",
       "name": "eBay",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1253,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "ED",
+      "name": "Consolidated Edison",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -344520,8 +344520,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "AMP",
-      "name": "Ameriprise Financial",
+      "symbol": "ROK",
+      "name": "Rockwell Automation",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -344530,8 +344530,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ROK",
-      "name": "Rockwell Automation",
+      "symbol": "AMP",
+      "name": "Ameriprise Financial",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -344550,11 +344550,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "DHI",
-      "name": "D. R. Horton",
+      "symbol": "NUE",
+      "name": "Nucor",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1251,
+      "bars": 1253,
       "events": [],
       "error": null
     },
@@ -344570,16 +344570,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "NUE",
-      "name": "Nucor",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1253,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "EQT",
       "name": "EQT Corporation",
       "source": "yahoo",
@@ -344590,11 +344580,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "VTR",
-      "name": "Ventas",
+      "symbol": "DHI",
+      "name": "D. R. Horton",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "WEC",
+      "name": "WEC Energy Group",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -344621,11 +344621,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "WEC",
-      "name": "WEC Energy Group",
+      "symbol": "VTR",
+      "name": "Ventas",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1252,
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -344751,16 +344751,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "MCHP",
-      "name": "Microchip Technology",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "SATS",
       "name": "EchoStar Corporation",
       "source": "yahoo",
@@ -344776,6 +344766,16 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1253,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "MCHP",
+      "name": "Microchip Technology",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -344821,16 +344821,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "EME",
-      "name": "EMCOR Group, Inc.",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "WDAY",
       "name": "Workday, Inc.",
       "source": "yahoo",
@@ -344841,11 +344831,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "RMD",
-      "name": "ResMed",
+      "symbol": "EME",
+      "name": "EMCOR Group, Inc.",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1250,
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -344861,11 +344851,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "GEHC",
-      "name": "GE HealthCare",
+      "symbol": "RMD",
+      "name": "ResMed",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 922,
+      "bars": 1250,
       "events": [],
       "error": null
     },
@@ -344881,21 +344871,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "TPL",
-      "name": "Texas Pacific Land Corporation",
+      "symbol": "GEHC",
+      "name": "GE HealthCare",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "A",
-      "name": "Agilent Technologies",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
+      "bars": 922,
       "events": [],
       "error": null
     },
@@ -344911,18 +344891,28 @@
     },
     {
       "group": "sp500",
-      "symbol": "HBAN",
-      "name": "Huntington Bancshares",
+      "symbol": "A",
+      "name": "Agilent Technologies",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1253,
+      "bars": 1252,
       "events": [],
       "error": null
     },
     {
       "group": "sp500",
-      "symbol": "KMB",
-      "name": "Kimberly-Clark",
+      "symbol": "TPL",
+      "name": "Texas Pacific Land Corporation",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "HBAN",
+      "name": "Huntington Bancshares",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1253,
@@ -344941,21 +344931,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "HPE",
-      "name": "Hewlett Packard Enterprise",
+      "symbol": "KMB",
+      "name": "Kimberly-Clark",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1254,
+      "bars": 1253,
       "events": [],
       "error": null
     },
     {
       "group": "sp500",
-      "symbol": "IR",
-      "name": "Ingersoll Rand",
+      "symbol": "HPE",
+      "name": "Hewlett Packard Enterprise",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1252,
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -344973,6 +344963,16 @@
       "group": "sp500",
       "symbol": "NRG",
       "name": "NRG Energy",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "IR",
+      "name": "Ingersoll Rand",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
@@ -345002,6 +345002,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "DVN",
+      "name": "Devon Energy",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "ATO",
       "name": "Atmos Energy",
       "source": "yahoo",
@@ -345022,41 +345032,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "DVN",
-      "name": "Devon Energy",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "DTE",
-      "name": "DTE Energy",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "IBKR",
       "name": "Interactive Brokers Group",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "OTIS",
-      "name": "Otis Worldwide",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -345072,8 +345052,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "CTSH",
-      "name": "Cognizant",
+      "symbol": "DTE",
+      "name": "DTE Energy",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "OTIS",
+      "name": "Otis Worldwide",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
@@ -345102,6 +345092,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "CTSH",
+      "name": "Cognizant",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "CBOE",
       "name": "Cboe Global Markets",
       "source": "yahoo",
@@ -345122,16 +345122,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "FE",
-      "name": "FirstEnergy",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "WAT",
       "name": "Waters Corporation",
       "source": "yahoo",
@@ -345142,8 +345132,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "TPR",
-      "name": "Tapestry, Inc.",
+      "symbol": "FE",
+      "name": "FirstEnergy",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -345157,6 +345147,16 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "TPR",
+      "name": "Tapestry, Inc.",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -345202,21 +345202,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "RJF",
-      "name": "Raymond James Financial",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "EIX",
       "name": "Edison International",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1253,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "RJF",
+      "name": "Raymond James Financial",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -345252,6 +345252,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "BIIB",
+      "name": "Biogen",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "WTW",
       "name": "Willis Towers Watson",
       "source": "yahoo",
@@ -345272,18 +345282,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "BIIB",
-      "name": "Biogen",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "AWK",
-      "name": "American Water Works",
+      "symbol": "CHTR",
+      "name": "Charter Communications",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -345302,21 +345302,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "CHTR",
-      "name": "Charter Communications",
+      "symbol": "AWK",
+      "name": "American Water Works",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "ROL",
-      "name": "Rollins, Inc.",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1253,
       "events": [],
       "error": null
     },
@@ -345337,6 +345327,16 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "ROL",
+      "name": "Rollins, Inc.",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1253,
       "events": [],
       "error": null
     },
@@ -345442,6 +345442,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "LYB",
+      "name": "LyondellBasell",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1253,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "CTRA",
       "name": "Coterra",
       "source": "yahoo",
@@ -345452,11 +345462,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "LYB",
-      "name": "LyondellBasell",
+      "symbol": "ARES",
+      "name": "Ares Management Corporation",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1253,
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -345472,8 +345482,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ARES",
-      "name": "Ares Management Corporation",
+      "symbol": "WRB",
+      "name": "W. R. Berkley Corporation",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
@@ -345492,21 +345502,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "WRB",
-      "name": "W. R. Berkley Corporation",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "ON",
       "name": "ON Semiconductor",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "CINF",
+      "name": "Cincinnati Financial",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -345532,8 +345542,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CINF",
-      "name": "Cincinnati Financial",
+      "symbol": "PPG",
+      "name": "PPG Industries",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -345562,8 +345572,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "PPG",
-      "name": "PPG Industries",
+      "symbol": "ULTA",
+      "name": "Ulta Beauty",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -345582,16 +345592,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "VRSN",
-      "name": "Verisign",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "AVB",
       "name": "AvalonBay Communities",
       "source": "yahoo",
@@ -345602,8 +345602,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "ULTA",
-      "name": "Ulta Beauty",
+      "symbol": "VRSN",
+      "name": "Verisign",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -345652,21 +345652,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "TSN",
-      "name": "Tyson Foods",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "LH",
       "name": "LabCorp",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "TSN",
+      "name": "Tyson Foods",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -345682,21 +345682,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "CHD",
-      "name": "Church & Dwight",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "EQR",
       "name": "Equity Residential",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1233,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "CHD",
+      "name": "Church & Dwight",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -345712,11 +345712,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "DLTR",
-      "name": "Dollar Tree",
+      "symbol": "VLTO",
+      "name": "Veralto",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1251,
+      "bars": 719,
       "events": [],
       "error": null
     },
@@ -345732,11 +345732,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "VLTO",
-      "name": "Veralto",
+      "symbol": "DLTR",
+      "name": "Dollar Tree",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 719,
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -345752,8 +345752,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "STE",
-      "name": "Steris",
+      "symbol": "L",
+      "name": "Loews Corporation",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -345762,8 +345762,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "L",
-      "name": "Loews Corporation",
+      "symbol": "STE",
+      "name": "Steris",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -345777,6 +345777,16 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "FSLR",
+      "name": "First Solar",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1253,
       "events": [],
       "error": null
     },
@@ -345797,16 +345807,6 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "FSLR",
-      "name": "First Solar",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1253,
       "events": [],
       "error": null
     },
@@ -345872,16 +345872,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "CHRW",
-      "name": "C.H. Robinson",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "JBHT",
       "name": "J.B. Hunt",
       "source": "yahoo",
@@ -345912,6 +345902,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "CHRW",
+      "name": "C.H. Robinson",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "CPAY",
       "name": "Corpay",
       "source": "yahoo",
@@ -345922,8 +345922,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "CF",
-      "name": "CF Industries",
+      "symbol": "LDOS",
+      "name": "Leidos",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
@@ -345932,8 +345932,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "LDOS",
-      "name": "Leidos",
+      "symbol": "CF",
+      "name": "CF Industries",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
@@ -346053,6 +346053,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "IFF",
+      "name": "International Flavors & Fragrances",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "GPN",
       "name": "Global Payments",
       "source": "yahoo",
@@ -346063,8 +346073,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "IFF",
-      "name": "International Flavors & Fragrances",
+      "symbol": "NVR",
+      "name": "NVR, Inc.",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -346078,16 +346088,6 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "NVR",
-      "name": "NVR, Inc.",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -346123,6 +346123,16 @@
     },
     {
       "group": "sp500",
+      "symbol": "ZBH",
+      "name": "Zimmer Biomet",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "WY",
       "name": "Weyerhaeuser",
       "source": "yahoo",
@@ -346143,11 +346153,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "ZBH",
-      "name": "Zimmer Biomet",
+      "symbol": "FTV",
+      "name": "Fortive",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1251,
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -346163,11 +346173,11 @@
     },
     {
       "group": "sp500",
-      "symbol": "FTV",
-      "name": "Fortive",
+      "symbol": "PTC",
+      "name": "PTC Inc.",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1252,
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -346178,16 +346188,6 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "PTC",
-      "name": "PTC Inc.",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -346210,6 +346210,16 @@
       "bars": 1251,
       "events": [],
       "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "HOLX",
+      "name": "Hologic",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 0,
+      "events": [],
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "group": "sp500",
@@ -346253,16 +346263,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "HOLX",
-      "name": "Hologic",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 0,
-      "events": [],
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "group": "sp500",
       "symbol": "VTRS",
       "name": "Viatris",
       "source": "yahoo",
@@ -346303,6 +346303,26 @@
     },
     {
       "group": "sp500",
+      "symbol": "TXT",
+      "name": "Textron",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "KIM",
+      "name": "Kimco Realty",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "INVH",
       "name": "Invitation Homes",
       "source": "yahoo",
@@ -346324,26 +346344,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "TXT",
-      "name": "Textron",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "KIM",
-      "name": "Kimco Realty",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "NDSN",
       "name": "Nordson Corporation",
       "source": "yahoo",
@@ -346354,8 +346354,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "HII",
-      "name": "Huntington Ingalls Industries",
+      "symbol": "J",
+      "name": "Jacobs Solutions",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -346364,8 +346364,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "J",
-      "name": "Jacobs Solutions",
+      "symbol": "HII",
+      "name": "Huntington Ingalls Industries",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -346414,16 +346414,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "MAA",
-      "name": "Mid-America Apartment Communities",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1250,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "DECK",
       "name": "Deckers Brands",
       "source": "yahoo",
@@ -346434,18 +346424,18 @@
     },
     {
       "group": "sp500",
-      "symbol": "PNR",
-      "name": "Pentair",
+      "symbol": "MAA",
+      "name": "Mid-America Apartment Communities",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1251,
+      "bars": 1250,
       "events": [],
       "error": null
     },
     {
       "group": "sp500",
-      "symbol": "IEX",
-      "name": "IDEX Corporation",
+      "symbol": "PNR",
+      "name": "Pentair",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -346464,21 +346454,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "REG",
-      "name": "Regency Centers",
+      "symbol": "IEX",
+      "name": "IDEX Corporation",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1250,
+      "bars": 1251,
       "events": [],
       "error": null
     },
     {
       "group": "sp500",
-      "symbol": "COO",
-      "name": "Cooper Companies (The)",
+      "symbol": "REG",
+      "name": "Regency Centers",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1251,
+      "bars": 1250,
       "events": [],
       "error": null
     },
@@ -346494,21 +346484,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "MKC",
-      "name": "McCormick & Company",
+      "symbol": "COO",
+      "name": "Cooper Companies (The)",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1252,
+      "bars": 1251,
       "events": [],
       "error": null
     },
     {
       "group": "sp500",
-      "symbol": "AVY",
-      "name": "Avery Dennison",
+      "symbol": "MKC",
+      "name": "McCormick & Company",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1251,
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -346534,6 +346524,26 @@
     },
     {
       "group": "sp500",
+      "symbol": "AVY",
+      "name": "Avery Dennison",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "ALLE",
+      "name": "Allegion",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
       "symbol": "ERIE",
       "name": "Erie Indemnity",
       "source": "yahoo",
@@ -346546,16 +346556,6 @@
       "group": "sp500",
       "symbol": "HAS",
       "name": "Hasbro",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "ALLE",
-      "name": "Allegion",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -346594,26 +346594,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "BEN",
-      "name": "Franklin Resources",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
-      "symbol": "MAS",
-      "name": "Masco",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "ALGN",
       "name": "Align Technology",
       "source": "yahoo",
@@ -346631,6 +346611,26 @@
           "timeframe": "1d"
         }
       ],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "MAS",
+      "name": "Masco",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "BEN",
+      "name": "Franklin Resources",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
+      "events": [],
       "error": null
     },
     {
@@ -346675,8 +346675,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "FOXA",
-      "name": "Fox Corporation (Class A)",
+      "symbol": "GNRC",
+      "name": "Generac",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
@@ -346685,8 +346685,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "GNRC",
-      "name": "Generac",
+      "symbol": "FOXA",
+      "name": "Fox Corporation (Class A)",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
@@ -346756,16 +346756,6 @@
     },
     {
       "group": "sp500",
-      "symbol": "SWK",
-      "name": "Stanley Black & Decker",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "UDR",
       "name": "UDR, Inc.",
       "source": "yahoo",
@@ -346776,21 +346766,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "GDDY",
-      "name": "GoDaddy",
+      "symbol": "SWK",
+      "name": "Stanley Black & Decker",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1252,
+      "bars": 1251,
       "events": [],
       "error": null
     },
     {
       "group": "sp500",
-      "symbol": "GL",
-      "name": "Globe Life",
+      "symbol": "GDDY",
+      "name": "GoDaddy",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1251,
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -346808,6 +346798,16 @@
       "group": "sp500",
       "symbol": "IVZ",
       "name": "Invesco",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "GL",
+      "name": "Globe Life",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -346836,21 +346836,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "WYNN",
-      "name": "Wynn Resorts",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1252,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "DVA",
       "name": "DaVita",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1250,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "WYNN",
+      "name": "Wynn Resorts",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1252,
       "events": [],
       "error": null
     },
@@ -346876,21 +346876,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "PSKY",
-      "name": "Paramount Skydance Corp",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "CPT",
       "name": "Camden Property Trust",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1250,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "PSKY",
+      "name": "Paramount Skydance Corp",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -346916,21 +346916,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "MGM",
-      "name": "MGM Resorts",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1251,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "NWSA",
       "name": "News Corp (Class A)",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1252,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "MGM",
+      "name": "MGM Resorts",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1251,
       "events": [],
       "error": null
     },
@@ -346946,8 +346946,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "FRT",
-      "name": "Federal Realty Investment Trust",
+      "symbol": "AOS",
+      "name": "A. O. Smith",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -346956,8 +346956,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "AOS",
-      "name": "A. O. Smith",
+      "symbol": "FRT",
+      "name": "Federal Realty Investment Trust",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -347016,8 +347016,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "TECH",
-      "name": "Bio-Techne",
+      "symbol": "TAP",
+      "name": "Molson Coors Beverage Company",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -347026,8 +347026,8 @@
     },
     {
       "group": "sp500",
-      "symbol": "TAP",
-      "name": "Molson Coors Beverage Company",
+      "symbol": "TECH",
+      "name": "Bio-Techne",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1251,
@@ -347056,21 +347056,21 @@
     },
     {
       "group": "sp500",
-      "symbol": "MOS",
-      "name": "Mosaic Company (The)",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "sp500",
       "symbol": "ARE",
       "name": "Alexandria Real Estate Equities",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1250,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "sp500",
+      "symbol": "MOS",
+      "name": "Mosaic Company (The)",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -347216,21 +347216,21 @@
     },
     {
       "group": "dji30",
-      "symbol": "TRV",
-      "name": "The Travelers Companies, Inc.",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1253,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "dji30",
       "symbol": "JPM",
       "name": "JPMorgan Chase & Co.",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "dji30",
+      "symbol": "TRV",
+      "name": "The Travelers Companies, Inc.",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1253,
       "events": [],
       "error": null
     },
@@ -347276,16 +347276,6 @@
     },
     {
       "group": "dji30",
-      "symbol": "CVX",
-      "name": "Chevron Corporation",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "dji30",
       "symbol": "HON",
       "name": "Honeywell International Inc.",
       "source": "yahoo",
@@ -347309,6 +347299,16 @@
       "group": "dji30",
       "symbol": "AMZN",
       "name": "Amazon.com, Inc.amazon.com",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "dji30",
+      "symbol": "CVX",
+      "name": "Chevron Corporation",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -347357,6 +347357,16 @@
     },
     {
       "group": "dji30",
+      "symbol": "MRK",
+      "name": "Merck & Co., Inc.",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "dji30",
       "symbol": "PG",
       "name": "The Procter & Gamble Company",
       "source": "yahoo",
@@ -347369,16 +347379,6 @@
       "group": "dji30",
       "symbol": "WMT",
       "name": "Walmart Inc.",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "dji30",
-      "symbol": "MRK",
-      "name": "Merck & Co., Inc.",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1254,
@@ -347426,22 +347426,22 @@
       "error": null
     },
     {
-      "group": "dji30",
-      "symbol": "NKE",
-      "name": "Nike, Inc.",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1254,
-      "events": [],
-      "error": null
-    },
-    {
       "group": "futures",
       "symbol": "GC=F",
       "name": "Gold",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1257,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "dji30",
+      "symbol": "NKE",
+      "name": "Nike, Inc.",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1254,
       "events": [],
       "error": null
     },
@@ -347467,16 +347467,6 @@
     },
     {
       "group": "futures",
-      "symbol": "CL=F",
-      "name": "Crude Oil",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1257,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "futures",
       "symbol": "ES=F",
       "name": "E-mini S&P 500",
       "source": "yahoo",
@@ -347487,18 +347477,18 @@
     },
     {
       "group": "futures",
-      "symbol": "NQ=F",
-      "name": "E-mini Nasdaq",
+      "symbol": "CL=F",
+      "name": "Crude Oil",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1258,
+      "bars": 1257,
       "events": [],
       "error": null
     },
     {
       "group": "futures",
-      "symbol": "YM=F",
-      "name": "E-mini Dow",
+      "symbol": "NQ=F",
+      "name": "E-mini Nasdaq",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1258,
@@ -347517,8 +347507,8 @@
     },
     {
       "group": "futures",
-      "symbol": "RTY=F",
-      "name": "E-mini Russell",
+      "symbol": "YM=F",
+      "name": "E-mini Dow",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1258,
@@ -347527,8 +347517,8 @@
     },
     {
       "group": "futures",
-      "symbol": "ZB=F",
-      "name": "US Treasury Bond",
+      "symbol": "RTY=F",
+      "name": "E-mini Russell",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1258,
@@ -347547,6 +347537,16 @@
     },
     {
       "group": "futures",
+      "symbol": "ZB=F",
+      "name": "US Treasury Bond",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1258,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "futures",
       "symbol": "BTC=F",
       "name": "Bitcoin Futures",
       "source": "yahoo",
@@ -347557,11 +347557,11 @@
     },
     {
       "group": "fx",
-      "symbol": "USDJPY=X",
-      "name": "USD/JPY",
+      "symbol": "GBPUSD=X",
+      "name": "GBP/USD",
       "source": "yahoo",
       "timeframe": "1d",
-      "bars": 1300,
+      "bars": 1299,
       "events": [],
       "error": null
     },
@@ -347577,8 +347577,18 @@
     },
     {
       "group": "fx",
-      "symbol": "GBPUSD=X",
-      "name": "GBP/USD",
+      "symbol": "USDJPY=X",
+      "name": "USD/JPY",
+      "source": "yahoo",
+      "timeframe": "1d",
+      "bars": 1300,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "fx",
+      "symbol": "USDCAD=X",
+      "name": "USD/CAD",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1299,
@@ -347597,16 +347607,6 @@
     },
     {
       "group": "fx",
-      "symbol": "USDCAD=X",
-      "name": "USD/CAD",
-      "source": "yahoo",
-      "timeframe": "1d",
-      "bars": 1299,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "fx",
       "symbol": "USDCHF=X",
       "name": "USD/CHF",
       "source": "yahoo",
@@ -347617,8 +347617,8 @@
     },
     {
       "group": "fx",
-      "symbol": "GBPJPY=X",
-      "name": "GBP/JPY",
+      "symbol": "EURJPY=X",
+      "name": "EUR/JPY",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1299,
@@ -347637,8 +347637,8 @@
     },
     {
       "group": "fx",
-      "symbol": "EURJPY=X",
-      "name": "EUR/JPY",
+      "symbol": "GBPJPY=X",
+      "name": "GBP/JPY",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1299,
@@ -347657,8 +347657,8 @@
     },
     {
       "group": "fx",
-      "symbol": "EURGBP=X",
-      "name": "EUR/GBP",
+      "symbol": "AUDJPY=X",
+      "name": "AUD/JPY",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1299,
@@ -347667,8 +347667,8 @@
     },
     {
       "group": "fx",
-      "symbol": "AUDJPY=X",
-      "name": "AUD/JPY",
+      "symbol": "EURGBP=X",
+      "name": "EUR/GBP",
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1299,
@@ -347702,6 +347702,16 @@
       "source": "yahoo",
       "timeframe": "1d",
       "bars": 1300,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "ETHUSDT",
+      "name": "ETH",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 2000,
       "events": [],
       "error": null
     },
@@ -347747,11 +347757,11 @@
     },
     {
       "group": "crypto",
-      "symbol": "ETHUSDT",
-      "name": "ETH",
+      "symbol": "XPLUSDT",
+      "name": "XPL",
       "source": "binance",
       "timeframe": "1d",
-      "bars": 2000,
+      "bars": 331,
       "events": [],
       "error": null
     },
@@ -347767,31 +347777,21 @@
     },
     {
       "group": "crypto",
-      "symbol": "XPLUSDT",
-      "name": "XPL",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 331,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "PEPEUSDT",
-      "name": "PEPE",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 1205,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
       "symbol": "ZECUSDT",
       "name": "ZEC",
       "source": "binance",
       "timeframe": "1d",
       "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "REUSDT",
+      "name": "RE",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 65,
       "events": [],
       "error": null
     },
@@ -347807,11 +347807,11 @@
     },
     {
       "group": "crypto",
-      "symbol": "REUSDT",
-      "name": "RE",
+      "symbol": "PEPEUSDT",
+      "name": "PEPE",
       "source": "binance",
       "timeframe": "1d",
-      "bars": 65,
+      "bars": 1205,
       "events": [],
       "error": null
     },
@@ -347897,16 +347897,6 @@
     },
     {
       "group": "crypto",
-      "symbol": "TRXUSDT",
-      "name": "TRX",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 2000,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
       "symbol": "BOMEUSDT",
       "name": "BOME",
       "source": "binance",
@@ -347917,8 +347907,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "LINKUSDT",
-      "name": "LINK",
+      "symbol": "TRXUSDT",
+      "name": "TRX",
       "source": "binance",
       "timeframe": "1d",
       "bars": 2000,
@@ -347927,18 +347917,8 @@
     },
     {
       "group": "crypto",
-      "symbol": "SPCXBUSDT",
-      "name": "SPCXB",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 71,
-      "events": [],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "XLMUSDT",
-      "name": "XLM",
+      "symbol": "LINKUSDT",
+      "name": "LINK",
       "source": "binance",
       "timeframe": "1d",
       "bars": 2000,
@@ -347957,6 +347937,26 @@
     },
     {
       "group": "crypto",
+      "symbol": "XLMUSDT",
+      "name": "XLM",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 2000,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "SPCXBUSDT",
+      "name": "SPCXB",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 71,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
       "symbol": "ONGUSDT",
       "name": "ONG",
       "source": "binance",
@@ -347970,21 +347970,11 @@
           "time": 1787270400,
           "index": 1999,
           "level": 0.11439230769230771,
-          "close": 0.13617,
+          "close": 0.14232,
           "exceed_bars": 2,
           "timeframe": "1d"
         }
       ],
-      "error": null
-    },
-    {
-      "group": "crypto",
-      "symbol": "TAOUSDT",
-      "name": "TAO",
-      "source": "binance",
-      "timeframe": "1d",
-      "bars": 863,
-      "events": [],
       "error": null
     },
     {
@@ -347994,6 +347984,16 @@
       "source": "binance",
       "timeframe": "1d",
       "bars": 580,
+      "events": [],
+      "error": null
+    },
+    {
+      "group": "crypto",
+      "symbol": "TAOUSDT",
+      "name": "TAO",
+      "source": "binance",
+      "timeframe": "1d",
+      "bars": 863,
       "events": [],
       "error": null
     },
