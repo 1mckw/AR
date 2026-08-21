@@ -1,8 +1,112 @@
 {
-  "updated_at": "2026-08-21 14:22:32 UTC",
+  "updated_at": "2026-08-21 15:15:36 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "ndx100:ADBE:1h:trend_touch:resistance:1787322600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "ndx100",
+      "symbol": "ADBE",
+      "name": "Adobe Inc.",
+      "timeframe": "1h",
+      "level": 275.79117842499846,
+      "time": 1787322600,
+      "seen_at": "2026-08-21 15:15:36 UTC",
+      "first_seen": "2026-08-21 15:15:36 UTC"
+    },
+    {
+      "key": "ndx100:EXC:1h:trend_touch:support:1787322600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "EXC",
+      "name": "Exelon",
+      "timeframe": "1h",
+      "level": 44.373738226489486,
+      "time": 1787322600,
+      "seen_at": "2026-08-21 15:15:36 UTC",
+      "first_seen": "2026-08-21 15:15:36 UTC"
+    },
+    {
+      "key": "sp500:ADBE:1h:trend_touch:resistance:1787322600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "ADBE",
+      "name": "Adobe Inc.",
+      "timeframe": "1h",
+      "level": 275.79117842499846,
+      "time": 1787322600,
+      "seen_at": "2026-08-21 15:15:36 UTC",
+      "first_seen": "2026-08-21 15:15:36 UTC"
+    },
+    {
+      "key": "sp500:DUK:1h:trend_touch:support:1787322600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "DUK",
+      "name": "Duke Energy",
+      "timeframe": "1h",
+      "level": 120.89794386678668,
+      "time": 1787322600,
+      "seen_at": "2026-08-21 15:15:36 UTC",
+      "first_seen": "2026-08-21 15:15:36 UTC"
+    },
+    {
+      "key": "sp500:ETR:1h:trend_touch:support:1787322600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "ETR",
+      "name": "Entergy",
+      "timeframe": "1h",
+      "level": 105.71957558874307,
+      "time": 1787322600,
+      "seen_at": "2026-08-21 15:15:36 UTC",
+      "first_seen": "2026-08-21 15:15:36 UTC"
+    },
+    {
+      "key": "sp500:EXC:1h:trend_touch:support:1787322600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "EXC",
+      "name": "Exelon",
+      "timeframe": "1h",
+      "level": 44.373738226489486,
+      "time": 1787322600,
+      "seen_at": "2026-08-21 15:15:36 UTC",
+      "first_seen": "2026-08-21 15:15:36 UTC"
+    },
+    {
+      "key": "sp500:FRT:1h:trend_touch:support:1787322600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "FRT",
+      "name": "Federal Realty Investment Trust",
+      "timeframe": "1h",
+      "level": 116.20025516823294,
+      "time": 1787322600,
+      "seen_at": "2026-08-21 15:15:36 UTC",
+      "first_seen": "2026-08-21 15:15:36 UTC"
+    },
+    {
+      "key": "sp500:KIM:1h:trend_touch:support:1787322600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "KIM",
+      "name": "Kimco Realty",
+      "timeframe": "1h",
+      "level": 23.985638134557345,
+      "time": 1787322600,
+      "seen_at": "2026-08-21 15:15:36 UTC",
+      "first_seen": "2026-08-21 15:15:36 UTC"
+    },
     {
       "key": "sp500:GE:1h:trend_exceed:support:1787320803",
       "kind": "trend_exceed",
@@ -18,6 +122,19 @@
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
     {
+      "key": "crypto:LTCUSDT:1h:trend_touch:resistance:1787320800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "LTCUSDT",
+      "name": "LTC",
+      "timeframe": "1h",
+      "level": 51.52685455460493,
+      "time": 1787320800,
+      "seen_at": "2026-08-21 15:15:36 UTC",
+      "first_seen": "2026-08-21 15:15:36 UTC"
+    },
+    {
       "key": "dji30:HON:1d:trend_exceed:support:1787319000",
       "kind": "trend_exceed",
       "type": "support",
@@ -27,7 +144,7 @@
       "timeframe": "1d",
       "level": 221.8553606669108,
       "time": 1787319000,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -41,7 +158,7 @@
       "timeframe": "1d",
       "level": 210.50061588320756,
       "time": 1787319000,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -55,7 +172,7 @@
       "timeframe": "1d",
       "level": 221.8553606669108,
       "time": 1787319000,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -69,7 +186,7 @@
       "timeframe": "1d",
       "level": 163.19423567883075,
       "time": 1787319000,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -83,7 +200,7 @@
       "timeframe": "1d",
       "level": 95.04169152114565,
       "time": 1787319000,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -97,7 +214,7 @@
       "timeframe": "1d",
       "level": 148.65486871239972,
       "time": 1787319000,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -111,7 +228,7 @@
       "timeframe": "1d",
       "level": 210.50061588320756,
       "time": 1787319000,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -125,7 +242,7 @@
       "timeframe": "1d",
       "level": 221.8553606669108,
       "time": 1787319000,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -139,7 +256,7 @@
       "timeframe": "1d",
       "level": 40.469343763882996,
       "time": 1787319000,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -153,7 +270,7 @@
       "timeframe": "1d",
       "level": 26.82834815738481,
       "time": 1787319000,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -167,7 +284,7 @@
       "timeframe": "1d",
       "level": 1191.378435213388,
       "time": 1787319000,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -181,9 +298,48 @@
       "timeframe": "1d",
       "level": 144.48313358146396,
       "time": 1787319000,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-21 14:22:32 UTC"
+    },
+    {
+      "key": "sp500:CL:1d:trend_touch:support:1787319000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "CL",
+      "name": "Colgate-Palmolive",
+      "timeframe": "1d",
+      "level": 89.39099578857422,
+      "time": 1787319000,
+      "seen_at": "2026-08-21 15:15:36 UTC",
+      "first_seen": "2026-08-21 14:22:32 UTC"
+    },
+    {
+      "key": "sp500:BRO:1d:trend_touch:resistance:1787319000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "BRO",
+      "name": "Brown & Brown",
+      "timeframe": "1d",
+      "level": 73.38235024844899,
+      "time": 1787319000,
+      "seen_at": "2026-08-21 15:15:36 UTC",
+      "first_seen": "2026-08-21 15:15:36 UTC"
+    },
+    {
+      "key": "sp500:DUK:1d:trend_touch:support:1787319000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "DUK",
+      "name": "Duke Energy",
+      "timeframe": "1d",
+      "level": 121.09751766139686,
+      "time": 1787319000,
+      "seen_at": "2026-08-21 15:15:36 UTC",
+      "first_seen": "2026-08-21 15:15:36 UTC"
     },
     {
       "key": "dji30:MSFT:1h:trend_touch:resistance:1787319000",
@@ -602,19 +758,6 @@
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
     {
-      "key": "sp500:CL:1d:trend_touch:support:1787319000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "CL",
-      "name": "Colgate-Palmolive",
-      "timeframe": "1d",
-      "level": 89.39099578857422,
-      "time": 1787319000,
-      "seen_at": "2026-08-21 14:22:32 UTC",
-      "first_seen": "2026-08-21 14:22:32 UTC"
-    },
-    {
       "key": "sp500:PEG:1d:trend_touch:support:1787319000",
       "kind": "trend_touch",
       "type": "support",
@@ -897,7 +1040,7 @@
       "timeframe": "1d",
       "level": 0.11439230769230771,
       "time": 1787270400,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 02:08:17 UTC"
     },
@@ -911,7 +1054,7 @@
       "timeframe": "1d",
       "level": 0.1448,
       "time": 1787270400,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "bars_after_signal": 200,
       "first_seen": "2026-08-21 09:20:26 UTC"
     },
@@ -1910,7 +2053,7 @@
       "timeframe": "1d",
       "level": 926.863791692275,
       "time": 1787232600,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -1923,7 +2066,7 @@
       "timeframe": "1d",
       "level": 2925.039133250957,
       "time": 1787232600,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -1936,7 +2079,7 @@
       "timeframe": "1d",
       "level": 926.863791692275,
       "time": 1787232600,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -1949,7 +2092,7 @@
       "timeframe": "1d",
       "level": 55.25455283839392,
       "time": 1787232600,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -1962,7 +2105,7 @@
       "timeframe": "1d",
       "level": 40.41950769893459,
       "time": 1787232600,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -1975,7 +2118,7 @@
       "timeframe": "1d",
       "level": 18.320000648498535,
       "time": 1787232600,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -1988,7 +2131,7 @@
       "timeframe": "1d",
       "level": 1190.662339529816,
       "time": 1787232600,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "first_seen": "2026-08-20 19:20:30 UTC"
     },
     {
@@ -2001,7 +2144,7 @@
       "timeframe": "1d",
       "level": 30.42404946036961,
       "time": 1787232600,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "first_seen": "2026-08-20 19:20:30 UTC"
     },
     {
@@ -2014,7 +2157,7 @@
       "timeframe": "1d",
       "level": 420.2278351841574,
       "time": 1787232600,
-      "seen_at": "2026-08-21 14:22:32 UTC",
+      "seen_at": "2026-08-21 15:15:36 UTC",
       "first_seen": "2026-08-20 16:09:55 UTC"
     },
     {
@@ -6521,152 +6664,6 @@
       "level": 96.5,
       "time": 1787059800,
       "seen_at": "2026-08-18 15:13:29 UTC",
-      "first_seen": "2026-08-18 14:19:51 UTC"
-    },
-    {
-      "key": "sp500:TECH:1d:trend_touch:resistance:1787059800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "TECH",
-      "name": "Bio-Techne",
-      "timeframe": "1d",
-      "level": 72.47564453774311,
-      "time": 1787059800,
-      "seen_at": "2026-08-18 15:13:29 UTC",
-      "first_seen": "2026-08-18 15:13:29 UTC"
-    },
-    {
-      "key": "ndx100:TSLA:1h:ar_dr_touch:DR:1787059800",
-      "kind": "ar_dr_touch",
-      "type": "DR",
-      "group": "ndx100",
-      "symbol": "TSLA",
-      "name": "Tesla, Inc.",
-      "timeframe": "1h",
-      "level": 335.3305969238281,
-      "time": 1787059800,
-      "seen_at": "2026-08-18 14:19:51 UTC",
-      "bars_after_signal": 13,
-      "first_seen": "2026-08-18 14:19:51 UTC"
-    },
-    {
-      "key": "sp500:SLB:1h:ar_dr_touch:AR:1787059800",
-      "kind": "ar_dr_touch",
-      "type": "AR",
-      "group": "sp500",
-      "symbol": "SLB",
-      "name": "Schlumberger",
-      "timeframe": "1h",
-      "level": 54.3650016784668,
-      "time": 1787059800,
-      "seen_at": "2026-08-18 14:19:51 UTC",
-      "bars_after_signal": 301,
-      "first_seen": "2026-08-18 14:19:51 UTC"
-    },
-    {
-      "key": "sp500:TSLA:1h:ar_dr_touch:DR:1787059800",
-      "kind": "ar_dr_touch",
-      "type": "DR",
-      "group": "sp500",
-      "symbol": "TSLA",
-      "name": "Tesla, Inc.",
-      "timeframe": "1h",
-      "level": 335.3305969238281,
-      "time": 1787059800,
-      "seen_at": "2026-08-18 14:19:51 UTC",
-      "bars_after_signal": 13,
-      "first_seen": "2026-08-18 14:19:51 UTC"
-    },
-    {
-      "key": "ndx100:FANG:1h:trend_touch:resistance:1787059800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "FANG",
-      "name": "Diamondback Energy",
-      "timeframe": "1h",
-      "level": 209.3549161164657,
-      "time": 1787059800,
-      "seen_at": "2026-08-18 14:19:51 UTC",
-      "first_seen": "2026-08-18 14:19:51 UTC"
-    },
-    {
-      "key": "ndx100:MELI:1h:trend_touch:support:1787059800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "MELI",
-      "name": "MercadoLibre",
-      "timeframe": "1h",
-      "level": 1766.7510483200485,
-      "time": 1787059800,
-      "seen_at": "2026-08-18 14:19:51 UTC",
-      "first_seen": "2026-08-18 14:19:51 UTC"
-    },
-    {
-      "key": "ndx100:ODFL:1h:trend_touch:support:1787059800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "ODFL",
-      "name": "Old Dominion Freight Line",
-      "timeframe": "1h",
-      "level": 208.56419213681832,
-      "time": 1787059800,
-      "seen_at": "2026-08-18 14:19:51 UTC",
-      "first_seen": "2026-08-18 14:19:51 UTC"
-    },
-    {
-      "key": "ndx100:TSLA:1h:trend_touch:support:1787059800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "TSLA",
-      "name": "Tesla, Inc.",
-      "timeframe": "1h",
-      "level": 332.9966532389323,
-      "time": 1787059800,
-      "seen_at": "2026-08-18 14:19:51 UTC",
-      "first_seen": "2026-08-18 14:19:51 UTC"
-    },
-    {
-      "key": "ndx100:ZS:1h:trend_touch:resistance:1787059800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "ZS",
-      "name": "Zscaler",
-      "timeframe": "1h",
-      "level": 190.28312493338802,
-      "time": 1787059800,
-      "seen_at": "2026-08-18 14:19:51 UTC",
-      "first_seen": "2026-08-18 14:19:51 UTC"
-    },
-    {
-      "key": "sp500:A:1h:trend_touch:support:1787059800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "A",
-      "name": "Agilent Technologies",
-      "timeframe": "1h",
-      "level": 148.3578973067434,
-      "time": 1787059800,
-      "seen_at": "2026-08-18 14:19:51 UTC",
-      "first_seen": "2026-08-18 14:19:51 UTC"
-    },
-    {
-      "key": "sp500:AIG:1h:trend_touch:resistance:1787059800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "AIG",
-      "name": "American International Group",
-      "timeframe": "1h",
-      "level": 77.04825019836426,
-      "time": 1787059800,
-      "seen_at": "2026-08-18 14:19:51 UTC",
       "first_seen": "2026-08-18 14:19:51 UTC"
     }
   ]
