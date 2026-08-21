@@ -1,8 +1,48 @@
 {
-  "updated_at": "2026-08-21 17:07:42 UTC",
+  "updated_at": "2026-08-21 18:08:01 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "sp500:PRU:1h:trend_touch:support:1787333400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "PRU",
+      "name": "Prudential Financial",
+      "timeframe": "1h",
+      "level": 120.68690707705437,
+      "time": 1787333400,
+      "seen_at": "2026-08-21 18:08:01 UTC",
+      "first_seen": "2026-08-21 18:08:01 UTC"
+    },
+    {
+      "key": "crypto:LTCUSDT:1h:trend_exceed:resistance:1787331600",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "LTCUSDT",
+      "name": "LTC",
+      "timeframe": "1h",
+      "level": 51.52496728736789,
+      "time": 1787331600,
+      "seen_at": "2026-08-21 18:08:01 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-08-21 18:08:01 UTC"
+    },
+    {
+      "key": "crypto:AVAXUSDT:1h:trend_touch:resistance:1787331600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "AVAXUSDT",
+      "name": "AVAX",
+      "timeframe": "1h",
+      "level": 7.692660348360656,
+      "time": 1787331600,
+      "seen_at": "2026-08-21 18:08:01 UTC",
+      "first_seen": "2026-08-21 18:08:01 UTC"
+    },
     {
       "key": "sp500:GNRC:1h:trend_touch:support:1787329800",
       "kind": "trend_touch",
@@ -236,7 +276,7 @@
       "timeframe": "1d",
       "level": 221.8553606669108,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -250,7 +290,7 @@
       "timeframe": "1d",
       "level": 210.50061588320756,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -264,7 +304,7 @@
       "timeframe": "1d",
       "level": 221.8553606669108,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -278,7 +318,7 @@
       "timeframe": "1d",
       "level": 163.19423567883075,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -292,7 +332,7 @@
       "timeframe": "1d",
       "level": 95.04169152114565,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -306,7 +346,7 @@
       "timeframe": "1d",
       "level": 148.65486871239972,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -320,7 +360,7 @@
       "timeframe": "1d",
       "level": 210.50061588320756,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -334,7 +374,7 @@
       "timeframe": "1d",
       "level": 221.8553606669108,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -348,7 +388,7 @@
       "timeframe": "1d",
       "level": 40.469343763882996,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -362,7 +402,7 @@
       "timeframe": "1d",
       "level": 26.82834815738481,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -376,7 +416,7 @@
       "timeframe": "1d",
       "level": 1191.378435213388,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -390,7 +430,7 @@
       "timeframe": "1d",
       "level": 144.48313358146396,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
@@ -404,7 +444,7 @@
       "timeframe": "1d",
       "level": 89.39099578857422,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
     {
@@ -417,7 +457,7 @@
       "timeframe": "1d",
       "level": 73.38235024844899,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "first_seen": "2026-08-21 15:15:36 UTC"
     },
     {
@@ -430,7 +470,7 @@
       "timeframe": "1d",
       "level": 121.09751766139686,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "first_seen": "2026-08-21 15:15:36 UTC"
     },
     {
@@ -443,9 +483,22 @@
       "timeframe": "1d",
       "level": 94.12000274658203,
       "time": 1787319000,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "bars_after_signal": 15,
       "first_seen": "2026-08-21 17:07:42 UTC"
+    },
+    {
+      "key": "sp500:SO:1d:trend_touch:support:1787319000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "SO",
+      "name": "Southern Company",
+      "timeframe": "1d",
+      "level": 91.35163062249788,
+      "time": 1787319000,
+      "seen_at": "2026-08-21 18:08:01 UTC",
+      "first_seen": "2026-08-21 18:08:01 UTC"
     },
     {
       "key": "sp500:SRE:1d:trend_touch:support:1787319000",
@@ -1174,7 +1227,7 @@
       "timeframe": "1d",
       "level": 0.11439230769230771,
       "time": 1787270400,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-21 02:08:17 UTC"
     },
@@ -1188,7 +1241,7 @@
       "timeframe": "1d",
       "level": 0.1448,
       "time": 1787270400,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "bars_after_signal": 200,
       "first_seen": "2026-08-21 09:20:26 UTC"
     },
@@ -2187,7 +2240,7 @@
       "timeframe": "1d",
       "level": 926.863791692275,
       "time": 1787232600,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -2200,7 +2253,7 @@
       "timeframe": "1d",
       "level": 2925.039133250957,
       "time": 1787232600,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -2213,7 +2266,7 @@
       "timeframe": "1d",
       "level": 926.863791692275,
       "time": 1787232600,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -2226,7 +2279,7 @@
       "timeframe": "1d",
       "level": 55.25455283839392,
       "time": 1787232600,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -2239,7 +2292,7 @@
       "timeframe": "1d",
       "level": 40.41950769893459,
       "time": 1787232600,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -2252,7 +2305,7 @@
       "timeframe": "1d",
       "level": 18.320000648498535,
       "time": 1787232600,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "first_seen": "2026-08-20 14:24:40 UTC"
     },
     {
@@ -2265,7 +2318,7 @@
       "timeframe": "1d",
       "level": 1190.662339529816,
       "time": 1787232600,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "first_seen": "2026-08-20 19:20:30 UTC"
     },
     {
@@ -2278,7 +2331,7 @@
       "timeframe": "1d",
       "level": 30.42404946036961,
       "time": 1787232600,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "first_seen": "2026-08-20 19:20:30 UTC"
     },
     {
@@ -2291,7 +2344,7 @@
       "timeframe": "1d",
       "level": 420.2278351841574,
       "time": 1787232600,
-      "seen_at": "2026-08-21 17:07:42 UTC",
+      "seen_at": "2026-08-21 18:08:01 UTC",
       "first_seen": "2026-08-20 16:09:55 UTC"
     },
     {
@@ -6610,59 +6663,6 @@
       "seen_at": "2026-08-19 13:29:30 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-18 14:19:51 UTC"
-    },
-    {
-      "key": "sp500:VRT:1d:trend_touch:support:1787059800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "VRT",
-      "name": "Vertiv Holdings Co",
-      "timeframe": "1d",
-      "level": 271.98916646879013,
-      "time": 1787059800,
-      "seen_at": "2026-08-19 13:29:30 UTC",
-      "first_seen": "2026-08-18 18:04:58 UTC"
-    },
-    {
-      "key": "sp500:IRM:1d:trend_exceed:resistance:1787059800",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "IRM",
-      "name": "Iron Mountain",
-      "timeframe": "1d",
-      "level": 127.76137358566811,
-      "time": 1787059800,
-      "seen_at": "2026-08-19 13:29:30 UTC",
-      "exceed_bars": 3,
-      "first_seen": "2026-08-18 14:19:51 UTC"
-    },
-    {
-      "key": "sp500:CPRT:1d:trend_touch:resistance:1787059800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "CPRT",
-      "name": "Copart",
-      "timeframe": "1d",
-      "level": 32.50000311198988,
-      "time": 1787059800,
-      "seen_at": "2026-08-19 13:29:30 UTC",
-      "first_seen": "2026-08-18 20:12:35 UTC"
-    },
-    {
-      "key": "ndx100:CPRT:1d:trend_touch:resistance:1787059800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "CPRT",
-      "name": "Copart",
-      "timeframe": "1d",
-      "level": 32.50000311198988,
-      "time": 1787059800,
-      "seen_at": "2026-08-19 13:29:30 UTC",
-      "first_seen": "2026-08-18 20:12:35 UTC"
     }
   ]
 }
