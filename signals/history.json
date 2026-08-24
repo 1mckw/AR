@@ -1,8 +1,47 @@
 {
-  "updated_at": "2026-08-24 18:20:51 UTC",
+  "updated_at": "2026-08-24 19:24:11 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "sp500:CPT:1h:trend_touch:resistance:1787596200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "CPT",
+      "name": "Camden Property Trust",
+      "timeframe": "1h",
+      "level": 109.16618973868233,
+      "time": 1787596200,
+      "seen_at": "2026-08-24 19:24:11 UTC",
+      "first_seen": "2026-08-24 19:24:11 UTC"
+    },
+    {
+      "key": "sp500:MSCI:1h:trend_touch:resistance:1787596200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "MSCI",
+      "name": "MSCI",
+      "timeframe": "1h",
+      "level": 571.2487487792969,
+      "time": 1787596200,
+      "seen_at": "2026-08-24 19:24:11 UTC",
+      "first_seen": "2026-08-24 19:24:11 UTC"
+    },
+    {
+      "key": "futures:ES=F:1h:trend_touch:resistance:1787594400",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "futures",
+      "symbol": "ES=F",
+      "name": "E-mini S&P 500",
+      "timeframe": "1h",
+      "level": 7684.381443298969,
+      "time": 1787594400,
+      "seen_at": "2026-08-24 19:24:11 UTC",
+      "first_seen": "2026-08-24 19:24:11 UTC"
+    },
     {
       "key": "ndx100:CDNS:1h:trend_touch:support:1787592600",
       "kind": "trend_touch",
@@ -269,7 +308,7 @@
       "timeframe": "1d",
       "level": 221.9852825346447,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
@@ -283,7 +322,7 @@
       "timeframe": "1d",
       "level": 123.00017417349466,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
@@ -297,7 +336,7 @@
       "timeframe": "1d",
       "level": 221.9852825346447,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
@@ -311,7 +350,7 @@
       "timeframe": "1d",
       "level": 115.12033312248461,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
@@ -325,7 +364,7 @@
       "timeframe": "1d",
       "level": 123.00017417349466,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
@@ -339,7 +378,7 @@
       "timeframe": "1d",
       "level": 163.37570808270226,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
@@ -353,7 +392,7 @@
       "timeframe": "1d",
       "level": 69.06113268878009,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
@@ -367,7 +406,7 @@
       "timeframe": "1d",
       "level": 121.13835258411501,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
@@ -381,7 +420,7 @@
       "timeframe": "1d",
       "level": 221.9852825346447,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
@@ -395,7 +434,7 @@
       "timeframe": "1d",
       "level": 74.58372519253555,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
@@ -409,7 +448,7 @@
       "timeframe": "1d",
       "level": 26.808537313646507,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
@@ -423,7 +462,7 @@
       "timeframe": "1d",
       "level": 91.39253648178615,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
@@ -437,7 +476,7 @@
       "timeframe": "1d",
       "level": 235.44890987282932,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
     {
@@ -450,7 +489,7 @@
       "timeframe": "1d",
       "level": 266.45756232220197,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
     {
@@ -463,7 +502,7 @@
       "timeframe": "1d",
       "level": 48.88852913584717,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
     {
@@ -476,7 +515,7 @@
       "timeframe": "1d",
       "level": 63.84686720514872,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
     {
@@ -489,7 +528,7 @@
       "timeframe": "1d",
       "level": 29.299298206699333,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
     {
@@ -500,9 +539,9 @@
       "symbol": "COO",
       "name": "Cooper Companies (The)",
       "timeframe": "1d",
-      "level": 75.70000457763672,
+      "level": 75.88065421062967,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
     {
@@ -515,7 +554,7 @@
       "timeframe": "1d",
       "level": 934.7414791434153,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
     {
@@ -528,7 +567,7 @@
       "timeframe": "1d",
       "level": 60.92885922425545,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
     {
@@ -541,7 +580,7 @@
       "timeframe": "1d",
       "level": 355.5560479933216,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-24 14:47:43 UTC"
     },
     {
@@ -554,7 +593,7 @@
       "timeframe": "1d",
       "level": 264.3422818587998,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-24 15:45:36 UTC"
     },
     {
@@ -567,7 +606,7 @@
       "timeframe": "1d",
       "level": 620.7328076171875,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-24 15:45:36 UTC"
     },
     {
@@ -580,7 +619,7 @@
       "timeframe": "1d",
       "level": 100.70588235294117,
       "time": 1787578200,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-24 16:38:20 UTC"
     },
     {
@@ -1653,7 +1692,7 @@
       "timeframe": "1d",
       "level": 4.264681063122923,
       "time": 1787529600,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-24 00:21:31 UTC"
     },
@@ -2592,7 +2631,7 @@
       "timeframe": "1d",
       "level": 89.39099578857422,
       "time": 1787319000,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-21 14:22:32 UTC"
     },
     {
@@ -2605,7 +2644,7 @@
       "timeframe": "1d",
       "level": 73.38235024844899,
       "time": 1787319000,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-21 15:15:36 UTC"
     },
     {
@@ -2618,7 +2657,7 @@
       "timeframe": "1d",
       "level": 121.09751766139686,
       "time": 1787319000,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-21 15:15:36 UTC"
     },
     {
@@ -2631,7 +2670,7 @@
       "timeframe": "1d",
       "level": 94.12000274658203,
       "time": 1787319000,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "bars_after_signal": 15,
       "first_seen": "2026-08-21 17:07:42 UTC"
     },
@@ -2645,7 +2684,7 @@
       "timeframe": "1d",
       "level": 91.35163062249788,
       "time": 1787319000,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-21 18:08:01 UTC"
     },
     {
@@ -2658,7 +2697,7 @@
       "timeframe": "1d",
       "level": 67.8111120485792,
       "time": 1787319000,
-      "seen_at": "2026-08-24 18:20:51 UTC",
+      "seen_at": "2026-08-24 19:24:11 UTC",
       "first_seen": "2026-08-21 20:21:16 UTC"
     },
     {
@@ -6615,45 +6654,6 @@
       "name": "Crown Castle",
       "timeframe": "1h",
       "level": 73.99543964161592,
-      "time": 1787160600,
-      "seen_at": "2026-08-19 18:25:01 UTC",
-      "first_seen": "2026-08-19 18:25:01 UTC"
-    },
-    {
-      "key": "sp500:ELV:1h:trend_touch:resistance:1787160600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "ELV",
-      "name": "Elevance Health",
-      "timeframe": "1h",
-      "level": 402.6283981323242,
-      "time": 1787160600,
-      "seen_at": "2026-08-19 18:25:01 UTC",
-      "first_seen": "2026-08-19 18:25:01 UTC"
-    },
-    {
-      "key": "sp500:KVUE:1h:trend_touch:resistance:1787160600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "KVUE",
-      "name": "Kenvue",
-      "timeframe": "1h",
-      "level": 19.138714381626674,
-      "time": 1787160600,
-      "seen_at": "2026-08-19 18:25:01 UTC",
-      "first_seen": "2026-08-19 18:25:01 UTC"
-    },
-    {
-      "key": "sp500:SLB:1h:trend_touch:support:1787160600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "SLB",
-      "name": "Schlumberger",
-      "timeframe": "1h",
-      "level": 53.210965679537864,
       "time": 1787160600,
       "seen_at": "2026-08-19 18:25:01 UTC",
       "first_seen": "2026-08-19 18:25:01 UTC"
