@@ -1,8 +1,49 @@
 {
-  "updated_at": "2026-08-26 16:29:18 UTC",
+  "updated_at": "2026-08-26 17:15:32 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "sp500:NOC:1h:ar_dr_near:AR:1787761800",
+      "kind": "ar_dr_near",
+      "type": "AR",
+      "group": "sp500",
+      "symbol": "NOC",
+      "name": "Northrop Grumman",
+      "timeframe": "1h",
+      "level": 554.8200073242188,
+      "time": 1787761800,
+      "seen_at": "2026-08-26 17:15:32 UTC",
+      "bars_after_signal": 22,
+      "gap_pct": 0.3757795095383794,
+      "first_seen": "2026-08-26 17:15:32 UTC"
+    },
+    {
+      "key": "sp500:BLDR:1h:trend_touch:support:1787761800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "BLDR",
+      "name": "Builders FirstSource",
+      "timeframe": "1h",
+      "level": 68.75673171012632,
+      "time": 1787761800,
+      "seen_at": "2026-08-26 17:15:32 UTC",
+      "first_seen": "2026-08-26 17:15:32 UTC"
+    },
+    {
+      "key": "sp500:INVH:1h:trend_touch:support:1787761800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "INVH",
+      "name": "Invitation Homes",
+      "timeframe": "1h",
+      "level": 30.020131156954704,
+      "time": 1787761800,
+      "seen_at": "2026-08-26 17:15:32 UTC",
+      "first_seen": "2026-08-26 17:15:32 UTC"
+    },
     {
       "key": "sp500:DVA:1h:trend_exceed:resistance:1787760592",
       "kind": "trend_exceed",
@@ -27,7 +68,7 @@
       "timeframe": "1h",
       "level": 0.1364,
       "time": 1787760000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "bars_after_signal": 107,
       "first_seen": "2026-08-26 16:29:18 UTC"
     },
@@ -41,8 +82,21 @@
       "timeframe": "1h",
       "level": 1.000100822622108,
       "time": 1787760000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "first_seen": "2026-08-26 16:29:18 UTC"
+    },
+    {
+      "key": "futures:RTY=F:1h:trend_touch:support:1787760000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "futures",
+      "symbol": "RTY=F",
+      "name": "E-mini Russell",
+      "timeframe": "1h",
+      "level": 3003.2210445919554,
+      "time": 1787760000,
+      "seen_at": "2026-08-26 17:15:32 UTC",
+      "first_seen": "2026-08-26 17:15:32 UTC"
     },
     {
       "key": "sp500:NOC:1h:ar_dr_near:AR:1787758200",
@@ -165,7 +219,7 @@
       "timeframe": "1d",
       "level": 222.24512627011254,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-26 13:38:42 UTC"
     },
@@ -179,7 +233,7 @@
       "timeframe": "1d",
       "level": 266.04198256782865,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-26 13:38:42 UTC"
     },
@@ -193,7 +247,7 @@
       "timeframe": "1d",
       "level": 72.98570665933681,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-26 13:38:42 UTC"
     },
@@ -207,7 +261,7 @@
       "timeframe": "1d",
       "level": 62.79978764310796,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "first_seen": "2026-08-26 13:38:42 UTC"
     },
     {
@@ -220,7 +274,7 @@
       "timeframe": "1d",
       "level": 126.85493966733031,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "first_seen": "2026-08-26 13:38:42 UTC"
     },
     {
@@ -233,7 +287,7 @@
       "timeframe": "1d",
       "level": 222.24512627011254,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-26 14:49:56 UTC"
     },
@@ -247,7 +301,7 @@
       "timeframe": "1d",
       "level": 114.93881826689748,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-08-26 14:49:56 UTC"
     },
@@ -261,7 +315,7 @@
       "timeframe": "1d",
       "level": 938.8594220842634,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-26 14:49:56 UTC"
     },
@@ -275,7 +329,7 @@
       "timeframe": "1d",
       "level": 222.24512627011254,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-08-26 14:49:56 UTC"
     },
@@ -289,7 +343,7 @@
       "timeframe": "1d",
       "level": 582.4090899451304,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-08-26 14:49:56 UTC"
     },
@@ -303,7 +357,7 @@
       "timeframe": "1d",
       "level": 283.25426025390624,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "first_seen": "2026-08-26 14:49:56 UTC"
     },
     {
@@ -316,7 +370,7 @@
       "timeframe": "1d",
       "level": 283.25426025390624,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "first_seen": "2026-08-26 14:49:56 UTC"
     },
     {
@@ -329,7 +383,7 @@
       "timeframe": "1d",
       "level": 97.9541025406275,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "first_seen": "2026-08-26 14:49:56 UTC"
     },
     {
@@ -342,7 +396,7 @@
       "timeframe": "1d",
       "level": 18.384789763378496,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "first_seen": "2026-08-26 14:49:56 UTC"
     },
     {
@@ -355,7 +409,7 @@
       "timeframe": "1d",
       "level": 125.89050929087134,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "first_seen": "2026-08-26 14:49:56 UTC"
     },
     {
@@ -368,7 +422,7 @@
       "timeframe": "1d",
       "level": 59.61000061035156,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "bars_after_signal": 220,
       "gap_pct": 0.1174294482594972,
       "first_seen": "2026-08-26 16:29:18 UTC"
@@ -383,7 +437,7 @@
       "timeframe": "1d",
       "level": 55.54999923706055,
       "time": 1787751000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "first_seen": "2026-08-26 16:29:18 UTC"
     },
     {
@@ -1768,7 +1822,7 @@
       "timeframe": "1d",
       "level": 76.87110577599478,
       "time": 1787664600,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "first_seen": "2026-08-25 15:28:52 UTC"
     },
     {
@@ -1781,7 +1835,7 @@
       "timeframe": "1d",
       "level": 805.5321240720496,
       "time": 1787664600,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "first_seen": "2026-08-26 13:38:42 UTC"
     },
     {
@@ -1794,7 +1848,7 @@
       "timeframe": "1d",
       "level": 88.27012755051543,
       "time": 1787664600,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "first_seen": "2026-08-26 13:38:42 UTC"
     },
     {
@@ -1807,7 +1861,7 @@
       "timeframe": "1d",
       "level": 805.5321240720496,
       "time": 1787664600,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "first_seen": "2026-08-26 14:49:56 UTC"
     },
     {
@@ -2589,7 +2643,7 @@
       "timeframe": "1d",
       "level": 2531.115211267606,
       "time": 1787616000,
-      "seen_at": "2026-08-26 16:29:18 UTC",
+      "seen_at": "2026-08-26 17:15:32 UTC",
       "first_seen": "2026-08-25 03:25:29 UTC"
     },
     {
@@ -6577,58 +6631,6 @@
       "kind": "trend_touch",
       "type": "support",
       "group": "ndx100",
-      "symbol": "NXPI",
-      "name": "NXP Semiconductors",
-      "timeframe": "1h",
-      "level": 222.74467926564571,
-      "time": 1787254200,
-      "seen_at": "2026-08-21 13:23:20 UTC",
-      "first_seen": "2026-08-20 21:08:39 UTC"
-    },
-    {
-      "key": "sp500:ACGL:1h:trend_touch:resistance:1787254200",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "ACGL",
-      "name": "Arch Capital Group",
-      "timeframe": "1h",
-      "level": 99.5668056591137,
-      "time": 1787254200,
-      "seen_at": "2026-08-21 13:23:20 UTC",
-      "first_seen": "2026-08-20 21:08:39 UTC"
-    },
-    {
-      "key": "sp500:CL:1h:trend_touch:support:1787254200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "CL",
-      "name": "Colgate-Palmolive",
-      "timeframe": "1h",
-      "level": 89.60737330187364,
-      "time": 1787254200,
-      "seen_at": "2026-08-21 13:23:20 UTC",
-      "first_seen": "2026-08-20 21:08:39 UTC"
-    },
-    {
-      "key": "sp500:HST:1h:trend_touch:resistance:1787254200",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "HST",
-      "name": "Host Hotels & Resorts",
-      "timeframe": "1h",
-      "level": 23.20513801052146,
-      "time": 1787254200,
-      "seen_at": "2026-08-21 13:23:20 UTC",
-      "first_seen": "2026-08-20 21:08:39 UTC"
-    },
-    {
-      "key": "sp500:NXPI:1h:trend_touch:support:1787254200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
       "symbol": "NXPI",
       "name": "NXP Semiconductors",
       "timeframe": "1h",
