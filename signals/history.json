@@ -1,8 +1,21 @@
 {
-  "updated_at": "2026-09-01 21:34:04 UTC",
+  "updated_at": "2026-09-01 23:58:24 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "futures:GC=F:1h:trend_touch:support:1788303600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "futures",
+      "symbol": "GC=F",
+      "name": "Gold",
+      "timeframe": "1h",
+      "level": 4371.551830928625,
+      "time": 1788303600,
+      "seen_at": "2026-09-01 23:58:24 UTC",
+      "first_seen": "2026-09-01 23:58:24 UTC"
+    },
     {
       "key": "fx:GBPJPY=X:1h:trend_touch:support:1788296400",
       "kind": "trend_touch",
@@ -26,7 +39,7 @@
       "timeframe": "1h",
       "level": 135.6344130734884,
       "time": 1788292800,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-09-01 21:34:04 UTC"
     },
@@ -40,7 +53,7 @@
       "timeframe": "1h",
       "level": 57.71795957915637,
       "time": 1788292800,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-09-01 21:34:04 UTC"
     },
@@ -54,7 +67,7 @@
       "timeframe": "1h",
       "level": 75.27396850585937,
       "time": 1788292800,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "exceed_bars": 6,
       "first_seen": "2026-09-01 21:34:04 UTC"
     },
@@ -68,7 +81,7 @@
       "timeframe": "1h",
       "level": 78.82030646480732,
       "time": 1788292800,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-01 21:34:04 UTC"
     },
@@ -82,7 +95,7 @@
       "timeframe": "1h",
       "level": 271.39904349190846,
       "time": 1788291000,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-09-01 21:34:04 UTC"
     },
     {
@@ -95,7 +108,7 @@
       "timeframe": "1h",
       "level": 337.84598890330693,
       "time": 1788291000,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-09-01 21:34:04 UTC"
     },
     {
@@ -108,7 +121,7 @@
       "timeframe": "1h",
       "level": 52.95036893931742,
       "time": 1788291000,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-09-01 21:34:04 UTC"
     },
     {
@@ -121,7 +134,7 @@
       "timeframe": "1h",
       "level": 198.73607598581623,
       "time": 1788291000,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-09-01 21:34:04 UTC"
     },
     {
@@ -134,7 +147,7 @@
       "timeframe": "1h",
       "level": 146.1493128674038,
       "time": 1788291000,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-09-01 21:34:04 UTC"
     },
     {
@@ -147,7 +160,7 @@
       "timeframe": "1h",
       "level": 93.05013495997379,
       "time": 1788291000,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-09-01 21:34:04 UTC"
     },
     {
@@ -160,7 +173,7 @@
       "timeframe": "1h",
       "level": 271.39904349190846,
       "time": 1788291000,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-09-01 21:34:04 UTC"
     },
     {
@@ -398,10 +411,10 @@
       "symbol": "LUV",
       "name": "Southwest Airlines",
       "timeframe": "1d",
-      "level": 40.76836015357346,
+      "level": 40.81819621852187,
       "time": 1788269400,
-      "seen_at": "2026-09-01 21:34:04 UTC",
-      "exceed_bars": 3,
+      "seen_at": "2026-09-01 23:58:24 UTC",
+      "exceed_bars": 4,
       "first_seen": "2026-09-01 15:16:37 UTC"
     },
     {
@@ -414,7 +427,7 @@
       "timeframe": "1d",
       "level": 141.91748773864424,
       "time": 1788269400,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-01 15:16:37 UTC"
     },
@@ -428,7 +441,7 @@
       "timeframe": "1d",
       "level": 34.417840632889195,
       "time": 1788269400,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-01 15:16:37 UTC"
     },
@@ -440,10 +453,10 @@
       "symbol": "TYL",
       "name": "Tyler Technologies",
       "timeframe": "1d",
-      "level": 352.1866907919607,
+      "level": 351.5128193516885,
       "time": 1788269400,
-      "seen_at": "2026-09-01 21:34:04 UTC",
-      "exceed_bars": 3,
+      "seen_at": "2026-09-01 23:58:24 UTC",
+      "exceed_bars": 4,
       "first_seen": "2026-09-01 15:16:37 UTC"
     },
     {
@@ -454,9 +467,9 @@
       "symbol": "TRI",
       "name": "Thomson Reuters Corporation",
       "timeframe": "1d",
-      "level": 108.00256104902788,
+      "level": 107.71107344193891,
       "time": 1788269400,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-09-01 15:16:37 UTC"
     },
     {
@@ -467,9 +480,9 @@
       "symbol": "BLDR",
       "name": "Builders FirstSource",
       "timeframe": "1d",
-      "level": 65.20717875996574,
+      "level": 65.2122825831012,
       "time": 1788269400,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-09-01 15:16:37 UTC"
     },
     {
@@ -480,9 +493,9 @@
       "symbol": "MS",
       "name": "Morgan Stanley",
       "timeframe": "1d",
-      "level": 209.3581903631037,
+      "level": 209.64935936865868,
       "time": 1788269400,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-09-01 15:16:37 UTC"
     },
     {
@@ -493,9 +506,9 @@
       "symbol": "WMB",
       "name": "Williams Companies",
       "timeframe": "1d",
-      "level": 76.27816772460938,
+      "level": 76.27271270751953,
       "time": 1788269400,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-09-01 15:16:37 UTC"
     },
     {
@@ -508,7 +521,7 @@
       "timeframe": "1d",
       "level": 101.8016543382214,
       "time": 1788269400,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-09-01 15:16:37 UTC"
     },
     {
@@ -519,10 +532,102 @@
       "symbol": "KEY",
       "name": "KeyCorp",
       "timeframe": "1d",
-      "level": 21.194693117725606,
+      "level": 21.183714076450894,
       "time": 1788269400,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-09-01 18:51:18 UTC"
+    },
+    {
+      "key": "dji30:HON:1d:trend_touch:support:1788269400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "dji30",
+      "symbol": "HON",
+      "name": "Honeywell International Inc.",
+      "timeframe": "1d",
+      "level": 209.5348477570907,
+      "time": 1788269400,
+      "seen_at": "2026-09-01 23:58:24 UTC",
+      "first_seen": "2026-09-01 21:34:04 UTC"
+    },
+    {
+      "key": "ndx100:HON:1d:trend_touch:support:1788269400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "HON",
+      "name": "Honeywell",
+      "timeframe": "1d",
+      "level": 209.5348477570907,
+      "time": 1788269400,
+      "seen_at": "2026-09-01 23:58:24 UTC",
+      "first_seen": "2026-09-01 21:34:04 UTC"
+    },
+    {
+      "key": "sp500:HON:1d:trend_touch:support:1788269400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "HON",
+      "name": "Honeywell",
+      "timeframe": "1d",
+      "level": 209.5348477570907,
+      "time": 1788269400,
+      "seen_at": "2026-09-01 23:58:24 UTC",
+      "first_seen": "2026-09-01 21:34:04 UTC"
+    },
+    {
+      "key": "sp500:LOW:1d:trend_touch:support:1788269400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "LOW",
+      "name": "Lowe's",
+      "timeframe": "1d",
+      "level": 199.53346750359788,
+      "time": 1788269400,
+      "seen_at": "2026-09-01 23:58:24 UTC",
+      "first_seen": "2026-09-01 21:34:04 UTC"
+    },
+    {
+      "key": "sp500:BRO:1d:trend_touch:support:1788269400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "BRO",
+      "name": "Brown & Brown",
+      "timeframe": "1d",
+      "level": 71.66490120981254,
+      "time": 1788269400,
+      "seen_at": "2026-09-01 23:58:24 UTC",
+      "first_seen": "2026-09-01 18:51:18 UTC"
+    },
+    {
+      "key": "sp500:STT:1d:trend_touch:support:1788269400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "STT",
+      "name": "State Street Corporation",
+      "timeframe": "1d",
+      "level": 187.03305075825125,
+      "time": 1788269400,
+      "seen_at": "2026-09-01 23:58:24 UTC",
+      "first_seen": "2026-09-01 18:51:18 UTC"
+    },
+    {
+      "key": "sp500:SLB:1d:trend_exceed:resistance:1788269400",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "SLB",
+      "name": "Schlumberger",
+      "timeframe": "1d",
+      "level": 58.55515757395809,
+      "time": 1788269400,
+      "seen_at": "2026-09-01 23:58:24 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-09-01 15:16:37 UTC"
     },
     {
       "key": "sp500:CARR:1d:ar_dr_touch:DR:1788269400",
@@ -539,58 +644,6 @@
       "first_seen": "2026-09-01 21:34:04 UTC"
     },
     {
-      "key": "dji30:HON:1d:trend_touch:support:1788269400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "dji30",
-      "symbol": "HON",
-      "name": "Honeywell International Inc.",
-      "timeframe": "1d",
-      "level": 209.47761801014775,
-      "time": 1788269400,
-      "seen_at": "2026-09-01 21:34:04 UTC",
-      "first_seen": "2026-09-01 21:34:04 UTC"
-    },
-    {
-      "key": "ndx100:HON:1d:trend_touch:support:1788269400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "HON",
-      "name": "Honeywell",
-      "timeframe": "1d",
-      "level": 209.47761801014775,
-      "time": 1788269400,
-      "seen_at": "2026-09-01 21:34:04 UTC",
-      "first_seen": "2026-09-01 21:34:04 UTC"
-    },
-    {
-      "key": "sp500:HON:1d:trend_touch:support:1788269400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "HON",
-      "name": "Honeywell",
-      "timeframe": "1d",
-      "level": 209.47761801014775,
-      "time": 1788269400,
-      "seen_at": "2026-09-01 21:34:04 UTC",
-      "first_seen": "2026-09-01 21:34:04 UTC"
-    },
-    {
-      "key": "sp500:LOW:1d:trend_touch:support:1788269400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "LOW",
-      "name": "Lowe's",
-      "timeframe": "1d",
-      "level": 200.17202511429787,
-      "time": 1788269400,
-      "seen_at": "2026-09-01 21:34:04 UTC",
-      "first_seen": "2026-09-01 21:34:04 UTC"
-    },
-    {
       "key": "sp500:TKO:1d:trend_touch:support:1788269400",
       "kind": "trend_touch",
       "type": "support",
@@ -602,46 +655,6 @@
       "time": 1788269400,
       "seen_at": "2026-09-01 21:34:04 UTC",
       "first_seen": "2026-09-01 21:34:04 UTC"
-    },
-    {
-      "key": "sp500:BRO:1d:trend_touch:support:1788269400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "BRO",
-      "name": "Brown & Brown",
-      "timeframe": "1d",
-      "level": 71.66490120981254,
-      "time": 1788269400,
-      "seen_at": "2026-09-01 18:51:18 UTC",
-      "first_seen": "2026-09-01 18:51:18 UTC"
-    },
-    {
-      "key": "sp500:STT:1d:trend_touch:support:1788269400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "STT",
-      "name": "State Street Corporation",
-      "timeframe": "1d",
-      "level": 187.03305075825125,
-      "time": 1788269400,
-      "seen_at": "2026-09-01 18:51:18 UTC",
-      "first_seen": "2026-09-01 18:51:18 UTC"
-    },
-    {
-      "key": "sp500:SLB:1d:trend_exceed:resistance:1788269400",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "SLB",
-      "name": "Schlumberger",
-      "timeframe": "1d",
-      "level": 58.55515757395809,
-      "time": 1788269400,
-      "seen_at": "2026-09-01 15:16:37 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-09-01 15:16:37 UTC"
     },
     {
       "key": "fx:NZDUSD=X:1d:trend_touch:support:1788258290",
@@ -927,9 +940,9 @@
       "symbol": "APD",
       "name": "Air Products",
       "timeframe": "1d",
-      "level": 310.29636452414775,
+      "level": 310.179091944839,
       "time": 1788183000,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-08-31 14:10:27 UTC"
     },
     {
@@ -940,9 +953,9 @@
       "symbol": "VTRS",
       "name": "Viatris",
       "timeframe": "1d",
-      "level": 16.136719970292944,
+      "level": 16.168064055904267,
       "time": 1788183000,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-08-31 14:10:27 UTC"
     },
     {
@@ -955,7 +968,33 @@
       "timeframe": "1d",
       "level": 1171.2049062977667,
       "time": 1788183000,
-      "seen_at": "2026-09-01 21:34:04 UTC",
+      "seen_at": "2026-09-01 23:58:24 UTC",
+      "first_seen": "2026-08-31 14:10:27 UTC"
+    },
+    {
+      "key": "sp500:TKO:1d:trend_touch:support:1788183000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "TKO",
+      "name": "TKO Group Holdings",
+      "timeframe": "1d",
+      "level": 182.51221477585352,
+      "time": 1788183000,
+      "seen_at": "2026-09-01 23:58:24 UTC",
+      "first_seen": "2026-08-31 20:26:19 UTC"
+    },
+    {
+      "key": "sp500:SLB:1d:trend_touch:resistance:1788183000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "SLB",
+      "name": "Schlumberger",
+      "timeframe": "1d",
+      "level": 58.559052311029646,
+      "time": 1788183000,
+      "seen_at": "2026-09-01 23:58:24 UTC",
       "first_seen": "2026-08-31 14:10:27 UTC"
     },
     {
@@ -985,19 +1024,6 @@
       "first_seen": "2026-09-01 05:21:23 UTC"
     },
     {
-      "key": "sp500:TKO:1d:trend_touch:support:1788183000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "TKO",
-      "name": "TKO Group Holdings",
-      "timeframe": "1d",
-      "level": 182.51221477585352,
-      "time": 1788183000,
-      "seen_at": "2026-09-01 18:51:18 UTC",
-      "first_seen": "2026-08-31 20:26:19 UTC"
-    },
-    {
       "key": "sp500:HSIC:1d:trend_touch:support:1788183000",
       "kind": "trend_touch",
       "type": "support",
@@ -1022,19 +1048,6 @@
       "time": 1788183000,
       "seen_at": "2026-09-01 15:16:37 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
-    },
-    {
-      "key": "sp500:SLB:1d:trend_touch:resistance:1788183000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "SLB",
-      "name": "Schlumberger",
-      "timeframe": "1d",
-      "level": 58.559052311029646,
-      "time": 1788183000,
-      "seen_at": "2026-09-01 15:16:37 UTC",
-      "first_seen": "2026-08-31 14:10:27 UTC"
     },
     {
       "key": "sp500:LUV:1d:trend_exceed:support:1788183000",
@@ -6627,20 +6640,6 @@
       "time": 1787578200,
       "seen_at": "2026-08-25 13:33:30 UTC",
       "exceed_bars": 3,
-      "first_seen": "2026-08-24 14:47:43 UTC"
-    },
-    {
-      "key": "sp500:ABT:1d:trend_exceed:resistance:1787578200",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "ABT",
-      "name": "Abbott Laboratories",
-      "timeframe": "1d",
-      "level": 115.12033312248461,
-      "time": 1787578200,
-      "seen_at": "2026-08-25 13:33:30 UTC",
-      "exceed_bars": 2,
       "first_seen": "2026-08-24 14:47:43 UTC"
     }
   ]
