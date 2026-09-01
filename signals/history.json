@@ -1,8 +1,21 @@
 {
-  "updated_at": "2026-09-01 05:21:23 UTC",
+  "updated_at": "2026-09-01 10:28:21 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "fx:NZDUSD=X:1d:trend_touch:support:1788258290",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "fx",
+      "symbol": "NZDUSD=X",
+      "name": "NZD/USD",
+      "timeframe": "1d",
+      "level": 0.5897706326316384,
+      "time": 1788258290,
+      "seen_at": "2026-09-01 10:28:21 UTC",
+      "first_seen": "2026-09-01 10:28:21 UTC"
+    },
     {
       "key": "crypto:ARBUSDT:1h:trend_exceed:resistance:1788217200",
       "kind": "trend_exceed",
@@ -27,7 +40,7 @@
       "timeframe": "1h",
       "level": 324.92741224500867,
       "time": 1788206400,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-09-01 00:14:13 UTC"
     },
@@ -41,7 +54,7 @@
       "timeframe": "1h",
       "level": 265.6926373981294,
       "time": 1788204600,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
@@ -54,7 +67,7 @@
       "timeframe": "1h",
       "level": 241.2468365023595,
       "time": 1788204600,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
@@ -67,7 +80,7 @@
       "timeframe": "1h",
       "level": 83.7402093069894,
       "time": 1788204600,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
@@ -80,7 +93,7 @@
       "timeframe": "1h",
       "level": 59.109655953393194,
       "time": 1788204600,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
@@ -93,7 +106,7 @@
       "timeframe": "1h",
       "level": 131.50287567894415,
       "time": 1788204600,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
@@ -106,7 +119,7 @@
       "timeframe": "1h",
       "level": 138.04934367343517,
       "time": 1788204600,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
@@ -119,7 +132,7 @@
       "timeframe": "1h",
       "level": 265.6926373981294,
       "time": 1788204600,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
@@ -132,7 +145,7 @@
       "timeframe": "1h",
       "level": 341.980956613201,
       "time": 1788204600,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
@@ -145,7 +158,7 @@
       "timeframe": "1h",
       "level": 6312.708127391582,
       "time": 1788204600,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
@@ -158,7 +171,7 @@
       "timeframe": "1h",
       "level": 239.44336539048416,
       "time": 1788204600,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
@@ -261,10 +274,10 @@
       "symbol": "LUV",
       "name": "Southwest Airlines",
       "timeframe": "1d",
-      "level": 40.718524088625045,
+      "level": 40.76836015357346,
       "time": 1788183000,
-      "seen_at": "2026-09-01 05:21:23 UTC",
-      "exceed_bars": 2,
+      "seen_at": "2026-09-01 10:28:21 UTC",
+      "exceed_bars": 3,
       "first_seen": "2026-08-31 14:10:27 UTC"
     },
     {
@@ -277,7 +290,7 @@
       "timeframe": "1d",
       "level": 142.16173900983722,
       "time": 1788183000,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-08-31 14:10:27 UTC"
     },
@@ -289,10 +302,10 @@
       "symbol": "TYL",
       "name": "Tyler Technologies",
       "timeframe": "1d",
-      "level": 352.86056223223284,
+      "level": 352.1866907919607,
       "time": 1788183000,
-      "seen_at": "2026-09-01 05:21:23 UTC",
-      "exceed_bars": 2,
+      "seen_at": "2026-09-01 10:28:21 UTC",
+      "exceed_bars": 3,
       "first_seen": "2026-08-31 14:10:27 UTC"
     },
     {
@@ -303,9 +316,9 @@
       "symbol": "APD",
       "name": "Air Products",
       "timeframe": "1d",
-      "level": 310.29636452414775,
+      "level": 310.179091944839,
       "time": 1788183000,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 14:10:27 UTC"
     },
     {
@@ -316,9 +329,9 @@
       "symbol": "HSIC",
       "name": "Henry Schein",
       "timeframe": "1d",
-      "level": 88.4927250255238,
+      "level": 88.69840673966841,
       "time": 1788183000,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 14:10:27 UTC"
     },
     {
@@ -329,9 +342,9 @@
       "symbol": "TDG",
       "name": "TransDigm Group",
       "timeframe": "1d",
-      "level": 1170.6990834111753,
+      "level": 1171.2049062977667,
       "time": 1788183000,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 14:10:27 UTC"
     },
     {
@@ -342,9 +355,9 @@
       "symbol": "VTRS",
       "name": "Viatris",
       "timeframe": "1d",
-      "level": 16.136719970292944,
+      "level": 16.168064055904267,
       "time": 1788183000,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 14:10:27 UTC"
     },
     {
@@ -355,9 +368,9 @@
       "symbol": "CLX",
       "name": "Clorox",
       "timeframe": "1d",
-      "level": 96.84285191127232,
+      "level": 96.97499465942383,
       "time": 1788183000,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
@@ -368,9 +381,9 @@
       "symbol": "TPR",
       "name": "Tapestry, Inc.",
       "timeframe": "1d",
-      "level": 122.35147665272589,
+      "level": 122.49678099259086,
       "time": 1788183000,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
@@ -381,9 +394,62 @@
       "symbol": "TROW",
       "name": "T. Rowe Price",
       "timeframe": "1d",
-      "level": 110.5866683959961,
+      "level": 110.73500175476075,
       "time": 1788183000,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
+      "first_seen": "2026-08-31 20:26:19 UTC"
+    },
+    {
+      "key": "sp500:PPL:1d:trend_exceed:support:1788183000",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "PPL",
+      "name": "PPL Corporation",
+      "timeframe": "1d",
+      "level": 34.41100610417428,
+      "time": 1788183000,
+      "seen_at": "2026-09-01 10:28:21 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-08-31 14:10:27 UTC"
+    },
+    {
+      "key": "sp500:SLB:1d:trend_touch:resistance:1788183000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "SLB",
+      "name": "Schlumberger",
+      "timeframe": "1d",
+      "level": 58.559052311029646,
+      "time": 1788183000,
+      "seen_at": "2026-09-01 10:28:21 UTC",
+      "first_seen": "2026-08-31 14:10:27 UTC"
+    },
+    {
+      "key": "ndx100:ARM:1d:trend_touch:support:1788183000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "ARM",
+      "name": "Arm Holdings",
+      "timeframe": "1d",
+      "level": 238.54990669776654,
+      "time": 1788183000,
+      "seen_at": "2026-09-01 10:28:21 UTC",
+      "first_seen": "2026-08-31 20:26:19 UTC"
+    },
+    {
+      "key": "sp500:TKO:1d:trend_touch:support:1788183000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "TKO",
+      "name": "TKO Group Holdings",
+      "timeframe": "1d",
+      "level": 182.51221477585352,
+      "time": 1788183000,
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
@@ -482,59 +548,6 @@
       "time": 1788183000,
       "seen_at": "2026-09-01 05:21:23 UTC",
       "first_seen": "2026-09-01 05:21:23 UTC"
-    },
-    {
-      "key": "sp500:PPL:1d:trend_exceed:support:1788183000",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "PPL",
-      "name": "PPL Corporation",
-      "timeframe": "1d",
-      "level": 34.41100610417428,
-      "time": 1788183000,
-      "seen_at": "2026-09-01 00:14:13 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-08-31 14:10:27 UTC"
-    },
-    {
-      "key": "sp500:SLB:1d:trend_touch:resistance:1788183000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "SLB",
-      "name": "Schlumberger",
-      "timeframe": "1d",
-      "level": 58.559052311029646,
-      "time": 1788183000,
-      "seen_at": "2026-09-01 00:14:13 UTC",
-      "first_seen": "2026-08-31 14:10:27 UTC"
-    },
-    {
-      "key": "ndx100:ARM:1d:trend_touch:support:1788183000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "ARM",
-      "name": "Arm Holdings",
-      "timeframe": "1d",
-      "level": 238.54990669776654,
-      "time": 1788183000,
-      "seen_at": "2026-09-01 00:14:13 UTC",
-      "first_seen": "2026-08-31 20:26:19 UTC"
-    },
-    {
-      "key": "sp500:TKO:1d:trend_touch:support:1788183000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "TKO",
-      "name": "TKO Group Holdings",
-      "timeframe": "1d",
-      "level": 182.51221477585352,
-      "time": 1788183000,
-      "seen_at": "2026-09-01 00:14:13 UTC",
-      "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
       "key": "sp500:PGR:1h:ar_dr_near:DR:1788183000",
@@ -1081,7 +1094,7 @@
       "timeframe": "1d",
       "level": 45.72189834024897,
       "time": 1788134400,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-31 20:26:19 UTC"
     },
     {
@@ -1508,7 +1521,7 @@
       "timeframe": "1d",
       "level": 258.96059226989746,
       "time": 1787923800,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-28 23:01:32 UTC"
     },
     {
@@ -1521,7 +1534,7 @@
       "timeframe": "1d",
       "level": 258.96059226989746,
       "time": 1787923800,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-28 23:01:32 UTC"
     },
     {
@@ -1534,7 +1547,7 @@
       "timeframe": "1d",
       "level": 142.40599028103014,
       "time": 1787923800,
-      "seen_at": "2026-09-01 05:21:23 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-28 23:01:32 UTC"
     },
     {
@@ -1547,7 +1560,7 @@
       "timeframe": "1d",
       "level": 57.70000076293945,
       "time": 1787923800,
-      "seen_at": "2026-09-01 00:14:13 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "bars_after_signal": 94,
       "first_seen": "2026-08-28 23:01:32 UTC"
     },
@@ -1561,7 +1574,7 @@
       "timeframe": "1d",
       "level": 153.89076866736778,
       "time": 1787923800,
-      "seen_at": "2026-09-01 00:14:13 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-28 23:01:32 UTC"
     },
     {
@@ -1574,7 +1587,7 @@
       "timeframe": "1d",
       "level": 41.63047709891466,
       "time": 1787923800,
-      "seen_at": "2026-09-01 00:14:13 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-28 23:01:32 UTC"
     },
     {
@@ -1587,7 +1600,7 @@
       "timeframe": "1d",
       "level": 98.3690879128196,
       "time": 1787923800,
-      "seen_at": "2026-09-01 00:14:13 UTC",
+      "seen_at": "2026-09-01 10:28:21 UTC",
       "first_seen": "2026-08-28 23:01:32 UTC"
     },
     {
@@ -6622,19 +6635,6 @@
       "name": "DoorDash",
       "timeframe": "1h",
       "level": 221.80316656704605,
-      "time": 1787578200,
-      "seen_at": "2026-08-24 14:47:43 UTC",
-      "first_seen": "2026-08-24 14:47:43 UTC"
-    },
-    {
-      "key": "sp500:DIS:1h:trend_touch:resistance:1787578200",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "DIS",
-      "name": "Walt Disney Company (The)",
-      "timeframe": "1h",
-      "level": 108.3816475019063,
       "time": 1787578200,
       "seen_at": "2026-08-24 14:47:43 UTC",
       "first_seen": "2026-08-24 14:47:43 UTC"
