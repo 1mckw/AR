@@ -1,8 +1,34 @@
 {
-  "updated_at": "2026-09-03 05:26:39 UTC",
+  "updated_at": "2026-09-03 10:02:40 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "fx:GBPJPY=X:1d:trend_touch:support:1788429691",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "fx",
+      "symbol": "GBPJPY=X",
+      "name": "GBP/JPY",
+      "timeframe": "1d",
+      "level": 210.90765971522177,
+      "time": 1788429691,
+      "seen_at": "2026-09-03 10:02:40 UTC",
+      "first_seen": "2026-09-03 10:02:40 UTC"
+    },
+    {
+      "key": "crypto:PEPEUSDT:1h:trend_touch:resistance:1788422400",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "PEPEUSDT",
+      "name": "PEPE",
+      "timeframe": "1h",
+      "level": 3.5059512195121946e-06,
+      "time": 1788422400,
+      "seen_at": "2026-09-03 10:02:40 UTC",
+      "first_seen": "2026-09-03 10:02:40 UTC"
+    },
     {
       "key": "crypto:ADAUSDT:1h:trend_touch:resistance:1788411600",
       "kind": "trend_touch",
@@ -39,7 +65,7 @@
       "timeframe": "1h",
       "level": 328.4700012207031,
       "time": 1788379200,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "bars_after_signal": 399,
       "gap_pct": 0.3135746873288455,
       "first_seen": "2026-09-02 22:22:14 UTC"
@@ -54,7 +80,7 @@
       "timeframe": "1h",
       "level": 464.3316650390625,
       "time": 1788379200,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-09-02 22:22:14 UTC"
     },
@@ -68,7 +94,7 @@
       "timeframe": "1h",
       "level": 187.85978997271994,
       "time": 1788379200,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-02 22:22:14 UTC"
     },
@@ -123,7 +149,7 @@
       "timeframe": "1h",
       "level": 170.24826049804688,
       "time": 1788377400,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-02 22:22:14 UTC"
     },
     {
@@ -136,7 +162,7 @@
       "timeframe": "1h",
       "level": 139.50273522876557,
       "time": 1788377400,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-02 22:22:14 UTC"
     },
     {
@@ -149,7 +175,7 @@
       "timeframe": "1h",
       "level": 927.2493971854665,
       "time": 1788377400,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-02 22:22:14 UTC"
     },
     {
@@ -162,7 +188,7 @@
       "timeframe": "1h",
       "level": 53.734699281871826,
       "time": 1788377400,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-02 22:22:14 UTC"
     },
     {
@@ -175,7 +201,7 @@
       "timeframe": "1h",
       "level": 170.24826049804688,
       "time": 1788377400,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-02 22:22:14 UTC"
     },
     {
@@ -349,9 +375,9 @@
       "symbol": "BLDR",
       "name": "Builders FirstSource",
       "timeframe": "1d",
-      "level": 65.2122825831012,
+      "level": 65.21738640623666,
       "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-09-02 16:56:43 UTC"
     },
@@ -365,7 +391,7 @@
       "timeframe": "1d",
       "level": 40.86803228347028,
       "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-09-02 16:56:43 UTC"
     },
@@ -379,7 +405,7 @@
       "timeframe": "1d",
       "level": 34.424675161604114,
       "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-09-02 16:56:43 UTC"
     },
@@ -391,10 +417,10 @@
       "symbol": "TYL",
       "name": "Tyler Technologies",
       "timeframe": "1d",
-      "level": 351.5128193516885,
+      "level": 350.8389479114163,
       "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
-      "exceed_bars": 4,
+      "seen_at": "2026-09-03 10:02:40 UTC",
+      "exceed_bars": 5,
       "first_seen": "2026-09-02 16:56:43 UTC"
     },
     {
@@ -407,7 +433,7 @@
       "timeframe": "1d",
       "level": 50.22383436438155,
       "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-02 16:56:43 UTC"
     },
     {
@@ -420,7 +446,7 @@
       "timeframe": "1d",
       "level": 44.99102486504449,
       "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-02 19:53:35 UTC"
     },
     {
@@ -433,7 +459,7 @@
       "timeframe": "1d",
       "level": 67.77457553603084,
       "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-02 19:53:35 UTC"
     },
     {
@@ -444,9 +470,9 @@
       "symbol": "TEL",
       "name": "TE Connectivity",
       "timeframe": "1d",
-      "level": 200.71481138553673,
+      "level": 200.47567595116342,
       "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-02 19:53:35 UTC"
     },
     {
@@ -459,7 +485,7 @@
       "timeframe": "1d",
       "level": 222.69460731180789,
       "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-02 22:22:14 UTC"
     },
     {
@@ -472,7 +498,7 @@
       "timeframe": "1d",
       "level": 334.0899963378906,
       "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "bars_after_signal": 115,
       "first_seen": "2026-09-02 16:56:43 UTC"
     },
@@ -486,8 +512,86 @@
       "timeframe": "1d",
       "level": 64.66545679662134,
       "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-02 16:56:43 UTC"
+    },
+    {
+      "key": "sp500:CAT:1d:trend_touch:support:1788355800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "CAT",
+      "name": "Caterpillar Inc.",
+      "timeframe": "1d",
+      "level": 771.9024681678185,
+      "time": 1788355800,
+      "seen_at": "2026-09-03 10:02:40 UTC",
+      "first_seen": "2026-09-02 19:53:35 UTC"
+    },
+    {
+      "key": "sp500:CLX:1d:trend_touch:support:1788355800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "CLX",
+      "name": "Clorox",
+      "timeframe": "1d",
+      "level": 94.81900482177734,
+      "time": 1788355800,
+      "seen_at": "2026-09-03 10:02:40 UTC",
+      "first_seen": "2026-09-02 19:53:35 UTC"
+    },
+    {
+      "key": "sp500:CMG:1d:trend_touch:resistance:1788355800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "CMG",
+      "name": "Chipotle Mexican Grill",
+      "timeframe": "1d",
+      "level": 38.63558396470123,
+      "time": 1788355800,
+      "seen_at": "2026-09-03 10:02:40 UTC",
+      "first_seen": "2026-09-02 19:53:35 UTC"
+    },
+    {
+      "key": "sp500:BKR:1d:trend_touch:resistance:1788355800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "BKR",
+      "name": "Baker Hughes",
+      "timeframe": "1d",
+      "level": 64.73000226702008,
+      "time": 1788355800,
+      "seen_at": "2026-09-03 10:02:40 UTC",
+      "first_seen": "2026-09-02 16:56:43 UTC"
+    },
+    {
+      "key": "sp500:AWK:1d:trend_touch:resistance:1788355800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "AWK",
+      "name": "American Water Works",
+      "timeframe": "1d",
+      "level": 140.27946830024487,
+      "time": 1788355800,
+      "seen_at": "2026-09-03 10:02:40 UTC",
+      "first_seen": "2026-09-03 05:26:39 UTC"
+    },
+    {
+      "key": "dji30:CAT:1d:trend_touch:support:1788355800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "dji30",
+      "symbol": "CAT",
+      "name": "Caterpillar Inc.",
+      "timeframe": "1d",
+      "level": 771.9024681678185,
+      "time": 1788355800,
+      "seen_at": "2026-09-03 10:02:40 UTC",
+      "first_seen": "2026-09-02 19:53:35 UTC"
     },
     {
       "key": "sp500:TDG:1d:trend_exceed:support:1788355800",
@@ -504,45 +608,6 @@
       "first_seen": "2026-09-02 19:53:35 UTC"
     },
     {
-      "key": "sp500:CAT:1d:trend_touch:support:1788355800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "CAT",
-      "name": "Caterpillar Inc.",
-      "timeframe": "1d",
-      "level": 771.9024681678185,
-      "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
-      "first_seen": "2026-09-02 19:53:35 UTC"
-    },
-    {
-      "key": "sp500:CLX:1d:trend_touch:support:1788355800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "CLX",
-      "name": "Clorox",
-      "timeframe": "1d",
-      "level": 94.81900482177734,
-      "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
-      "first_seen": "2026-09-02 19:53:35 UTC"
-    },
-    {
-      "key": "sp500:CMG:1d:trend_touch:resistance:1788355800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "CMG",
-      "name": "Chipotle Mexican Grill",
-      "timeframe": "1d",
-      "level": 38.63558396470123,
-      "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
-      "first_seen": "2026-09-02 19:53:35 UTC"
-    },
-    {
       "key": "ndx100:REGN:1d:trend_touch:resistance:1788355800",
       "kind": "trend_touch",
       "type": "resistance",
@@ -551,19 +616,6 @@
       "name": "Regeneron Pharmaceuticals",
       "timeframe": "1d",
       "level": 842.3297738301385,
-      "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
-      "first_seen": "2026-09-02 16:56:43 UTC"
-    },
-    {
-      "key": "sp500:BKR:1d:trend_touch:resistance:1788355800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "BKR",
-      "name": "Baker Hughes",
-      "timeframe": "1d",
-      "level": 64.66545679662134,
       "time": 1788355800,
       "seen_at": "2026-09-03 05:26:39 UTC",
       "first_seen": "2026-09-02 16:56:43 UTC"
@@ -596,19 +648,6 @@
       "first_seen": "2026-09-03 05:26:39 UTC"
     },
     {
-      "key": "sp500:AWK:1d:trend_touch:resistance:1788355800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "AWK",
-      "name": "American Water Works",
-      "timeframe": "1d",
-      "level": 140.23727126982072,
-      "time": 1788355800,
-      "seen_at": "2026-09-03 05:26:39 UTC",
-      "first_seen": "2026-09-03 05:26:39 UTC"
-    },
-    {
       "key": "sp500:GDDY:1d:trend_exceed:resistance:1788355800",
       "kind": "trend_exceed",
       "type": "resistance",
@@ -620,19 +659,6 @@
       "time": 1788355800,
       "seen_at": "2026-09-02 19:53:35 UTC",
       "exceed_bars": 2,
-      "first_seen": "2026-09-02 19:53:35 UTC"
-    },
-    {
-      "key": "dji30:CAT:1d:trend_touch:support:1788355800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "dji30",
-      "symbol": "CAT",
-      "name": "Caterpillar Inc.",
-      "timeframe": "1d",
-      "level": 771.9024681678185,
-      "time": 1788355800,
-      "seen_at": "2026-09-02 19:53:35 UTC",
       "first_seen": "2026-09-02 19:53:35 UTC"
     },
     {
@@ -788,7 +814,7 @@
       "timeframe": "1d",
       "level": 0.9433732032775879,
       "time": 1788303600,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-02 22:22:14 UTC"
     },
     {
@@ -1199,9 +1225,9 @@
       "symbol": "BLDR",
       "name": "Builders FirstSource",
       "timeframe": "1d",
-      "level": 65.20717875996574,
+      "level": 65.2122825831012,
       "time": 1788269400,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-01 15:16:37 UTC"
     },
     {
@@ -1214,7 +1240,7 @@
       "timeframe": "1d",
       "level": 101.8016543382214,
       "time": 1788269400,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-01 15:16:37 UTC"
     },
     {
@@ -1227,21 +1253,8 @@
       "timeframe": "1d",
       "level": 21.183714076450894,
       "time": 1788269400,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-01 18:51:18 UTC"
-    },
-    {
-      "key": "sp500:TKO:1d:trend_touch:support:1788269400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "TKO",
-      "name": "TKO Group Holdings",
-      "timeframe": "1d",
-      "level": 182.51221477585352,
-      "time": 1788269400,
-      "seen_at": "2026-09-03 05:26:39 UTC",
-      "first_seen": "2026-09-01 21:34:04 UTC"
     },
     {
       "key": "ndx100:TRI:1d:trend_touch:resistance:1788269400",
@@ -1251,9 +1264,9 @@
       "symbol": "TRI",
       "name": "Thomson Reuters Corporation",
       "timeframe": "1d",
-      "level": 107.71107344193891,
+      "level": 108.00256104902788,
       "time": 1788269400,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-01 15:16:37 UTC"
     },
     {
@@ -1266,7 +1279,7 @@
       "timeframe": "1d",
       "level": 209.3581903631037,
       "time": 1788269400,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-01 15:16:37 UTC"
     },
     {
@@ -1277,9 +1290,9 @@
       "symbol": "WMB",
       "name": "Williams Companies",
       "timeframe": "1d",
-      "level": 76.27271270751953,
+      "level": 76.27816772460938,
       "time": 1788269400,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-01 15:16:37 UTC"
     },
     {
@@ -1290,9 +1303,9 @@
       "symbol": "LOW",
       "name": "Lowe's",
       "timeframe": "1d",
-      "level": 200.17202511429787,
+      "level": 199.53346750359788,
       "time": 1788269400,
-      "seen_at": "2026-09-03 05:26:39 UTC",
+      "seen_at": "2026-09-03 10:02:40 UTC",
       "first_seen": "2026-09-01 21:34:04 UTC"
     },
     {
@@ -1304,6 +1317,58 @@
       "name": "Honeywell International Inc.",
       "timeframe": "1d",
       "level": 209.5348477570907,
+      "time": 1788269400,
+      "seen_at": "2026-09-03 10:02:40 UTC",
+      "first_seen": "2026-09-01 21:34:04 UTC"
+    },
+    {
+      "key": "sp500:BRO:1d:trend_touch:support:1788269400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "BRO",
+      "name": "Brown & Brown",
+      "timeframe": "1d",
+      "level": 71.66490120981254,
+      "time": 1788269400,
+      "seen_at": "2026-09-03 10:02:40 UTC",
+      "first_seen": "2026-09-01 18:51:18 UTC"
+    },
+    {
+      "key": "ndx100:HON:1d:trend_touch:support:1788269400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "HON",
+      "name": "Honeywell",
+      "timeframe": "1d",
+      "level": 209.5348477570907,
+      "time": 1788269400,
+      "seen_at": "2026-09-03 10:02:40 UTC",
+      "first_seen": "2026-09-01 21:34:04 UTC"
+    },
+    {
+      "key": "sp500:HON:1d:trend_touch:support:1788269400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "HON",
+      "name": "Honeywell",
+      "timeframe": "1d",
+      "level": 209.5348477570907,
+      "time": 1788269400,
+      "seen_at": "2026-09-03 10:02:40 UTC",
+      "first_seen": "2026-09-01 21:34:04 UTC"
+    },
+    {
+      "key": "sp500:TKO:1d:trend_touch:support:1788269400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "TKO",
+      "name": "TKO Group Holdings",
+      "timeframe": "1d",
+      "level": 182.51221477585352,
       "time": 1788269400,
       "seen_at": "2026-09-03 05:26:39 UTC",
       "first_seen": "2026-09-01 21:34:04 UTC"
@@ -1320,45 +1385,6 @@
       "time": 1788269400,
       "seen_at": "2026-09-03 05:26:39 UTC",
       "first_seen": "2026-09-01 18:51:18 UTC"
-    },
-    {
-      "key": "sp500:BRO:1d:trend_touch:support:1788269400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "BRO",
-      "name": "Brown & Brown",
-      "timeframe": "1d",
-      "level": 71.66490120981254,
-      "time": 1788269400,
-      "seen_at": "2026-09-03 05:26:39 UTC",
-      "first_seen": "2026-09-01 18:51:18 UTC"
-    },
-    {
-      "key": "ndx100:HON:1d:trend_touch:support:1788269400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "HON",
-      "name": "Honeywell",
-      "timeframe": "1d",
-      "level": 209.47761801014775,
-      "time": 1788269400,
-      "seen_at": "2026-09-03 00:36:23 UTC",
-      "first_seen": "2026-09-01 21:34:04 UTC"
-    },
-    {
-      "key": "sp500:HON:1d:trend_touch:support:1788269400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "HON",
-      "name": "Honeywell",
-      "timeframe": "1d",
-      "level": 209.47761801014775,
-      "time": 1788269400,
-      "seen_at": "2026-09-03 00:36:23 UTC",
-      "first_seen": "2026-09-01 21:34:04 UTC"
     },
     {
       "key": "sp500:CARR:1d:ar_dr_touch:DR:1788269400",
@@ -6625,32 +6651,6 @@
       "time": 1787648400,
       "seen_at": "2026-08-25 10:15:09 UTC",
       "first_seen": "2026-08-25 10:15:09 UTC"
-    },
-    {
-      "key": "fx:USDCNH=X:1h:trend_touch:support:1787648400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "fx",
-      "symbol": "USDCNH=X",
-      "name": "USD/CNH",
-      "timeframe": "1h",
-      "level": 6.718189440275493,
-      "time": 1787648400,
-      "seen_at": "2026-08-25 10:15:09 UTC",
-      "first_seen": "2026-08-25 10:15:09 UTC"
-    },
-    {
-      "key": "crypto:LTCUSDT:1h:trend_touch:support:1787641200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "crypto",
-      "symbol": "LTCUSDT",
-      "name": "LTC",
-      "timeframe": "1h",
-      "level": 51.34967213114754,
-      "time": 1787641200,
-      "seen_at": "2026-08-25 08:09:51 UTC",
-      "first_seen": "2026-08-25 08:09:51 UTC"
     }
   ]
 }
