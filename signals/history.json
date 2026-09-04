@@ -1,8 +1,309 @@
 {
-  "updated_at": "2026-09-04 19:31:47 UTC",
+  "updated_at": "2026-09-04 21:46:34 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "crypto:NEARUSDT:1h:trend_exceed:resistance:1788555600",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "NEARUSDT",
+      "name": "NEAR",
+      "timeframe": "1h",
+      "level": 2.034118102114492,
+      "time": 1788555600,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:VRT:1h:trend_exceed:resistance:1788552000",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "VRT",
+      "name": "Vertiv Holdings Co",
+      "timeframe": "1h",
+      "level": 276.27195250628745,
+      "time": 1788552000,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "crypto:SNDKBUSDT:1h:trend_touch:resistance:1788552000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "SNDKBUSDT",
+      "name": "SNDKB",
+      "timeframe": "1h",
+      "level": 1741.5243902439024,
+      "time": 1788552000,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "dji30:DIS:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "dji30",
+      "symbol": "DIS",
+      "name": "The Walt Disney Company",
+      "timeframe": "1h",
+      "level": 105.28151984836744,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "dji30:IBM:1h:trend_touch:resistance:1788550200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "dji30",
+      "symbol": "IBM",
+      "name": "International Business Machines Corporation",
+      "timeframe": "1h",
+      "level": 235.15822573250352,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "dji30:V:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "dji30",
+      "symbol": "V",
+      "name": "Visa Inc.",
+      "timeframe": "1h",
+      "level": 374.2720265107996,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "ndx100:ASML:1h:trend_touch:resistance:1788550200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "ndx100",
+      "symbol": "ASML",
+      "name": "ASML Holding",
+      "timeframe": "1h",
+      "level": 1716.4042489188057,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "ndx100:EXC:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "EXC",
+      "name": "Exelon",
+      "timeframe": "1h",
+      "level": 43.56117139543806,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "ndx100:PEP:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "PEP",
+      "name": "PepsiCo",
+      "timeframe": "1h",
+      "level": 137.45399267578125,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:ACGL:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "ACGL",
+      "name": "Arch Capital Group",
+      "timeframe": "1h",
+      "level": 97.98603951394021,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:BRO:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "BRO",
+      "name": "Brown & Brown",
+      "timeframe": "1h",
+      "level": 71.39130129132953,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:DIS:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "DIS",
+      "name": "Walt Disney Company (The)",
+      "timeframe": "1h",
+      "level": 105.28151984836744,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:EG:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "EG",
+      "name": "Everest Group",
+      "timeframe": "1h",
+      "level": 380.57537532198256,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:EXC:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "EXC",
+      "name": "Exelon",
+      "timeframe": "1h",
+      "level": 43.56117139543806,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:IBM:1h:trend_touch:resistance:1788550200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "IBM",
+      "name": "IBM",
+      "timeframe": "1h",
+      "level": 235.15822573250352,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:IT:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "IT",
+      "name": "Gartner",
+      "timeframe": "1h",
+      "level": 186.12173400878908,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:KVUE:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "KVUE",
+      "name": "Kenvue",
+      "timeframe": "1h",
+      "level": 18.712499346051896,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:PEP:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "PEP",
+      "name": "PepsiCo",
+      "timeframe": "1h",
+      "level": 137.45399267578125,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:TER:1h:trend_touch:resistance:1788550200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "TER",
+      "name": "Teradyne",
+      "timeframe": "1h",
+      "level": 358.0834686279297,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:V:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "V",
+      "name": "Visa Inc.",
+      "timeframe": "1h",
+      "level": 374.2720265107996,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:VICI:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "VICI",
+      "name": "Vici Properties",
+      "timeframe": "1h",
+      "level": 25.395714351109095,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:WELL:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "WELL",
+      "name": "Welltower",
+      "timeframe": "1h",
+      "level": 236.010964040506,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:YUM:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "YUM",
+      "name": "Yum! Brands",
+      "timeframe": "1h",
+      "level": 150.6101217149179,
+      "time": 1788550200,
+      "seen_at": "2026-09-04 21:46:34 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
     {
       "key": "sp500:NFLX:1h:trend_exceed:support:1788548964",
       "kind": "trend_exceed",
@@ -217,7 +518,7 @@
       "timeframe": "1d",
       "level": 258.6851452418736,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
@@ -231,7 +532,7 @@
       "timeframe": "1d",
       "level": 209.7065369979195,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
@@ -245,7 +546,7 @@
       "timeframe": "1d",
       "level": 260.02939325942447,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
@@ -259,7 +560,7 @@
       "timeframe": "1d",
       "level": 209.7065369979195,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
@@ -273,7 +574,7 @@
       "timeframe": "1d",
       "level": 65.22759405250758,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
@@ -287,7 +588,7 @@
       "timeframe": "1d",
       "level": 94.94100494384766,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
@@ -301,7 +602,7 @@
       "timeframe": "1d",
       "level": 258.6851452418736,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
@@ -315,7 +616,7 @@
       "timeframe": "1d",
       "level": 98.05882352941175,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
@@ -329,7 +630,7 @@
       "timeframe": "1d",
       "level": 209.7065369979195,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
@@ -343,7 +644,7 @@
       "timeframe": "1d",
       "level": 40.9677044133671,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "exceed_bars": 7,
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
@@ -357,7 +658,7 @@
       "timeframe": "1d",
       "level": 260.02939325942447,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
@@ -371,7 +672,7 @@
       "timeframe": "1d",
       "level": 1173.2281978441322,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
@@ -385,7 +686,7 @@
       "timeframe": "1d",
       "level": 349.491205030872,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "exceed_bars": 7,
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
@@ -399,7 +700,7 @@
       "timeframe": "1d",
       "level": 88.78181665593928,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
@@ -413,7 +714,7 @@
       "timeframe": "1d",
       "level": 254.1492876325335,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
     {
@@ -426,7 +727,7 @@
       "timeframe": "1d",
       "level": 335.58177454331343,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
     {
@@ -439,7 +740,7 @@
       "timeframe": "1d",
       "level": 335.58177454331343,
       "time": 1788528600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
     {
@@ -479,7 +780,7 @@
       "timeframe": "1d",
       "level": 107.45243174061433,
       "time": 1788494400,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
     {
@@ -505,7 +806,7 @@
       "timeframe": "1d",
       "level": 2536.3934482758623,
       "time": 1788480000,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-04 12:07:13 UTC"
     },
     {
@@ -1076,7 +1377,7 @@
       "timeframe": "1d",
       "level": 259.99949540010635,
       "time": 1788442200,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1089,7 +1390,7 @@
       "timeframe": "1d",
       "level": 226.98821367536272,
       "time": 1788442200,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1102,7 +1403,7 @@
       "timeframe": "1d",
       "level": 1620.5677114633413,
       "time": 1788442200,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1115,7 +1416,7 @@
       "timeframe": "1d",
       "level": 919.4608302560412,
       "time": 1788442200,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1128,7 +1429,7 @@
       "timeframe": "1d",
       "level": 2026.232996026401,
       "time": 1788442200,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1141,7 +1442,7 @@
       "timeframe": "1d",
       "level": 189.46881164013027,
       "time": 1788442200,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1154,7 +1455,7 @@
       "timeframe": "1d",
       "level": 919.4608302560412,
       "time": 1788442200,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1167,7 +1468,7 @@
       "timeframe": "1d",
       "level": 56.16071564810617,
       "time": 1788442200,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1180,7 +1481,7 @@
       "timeframe": "1d",
       "level": 91.38410897450905,
       "time": 1788442200,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1193,7 +1494,7 @@
       "timeframe": "1d",
       "level": 312.8251231800426,
       "time": 1788442200,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1206,7 +1507,7 @@
       "timeframe": "1d",
       "level": 259.99949540010635,
       "time": 1788442200,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1219,7 +1520,7 @@
       "timeframe": "1d",
       "level": 136.4212494763461,
       "time": 1788442200,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1232,7 +1533,7 @@
       "timeframe": "1d",
       "level": 189.46881164013027,
       "time": 1788442200,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1245,7 +1546,7 @@
       "timeframe": "1d",
       "level": 68.42749275898214,
       "time": 1788442200,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 18:28:35 UTC"
     },
     {
@@ -1610,7 +1911,7 @@
       "timeframe": "1d",
       "level": 81406.70526315788,
       "time": 1788393600,
-      "seen_at": "2026-09-04 19:31:47 UTC",
+      "seen_at": "2026-09-04 21:46:34 UTC",
       "first_seen": "2026-09-03 23:40:50 UTC"
     },
     {
@@ -6377,305 +6678,6 @@
       "name": "Globe Life",
       "timeframe": "1h",
       "level": 173.4825581395349,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:GM:1h:trend_touch:support:1787751000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "GM",
-      "name": "General Motors",
-      "timeframe": "1h",
-      "level": 85.35363977605647,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:HAL:1h:trend_touch:support:1787751000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "HAL",
-      "name": "Halliburton",
-      "timeframe": "1h",
-      "level": 33.168960412343345,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:HAS:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "HAS",
-      "name": "Hasbro",
-      "timeframe": "1h",
-      "level": 97.88975380562447,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:ICE:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "ICE",
-      "name": "Intercontinental Exchange",
-      "timeframe": "1h",
-      "level": 162.96823485050857,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:IEX:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "IEX",
-      "name": "IDEX Corporation",
-      "timeframe": "1h",
-      "level": 235.33500289916992,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:ITW:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "ITW",
-      "name": "Illinois Tool Works",
-      "timeframe": "1h",
-      "level": 285.3260192871094,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:JPM:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "JPM",
-      "name": "JPMorgan Chase",
-      "timeframe": "1h",
-      "level": 357.1669891357422,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:LII:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "LII",
-      "name": "Lennox International",
-      "timeframe": "1h",
-      "level": 398.10391920891357,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:LOW:1h:trend_touch:support:1787751000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "LOW",
-      "name": "Lowe's",
-      "timeframe": "1h",
-      "level": 213.49250411987305,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:LULU:1h:trend_touch:support:1787751000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "LULU",
-      "name": "Lululemon Athletica",
-      "timeframe": "1h",
-      "level": 117.64826368248981,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:MCK:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "MCK",
-      "name": "McKesson Corporation",
-      "timeframe": "1h",
-      "level": 906.6765666923137,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:MOS:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "MOS",
-      "name": "Mosaic Company (The)",
-      "timeframe": "1h",
-      "level": 25.13420937278054,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:MRSH:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "MRSH",
-      "name": "Marsh & McLennan Companies, Inc.",
-      "timeframe": "1h",
-      "level": 195.3541573486328,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:O:1h:trend_touch:support:1787751000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "O",
-      "name": "Realty Income",
-      "timeframe": "1h",
-      "level": 62.71607705611217,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:ORCL:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "ORCL",
-      "name": "Oracle Corporation",
-      "timeframe": "1h",
-      "level": 151.2888337787829,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:RCL:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "RCL",
-      "name": "Royal Caribbean Group",
-      "timeframe": "1h",
-      "level": 294.8381827218192,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:SNPS:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "SNPS",
-      "name": "Synopsys",
-      "timeframe": "1h",
-      "level": 416.58021318151594,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:SPGI:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "SPGI",
-      "name": "S&P Global",
-      "timeframe": "1h",
-      "level": 437.89598754882815,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:TSCO:1h:trend_touch:support:1787751000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "TSCO",
-      "name": "Tractor Supply",
-      "timeframe": "1h",
-      "level": 34.96727405894887,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:TTD:1h:trend_touch:support:1787751000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "TTD",
-      "name": "The Trade Desk, Inc.",
-      "timeframe": "1h",
-      "level": 13.10094173749288,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:VLTO:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "VLTO",
-      "name": "Veralto",
-      "timeframe": "1h",
-      "level": 99.25333658854167,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:VTR:1h:trend_touch:support:1787751000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "VTR",
-      "name": "Ventas",
-      "timeframe": "1h",
-      "level": 93.47651851177216,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:WMB:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "WMB",
-      "name": "Williams Companies",
-      "timeframe": "1h",
-      "level": 75.45009690221646,
       "time": 1787751000,
       "seen_at": "2026-08-26 14:49:56 UTC",
       "first_seen": "2026-08-26 14:49:56 UTC"
