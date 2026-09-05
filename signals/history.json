@@ -1,8 +1,35 @@
 {
-  "updated_at": "2026-09-04 23:37:33 UTC",
+  "updated_at": "2026-09-05 01:47:59 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "crypto:TRUMPUSDT:1h:trend_exceed:resistance:1788570000",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "TRUMPUSDT",
+      "name": "TRUMP",
+      "timeframe": "1h",
+      "level": 2.316,
+      "time": 1788570000,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-09-05 01:47:59 UTC"
+    },
+    {
+      "key": "crypto:SUIUSDT:1h:trend_touch:resistance:1788570000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "SUIUSDT",
+      "name": "SUI",
+      "timeframe": "1h",
+      "level": 0.7682800000000001,
+      "time": 1788570000,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-05 01:47:59 UTC"
+    },
     {
       "key": "crypto:PEPEUSDT:1h:trend_touch:support:1788559200",
       "kind": "trend_touch",
@@ -40,7 +67,7 @@
       "timeframe": "1h",
       "level": 276.27195250628745,
       "time": 1788552000,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-04 21:46:34 UTC"
     },
@@ -67,7 +94,7 @@
       "timeframe": "1h",
       "level": 105.28151984836744,
       "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-04 21:46:34 UTC"
     },
     {
@@ -80,7 +107,7 @@
       "timeframe": "1h",
       "level": 235.15822573250352,
       "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-04 21:46:34 UTC"
     },
     {
@@ -93,7 +120,7 @@
       "timeframe": "1h",
       "level": 374.2720265107996,
       "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-04 21:46:34 UTC"
     },
     {
@@ -106,7 +133,189 @@
       "timeframe": "1h",
       "level": 1716.4042489188057,
       "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "ndx100:PEP:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "PEP",
+      "name": "PepsiCo",
+      "timeframe": "1h",
+      "level": 137.45399267578125,
+      "time": 1788550200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:ACGL:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "ACGL",
+      "name": "Arch Capital Group",
+      "timeframe": "1h",
+      "level": 97.98603951394021,
+      "time": 1788550200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:BRO:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "BRO",
+      "name": "Brown & Brown",
+      "timeframe": "1h",
+      "level": 71.39130129132953,
+      "time": 1788550200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:DIS:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "DIS",
+      "name": "Walt Disney Company (The)",
+      "timeframe": "1h",
+      "level": 105.28151984836744,
+      "time": 1788550200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:EG:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "EG",
+      "name": "Everest Group",
+      "timeframe": "1h",
+      "level": 380.57537532198256,
+      "time": 1788550200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:IBM:1h:trend_touch:resistance:1788550200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "IBM",
+      "name": "IBM",
+      "timeframe": "1h",
+      "level": 235.15822573250352,
+      "time": 1788550200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:IT:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "IT",
+      "name": "Gartner",
+      "timeframe": "1h",
+      "level": 186.12173400878908,
+      "time": 1788550200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:KVUE:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "KVUE",
+      "name": "Kenvue",
+      "timeframe": "1h",
+      "level": 18.712499346051896,
+      "time": 1788550200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:PEP:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "PEP",
+      "name": "PepsiCo",
+      "timeframe": "1h",
+      "level": 137.45399267578125,
+      "time": 1788550200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:TER:1h:trend_touch:resistance:1788550200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "TER",
+      "name": "Teradyne",
+      "timeframe": "1h",
+      "level": 358.0834686279297,
+      "time": 1788550200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:V:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "V",
+      "name": "Visa Inc.",
+      "timeframe": "1h",
+      "level": 374.2720265107996,
+      "time": 1788550200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:VICI:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "VICI",
+      "name": "Vici Properties",
+      "timeframe": "1h",
+      "level": 25.395714351109095,
+      "time": 1788550200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:WELL:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "WELL",
+      "name": "Welltower",
+      "timeframe": "1h",
+      "level": 236.010964040506,
+      "time": 1788550200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-04 21:46:34 UTC"
+    },
+    {
+      "key": "sp500:YUM:1h:trend_touch:support:1788550200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "YUM",
+      "name": "Yum! Brands",
+      "timeframe": "1h",
+      "level": 150.6101217149179,
+      "time": 1788550200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-04 21:46:34 UTC"
     },
     {
@@ -123,71 +332,6 @@
       "first_seen": "2026-09-04 21:46:34 UTC"
     },
     {
-      "key": "ndx100:PEP:1h:trend_touch:support:1788550200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "PEP",
-      "name": "PepsiCo",
-      "timeframe": "1h",
-      "level": 137.45399267578125,
-      "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
-      "first_seen": "2026-09-04 21:46:34 UTC"
-    },
-    {
-      "key": "sp500:ACGL:1h:trend_touch:support:1788550200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "ACGL",
-      "name": "Arch Capital Group",
-      "timeframe": "1h",
-      "level": 97.98603951394021,
-      "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
-      "first_seen": "2026-09-04 21:46:34 UTC"
-    },
-    {
-      "key": "sp500:BRO:1h:trend_touch:support:1788550200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "BRO",
-      "name": "Brown & Brown",
-      "timeframe": "1h",
-      "level": 71.39130129132953,
-      "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
-      "first_seen": "2026-09-04 21:46:34 UTC"
-    },
-    {
-      "key": "sp500:DIS:1h:trend_touch:support:1788550200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "DIS",
-      "name": "Walt Disney Company (The)",
-      "timeframe": "1h",
-      "level": 105.28151984836744,
-      "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
-      "first_seen": "2026-09-04 21:46:34 UTC"
-    },
-    {
-      "key": "sp500:EG:1h:trend_touch:support:1788550200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "EG",
-      "name": "Everest Group",
-      "timeframe": "1h",
-      "level": 380.57537532198256,
-      "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
-      "first_seen": "2026-09-04 21:46:34 UTC"
-    },
-    {
       "key": "sp500:EXC:1h:trend_touch:support:1788550200",
       "kind": "trend_touch",
       "type": "support",
@@ -196,123 +340,6 @@
       "name": "Exelon",
       "timeframe": "1h",
       "level": 43.56117139543806,
-      "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
-      "first_seen": "2026-09-04 21:46:34 UTC"
-    },
-    {
-      "key": "sp500:IBM:1h:trend_touch:resistance:1788550200",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "IBM",
-      "name": "IBM",
-      "timeframe": "1h",
-      "level": 235.15822573250352,
-      "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
-      "first_seen": "2026-09-04 21:46:34 UTC"
-    },
-    {
-      "key": "sp500:IT:1h:trend_touch:support:1788550200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "IT",
-      "name": "Gartner",
-      "timeframe": "1h",
-      "level": 186.12173400878908,
-      "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
-      "first_seen": "2026-09-04 21:46:34 UTC"
-    },
-    {
-      "key": "sp500:KVUE:1h:trend_touch:support:1788550200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "KVUE",
-      "name": "Kenvue",
-      "timeframe": "1h",
-      "level": 18.712499346051896,
-      "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
-      "first_seen": "2026-09-04 21:46:34 UTC"
-    },
-    {
-      "key": "sp500:PEP:1h:trend_touch:support:1788550200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "PEP",
-      "name": "PepsiCo",
-      "timeframe": "1h",
-      "level": 137.45399267578125,
-      "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
-      "first_seen": "2026-09-04 21:46:34 UTC"
-    },
-    {
-      "key": "sp500:TER:1h:trend_touch:resistance:1788550200",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "TER",
-      "name": "Teradyne",
-      "timeframe": "1h",
-      "level": 358.0834686279297,
-      "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
-      "first_seen": "2026-09-04 21:46:34 UTC"
-    },
-    {
-      "key": "sp500:V:1h:trend_touch:support:1788550200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "V",
-      "name": "Visa Inc.",
-      "timeframe": "1h",
-      "level": 374.2720265107996,
-      "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
-      "first_seen": "2026-09-04 21:46:34 UTC"
-    },
-    {
-      "key": "sp500:VICI:1h:trend_touch:support:1788550200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "VICI",
-      "name": "Vici Properties",
-      "timeframe": "1h",
-      "level": 25.395714351109095,
-      "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
-      "first_seen": "2026-09-04 21:46:34 UTC"
-    },
-    {
-      "key": "sp500:WELL:1h:trend_touch:support:1788550200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "WELL",
-      "name": "Welltower",
-      "timeframe": "1h",
-      "level": 236.010964040506,
-      "time": 1788550200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
-      "first_seen": "2026-09-04 21:46:34 UTC"
-    },
-    {
-      "key": "sp500:YUM:1h:trend_touch:support:1788550200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "YUM",
-      "name": "Yum! Brands",
-      "timeframe": "1h",
-      "level": 150.6101217149179,
       "time": 1788550200,
       "seen_at": "2026-09-04 23:37:33 UTC",
       "first_seen": "2026-09-04 21:46:34 UTC"
@@ -793,7 +820,7 @@
       "timeframe": "1d",
       "level": 107.45243174061433,
       "time": 1788494400,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-04 16:43:51 UTC"
     },
     {
@@ -819,7 +846,7 @@
       "timeframe": "1d",
       "level": 2536.3934482758623,
       "time": 1788480000,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-04 12:07:13 UTC"
     },
     {
@@ -1390,7 +1417,7 @@
       "timeframe": "1d",
       "level": 259.99949540010635,
       "time": 1788442200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1403,7 +1430,7 @@
       "timeframe": "1d",
       "level": 226.98821367536272,
       "time": 1788442200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1416,7 +1443,7 @@
       "timeframe": "1d",
       "level": 1620.5677114633413,
       "time": 1788442200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1429,7 +1456,7 @@
       "timeframe": "1d",
       "level": 919.4608302560412,
       "time": 1788442200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1442,7 +1469,7 @@
       "timeframe": "1d",
       "level": 2026.232996026401,
       "time": 1788442200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1455,7 +1482,7 @@
       "timeframe": "1d",
       "level": 189.46881164013027,
       "time": 1788442200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1468,7 +1495,7 @@
       "timeframe": "1d",
       "level": 919.4608302560412,
       "time": 1788442200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1481,7 +1508,7 @@
       "timeframe": "1d",
       "level": 56.16071564810617,
       "time": 1788442200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1494,7 +1521,7 @@
       "timeframe": "1d",
       "level": 91.38410897450905,
       "time": 1788442200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1507,7 +1534,7 @@
       "timeframe": "1d",
       "level": 312.8251231800426,
       "time": 1788442200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1520,7 +1547,7 @@
       "timeframe": "1d",
       "level": 259.99949540010635,
       "time": 1788442200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1533,7 +1560,7 @@
       "timeframe": "1d",
       "level": 136.4212494763461,
       "time": 1788442200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1546,7 +1573,7 @@
       "timeframe": "1d",
       "level": 189.46881164013027,
       "time": 1788442200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1559,7 +1586,7 @@
       "timeframe": "1d",
       "level": 68.42749275898214,
       "time": 1788442200,
-      "seen_at": "2026-09-04 23:37:33 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-03 18:28:35 UTC"
     },
     {
@@ -1572,7 +1599,175 @@
       "timeframe": "1d",
       "level": 128.47692166841946,
       "time": 1788442200,
-      "seen_at": "2026-09-04 16:43:51 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "first_seen": "2026-09-03 14:58:20 UTC"
+    },
+    {
+      "key": "dji30:CRM:1d:trend_exceed:resistance:1788442200",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "dji30",
+      "symbol": "CRM",
+      "name": "Salesforce, Inc.",
+      "timeframe": "1d",
+      "level": 258.74023464747836,
+      "time": 1788442200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-09-03 14:58:20 UTC"
+    },
+    {
+      "key": "dji30:HON:1d:trend_exceed:support:1788442200",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "dji30",
+      "symbol": "HON",
+      "name": "Honeywell International Inc.",
+      "timeframe": "1d",
+      "level": 209.64930725097656,
+      "time": 1788442200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-09-03 14:58:20 UTC"
+    },
+    {
+      "key": "ndx100:HON:1d:trend_exceed:support:1788442200",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "HON",
+      "name": "Honeywell",
+      "timeframe": "1d",
+      "level": 209.64930725097656,
+      "time": 1788442200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-09-03 14:58:20 UTC"
+    },
+    {
+      "key": "sp500:BLDR:1d:trend_exceed:support:1788442200",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "BLDR",
+      "name": "Builders FirstSource",
+      "timeframe": "1d",
+      "level": 65.22249022937211,
+      "time": 1788442200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-09-03 14:58:20 UTC"
+    },
+    {
+      "key": "sp500:CLX:1d:trend_exceed:support:1788442200",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "CLX",
+      "name": "Clorox",
+      "timeframe": "1d",
+      "level": 94.8800048828125,
+      "time": 1788442200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-09-03 14:58:20 UTC"
+    },
+    {
+      "key": "sp500:CRM:1d:trend_exceed:resistance:1788442200",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "CRM",
+      "name": "Salesforce",
+      "timeframe": "1d",
+      "level": 258.74023464747836,
+      "time": 1788442200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-09-03 14:58:20 UTC"
+    },
+    {
+      "key": "sp500:GDDY:1d:trend_exceed:resistance:1788442200",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "GDDY",
+      "name": "GoDaddy",
+      "timeframe": "1d",
+      "level": 98.35294117647058,
+      "time": 1788442200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-09-03 14:58:20 UTC"
+    },
+    {
+      "key": "sp500:HON:1d:trend_exceed:support:1788442200",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "HON",
+      "name": "Honeywell",
+      "timeframe": "1d",
+      "level": 209.64930725097656,
+      "time": 1788442200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-09-03 14:58:20 UTC"
+    },
+    {
+      "key": "sp500:LUV:1d:trend_exceed:support:1788442200",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "LUV",
+      "name": "Southwest Airlines",
+      "timeframe": "1d",
+      "level": 40.91786834841869,
+      "time": 1788442200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "exceed_bars": 6,
+      "first_seen": "2026-09-03 14:58:20 UTC"
+    },
+    {
+      "key": "sp500:TDG:1d:trend_exceed:support:1788442200",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "TDG",
+      "name": "TransDigm Group",
+      "timeframe": "1d",
+      "level": 1172.7223749575408,
+      "time": 1788442200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-09-03 14:58:20 UTC"
+    },
+    {
+      "key": "sp500:TYL:1d:trend_exceed:resistance:1788442200",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "TYL",
+      "name": "Tyler Technologies",
+      "timeframe": "1d",
+      "level": 350.1650764711442,
+      "time": 1788442200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "exceed_bars": 6,
+      "first_seen": "2026-09-03 14:58:20 UTC"
+    },
+    {
+      "key": "sp500:WFC:1d:trend_exceed:resistance:1788442200",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "WFC",
+      "name": "Wells Fargo",
+      "timeframe": "1d",
+      "level": 88.8352582361791,
+      "time": 1788442200,
+      "seen_at": "2026-09-05 01:47:59 UTC",
+      "exceed_bars": 2,
       "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
@@ -1587,174 +1782,6 @@
       "time": 1788442200,
       "seen_at": "2026-09-04 16:43:51 UTC",
       "first_seen": "2026-09-04 16:43:51 UTC"
-    },
-    {
-      "key": "dji30:CRM:1d:trend_exceed:resistance:1788442200",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "dji30",
-      "symbol": "CRM",
-      "name": "Salesforce, Inc.",
-      "timeframe": "1d",
-      "level": 258.74023464747836,
-      "time": 1788442200,
-      "seen_at": "2026-09-04 12:07:13 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-09-03 14:58:20 UTC"
-    },
-    {
-      "key": "dji30:HON:1d:trend_exceed:support:1788442200",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "dji30",
-      "symbol": "HON",
-      "name": "Honeywell International Inc.",
-      "timeframe": "1d",
-      "level": 209.64930725097656,
-      "time": 1788442200,
-      "seen_at": "2026-09-04 12:07:13 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-09-03 14:58:20 UTC"
-    },
-    {
-      "key": "ndx100:HON:1d:trend_exceed:support:1788442200",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "HON",
-      "name": "Honeywell",
-      "timeframe": "1d",
-      "level": 209.64930725097656,
-      "time": 1788442200,
-      "seen_at": "2026-09-04 12:07:13 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-09-03 14:58:20 UTC"
-    },
-    {
-      "key": "sp500:BLDR:1d:trend_exceed:support:1788442200",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "BLDR",
-      "name": "Builders FirstSource",
-      "timeframe": "1d",
-      "level": 65.22249022937211,
-      "time": 1788442200,
-      "seen_at": "2026-09-04 12:07:13 UTC",
-      "exceed_bars": 3,
-      "first_seen": "2026-09-03 14:58:20 UTC"
-    },
-    {
-      "key": "sp500:CLX:1d:trend_exceed:support:1788442200",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "CLX",
-      "name": "Clorox",
-      "timeframe": "1d",
-      "level": 94.8800048828125,
-      "time": 1788442200,
-      "seen_at": "2026-09-04 12:07:13 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-09-03 14:58:20 UTC"
-    },
-    {
-      "key": "sp500:CRM:1d:trend_exceed:resistance:1788442200",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "CRM",
-      "name": "Salesforce",
-      "timeframe": "1d",
-      "level": 258.74023464747836,
-      "time": 1788442200,
-      "seen_at": "2026-09-04 12:07:13 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-09-03 14:58:20 UTC"
-    },
-    {
-      "key": "sp500:GDDY:1d:trend_exceed:resistance:1788442200",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "GDDY",
-      "name": "GoDaddy",
-      "timeframe": "1d",
-      "level": 98.35294117647058,
-      "time": 1788442200,
-      "seen_at": "2026-09-04 12:07:13 UTC",
-      "exceed_bars": 3,
-      "first_seen": "2026-09-03 14:58:20 UTC"
-    },
-    {
-      "key": "sp500:HON:1d:trend_exceed:support:1788442200",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "HON",
-      "name": "Honeywell",
-      "timeframe": "1d",
-      "level": 209.64930725097656,
-      "time": 1788442200,
-      "seen_at": "2026-09-04 12:07:13 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-09-03 14:58:20 UTC"
-    },
-    {
-      "key": "sp500:LUV:1d:trend_exceed:support:1788442200",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "LUV",
-      "name": "Southwest Airlines",
-      "timeframe": "1d",
-      "level": 40.91786834841869,
-      "time": 1788442200,
-      "seen_at": "2026-09-04 12:07:13 UTC",
-      "exceed_bars": 6,
-      "first_seen": "2026-09-03 14:58:20 UTC"
-    },
-    {
-      "key": "sp500:TDG:1d:trend_exceed:support:1788442200",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "TDG",
-      "name": "TransDigm Group",
-      "timeframe": "1d",
-      "level": 1172.7223749575408,
-      "time": 1788442200,
-      "seen_at": "2026-09-04 12:07:13 UTC",
-      "exceed_bars": 3,
-      "first_seen": "2026-09-03 14:58:20 UTC"
-    },
-    {
-      "key": "sp500:TYL:1d:trend_exceed:resistance:1788442200",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "TYL",
-      "name": "Tyler Technologies",
-      "timeframe": "1d",
-      "level": 350.1650764711442,
-      "time": 1788442200,
-      "seen_at": "2026-09-04 12:07:13 UTC",
-      "exceed_bars": 6,
-      "first_seen": "2026-09-03 14:58:20 UTC"
-    },
-    {
-      "key": "sp500:WFC:1d:trend_exceed:resistance:1788442200",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "WFC",
-      "name": "Wells Fargo",
-      "timeframe": "1d",
-      "level": 88.8352582361791,
-      "time": 1788442200,
-      "seen_at": "2026-09-04 12:07:13 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-09-03 14:58:20 UTC"
     },
     {
       "key": "ndx100:MNST:1d:trend_exceed:support:1788442200",
@@ -2262,7 +2289,7 @@
       "timeframe": "1d",
       "level": 44.99102486504449,
       "time": 1788355800,
-      "seen_at": "2026-09-04 12:07:13 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-02 19:53:35 UTC"
     },
     {
@@ -2275,7 +2302,7 @@
       "timeframe": "1d",
       "level": 200.71481138553673,
       "time": 1788355800,
-      "seen_at": "2026-09-04 12:07:13 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-02 19:53:35 UTC"
     },
     {
@@ -2288,7 +2315,7 @@
       "timeframe": "1d",
       "level": 334.0899963378906,
       "time": 1788355800,
-      "seen_at": "2026-09-04 12:07:13 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "bars_after_signal": 115,
       "first_seen": "2026-09-02 16:56:43 UTC"
     },
@@ -2302,7 +2329,7 @@
       "timeframe": "1d",
       "level": 64.66545679662134,
       "time": 1788355800,
-      "seen_at": "2026-09-04 12:07:13 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-02 16:56:43 UTC"
     },
     {
@@ -2315,7 +2342,7 @@
       "timeframe": "1d",
       "level": 771.9024681678185,
       "time": 1788355800,
-      "seen_at": "2026-09-04 12:07:13 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-02 19:53:35 UTC"
     },
     {
@@ -2328,7 +2355,7 @@
       "timeframe": "1d",
       "level": 94.81900482177734,
       "time": 1788355800,
-      "seen_at": "2026-09-04 12:07:13 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-02 19:53:35 UTC"
     },
     {
@@ -2341,7 +2368,7 @@
       "timeframe": "1d",
       "level": 64.66545679662134,
       "time": 1788355800,
-      "seen_at": "2026-09-04 12:07:13 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-02 16:56:43 UTC"
     },
     {
@@ -2354,7 +2381,7 @@
       "timeframe": "1d",
       "level": 771.9024681678185,
       "time": 1788355800,
-      "seen_at": "2026-09-04 12:07:13 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-02 19:53:35 UTC"
     },
     {
@@ -2367,7 +2394,7 @@
       "timeframe": "1d",
       "level": 88.88869981641894,
       "time": 1788355800,
-      "seen_at": "2026-09-04 12:07:13 UTC",
+      "seen_at": "2026-09-05 01:47:59 UTC",
       "first_seen": "2026-09-02 19:53:35 UTC"
     },
     {
@@ -6652,32 +6679,6 @@
       "name": "Dow Inc.",
       "timeframe": "1h",
       "level": 29.982714406701902,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:DVA:1h:trend_touch:resistance:1787751000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "DVA",
-      "name": "DaVita",
-      "timeframe": "1h",
-      "level": 178.8112449645996,
-      "time": 1787751000,
-      "seen_at": "2026-08-26 14:49:56 UTC",
-      "first_seen": "2026-08-26 14:49:56 UTC"
-    },
-    {
-      "key": "sp500:F:1h:trend_touch:support:1787751000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "F",
-      "name": "Ford Motor Company",
-      "timeframe": "1h",
-      "level": 13.781193733215332,
       "time": 1787751000,
       "seen_at": "2026-08-26 14:49:56 UTC",
       "first_seen": "2026-08-26 14:49:56 UTC"
