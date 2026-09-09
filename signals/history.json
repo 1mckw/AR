@@ -1,8 +1,90 @@
 {
-  "updated_at": "2026-09-09 14:58:22 UTC",
+  "updated_at": "2026-09-09 18:13:46 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "fx:AUDUSD=X:1d:trend_touch:resistance:1788977551",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "fx",
+      "symbol": "AUDUSD=X",
+      "name": "AUD/USD",
+      "timeframe": "1d",
+      "level": 0.7240032844427156,
+      "time": 1788977551,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "first_seen": "2026-09-09 18:13:46 UTC"
+    },
+    {
+      "key": "sp500:PSKY:1h:trend_exceed:support:1788976972",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "PSKY",
+      "name": "Paramount Skydance Corp",
+      "timeframe": "1h",
+      "level": 10.510000024523054,
+      "time": 1788976972,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-09-09 18:13:46 UTC"
+    },
+    {
+      "key": "sp500:SW:1h:trend_exceed:support:1788976936",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "SW",
+      "name": "Smurfit WestRock",
+      "timeframe": "1h",
+      "level": 44.14433109059053,
+      "time": 1788976936,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "exceed_bars": 6,
+      "first_seen": "2026-09-09 18:13:46 UTC"
+    },
+    {
+      "key": "sp500:IP:1h:trend_exceed:support:1788976927",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "IP",
+      "name": "International Paper",
+      "timeframe": "1h",
+      "level": 35.98558147474267,
+      "time": 1788976927,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-09-09 18:13:46 UTC"
+    },
+    {
+      "key": "sp500:FDS:1h:trend_exceed:support:1788976794",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "FDS",
+      "name": "FactSet",
+      "timeframe": "1h",
+      "level": 281.7940405273437,
+      "time": 1788976794,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-09-09 18:13:46 UTC"
+    },
+    {
+      "key": "sp500:TDG:1h:trend_touch:support:1788975000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "TDG",
+      "name": "TransDigm Group",
+      "timeframe": "1h",
+      "level": 1130.9971260224413,
+      "time": 1788975000,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "first_seen": "2026-09-09 18:13:46 UTC"
+    },
     {
       "key": "fx:AUDUSD=X:1d:trend_touch:resistance:1788965792",
       "kind": "trend_touch",
@@ -162,7 +244,7 @@
       "timeframe": "1d",
       "level": 114.38999938964844,
       "time": 1788960600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "bars_after_signal": 186,
       "gap_pct": 0.08741889558060699,
       "first_seen": "2026-09-09 14:58:22 UTC"
@@ -177,7 +259,7 @@
       "timeframe": "1d",
       "level": 323.0899963378906,
       "time": 1788960600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "bars_after_signal": 28,
       "first_seen": "2026-09-09 14:58:22 UTC"
     },
@@ -191,7 +273,7 @@
       "timeframe": "1d",
       "level": 260.08918897806075,
       "time": 1788960600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-09-09 14:58:22 UTC"
     },
@@ -205,7 +287,7 @@
       "timeframe": "1d",
       "level": 249.6357160295759,
       "time": 1788960600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-09-09 14:58:22 UTC"
     },
@@ -219,7 +301,7 @@
       "timeframe": "1d",
       "level": 920.7136034019563,
       "time": 1788960600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-09 14:58:22 UTC"
     },
@@ -233,7 +315,7 @@
       "timeframe": "1d",
       "level": 339.2994223201976,
       "time": 1788960600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-09 14:58:22 UTC"
     },
@@ -247,7 +329,7 @@
       "timeframe": "1d",
       "level": 920.7136034019563,
       "time": 1788960600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-09 14:58:22 UTC"
     },
@@ -261,7 +343,7 @@
       "timeframe": "1d",
       "level": 339.2994223201976,
       "time": 1788960600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-09 14:58:22 UTC"
     },
@@ -275,7 +357,7 @@
       "timeframe": "1d",
       "level": 260.08918897806075,
       "time": 1788960600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-09-09 14:58:22 UTC"
     },
@@ -289,21 +371,8 @@
       "timeframe": "1d",
       "level": 1174.2398436173148,
       "time": 1788960600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "exceed_bars": 6,
-      "first_seen": "2026-09-09 14:58:22 UTC"
-    },
-    {
-      "key": "dji30:PG:1d:trend_touch:support:1788960600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "dji30",
-      "symbol": "PG",
-      "name": "The Procter & Gamble Company",
-      "timeframe": "1d",
-      "level": 142.84666660853796,
-      "time": 1788960600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
       "first_seen": "2026-09-09 14:58:22 UTC"
     },
     {
@@ -316,7 +385,7 @@
       "timeframe": "1d",
       "level": 389.919490814209,
       "time": 1788960600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "first_seen": "2026-09-09 14:58:22 UTC"
     },
     {
@@ -328,6 +397,97 @@
       "name": "Aon",
       "timeframe": "1d",
       "level": 310.37319789453545,
+      "time": 1788960600,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "first_seen": "2026-09-09 14:58:22 UTC"
+    },
+    {
+      "key": "sp500:ELV:1d:trend_touch:support:1788960600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "ELV",
+      "name": "Elevance Health",
+      "timeframe": "1d",
+      "level": 397.7549819946289,
+      "time": 1788960600,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "first_seen": "2026-09-09 14:58:22 UTC"
+    },
+    {
+      "key": "sp500:LUV:1d:trend_touch:support:1788960600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "LUV",
+      "name": "Southwest Airlines",
+      "timeframe": "1d",
+      "level": 37.78058495257408,
+      "time": 1788960600,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "first_seen": "2026-09-09 14:58:22 UTC"
+    },
+    {
+      "key": "ndx100:INSM:1d:trend_touch:resistance:1788960600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "ndx100",
+      "symbol": "INSM",
+      "name": "Insmed Incorporated",
+      "timeframe": "1d",
+      "level": 129.90090515563537,
+      "time": 1788960600,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "first_seen": "2026-09-09 18:13:46 UTC"
+    },
+    {
+      "key": "sp500:AZO:1d:trend_touch:support:1788960600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "AZO",
+      "name": "AutoZone",
+      "timeframe": "1d",
+      "level": 2908.326998939997,
+      "time": 1788960600,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "first_seen": "2026-09-09 18:13:46 UTC"
+    },
+    {
+      "key": "sp500:UNH:1d:trend_touch:support:1788960600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "UNH",
+      "name": "UnitedHealth Group",
+      "timeframe": "1d",
+      "level": 389.919490814209,
+      "time": 1788960600,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "first_seen": "2026-09-09 18:13:46 UTC"
+    },
+    {
+      "key": "sp500:YUM:1d:trend_touch:support:1788960600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "YUM",
+      "name": "Yum! Brands",
+      "timeframe": "1d",
+      "level": 143.31023641270914,
+      "time": 1788960600,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "first_seen": "2026-09-09 18:13:46 UTC"
+    },
+    {
+      "key": "dji30:PG:1d:trend_touch:support:1788960600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "dji30",
+      "symbol": "PG",
+      "name": "The Procter & Gamble Company",
+      "timeframe": "1d",
+      "level": 142.84666660853796,
       "time": 1788960600,
       "seen_at": "2026-09-09 14:58:22 UTC",
       "first_seen": "2026-09-09 14:58:22 UTC"
@@ -346,19 +506,6 @@
       "first_seen": "2026-09-09 14:58:22 UTC"
     },
     {
-      "key": "sp500:ELV:1d:trend_touch:support:1788960600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "ELV",
-      "name": "Elevance Health",
-      "timeframe": "1d",
-      "level": 397.7549819946289,
-      "time": 1788960600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
-      "first_seen": "2026-09-09 14:58:22 UTC"
-    },
-    {
       "key": "sp500:HSY:1d:trend_touch:support:1788960600",
       "kind": "trend_touch",
       "type": "support",
@@ -367,19 +514,6 @@
       "name": "Hershey Company (The)",
       "timeframe": "1d",
       "level": 169.9658744604207,
-      "time": 1788960600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
-      "first_seen": "2026-09-09 14:58:22 UTC"
-    },
-    {
-      "key": "sp500:LUV:1d:trend_touch:support:1788960600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "LUV",
-      "name": "Southwest Airlines",
-      "timeframe": "1d",
-      "level": 37.78058495257408,
       "time": 1788960600,
       "seen_at": "2026-09-09 14:58:22 UTC",
       "first_seen": "2026-09-09 14:58:22 UTC"
@@ -448,6 +582,19 @@
       "time": 1788930000,
       "seen_at": "2026-09-09 05:29:06 UTC",
       "first_seen": "2026-09-09 05:29:06 UTC"
+    },
+    {
+      "key": "futures:ZB=F:1d:trend_touch:support:1788926400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "futures",
+      "symbol": "ZB=F",
+      "name": "US Treasury Bond",
+      "timeframe": "1d",
+      "level": 107.92277856135402,
+      "time": 1788926400,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "first_seen": "2026-09-09 18:13:46 UTC"
     },
     {
       "key": "futures:ZN=F:1d:trend_touch:support:1788926400",
@@ -1118,7 +1265,7 @@
       "timeframe": "1d",
       "level": 190.14999389648438,
       "time": 1788874200,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "bars_after_signal": 27,
       "first_seen": "2026-09-08 15:42:08 UTC"
     },
@@ -1132,7 +1279,7 @@
       "timeframe": "1d",
       "level": 190.14999389648438,
       "time": 1788874200,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "bars_after_signal": 27,
       "first_seen": "2026-09-08 15:42:08 UTC"
     },
@@ -1146,7 +1293,7 @@
       "timeframe": "1d",
       "level": 335.35358642578126,
       "time": 1788874200,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "first_seen": "2026-09-08 22:14:08 UTC"
     },
     {
@@ -1159,7 +1306,7 @@
       "timeframe": "1d",
       "level": 152.9279136088357,
       "time": 1788874200,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "first_seen": "2026-09-09 14:58:22 UTC"
     },
     {
@@ -1172,8 +1319,21 @@
       "timeframe": "1d",
       "level": 152.9279136088357,
       "time": 1788874200,
-      "seen_at": "2026-09-09 14:58:22 UTC",
+      "seen_at": "2026-09-09 18:13:46 UTC",
       "first_seen": "2026-09-09 14:58:22 UTC"
+    },
+    {
+      "key": "sp500:HSY:1d:trend_touch:support:1788874200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "HSY",
+      "name": "Hershey Company (The)",
+      "timeframe": "1d",
+      "level": 171.5095036614368,
+      "time": 1788874200,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "first_seen": "2026-09-08 15:42:08 UTC"
     },
     {
       "key": "dji30:HON:1d:trend_exceed:support:1788874200",
@@ -1398,19 +1558,6 @@
       "first_seen": "2026-09-08 15:42:08 UTC"
     },
     {
-      "key": "sp500:HSY:1d:trend_touch:support:1788874200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "HSY",
-      "name": "Hershey Company (The)",
-      "timeframe": "1d",
-      "level": 171.5095036614368,
-      "time": 1788874200,
-      "seen_at": "2026-09-09 10:30:53 UTC",
-      "first_seen": "2026-09-08 15:42:08 UTC"
-    },
-    {
       "key": "sp500:IDXX:1d:trend_touch:support:1788874200",
       "kind": "trend_touch",
       "type": "support",
@@ -1567,6 +1714,20 @@
       "first_seen": "2026-09-08 01:33:23 UTC"
     },
     {
+      "key": "crypto:DOTUSDT:1d:ar_dr_touch:AR:1788825600",
+      "kind": "ar_dr_touch",
+      "type": "AR",
+      "group": "crypto",
+      "symbol": "DOTUSDT",
+      "name": "DOT",
+      "timeframe": "1d",
+      "level": 1.133,
+      "time": 1788825600,
+      "seen_at": "2026-09-09 18:13:46 UTC",
+      "bars_after_signal": 97,
+      "first_seen": "2026-09-08 15:42:08 UTC"
+    },
+    {
       "key": "crypto:SOPHUSDT:1d:ar_dr_touch:AR:1788825600",
       "kind": "ar_dr_touch",
       "type": "AR",
@@ -1579,20 +1740,6 @@
       "seen_at": "2026-09-09 14:58:22 UTC",
       "bars_after_signal": 163,
       "first_seen": "2026-09-08 06:24:45 UTC"
-    },
-    {
-      "key": "crypto:DOTUSDT:1d:ar_dr_touch:AR:1788825600",
-      "kind": "ar_dr_touch",
-      "type": "AR",
-      "group": "crypto",
-      "symbol": "DOTUSDT",
-      "name": "DOT",
-      "timeframe": "1d",
-      "level": 1.133,
-      "time": 1788825600,
-      "seen_at": "2026-09-09 14:58:22 UTC",
-      "bars_after_signal": 97,
-      "first_seen": "2026-09-08 15:42:08 UTC"
     },
     {
       "key": "futures:ZN=F:1d:trend_touch:support:1788821610",
@@ -6546,152 +6693,6 @@
       "time": 1788123600,
       "seen_at": "2026-08-30 22:28:11 UTC",
       "first_seen": "2026-08-30 22:28:11 UTC"
-    },
-    {
-      "key": "crypto:ETHUSDT:1h:trend_touch:resistance:1788105600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "ETHUSDT",
-      "name": "ETH",
-      "timeframe": "1h",
-      "level": 2530.0228571428574,
-      "time": 1788105600,
-      "seen_at": "2026-08-30 16:56:39 UTC",
-      "first_seen": "2026-08-30 16:56:39 UTC"
-    },
-    {
-      "key": "crypto:TUTUSDT:1h:trend_exceed:support:1788091200",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "crypto",
-      "symbol": "TUTUSDT",
-      "name": "TUT",
-      "timeframe": "1h",
-      "level": 0.03538993720565149,
-      "time": 1788091200,
-      "seen_at": "2026-08-30 12:16:03 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-08-30 12:16:03 UTC"
-    },
-    {
-      "key": "crypto:SOLUSDT:1h:trend_touch:resistance:1788087600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "SOLUSDT",
-      "name": "SOL",
-      "timeframe": "1h",
-      "level": 105.19,
-      "time": 1788087600,
-      "seen_at": "2026-08-30 12:16:03 UTC",
-      "first_seen": "2026-08-30 12:16:03 UTC"
-    },
-    {
-      "key": "crypto:FETUSDT:1h:ar_dr_near:AR:1788066000",
-      "kind": "ar_dr_near",
-      "type": "AR",
-      "group": "crypto",
-      "symbol": "FETUSDT",
-      "name": "FET",
-      "timeframe": "1h",
-      "level": 0.1529,
-      "time": 1788066000,
-      "seen_at": "2026-08-30 06:09:03 UTC",
-      "bars_after_signal": 34,
-      "gap_pct": 0.2616088947024274,
-      "first_seen": "2026-08-30 06:09:03 UTC"
-    },
-    {
-      "key": "crypto:DOGEUSDT:1h:trend_touch:resistance:1788066000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "DOGEUSDT",
-      "name": "DOGE",
-      "timeframe": "1h",
-      "level": 0.0851033510638298,
-      "time": 1788066000,
-      "seen_at": "2026-08-30 06:09:03 UTC",
-      "first_seen": "2026-08-30 06:09:03 UTC"
-    },
-    {
-      "key": "crypto:LTCUSDT:1h:trend_touch:support:1788062400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "crypto",
-      "symbol": "LTCUSDT",
-      "name": "LTC",
-      "timeframe": "1h",
-      "level": 48.76144736842105,
-      "time": 1788062400,
-      "seen_at": "2026-08-30 06:09:03 UTC",
-      "first_seen": "2026-08-30 06:09:03 UTC"
-    },
-    {
-      "key": "crypto:SUIUSDT:1h:trend_touch:support:1788062400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "crypto",
-      "symbol": "SUIUSDT",
-      "name": "SUI",
-      "timeframe": "1h",
-      "level": 0.7385111111111111,
-      "time": 1788062400,
-      "seen_at": "2026-08-30 06:09:03 UTC",
-      "first_seen": "2026-08-30 06:09:03 UTC"
-    },
-    {
-      "key": "crypto:ZKCUSDT:1d:trend_touch:resistance:1788048000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "ZKCUSDT",
-      "name": "ZKC",
-      "timeframe": "1d",
-      "level": 0.06934615384615384,
-      "time": 1788048000,
-      "seen_at": "2026-08-31 14:10:27 UTC",
-      "first_seen": "2026-08-30 12:16:03 UTC"
-    },
-    {
-      "key": "crypto:XRPUSDT:1h:trend_touch:resistance:1788048000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "XRPUSDT",
-      "name": "XRP",
-      "timeframe": "1h",
-      "level": 1.3980833333333333,
-      "time": 1788048000,
-      "seen_at": "2026-08-30 00:42:41 UTC",
-      "first_seen": "2026-08-30 00:42:41 UTC"
-    },
-    {
-      "key": "crypto:ZECUSDT:1h:trend_touch:resistance:1788012000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "ZECUSDT",
-      "name": "ZEC",
-      "timeframe": "1h",
-      "level": 841.240588235294,
-      "time": 1788012000,
-      "seen_at": "2026-08-29 16:01:46 UTC",
-      "first_seen": "2026-08-29 16:01:46 UTC"
-    },
-    {
-      "key": "crypto:UUSDT:1d:trend_touch:support:1787961600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "crypto",
-      "symbol": "UUSDT",
-      "name": "U",
-      "timeframe": "1d",
-      "level": 0.9994202898550725,
-      "time": 1787961600,
-      "seen_at": "2026-08-30 22:28:11 UTC",
-      "first_seen": "2026-08-30 00:42:41 UTC"
     }
   ]
 }
