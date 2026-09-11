@@ -1,21 +1,75 @@
 {
-  "updated_at": "2026-09-11 13:57:06 UTC",
+  "updated_at": "2026-09-11 17:38:12 UTC",
   "count": 500,
   "max": 500,
   "hits": [
     {
-      "key": "sp500:GE:1h:ar_dr_touch:AR:1789133400",
-      "kind": "ar_dr_touch",
-      "type": "AR",
+      "key": "sp500:FIX:1h:trend_exceed:resistance:1789147059",
+      "kind": "trend_exceed",
+      "type": "resistance",
       "group": "sp500",
-      "symbol": "GE",
-      "name": "GE Aerospace",
+      "symbol": "FIX",
+      "name": "Comfort Systems USA, Inc.",
       "timeframe": "1h",
-      "level": 327.8699951171875,
-      "time": 1789133400,
-      "seen_at": "2026-09-11 13:57:06 UTC",
-      "bars_after_signal": 13,
-      "first_seen": "2026-09-11 13:57:06 UTC"
+      "level": 1663.0220458984375,
+      "time": 1789147059,
+      "seen_at": "2026-09-11 17:38:12 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-09-11 17:38:12 UTC"
+    },
+    {
+      "key": "sp500:NXPI:1h:trend_exceed:resistance:1789147048",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "NXPI",
+      "name": "NXP Semiconductors",
+      "timeframe": "1h",
+      "level": 225.58495284980262,
+      "time": 1789147048,
+      "seen_at": "2026-09-11 17:38:12 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-09-11 17:38:12 UTC"
+    },
+    {
+      "key": "ndx100:NXPI:1h:trend_exceed:resistance:1789146917",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "ndx100",
+      "symbol": "NXPI",
+      "name": "NXP Semiconductors",
+      "timeframe": "1h",
+      "level": 225.58495284980262,
+      "time": 1789146917,
+      "seen_at": "2026-09-11 17:38:12 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-09-11 17:38:12 UTC"
+    },
+    {
+      "key": "ndx100:MRVL:1h:trend_touch:resistance:1789144200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "ndx100",
+      "symbol": "MRVL",
+      "name": "Marvell Technology",
+      "timeframe": "1h",
+      "level": 238.47949604034423,
+      "time": 1789144200,
+      "seen_at": "2026-09-11 17:38:12 UTC",
+      "first_seen": "2026-09-11 17:38:12 UTC"
+    },
+    {
+      "key": "sp500:HUBB:1h:trend_touch:resistance:1789144200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "HUBB",
+      "name": "Hubbell Incorporated",
+      "timeframe": "1h",
+      "level": 466.5712711879185,
+      "time": 1789144200,
+      "seen_at": "2026-09-11 17:38:12 UTC",
+      "first_seen": "2026-09-11 17:38:12 UTC"
     },
     {
       "key": "ndx100:ARM:1d:trend_exceed:resistance:1789133400",
@@ -27,7 +81,7 @@
       "timeframe": "1d",
       "level": 245.12214442661832,
       "time": 1789133400,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-09-11 13:57:06 UTC"
     },
@@ -41,7 +95,7 @@
       "timeframe": "1d",
       "level": 921.548785499233,
       "time": 1789133400,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-09-11 13:57:06 UTC"
     },
@@ -55,7 +109,7 @@
       "timeframe": "1d",
       "level": 343.0170700970818,
       "time": 1789133400,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-09-11 13:57:06 UTC"
     },
@@ -69,7 +123,7 @@
       "timeframe": "1d",
       "level": 310.4638616329087,
       "time": 1789133400,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-11 13:57:06 UTC"
     },
@@ -83,7 +137,7 @@
       "timeframe": "1d",
       "level": 921.548785499233,
       "time": 1789133400,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-09-11 13:57:06 UTC"
     },
@@ -97,7 +151,7 @@
       "timeframe": "1d",
       "level": 337.19798583984374,
       "time": 1789133400,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-11 13:57:06 UTC"
     },
@@ -111,8 +165,74 @@
       "timeframe": "1d",
       "level": 343.0170700970818,
       "time": 1789133400,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "exceed_bars": 5,
+      "first_seen": "2026-09-11 13:57:06 UTC"
+    },
+    {
+      "key": "sp500:DTE:1d:trend_touch:support:1789133400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "DTE",
+      "name": "DTE Energy",
+      "timeframe": "1d",
+      "level": 133.42240934734104,
+      "time": 1789133400,
+      "seen_at": "2026-09-11 17:38:12 UTC",
+      "first_seen": "2026-09-11 17:38:12 UTC"
+    },
+    {
+      "key": "sp500:ETR:1d:trend_touch:support:1789133400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "ETR",
+      "name": "Entergy",
+      "timeframe": "1d",
+      "level": 105.34205654426403,
+      "time": 1789133400,
+      "seen_at": "2026-09-11 17:38:12 UTC",
+      "first_seen": "2026-09-11 17:38:12 UTC"
+    },
+    {
+      "key": "sp500:KMI:1d:trend_touch:support:1789133400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "KMI",
+      "name": "Kinder Morgan",
+      "timeframe": "1d",
+      "level": 30.83462014672352,
+      "time": 1789133400,
+      "seen_at": "2026-09-11 17:38:12 UTC",
+      "first_seen": "2026-09-11 17:38:12 UTC"
+    },
+    {
+      "key": "sp500:KR:1d:trend_touch:resistance:1789133400",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "KR",
+      "name": "Kroger",
+      "timeframe": "1d",
+      "level": 58.85436033591246,
+      "time": 1789133400,
+      "seen_at": "2026-09-11 17:38:12 UTC",
+      "first_seen": "2026-09-11 17:38:12 UTC"
+    },
+    {
+      "key": "sp500:GE:1h:ar_dr_touch:AR:1789133400",
+      "kind": "ar_dr_touch",
+      "type": "AR",
+      "group": "sp500",
+      "symbol": "GE",
+      "name": "GE Aerospace",
+      "timeframe": "1h",
+      "level": 327.8699951171875,
+      "time": 1789133400,
+      "seen_at": "2026-09-11 13:57:06 UTC",
+      "bars_after_signal": 13,
       "first_seen": "2026-09-11 13:57:06 UTC"
     },
     {
@@ -887,7 +1007,7 @@
       "timeframe": "1d",
       "level": 261.0,
       "time": 1789047000,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "bars_after_signal": 58,
       "gap_pct": 0.13410195536997127,
       "first_seen": "2026-09-10 16:45:21 UTC"
@@ -902,7 +1022,7 @@
       "timeframe": "1d",
       "level": 71.06908778710799,
       "time": 1789047000,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "first_seen": "2026-09-10 16:45:21 UTC"
     },
     {
@@ -915,7 +1035,7 @@
       "timeframe": "1d",
       "level": 88.10060189434992,
       "time": 1789047000,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "first_seen": "2026-09-10 16:45:21 UTC"
     },
     {
@@ -928,7 +1048,7 @@
       "timeframe": "1d",
       "level": 119.36552539105182,
       "time": 1789047000,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "first_seen": "2026-09-10 16:45:21 UTC"
     },
     {
@@ -941,7 +1061,7 @@
       "timeframe": "1d",
       "level": 71.06908778710799,
       "time": 1789047000,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "first_seen": "2026-09-10 16:45:21 UTC"
     },
     {
@@ -954,7 +1074,7 @@
       "timeframe": "1d",
       "level": 200.5145387649536,
       "time": 1789047000,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "first_seen": "2026-09-10 16:45:21 UTC"
     },
     {
@@ -967,7 +1087,7 @@
       "timeframe": "1d",
       "level": 65.03660176124102,
       "time": 1789047000,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "first_seen": "2026-09-10 19:33:38 UTC"
     },
     {
@@ -980,7 +1100,7 @@
       "timeframe": "1d",
       "level": 84.37549527964197,
       "time": 1789047000,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "first_seen": "2026-09-10 19:33:38 UTC"
     },
     {
@@ -993,7 +1113,7 @@
       "timeframe": "1d",
       "level": 16.3376571337382,
       "time": 1789047000,
-      "seen_at": "2026-09-11 13:57:06 UTC",
+      "seen_at": "2026-09-11 17:38:12 UTC",
       "first_seen": "2026-09-10 22:11:29 UTC"
     },
     {
@@ -6594,123 +6714,6 @@
       "level": 338.86871878982436,
       "time": 1788273000,
       "seen_at": "2026-09-01 15:16:37 UTC",
-      "first_seen": "2026-09-01 15:16:37 UTC"
-    },
-    {
-      "key": "sp500:POOL:1h:trend_touch:support:1788273000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "POOL",
-      "name": "Pool Corporation",
-      "timeframe": "1h",
-      "level": 184.60768574245728,
-      "time": 1788273000,
-      "seen_at": "2026-09-01 15:16:37 UTC",
-      "first_seen": "2026-09-01 15:16:37 UTC"
-    },
-    {
-      "key": "sp500:WRB:1h:trend_touch:resistance:1788273000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "WRB",
-      "name": "W. R. Berkley Corporation",
-      "timeframe": "1h",
-      "level": 68.13621179805779,
-      "time": 1788273000,
-      "seen_at": "2026-09-01 15:16:37 UTC",
-      "first_seen": "2026-09-01 15:16:37 UTC"
-    },
-    {
-      "key": "fx:GBPUSD=X:1h:trend_touch:resistance:1788271200",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "fx",
-      "symbol": "GBPUSD=X",
-      "name": "GBP/USD",
-      "timeframe": "1h",
-      "level": 1.3545968893802527,
-      "time": 1788271200,
-      "seen_at": "2026-09-01 15:16:37 UTC",
-      "first_seen": "2026-09-01 15:16:37 UTC"
-    },
-    {
-      "key": "sp500:BLDR:1d:trend_touch:support:1788269400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "BLDR",
-      "name": "Builders FirstSource",
-      "timeframe": "1d",
-      "level": 65.2122825831012,
-      "time": 1788269400,
-      "seen_at": "2026-09-04 06:56:35 UTC",
-      "first_seen": "2026-09-01 15:16:37 UTC"
-    },
-    {
-      "key": "sp500:ZBH:1d:trend_touch:resistance:1788269400",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "ZBH",
-      "name": "Zimmer Biomet",
-      "timeframe": "1d",
-      "level": 101.8016543382214,
-      "time": 1788269400,
-      "seen_at": "2026-09-04 06:56:35 UTC",
-      "first_seen": "2026-09-01 15:16:37 UTC"
-    },
-    {
-      "key": "sp500:KEY:1d:trend_touch:support:1788269400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "KEY",
-      "name": "KeyCorp",
-      "timeframe": "1d",
-      "level": 21.183714076450894,
-      "time": 1788269400,
-      "seen_at": "2026-09-04 06:56:35 UTC",
-      "first_seen": "2026-09-01 18:51:18 UTC"
-    },
-    {
-      "key": "ndx100:TRI:1d:trend_touch:resistance:1788269400",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "TRI",
-      "name": "Thomson Reuters Corporation",
-      "timeframe": "1d",
-      "level": 107.71107344193891,
-      "time": 1788269400,
-      "seen_at": "2026-09-04 06:56:35 UTC",
-      "first_seen": "2026-09-01 15:16:37 UTC"
-    },
-    {
-      "key": "sp500:MS:1d:trend_touch:support:1788269400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "MS",
-      "name": "Morgan Stanley",
-      "timeframe": "1d",
-      "level": 209.64935936865868,
-      "time": 1788269400,
-      "seen_at": "2026-09-04 06:56:35 UTC",
-      "first_seen": "2026-09-01 15:16:37 UTC"
-    },
-    {
-      "key": "sp500:WMB:1d:trend_touch:resistance:1788269400",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "WMB",
-      "name": "Williams Companies",
-      "timeframe": "1d",
-      "level": 76.27271270751953,
-      "time": 1788269400,
-      "seen_at": "2026-09-04 06:56:35 UTC",
       "first_seen": "2026-09-01 15:16:37 UTC"
     }
   ]
