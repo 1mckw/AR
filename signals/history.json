@@ -1,8 +1,62 @@
 {
-  "updated_at": "2026-10-01 01:15:10 UTC",
+  "updated_at": "2026-10-01 07:36:14 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "crypto:ADAUSDT:1h:trend_exceed:resistance:1790838000",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "ADAUSDT",
+      "name": "ADA",
+      "timeframe": "1h",
+      "level": 0.25115757575757575,
+      "time": 1790838000,
+      "seen_at": "2026-10-01 07:36:14 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-10-01 07:36:14 UTC"
+    },
+    {
+      "key": "crypto:TAOUSDT:1h:trend_exceed:resistance:1790838000",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "TAOUSDT",
+      "name": "TAO",
+      "timeframe": "1h",
+      "level": 309.6063829787234,
+      "time": 1790838000,
+      "seen_at": "2026-10-01 07:36:14 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-10-01 07:36:14 UTC"
+    },
+    {
+      "key": "crypto:PUMPUSDT:1h:trend_touch:resistance:1790834400",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "PUMPUSDT",
+      "name": "PUMP",
+      "timeframe": "1h",
+      "level": 0.005984208333333334,
+      "time": 1790834400,
+      "seen_at": "2026-10-01 07:36:14 UTC",
+      "first_seen": "2026-10-01 07:36:14 UTC"
+    },
+    {
+      "key": "crypto:TAOUSDT:1h:trend_touch:resistance:1790834400",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "TAOUSDT",
+      "name": "TAO",
+      "timeframe": "1h",
+      "level": 309.88936170212764,
+      "time": 1790834400,
+      "seen_at": "2026-10-01 07:36:14 UTC",
+      "first_seen": "2026-10-01 07:36:14 UTC"
+    },
     {
       "key": "futures:HG=F:1h:trend_touch:support:1790812800",
       "kind": "trend_touch",
@@ -39,7 +93,7 @@
       "timeframe": "1h",
       "level": 261.4418827056885,
       "time": 1790798400,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
@@ -53,7 +107,7 @@
       "timeframe": "1h",
       "level": 46.69178454081217,
       "time": 1790798400,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
@@ -67,7 +121,7 @@
       "timeframe": "1h",
       "level": 21.697846610947412,
       "time": 1790798400,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
@@ -81,7 +135,7 @@
       "timeframe": "1h",
       "level": 211.37818111072886,
       "time": 1790796600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -94,7 +148,7 @@
       "timeframe": "1h",
       "level": 514.1962411885634,
       "time": 1790796600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -107,7 +161,7 @@
       "timeframe": "1h",
       "level": 211.37818111072886,
       "time": 1790796600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -120,7 +174,7 @@
       "timeframe": "1h",
       "level": 196.96459366439225,
       "time": 1790796600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -133,7 +187,7 @@
       "timeframe": "1h",
       "level": 514.1962411885634,
       "time": 1790796600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -146,7 +200,7 @@
       "timeframe": "1h",
       "level": 13.276174371138863,
       "time": 1790796600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -159,7 +213,7 @@
       "timeframe": "1h",
       "level": 269.34612258208847,
       "time": 1790796600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -172,7 +226,7 @@
       "timeframe": "1h",
       "level": 949.461669921875,
       "time": 1790796600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -185,7 +239,7 @@
       "timeframe": "1h",
       "level": 211.37818111072886,
       "time": 1790796600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -198,7 +252,7 @@
       "timeframe": "1h",
       "level": 223.8924055646773,
       "time": 1790796600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -211,7 +265,7 @@
       "timeframe": "1h",
       "level": 196.96459366439225,
       "time": 1790796600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -224,7 +278,7 @@
       "timeframe": "1h",
       "level": 117.60889180501302,
       "time": 1790796600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -237,7 +291,7 @@
       "timeframe": "1h",
       "level": 76.95854519930752,
       "time": 1790796600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -250,8 +304,21 @@
       "timeframe": "1h",
       "level": 282.7903566843903,
       "time": 1790796600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
+    },
+    {
+      "key": "sp500:EOG:1h:trend_touch:support:1790796600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "EOG",
+      "name": "EOG Resources",
+      "timeframe": "1h",
+      "level": 137.56649322509764,
+      "time": 1790796600,
+      "seen_at": "2026-10-01 07:36:14 UTC",
+      "first_seen": "2026-10-01 07:36:14 UTC"
     },
     {
       "key": "fx:EURCHF=X:1d:trend_touch:resistance:1790788792",
@@ -356,7 +423,7 @@
       "timeframe": "1d",
       "level": 261.0,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "bars_after_signal": 72,
       "first_seen": "2026-09-30 17:21:28 UTC"
     },
@@ -370,7 +437,7 @@
       "timeframe": "1d",
       "level": 307.0512973393235,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-09-30 17:21:28 UTC"
     },
@@ -384,7 +451,7 @@
       "timeframe": "1d",
       "level": 178.50003051757812,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-30 17:21:28 UTC"
     },
@@ -398,7 +465,7 @@
       "timeframe": "1d",
       "level": 113.18775906818131,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-09-30 17:21:28 UTC"
     },
@@ -412,7 +479,7 @@
       "timeframe": "1d",
       "level": 307.0512973393235,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-09-30 17:21:28 UTC"
     },
@@ -426,7 +493,7 @@
       "timeframe": "1d",
       "level": 22.100909666581586,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-09-30 17:21:28 UTC"
     },
@@ -440,7 +507,7 @@
       "timeframe": "1d",
       "level": 130.57869784522603,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 7,
       "first_seen": "2026-09-30 17:21:28 UTC"
     },
@@ -454,7 +521,7 @@
       "timeframe": "1d",
       "level": 1519.2653904460487,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-30 17:21:28 UTC"
     },
@@ -468,7 +535,7 @@
       "timeframe": "1d",
       "level": 12.643279616823667,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 6,
       "first_seen": "2026-09-30 17:21:28 UTC"
     },
@@ -482,7 +549,7 @@
       "timeframe": "1d",
       "level": 181.46580957483363,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-09-30 17:21:28 UTC"
     },
@@ -496,7 +563,7 @@
       "timeframe": "1d",
       "level": 230.07620923272495,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-09-30 17:21:28 UTC"
     },
@@ -510,7 +577,7 @@
       "timeframe": "1d",
       "level": 135.522213406033,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 17:21:28 UTC"
     },
     {
@@ -523,9 +590,9 @@
       "timeframe": "1d",
       "level": 256.8999938964844,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "bars_after_signal": 43,
-      "gap_pct": 0.32842331742594144,
+      "gap_pct": 0.32697405910764415,
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -538,9 +605,9 @@
       "timeframe": "1d",
       "level": 256.8999938964844,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "bars_after_signal": 43,
-      "gap_pct": 0.32842331742594144,
+      "gap_pct": 0.32697405910764415,
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -553,7 +620,7 @@
       "timeframe": "1d",
       "level": 223.52000427246094,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "bars_after_signal": 116,
       "gap_pct": 0.1252678838335959,
       "first_seen": "2026-09-30 21:43:52 UTC"
@@ -568,7 +635,7 @@
       "timeframe": "1d",
       "level": 107.97165125333345,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
@@ -582,7 +649,7 @@
       "timeframe": "1d",
       "level": 50.84642468639475,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
@@ -596,7 +663,7 @@
       "timeframe": "1d",
       "level": 149.88628924334492,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -609,7 +676,7 @@
       "timeframe": "1d",
       "level": 48.581858553205215,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -622,7 +689,7 @@
       "timeframe": "1d",
       "level": 28.90465981862171,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -635,7 +702,7 @@
       "timeframe": "1d",
       "level": 67.58073935429444,
       "time": 1790775000,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -674,7 +741,7 @@
       "timeframe": "1d",
       "level": 1.828,
       "time": 1790726400,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "bars_after_signal": 121,
       "first_seen": "2026-09-30 11:46:48 UTC"
     },
@@ -688,7 +755,7 @@
       "timeframe": "1d",
       "level": 0.5694611048478011,
       "time": 1790726400,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-10-01 01:15:10 UTC"
     },
     {
@@ -701,7 +768,7 @@
       "timeframe": "1d",
       "level": 0.9470071489342087,
       "time": 1790722800,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -1205,7 +1272,7 @@
       "timeframe": "1d",
       "level": 725.2899780273438,
       "time": 1790688600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "bars_after_signal": 855,
       "first_seen": "2026-09-29 15:30:06 UTC"
     },
@@ -1219,7 +1286,7 @@
       "timeframe": "1d",
       "level": 306.5950356741932,
       "time": 1790688600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-29 15:30:06 UTC"
     },
     {
@@ -1232,7 +1299,7 @@
       "timeframe": "1d",
       "level": 464.38000405801307,
       "time": 1790688600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-29 15:30:06 UTC"
     },
     {
@@ -1245,7 +1312,7 @@
       "timeframe": "1d",
       "level": 113.13105863358626,
       "time": 1790688600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-29 15:30:06 UTC"
     },
     {
@@ -1258,7 +1325,7 @@
       "timeframe": "1d",
       "level": 306.5950356741932,
       "time": 1790688600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-29 15:30:06 UTC"
     },
     {
@@ -1271,7 +1338,7 @@
       "timeframe": "1d",
       "level": 107.85161279531626,
       "time": 1790688600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-29 15:30:06 UTC"
     },
     {
@@ -1284,7 +1351,7 @@
       "timeframe": "1d",
       "level": 464.38000405801307,
       "time": 1790688600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-29 15:30:06 UTC"
     },
     {
@@ -1297,7 +1364,7 @@
       "timeframe": "1d",
       "level": 26.82342447324869,
       "time": 1790688600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-29 20:24:37 UTC"
     },
     {
@@ -1310,8 +1377,34 @@
       "timeframe": "1d",
       "level": 26.82342447324869,
       "time": 1790688600,
-      "seen_at": "2026-10-01 01:15:10 UTC",
+      "seen_at": "2026-10-01 07:36:14 UTC",
       "first_seen": "2026-09-29 20:24:37 UTC"
+    },
+    {
+      "key": "sp500:AON:1d:trend_touch:support:1790688600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "AON",
+      "name": "Aon",
+      "timeframe": "1d",
+      "level": 269.6045268206803,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 07:36:14 UTC",
+      "first_seen": "2026-09-30 17:21:28 UTC"
+    },
+    {
+      "key": "sp500:NEE:1d:trend_touch:support:1790688600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "NEE",
+      "name": "NextEra Energy",
+      "timeframe": "1d",
+      "level": 74.94886496572784,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 07:36:14 UTC",
+      "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
       "key": "sp500:JBHT:1d:ar_dr_near:DR:1790688600",
@@ -1618,32 +1711,6 @@
       "time": 1790688600,
       "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:AON:1d:trend_touch:support:1790688600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "AON",
-      "name": "Aon",
-      "timeframe": "1d",
-      "level": 269.6045268206803,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
-      "first_seen": "2026-09-30 17:21:28 UTC"
-    },
-    {
-      "key": "sp500:NEE:1d:trend_touch:support:1790688600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "NEE",
-      "name": "NextEra Energy",
-      "timeframe": "1d",
-      "level": 74.94886496572784,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
-      "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
       "key": "sp500:EQT:1d:trend_touch:support:1790688600",
@@ -6643,75 +6710,6 @@
       "time": 1790083800,
       "seen_at": "2026-09-22 22:23:48 UTC",
       "exceed_bars": 3,
-      "first_seen": "2026-09-22 15:02:16 UTC"
-    },
-    {
-      "key": "sp500:HSY:1d:trend_exceed:support:1790083800",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "HSY",
-      "name": "Hershey Company (The)",
-      "timeframe": "1d",
-      "level": 170.2698430755259,
-      "time": 1790083800,
-      "seen_at": "2026-09-22 22:23:48 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-09-22 15:02:16 UTC"
-    },
-    {
-      "key": "sp500:O:1d:trend_exceed:support:1790083800",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "O",
-      "name": "Realty Income",
-      "timeframe": "1d",
-      "level": 58.03479551306754,
-      "time": 1790083800,
-      "seen_at": "2026-09-22 22:23:48 UTC",
-      "exceed_bars": 5,
-      "first_seen": "2026-09-22 15:02:16 UTC"
-    },
-    {
-      "key": "sp500:PEP:1d:trend_exceed:support:1790083800",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "PEP",
-      "name": "PepsiCo",
-      "timeframe": "1d",
-      "level": 134.6870956704519,
-      "time": 1790083800,
-      "seen_at": "2026-09-22 22:23:48 UTC",
-      "exceed_bars": 5,
-      "first_seen": "2026-09-22 15:02:16 UTC"
-    },
-    {
-      "key": "sp500:TMUS:1d:trend_exceed:support:1790083800",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "TMUS",
-      "name": "T-Mobile US",
-      "timeframe": "1d",
-      "level": 166.35641286070918,
-      "time": 1790083800,
-      "seen_at": "2026-09-22 22:23:48 UTC",
-      "exceed_bars": 3,
-      "first_seen": "2026-09-22 15:02:16 UTC"
-    },
-    {
-      "key": "ndx100:STX:1d:trend_touch:resistance:1790083800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "STX",
-      "name": "Seagate Technology Holdings",
-      "timeframe": "1d",
-      "level": 922.5590558733259,
-      "time": 1790083800,
-      "seen_at": "2026-09-22 22:23:48 UTC",
       "first_seen": "2026-09-22 15:02:16 UTC"
     }
   ]
