@@ -1,8 +1,34 @@
 {
-  "updated_at": "2026-09-30 21:43:52 UTC",
+  "updated_at": "2026-10-01 01:15:10 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "futures:HG=F:1h:trend_touch:support:1790812800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "futures",
+      "symbol": "HG=F",
+      "name": "Copper",
+      "timeframe": "1h",
+      "level": 6.608907032856899,
+      "time": 1790812800,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "first_seen": "2026-10-01 01:15:10 UTC"
+    },
+    {
+      "key": "futures:SI=F:1h:trend_touch:support:1790812800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "futures",
+      "symbol": "SI=F",
+      "name": "Silver",
+      "timeframe": "1h",
+      "level": 60.40054901332071,
+      "time": 1790812800,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "first_seen": "2026-10-01 01:15:10 UTC"
+    },
     {
       "key": "sp500:ITW:1h:trend_exceed:support:1790798400",
       "kind": "trend_exceed",
@@ -13,7 +39,7 @@
       "timeframe": "1h",
       "level": 261.4418827056885,
       "time": 1790798400,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
@@ -27,7 +53,7 @@
       "timeframe": "1h",
       "level": 46.69178454081217,
       "time": 1790798400,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
@@ -41,7 +67,7 @@
       "timeframe": "1h",
       "level": 21.697846610947412,
       "time": 1790798400,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
@@ -55,7 +81,7 @@
       "timeframe": "1h",
       "level": 211.37818111072886,
       "time": 1790796600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -68,7 +94,7 @@
       "timeframe": "1h",
       "level": 514.1962411885634,
       "time": 1790796600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -81,7 +107,7 @@
       "timeframe": "1h",
       "level": 211.37818111072886,
       "time": 1790796600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -94,7 +120,7 @@
       "timeframe": "1h",
       "level": 196.96459366439225,
       "time": 1790796600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -107,7 +133,7 @@
       "timeframe": "1h",
       "level": 514.1962411885634,
       "time": 1790796600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -120,7 +146,7 @@
       "timeframe": "1h",
       "level": 13.276174371138863,
       "time": 1790796600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -133,7 +159,7 @@
       "timeframe": "1h",
       "level": 269.34612258208847,
       "time": 1790796600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -146,7 +172,7 @@
       "timeframe": "1h",
       "level": 949.461669921875,
       "time": 1790796600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -159,7 +185,7 @@
       "timeframe": "1h",
       "level": 211.37818111072886,
       "time": 1790796600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -172,7 +198,7 @@
       "timeframe": "1h",
       "level": 223.8924055646773,
       "time": 1790796600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -185,7 +211,7 @@
       "timeframe": "1h",
       "level": 196.96459366439225,
       "time": 1790796600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -198,7 +224,7 @@
       "timeframe": "1h",
       "level": 117.60889180501302,
       "time": 1790796600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -211,7 +237,7 @@
       "timeframe": "1h",
       "level": 76.95854519930752,
       "time": 1790796600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -224,7 +250,7 @@
       "timeframe": "1h",
       "level": 282.7903566843903,
       "time": 1790796600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -648,9 +674,22 @@
       "timeframe": "1d",
       "level": 1.828,
       "time": 1790726400,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "bars_after_signal": 121,
       "first_seen": "2026-09-30 11:46:48 UTC"
+    },
+    {
+      "key": "crypto:WLDUSDT:1d:trend_touch:resistance:1790726400",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "WLDUSDT",
+      "name": "WLD",
+      "timeframe": "1d",
+      "level": 0.5694611048478011,
+      "time": 1790726400,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "first_seen": "2026-10-01 01:15:10 UTC"
     },
     {
       "key": "fx:EURCHF=X:1d:trend_touch:resistance:1790722800",
@@ -662,7 +701,7 @@
       "timeframe": "1d",
       "level": 0.9470071489342087,
       "time": 1790722800,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
     },
     {
@@ -1166,7 +1205,7 @@
       "timeframe": "1d",
       "level": 725.2899780273438,
       "time": 1790688600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "bars_after_signal": 855,
       "first_seen": "2026-09-29 15:30:06 UTC"
     },
@@ -1180,7 +1219,7 @@
       "timeframe": "1d",
       "level": 306.5950356741932,
       "time": 1790688600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-29 15:30:06 UTC"
     },
     {
@@ -1193,7 +1232,7 @@
       "timeframe": "1d",
       "level": 464.38000405801307,
       "time": 1790688600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-29 15:30:06 UTC"
     },
     {
@@ -1206,7 +1245,7 @@
       "timeframe": "1d",
       "level": 113.13105863358626,
       "time": 1790688600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-29 15:30:06 UTC"
     },
     {
@@ -1219,7 +1258,7 @@
       "timeframe": "1d",
       "level": 306.5950356741932,
       "time": 1790688600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-29 15:30:06 UTC"
     },
     {
@@ -1232,7 +1271,7 @@
       "timeframe": "1d",
       "level": 107.85161279531626,
       "time": 1790688600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-29 15:30:06 UTC"
     },
     {
@@ -1245,7 +1284,7 @@
       "timeframe": "1d",
       "level": 464.38000405801307,
       "time": 1790688600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-29 15:30:06 UTC"
     },
     {
@@ -1258,7 +1297,7 @@
       "timeframe": "1d",
       "level": 26.82342447324869,
       "time": 1790688600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-29 20:24:37 UTC"
     },
     {
@@ -1271,8 +1310,314 @@
       "timeframe": "1d",
       "level": 26.82342447324869,
       "time": 1790688600,
-      "seen_at": "2026-09-30 21:43:52 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-29 20:24:37 UTC"
+    },
+    {
+      "key": "sp500:JBHT:1d:ar_dr_near:DR:1790688600",
+      "kind": "ar_dr_near",
+      "type": "DR",
+      "group": "sp500",
+      "symbol": "JBHT",
+      "name": "J.B. Hunt",
+      "timeframe": "1d",
+      "level": 223.52000427246094,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "bars_after_signal": 115,
+      "gap_pct": 0.2102725535608949,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:TFC:1d:trend_touch:support:1790688600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "TFC",
+      "name": "Truist Financial",
+      "timeframe": "1d",
+      "level": 46.283074634831124,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "first_seen": "2026-09-29 20:24:37 UTC"
+    },
+    {
+      "key": "sp500:ACN:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "ACN",
+      "name": "Accenture",
+      "timeframe": "1d",
+      "level": 177.61378002166748,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:AEE:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "AEE",
+      "name": "Ameren",
+      "timeframe": "1d",
+      "level": 100.18313838095561,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:AON:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "AON",
+      "name": "Aon",
+      "timeframe": "1d",
+      "level": 278.08565138809627,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:D:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "D",
+      "name": "Dominion Energy",
+      "timeframe": "1d",
+      "level": 60.92604985052935,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:DTE:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "DTE",
+      "name": "DTE Energy",
+      "timeframe": "1d",
+      "level": 129.53416521227038,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 8,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:DUK:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "DUK",
+      "name": "Duke Energy",
+      "timeframe": "1d",
+      "level": 115.99443901909723,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:ES:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "ES",
+      "name": "Eversource Energy",
+      "timeframe": "1d",
+      "level": 63.29972129397922,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:ETR:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "ETR",
+      "name": "Entergy",
+      "timeframe": "1d",
+      "level": 100.54493219712201,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:FICO:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "FICO",
+      "name": "Fair Isaac",
+      "timeframe": "1d",
+      "level": 908.7708748790706,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:FISV:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "FISV",
+      "name": "Fiserv, Inc.",
+      "timeframe": "1d",
+      "level": 48.67874847139631,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 8,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:HIG:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "HIG",
+      "name": "Hartford (The)",
+      "timeframe": "1d",
+      "level": 130.51930854156728,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 6,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:MTD:1d:trend_exceed:resistance:1790688600",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "MTD",
+      "name": "Mettler Toledo",
+      "timeframe": "1d",
+      "level": 1519.2933745858556,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:NEE:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "NEE",
+      "name": "NextEra Energy",
+      "timeframe": "1d",
+      "level": 75.95576213192365,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:O:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "O",
+      "name": "Realty Income",
+      "timeframe": "1d",
+      "level": 58.093539883737606,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 10,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:PCG:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "PCG",
+      "name": "PG&E Corporation",
+      "timeframe": "1d",
+      "level": 12.64047543449547,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:PPL:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "PPL",
+      "name": "PPL Corporation",
+      "timeframe": "1d",
+      "level": 32.7694945702186,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 5,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:TSN:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "TSN",
+      "name": "Tyson Foods",
+      "timeframe": "1d",
+      "level": 50.83839965098756,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:USB:1d:trend_touch:support:1790688600",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "USB",
+      "name": "U.S. Bancorp",
+      "timeframe": "1d",
+      "level": 58.01626666624155,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:PNW:1d:trend_exceed:support:1790688600",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "PNW",
+      "name": "Pinnacle West",
+      "timeframe": "1d",
+      "level": 91.82553538870305,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-09-29 15:30:06 UTC"
+    },
+    {
+      "key": "sp500:BAX:1d:trend_touch:resistance:1790688600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "BAX",
+      "name": "Baxter International",
+      "timeframe": "1d",
+      "level": 23.699999156751133,
+      "time": 1790688600,
+      "seen_at": "2026-10-01 01:15:10 UTC",
+      "first_seen": "2026-09-29 15:30:06 UTC"
     },
     {
       "key": "sp500:AON:1d:trend_touch:support:1790688600",
@@ -1299,312 +1644,6 @@
       "time": 1790688600,
       "seen_at": "2026-09-30 21:43:52 UTC",
       "first_seen": "2026-09-30 21:43:52 UTC"
-    },
-    {
-      "key": "sp500:JBHT:1d:ar_dr_near:DR:1790688600",
-      "kind": "ar_dr_near",
-      "type": "DR",
-      "group": "sp500",
-      "symbol": "JBHT",
-      "name": "J.B. Hunt",
-      "timeframe": "1d",
-      "level": 223.52000427246094,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 17:21:28 UTC",
-      "bars_after_signal": 115,
-      "gap_pct": 0.2102725535608949,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:TFC:1d:trend_touch:support:1790688600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "TFC",
-      "name": "Truist Financial",
-      "timeframe": "1d",
-      "level": 46.283074634831124,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 17:21:28 UTC",
-      "first_seen": "2026-09-29 20:24:37 UTC"
-    },
-    {
-      "key": "sp500:ACN:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "ACN",
-      "name": "Accenture",
-      "timeframe": "1d",
-      "level": 177.61378002166748,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:AEE:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "AEE",
-      "name": "Ameren",
-      "timeframe": "1d",
-      "level": 100.18313838095561,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 5,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:AON:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "AON",
-      "name": "Aon",
-      "timeframe": "1d",
-      "level": 278.08565138809627,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:D:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "D",
-      "name": "Dominion Energy",
-      "timeframe": "1d",
-      "level": 60.92604985052935,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:DTE:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "DTE",
-      "name": "DTE Energy",
-      "timeframe": "1d",
-      "level": 129.53416521227038,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 8,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:DUK:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "DUK",
-      "name": "Duke Energy",
-      "timeframe": "1d",
-      "level": 115.99443901909723,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 5,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:ES:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "ES",
-      "name": "Eversource Energy",
-      "timeframe": "1d",
-      "level": 63.29972129397922,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:ETR:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "ETR",
-      "name": "Entergy",
-      "timeframe": "1d",
-      "level": 100.54493219712201,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 5,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:FICO:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "FICO",
-      "name": "Fair Isaac",
-      "timeframe": "1d",
-      "level": 908.7708748790706,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 5,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:FISV:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "FISV",
-      "name": "Fiserv, Inc.",
-      "timeframe": "1d",
-      "level": 48.67874847139631,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 8,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:HIG:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "HIG",
-      "name": "Hartford (The)",
-      "timeframe": "1d",
-      "level": 130.51930854156728,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 6,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:MTD:1d:trend_exceed:resistance:1790688600",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "MTD",
-      "name": "Mettler Toledo",
-      "timeframe": "1d",
-      "level": 1519.2933745858556,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:NEE:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "NEE",
-      "name": "NextEra Energy",
-      "timeframe": "1d",
-      "level": 75.95576213192365,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:O:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "O",
-      "name": "Realty Income",
-      "timeframe": "1d",
-      "level": 58.093539883737606,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 10,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:PCG:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "PCG",
-      "name": "PG&E Corporation",
-      "timeframe": "1d",
-      "level": 12.64047543449547,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 5,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:PPL:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "PPL",
-      "name": "PPL Corporation",
-      "timeframe": "1d",
-      "level": 32.7694945702186,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 5,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:TSN:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "TSN",
-      "name": "Tyson Foods",
-      "timeframe": "1d",
-      "level": 50.83839965098756,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:USB:1d:trend_touch:support:1790688600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "USB",
-      "name": "U.S. Bancorp",
-      "timeframe": "1d",
-      "level": 58.01626666624155,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:PNW:1d:trend_exceed:support:1790688600",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "PNW",
-      "name": "Pinnacle West",
-      "timeframe": "1d",
-      "level": 91.82553538870305,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-09-29 15:30:06 UTC"
-    },
-    {
-      "key": "sp500:BAX:1d:trend_touch:resistance:1790688600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "BAX",
-      "name": "Baxter International",
-      "timeframe": "1d",
-      "level": 23.699999156751133,
-      "time": 1790688600,
-      "seen_at": "2026-09-30 11:46:48 UTC",
-      "first_seen": "2026-09-29 15:30:06 UTC"
     },
     {
       "key": "sp500:EQT:1d:trend_touch:support:1790688600",
@@ -1960,7 +1999,7 @@
       "timeframe": "1d",
       "level": 82.8255824309129,
       "time": 1790602200,
-      "seen_at": "2026-09-30 11:46:48 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-28 16:23:53 UTC"
     },
     {
@@ -1973,7 +2012,7 @@
       "timeframe": "1d",
       "level": 241.25680449045248,
       "time": 1790602200,
-      "seen_at": "2026-09-30 11:46:48 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-28 16:23:53 UTC"
     },
     {
@@ -1986,7 +2025,7 @@
       "timeframe": "1d",
       "level": 25.73815914916992,
       "time": 1790602200,
-      "seen_at": "2026-09-30 11:46:48 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-28 22:10:56 UTC"
     },
     {
@@ -1999,7 +2038,7 @@
       "timeframe": "1d",
       "level": 22.51727323821097,
       "time": 1790602200,
-      "seen_at": "2026-09-30 11:46:48 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-28 22:10:56 UTC"
     },
     {
@@ -2012,7 +2051,7 @@
       "timeframe": "1d",
       "level": 85.93888996265552,
       "time": 1790602200,
-      "seen_at": "2026-09-30 11:46:48 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-28 16:23:53 UTC"
     },
     {
@@ -2025,7 +2064,7 @@
       "timeframe": "1d",
       "level": 85.93888996265552,
       "time": 1790602200,
-      "seen_at": "2026-09-30 11:46:48 UTC",
+      "seen_at": "2026-10-01 01:15:10 UTC",
       "first_seen": "2026-09-28 16:23:53 UTC"
     },
     {
@@ -6674,45 +6713,6 @@
       "time": 1790083800,
       "seen_at": "2026-09-22 22:23:48 UTC",
       "first_seen": "2026-09-22 15:02:16 UTC"
-    },
-    {
-      "key": "sp500:AIG:1d:trend_touch:support:1790083800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "AIG",
-      "name": "American International Group",
-      "timeframe": "1d",
-      "level": 74.21817330779848,
-      "time": 1790083800,
-      "seen_at": "2026-09-22 22:23:48 UTC",
-      "first_seen": "2026-09-22 15:02:16 UTC"
-    },
-    {
-      "key": "sp500:STX:1d:trend_touch:resistance:1790083800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "STX",
-      "name": "Seagate Technology",
-      "timeframe": "1d",
-      "level": 922.5590558733259,
-      "time": 1790083800,
-      "seen_at": "2026-09-22 22:23:48 UTC",
-      "first_seen": "2026-09-22 15:02:16 UTC"
-    },
-    {
-      "key": "sp500:HII:1d:trend_touch:support:1790083800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "HII",
-      "name": "Huntington Ingalls Industries",
-      "timeframe": "1d",
-      "level": 270.1471555555189,
-      "time": 1790083800,
-      "seen_at": "2026-09-22 22:23:48 UTC",
-      "first_seen": "2026-09-22 19:15:13 UTC"
     }
   ]
 }
