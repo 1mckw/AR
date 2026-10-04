@@ -1,8 +1,47 @@
 {
-  "updated_at": "2026-10-04 18:40:07 UTC",
+  "updated_at": "2026-10-04 22:21:30 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "fx:EURGBP=X:1d:trend_touch:support:1791152379",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "fx",
+      "symbol": "EURGBP=X",
+      "name": "EUR/GBP",
+      "timeframe": "1d",
+      "level": 0.8494050226994415,
+      "time": 1791152379,
+      "seen_at": "2026-10-04 22:21:30 UTC",
+      "first_seen": "2026-10-04 22:21:30 UTC"
+    },
+    {
+      "key": "crypto:AVAXUSDT:1h:trend_touch:resistance:1791151200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "AVAXUSDT",
+      "name": "AVAX",
+      "timeframe": "1h",
+      "level": 11.113347826086956,
+      "time": 1791151200,
+      "seen_at": "2026-10-04 22:21:30 UTC",
+      "first_seen": "2026-10-04 22:21:30 UTC"
+    },
+    {
+      "key": "crypto:BNBUSDT:1h:trend_touch:resistance:1791147600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "BNBUSDT",
+      "name": "BNB",
+      "timeframe": "1h",
+      "level": 794.9469144981413,
+      "time": 1791147600,
+      "seen_at": "2026-10-04 22:21:30 UTC",
+      "first_seen": "2026-10-04 22:21:30 UTC"
+    },
     {
       "key": "crypto:ADAUSDT:1h:trend_touch:resistance:1791118800",
       "kind": "trend_touch",
@@ -79,7 +118,7 @@
       "timeframe": "1d",
       "level": 0.6125953974895397,
       "time": 1790985600,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-03 16:39:45 UTC"
     },
     {
@@ -147,7 +186,7 @@
       "timeframe": "1h",
       "level": 3.022087045337843,
       "time": 1790974799,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-02 21:44:18 UTC"
     },
@@ -175,7 +214,7 @@
       "timeframe": "1h",
       "level": 207.2861570700621,
       "time": 1790969400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-02 21:44:18 UTC"
     },
     {
@@ -188,7 +227,7 @@
       "timeframe": "1h",
       "level": 280.63019581844935,
       "time": 1790969400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-02 21:44:18 UTC"
     },
     {
@@ -201,7 +240,7 @@
       "timeframe": "1h",
       "level": 477.08215370661094,
       "time": 1790969400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-02 21:44:18 UTC"
     },
     {
@@ -214,7 +253,7 @@
       "timeframe": "1h",
       "level": 98.68882482192096,
       "time": 1790969400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-02 21:44:18 UTC"
     },
     {
@@ -227,7 +266,7 @@
       "timeframe": "1h",
       "level": 86.0214745016659,
       "time": 1790969400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-02 21:44:18 UTC"
     },
     {
@@ -240,7 +279,7 @@
       "timeframe": "1h",
       "level": 465.88607925103634,
       "time": 1790969400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-02 21:44:18 UTC"
     },
     {
@@ -253,7 +292,7 @@
       "timeframe": "1h",
       "level": 69.16664387897156,
       "time": 1790969400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-02 21:44:18 UTC"
     },
     {
@@ -266,7 +305,7 @@
       "timeframe": "1h",
       "level": 98.68882482192096,
       "time": 1790969400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-02 21:44:18 UTC"
     },
     {
@@ -279,7 +318,7 @@
       "timeframe": "1h",
       "level": 207.2861570700621,
       "time": 1790969400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-02 21:44:18 UTC"
     },
     {
@@ -318,7 +357,7 @@
       "timeframe": "1d",
       "level": 56.82500076293945,
       "time": 1790947800,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "bars_after_signal": 13,
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
@@ -332,7 +371,7 @@
       "timeframe": "1d",
       "level": 307.96382066958415,
       "time": 1790947800,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
@@ -346,7 +385,7 @@
       "timeframe": "1d",
       "level": 307.96382066958415,
       "time": 1790947800,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
@@ -360,7 +399,7 @@
       "timeframe": "1d",
       "level": 21.684546094952207,
       "time": 1790947800,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
@@ -374,7 +413,7 @@
       "timeframe": "1d",
       "level": 181.62278493245444,
       "time": 1790947800,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
@@ -388,7 +427,7 @@
       "timeframe": "1d",
       "level": 161.16045599114406,
       "time": 1790947800,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
     {
@@ -401,7 +440,7 @@
       "timeframe": "1d",
       "level": 42.596004747620526,
       "time": 1790947800,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
     {
@@ -414,7 +453,7 @@
       "timeframe": "1d",
       "level": 22.822962513676398,
       "time": 1790947800,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
     {
@@ -427,7 +466,7 @@
       "timeframe": "1d",
       "level": 161.16045599114406,
       "time": 1790947800,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
     {
@@ -440,7 +479,7 @@
       "timeframe": "1d",
       "level": 256.8999938964844,
       "time": 1790947800,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "bars_after_signal": 45,
       "first_seen": "2026-10-02 21:44:18 UTC"
     },
@@ -454,7 +493,7 @@
       "timeframe": "1d",
       "level": 256.8999938964844,
       "time": 1790947800,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "bars_after_signal": 45,
       "first_seen": "2026-10-02 21:44:18 UTC"
     },
@@ -1082,7 +1121,7 @@
       "timeframe": "1d",
       "level": 223.52000427246094,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "bars_after_signal": 117,
       "first_seen": "2026-10-01 14:54:13 UTC"
     },
@@ -1096,7 +1135,7 @@
       "timeframe": "1d",
       "level": 300.2565153846445,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-01 14:54:13 UTC"
     },
     {
@@ -1109,7 +1148,7 @@
       "timeframe": "1d",
       "level": 78.35971472603934,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-01 14:54:13 UTC"
     },
     {
@@ -1122,7 +1161,7 @@
       "timeframe": "1d",
       "level": 300.2565153846445,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-01 14:54:13 UTC"
     },
     {
@@ -1135,7 +1174,7 @@
       "timeframe": "1d",
       "level": 134.9198925653444,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-01 14:54:13 UTC"
     },
     {
@@ -1148,7 +1187,7 @@
       "timeframe": "1d",
       "level": 185.7152909370318,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-01 14:54:13 UTC"
     },
     {
@@ -1161,7 +1200,7 @@
       "timeframe": "1d",
       "level": 77.26407778841778,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-01 14:54:13 UTC"
     },
     {
@@ -1174,7 +1213,7 @@
       "timeframe": "1d",
       "level": 46.162200668095295,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-01 14:54:13 UTC"
     },
     {
@@ -1187,7 +1226,7 @@
       "timeframe": "1d",
       "level": 270.8299865722656,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "bars_after_signal": 17,
       "first_seen": "2026-10-01 20:13:52 UTC"
     },
@@ -1201,7 +1240,7 @@
       "timeframe": "1d",
       "level": 155.08797653958945,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-01 20:13:52 UTC"
     },
     {
@@ -1214,7 +1253,7 @@
       "timeframe": "1d",
       "level": 2767.5922075611675,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-01 20:13:52 UTC"
     },
     {
@@ -1227,7 +1266,7 @@
       "timeframe": "1d",
       "level": 128.12081130827318,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-01 20:13:52 UTC"
     },
     {
@@ -1240,7 +1279,7 @@
       "timeframe": "1d",
       "level": 199.48248233279668,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-01 20:13:52 UTC"
     },
     {
@@ -1253,7 +1292,7 @@
       "timeframe": "1d",
       "level": 86.29850722648001,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-01 20:13:52 UTC"
     },
     {
@@ -1266,7 +1305,7 @@
       "timeframe": "1d",
       "level": 83.4851871735272,
       "time": 1790861400,
-      "seen_at": "2026-10-04 18:40:07 UTC",
+      "seen_at": "2026-10-04 22:21:30 UTC",
       "first_seen": "2026-10-01 20:13:52 UTC"
     },
     {
@@ -6658,45 +6697,6 @@
       "name": "Public Storage",
       "timeframe": "1h",
       "level": 286.40949720982144,
-      "time": 1790191800,
-      "seen_at": "2026-09-24 12:12:29 UTC",
-      "first_seen": "2026-09-23 22:40:54 UTC"
-    },
-    {
-      "key": "sp500:SCHW:1h:trend_touch:support:1790191800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "SCHW",
-      "name": "Charles Schwab Corporation",
-      "timeframe": "1h",
-      "level": 99.4862751680262,
-      "time": 1790191800,
-      "seen_at": "2026-09-24 12:12:29 UTC",
-      "first_seen": "2026-09-23 22:40:54 UTC"
-    },
-    {
-      "key": "sp500:SJM:1h:trend_touch:resistance:1790191800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "SJM",
-      "name": "J.M. Smucker Company (The)",
-      "timeframe": "1h",
-      "level": 122.53393829845992,
-      "time": 1790191800,
-      "seen_at": "2026-09-24 12:12:29 UTC",
-      "first_seen": "2026-09-23 22:40:54 UTC"
-    },
-    {
-      "key": "sp500:WELL:1h:trend_touch:support:1790191800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "WELL",
-      "name": "Welltower",
-      "timeframe": "1h",
-      "level": 229.2131067961165,
       "time": 1790191800,
       "seen_at": "2026-09-24 12:12:29 UTC",
       "first_seen": "2026-09-23 22:40:54 UTC"
