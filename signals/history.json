@@ -1,8 +1,47 @@
 {
-  "updated_at": "2026-10-06 02:56:20 UTC",
+  "updated_at": "2026-10-06 09:50:04 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "crypto:ENAUSDT:1h:trend_touch:support:1791277200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "crypto",
+      "symbol": "ENAUSDT",
+      "name": "ENA",
+      "timeframe": "1h",
+      "level": 0.23927567567567565,
+      "time": 1791277200,
+      "seen_at": "2026-10-06 09:50:04 UTC",
+      "first_seen": "2026-10-06 09:50:04 UTC"
+    },
+    {
+      "key": "crypto:ZECUSDT:1h:trend_touch:resistance:1791277200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "ZECUSDT",
+      "name": "ZEC",
+      "timeframe": "1h",
+      "level": 1354.6819672131148,
+      "time": 1791277200,
+      "seen_at": "2026-10-06 09:50:04 UTC",
+      "first_seen": "2026-10-06 09:50:04 UTC"
+    },
+    {
+      "key": "futures:ES=F:1h:trend_touch:resistance:1791277200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "futures",
+      "symbol": "ES=F",
+      "name": "E-mini S&P 500",
+      "timeframe": "1h",
+      "level": 7847.439534883721,
+      "time": 1791277200,
+      "seen_at": "2026-10-06 09:50:04 UTC",
+      "first_seen": "2026-10-06 09:50:04 UTC"
+    },
     {
       "key": "futures:GC=F:1d:trend_touch:support:1791254643",
       "kind": "trend_touch",
@@ -78,7 +117,7 @@
       "timeframe": "1h",
       "level": 1818.192037648168,
       "time": 1791230400,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "exceed_bars": 7,
       "first_seen": "2026-10-05 23:01:56 UTC"
     },
@@ -92,7 +131,7 @@
       "timeframe": "1h",
       "level": 223.4642835344587,
       "time": 1791228600,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "first_seen": "2026-10-05 23:01:56 UTC"
     },
     {
@@ -197,7 +236,7 @@
       "timeframe": "1d",
       "level": 134.39500427246094,
       "time": 1791207000,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "bars_after_signal": 31,
       "gap_pct": 0.39064633251477027,
       "first_seen": "2026-10-05 16:25:47 UTC"
@@ -212,7 +251,7 @@
       "timeframe": "1d",
       "level": 308.4200823347145,
       "time": 1791207000,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-10-05 16:25:47 UTC"
     },
@@ -226,7 +265,7 @@
       "timeframe": "1d",
       "level": 308.4200823347145,
       "time": 1791207000,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-10-05 16:25:47 UTC"
     },
@@ -240,7 +279,7 @@
       "timeframe": "1d",
       "level": 182.68379684974408,
       "time": 1791207000,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "first_seen": "2026-10-05 16:25:47 UTC"
     },
     {
@@ -253,7 +292,7 @@
       "timeframe": "1d",
       "level": 182.68379684974408,
       "time": 1791207000,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "first_seen": "2026-10-05 16:25:47 UTC"
     },
     {
@@ -266,8 +305,21 @@
       "timeframe": "1d",
       "level": 58.902174386918915,
       "time": 1791207000,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "first_seen": "2026-10-05 16:25:47 UTC"
+    },
+    {
+      "key": "futures:GC=F:1d:trend_touch:support:1791172800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "futures",
+      "symbol": "GC=F",
+      "name": "Gold",
+      "timeframe": "1d",
+      "level": 4155.018055080139,
+      "time": 1791172800,
+      "seen_at": "2026-10-06 09:50:04 UTC",
+      "first_seen": "2026-10-05 07:25:31 UTC"
     },
     {
       "key": "futures:RTY=F:1d:trend_touch:resistance:1791172800",
@@ -283,19 +335,6 @@
       "first_seen": "2026-10-06 02:56:20 UTC"
     },
     {
-      "key": "futures:GC=F:1d:trend_touch:support:1791172800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "futures",
-      "symbol": "GC=F",
-      "name": "Gold",
-      "timeframe": "1d",
-      "level": 4155.018055080139,
-      "time": 1791172800,
-      "seen_at": "2026-10-05 16:25:47 UTC",
-      "first_seen": "2026-10-05 07:25:31 UTC"
-    },
-    {
       "key": "crypto:FETUSDT:1d:trend_touch:resistance:1791158400",
       "kind": "trend_touch",
       "type": "resistance",
@@ -305,7 +344,7 @@
       "timeframe": "1d",
       "level": 0.26646164383561644,
       "time": 1791158400,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "first_seen": "2026-10-05 16:25:47 UTC"
     },
     {
@@ -318,7 +357,7 @@
       "timeframe": "1d",
       "level": 4129.81,
       "time": 1791158400,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "first_seen": "2026-10-05 23:01:56 UTC"
     },
     {
@@ -675,7 +714,7 @@
       "timeframe": "1d",
       "level": 56.82500076293945,
       "time": 1790947800,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "bars_after_signal": 13,
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
@@ -689,7 +728,7 @@
       "timeframe": "1d",
       "level": 161.16045599114406,
       "time": 1790947800,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
     {
@@ -702,7 +741,7 @@
       "timeframe": "1d",
       "level": 42.596004747620526,
       "time": 1790947800,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
     {
@@ -715,7 +754,7 @@
       "timeframe": "1d",
       "level": 22.822962513676398,
       "time": 1790947800,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
     {
@@ -728,7 +767,7 @@
       "timeframe": "1d",
       "level": 161.16045599114406,
       "time": 1790947800,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
     {
@@ -741,7 +780,7 @@
       "timeframe": "1d",
       "level": 256.8999938964844,
       "time": 1790947800,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "bars_after_signal": 45,
       "first_seen": "2026-10-02 21:44:18 UTC"
     },
@@ -755,7 +794,7 @@
       "timeframe": "1d",
       "level": 256.8999938964844,
       "time": 1790947800,
-      "seen_at": "2026-10-06 02:56:20 UTC",
+      "seen_at": "2026-10-06 09:50:04 UTC",
       "bars_after_signal": 45,
       "first_seen": "2026-10-02 21:44:18 UTC"
     },
@@ -6662,45 +6701,6 @@
       "seen_at": "2026-09-25 08:09:20 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-09-24 17:31:57 UTC"
-    },
-    {
-      "key": "sp500:ALB:1d:trend_touch:support:1790256600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "ALB",
-      "name": "Albemarle Corporation",
-      "timeframe": "1d",
-      "level": 108.73901082561481,
-      "time": 1790256600,
-      "seen_at": "2026-09-25 08:09:20 UTC",
-      "first_seen": "2026-09-24 17:31:57 UTC"
-    },
-    {
-      "key": "sp500:ELV:1d:trend_touch:support:1790256600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "ELV",
-      "name": "Elevance Health",
-      "timeframe": "1d",
-      "level": 394.3263084010074,
-      "time": 1790256600,
-      "seen_at": "2026-09-24 17:31:57 UTC",
-      "first_seen": "2026-09-24 17:31:57 UTC"
-    },
-    {
-      "key": "futures:HG=F:1h:trend_touch:resistance:1790247600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "futures",
-      "symbol": "HG=F",
-      "name": "Copper",
-      "timeframe": "1h",
-      "level": 6.78709095174616,
-      "time": 1790247600,
-      "seen_at": "2026-09-24 12:12:29 UTC",
-      "first_seen": "2026-09-24 12:12:29 UTC"
     }
   ]
 }
