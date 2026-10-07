@@ -1,8 +1,22 @@
 {
-  "updated_at": "2026-10-06 21:32:59 UTC",
+  "updated_at": "2026-10-07 01:13:36 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "crypto:ORCAUSDT:1d:trend_exceed:resistance:1791331200",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "ORCAUSDT",
+      "name": "ORCA",
+      "timeframe": "1d",
+      "level": 2.136842465753425,
+      "time": 1791331200,
+      "seen_at": "2026-10-07 01:13:36 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-10-07 01:13:36 UTC"
+    },
     {
       "key": "sp500:BBY:1h:trend_exceed:support:1791316800",
       "kind": "trend_exceed",
@@ -13,7 +27,7 @@
       "timeframe": "1h",
       "level": 85.01748162589982,
       "time": 1791316800,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-06 21:32:59 UTC"
     },
@@ -27,7 +41,7 @@
       "timeframe": "1h",
       "level": 432.38203846324575,
       "time": 1791316800,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-06 21:32:59 UTC"
     },
@@ -54,7 +68,7 @@
       "timeframe": "1h",
       "level": 193.75972334835507,
       "time": 1791315000,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-06 21:32:59 UTC"
     },
     {
@@ -67,7 +81,7 @@
       "timeframe": "1h",
       "level": 41.69795018976385,
       "time": 1791315000,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-06 21:32:59 UTC"
     },
     {
@@ -80,7 +94,7 @@
       "timeframe": "1h",
       "level": 362.22666426328857,
       "time": 1791315000,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-06 21:32:59 UTC"
     },
     {
@@ -93,7 +107,7 @@
       "timeframe": "1h",
       "level": 169.06353759765625,
       "time": 1791315000,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-06 21:32:59 UTC"
     },
     {
@@ -106,7 +120,7 @@
       "timeframe": "1h",
       "level": 84.97504547958525,
       "time": 1791315000,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-06 21:32:59 UTC"
     },
     {
@@ -119,7 +133,7 @@
       "timeframe": "1h",
       "level": 193.75972334835507,
       "time": 1791315000,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-06 21:32:59 UTC"
     },
     {
@@ -132,7 +146,7 @@
       "timeframe": "1h",
       "level": 185.01998901367188,
       "time": 1791315000,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-06 21:32:59 UTC"
     },
     {
@@ -145,7 +159,7 @@
       "timeframe": "1h",
       "level": 41.69795018976385,
       "time": 1791315000,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-06 21:32:59 UTC"
     },
     {
@@ -158,7 +172,7 @@
       "timeframe": "1h",
       "level": 15.36776762349265,
       "time": 1791315000,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-06 21:32:59 UTC"
     },
     {
@@ -171,7 +185,7 @@
       "timeframe": "1h",
       "level": 311.86830444335936,
       "time": 1791315000,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-06 21:32:59 UTC"
     },
     {
@@ -184,7 +198,7 @@
       "timeframe": "1h",
       "level": 362.22666426328857,
       "time": 1791315000,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-06 21:32:59 UTC"
     },
     {
@@ -197,7 +211,7 @@
       "timeframe": "1h",
       "level": 86.89939680976556,
       "time": 1791315000,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-06 21:32:59 UTC"
     },
     {
@@ -210,8 +224,21 @@
       "timeframe": "1h",
       "level": 116.53296684038521,
       "time": 1791315000,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-06 21:32:59 UTC"
+    },
+    {
+      "key": "sp500:PFG:1h:trend_touch:support:1791315000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "PFG",
+      "name": "Principal Financial Group",
+      "timeframe": "1h",
+      "level": 109.64566839526513,
+      "time": 1791315000,
+      "seen_at": "2026-10-07 01:13:36 UTC",
+      "first_seen": "2026-10-07 01:13:36 UTC"
     },
     {
       "key": "sp500:STX:1h:trend_exceed:support:1791303465",
@@ -386,6 +413,99 @@
       "first_seen": "2026-10-06 16:33:35 UTC"
     },
     {
+      "key": "sp500:BSX:1d:trend_exceed:support:1791293400",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "BSX",
+      "name": "Boston Scientific",
+      "timeframe": "1d",
+      "level": 42.61014774707342,
+      "time": 1791293400,
+      "seen_at": "2026-10-07 01:13:36 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-10-06 16:33:35 UTC"
+    },
+    {
+      "key": "sp500:VTR:1d:trend_exceed:support:1791293400",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "VTR",
+      "name": "Ventas",
+      "timeframe": "1d",
+      "level": 83.68957219659326,
+      "time": 1791293400,
+      "seen_at": "2026-10-07 01:13:36 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-10-06 16:33:35 UTC"
+    },
+    {
+      "key": "sp500:CB:1d:trend_touch:resistance:1791293400",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "CB",
+      "name": "Chubb Limited",
+      "timeframe": "1d",
+      "level": 335.71233592313877,
+      "time": 1791293400,
+      "seen_at": "2026-10-07 01:13:36 UTC",
+      "first_seen": "2026-10-06 16:33:35 UTC"
+    },
+    {
+      "key": "sp500:MET:1d:trend_touch:resistance:1791293400",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "MET",
+      "name": "MetLife",
+      "timeframe": "1d",
+      "level": 97.95399627685546,
+      "time": 1791293400,
+      "seen_at": "2026-10-07 01:13:36 UTC",
+      "first_seen": "2026-10-06 16:33:35 UTC"
+    },
+    {
+      "key": "sp500:PWR:1d:trend_touch:resistance:1791293400",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "PWR",
+      "name": "Quanta Services",
+      "timeframe": "1d",
+      "level": 692.8249816894531,
+      "time": 1791293400,
+      "seen_at": "2026-10-07 01:13:36 UTC",
+      "first_seen": "2026-10-06 16:33:35 UTC"
+    },
+    {
+      "key": "ndx100:CPRT:1d:trend_touch:support:1791293400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "CPRT",
+      "name": "Copart",
+      "timeframe": "1d",
+      "level": 26.741011256580943,
+      "time": 1791293400,
+      "seen_at": "2026-10-07 01:13:36 UTC",
+      "first_seen": "2026-10-06 21:32:59 UTC"
+    },
+    {
+      "key": "sp500:CPRT:1d:trend_touch:support:1791293400",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "CPRT",
+      "name": "Copart",
+      "timeframe": "1d",
+      "level": 26.741011256580943,
+      "time": 1791293400,
+      "seen_at": "2026-10-07 01:13:36 UTC",
+      "first_seen": "2026-10-06 21:32:59 UTC"
+    },
+    {
       "key": "ndx100:APP:1d:trend_exceed:support:1791293400",
       "kind": "trend_exceed",
       "type": "support",
@@ -414,34 +534,6 @@
       "first_seen": "2026-10-06 16:33:35 UTC"
     },
     {
-      "key": "sp500:BSX:1d:trend_exceed:support:1791293400",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "BSX",
-      "name": "Boston Scientific",
-      "timeframe": "1d",
-      "level": 42.61014774707342,
-      "time": 1791293400,
-      "seen_at": "2026-10-06 21:32:59 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-10-06 16:33:35 UTC"
-    },
-    {
-      "key": "sp500:VTR:1d:trend_exceed:support:1791293400",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "VTR",
-      "name": "Ventas",
-      "timeframe": "1d",
-      "level": 83.68957219659326,
-      "time": 1791293400,
-      "seen_at": "2026-10-06 21:32:59 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-10-06 16:33:35 UTC"
-    },
-    {
       "key": "ndx100:ZS:1d:trend_touch:resistance:1791293400",
       "kind": "trend_touch",
       "type": "resistance",
@@ -450,45 +542,6 @@
       "name": "Zscaler",
       "timeframe": "1d",
       "level": 212.66435139061622,
-      "time": 1791293400,
-      "seen_at": "2026-10-06 21:32:59 UTC",
-      "first_seen": "2026-10-06 16:33:35 UTC"
-    },
-    {
-      "key": "sp500:CB:1d:trend_touch:resistance:1791293400",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "CB",
-      "name": "Chubb Limited",
-      "timeframe": "1d",
-      "level": 335.71233592313877,
-      "time": 1791293400,
-      "seen_at": "2026-10-06 21:32:59 UTC",
-      "first_seen": "2026-10-06 16:33:35 UTC"
-    },
-    {
-      "key": "sp500:MET:1d:trend_touch:resistance:1791293400",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "MET",
-      "name": "MetLife",
-      "timeframe": "1d",
-      "level": 97.95399627685546,
-      "time": 1791293400,
-      "seen_at": "2026-10-06 21:32:59 UTC",
-      "first_seen": "2026-10-06 16:33:35 UTC"
-    },
-    {
-      "key": "sp500:PWR:1d:trend_touch:resistance:1791293400",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "PWR",
-      "name": "Quanta Services",
-      "timeframe": "1d",
-      "level": 692.8249816894531,
       "time": 1791293400,
       "seen_at": "2026-10-06 21:32:59 UTC",
       "first_seen": "2026-10-06 16:33:35 UTC"
@@ -505,32 +558,6 @@
       "time": 1791293400,
       "seen_at": "2026-10-06 21:32:59 UTC",
       "first_seen": "2026-10-06 16:33:35 UTC"
-    },
-    {
-      "key": "ndx100:CPRT:1d:trend_touch:support:1791293400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "ndx100",
-      "symbol": "CPRT",
-      "name": "Copart",
-      "timeframe": "1d",
-      "level": 26.741011256580943,
-      "time": 1791293400,
-      "seen_at": "2026-10-06 21:32:59 UTC",
-      "first_seen": "2026-10-06 21:32:59 UTC"
-    },
-    {
-      "key": "sp500:CPRT:1d:trend_touch:support:1791293400",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "CPRT",
-      "name": "Copart",
-      "timeframe": "1d",
-      "level": 26.741011256580943,
-      "time": 1791293400,
-      "seen_at": "2026-10-06 21:32:59 UTC",
-      "first_seen": "2026-10-06 21:32:59 UTC"
     },
     {
       "key": "crypto:ENAUSDT:1h:trend_touch:support:1791277200",
@@ -792,7 +819,7 @@
       "timeframe": "1d",
       "level": 134.39500427246094,
       "time": 1791207000,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "bars_after_signal": 31,
       "gap_pct": 0.39064633251477027,
       "first_seen": "2026-10-05 16:25:47 UTC"
@@ -807,7 +834,7 @@
       "timeframe": "1d",
       "level": 308.4200823347145,
       "time": 1791207000,
-      "seen_at": "2026-10-06 09:50:04 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-10-05 16:25:47 UTC"
     },
@@ -821,7 +848,7 @@
       "timeframe": "1d",
       "level": 308.4200823347145,
       "time": 1791207000,
-      "seen_at": "2026-10-06 09:50:04 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "exceed_bars": 5,
       "first_seen": "2026-10-05 16:25:47 UTC"
     },
@@ -835,7 +862,7 @@
       "timeframe": "1d",
       "level": 182.68379684974408,
       "time": 1791207000,
-      "seen_at": "2026-10-06 09:50:04 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-05 16:25:47 UTC"
     },
     {
@@ -848,7 +875,7 @@
       "timeframe": "1d",
       "level": 182.68379684974408,
       "time": 1791207000,
-      "seen_at": "2026-10-06 09:50:04 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-05 16:25:47 UTC"
     },
     {
@@ -874,7 +901,7 @@
       "timeframe": "1d",
       "level": 4155.018055080139,
       "time": 1791172800,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-05 07:25:31 UTC"
     },
     {
@@ -887,7 +914,7 @@
       "timeframe": "1d",
       "level": 2877.66796875,
       "time": 1791172800,
-      "seen_at": "2026-10-06 21:32:59 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "first_seen": "2026-10-06 02:56:20 UTC"
     },
     {
@@ -1283,7 +1310,7 @@
       "timeframe": "1d",
       "level": 56.82500076293945,
       "time": 1790947800,
-      "seen_at": "2026-10-06 09:50:04 UTC",
+      "seen_at": "2026-10-07 01:13:36 UTC",
       "bars_after_signal": 13,
       "first_seen": "2026-10-02 17:12:57 UTC"
     },
@@ -6656,34 +6683,6 @@
       "level": 1.1372244801632194,
       "time": 1790270948,
       "seen_at": "2026-09-24 17:31:57 UTC",
-      "first_seen": "2026-09-24 17:31:57 UTC"
-    },
-    {
-      "key": "sp500:MAS:1h:trend_exceed:support:1790269908",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "MAS",
-      "name": "Masco",
-      "timeframe": "1h",
-      "level": 67.77507199442445,
-      "time": 1790269908,
-      "seen_at": "2026-09-24 17:31:57 UTC",
-      "exceed_bars": 5,
-      "first_seen": "2026-09-24 17:31:57 UTC"
-    },
-    {
-      "key": "sp500:FSLR:1h:trend_exceed:support:1790269897",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "FSLR",
-      "name": "First Solar",
-      "timeframe": "1h",
-      "level": 189.61708144131694,
-      "time": 1790269897,
-      "seen_at": "2026-09-24 17:31:57 UTC",
-      "exceed_bars": 5,
       "first_seen": "2026-09-24 17:31:57 UTC"
     }
   ]
