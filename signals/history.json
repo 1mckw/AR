@@ -1,8 +1,47 @@
 {
-  "updated_at": "2026-10-08 14:22:00 UTC",
+  "updated_at": "2026-10-08 20:07:42 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "fx:GBPUSD=X:1d:trend_touch:support:1791489947",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "fx",
+      "symbol": "GBPUSD=X",
+      "name": "GBP/USD",
+      "timeframe": "1d",
+      "level": 1.318580505695749,
+      "time": 1791489947,
+      "seen_at": "2026-10-08 20:07:42 UTC",
+      "first_seen": "2026-10-08 20:07:42 UTC"
+    },
+    {
+      "key": "ndx100:PDD:1h:trend_touch:support:1791487800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "PDD",
+      "name": "PDD Holdings",
+      "timeframe": "1h",
+      "level": 78.18714141845703,
+      "time": 1791487800,
+      "seen_at": "2026-10-08 20:07:42 UTC",
+      "first_seen": "2026-10-08 20:07:42 UTC"
+    },
+    {
+      "key": "sp500:PEG:1h:trend_touch:resistance:1791487800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "PEG",
+      "name": "Public Service Enterprise Group",
+      "timeframe": "1h",
+      "level": 71.99148211669922,
+      "time": 1791487800,
+      "seen_at": "2026-10-08 20:07:42 UTC",
+      "first_seen": "2026-10-08 20:07:42 UTC"
+    },
     {
       "key": "sp500:IQV:1h:trend_exceed:support:1791468372",
       "kind": "trend_exceed",
@@ -111,7 +150,7 @@
       "timeframe": "1d",
       "level": 79.04000091552734,
       "time": 1791466200,
-      "seen_at": "2026-10-08 14:22:00 UTC",
+      "seen_at": "2026-10-08 20:07:42 UTC",
       "bars_after_signal": 18,
       "first_seen": "2026-10-08 14:22:00 UTC"
     },
@@ -125,7 +164,7 @@
       "timeframe": "1d",
       "level": 42.62429074652631,
       "time": 1791466200,
-      "seen_at": "2026-10-08 14:22:00 UTC",
+      "seen_at": "2026-10-08 20:07:42 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-08 14:22:00 UTC"
     },
@@ -139,7 +178,7 @@
       "timeframe": "1d",
       "level": 690.997838483538,
       "time": 1791466200,
-      "seen_at": "2026-10-08 14:22:00 UTC",
+      "seen_at": "2026-10-08 20:07:42 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-10-08 14:22:00 UTC"
     },
@@ -153,9 +192,100 @@
       "timeframe": "1d",
       "level": 83.82582887863731,
       "time": 1791466200,
-      "seen_at": "2026-10-08 14:22:00 UTC",
+      "seen_at": "2026-10-08 20:07:42 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-08 14:22:00 UTC"
+    },
+    {
+      "key": "sp500:EXR:1d:trend_touch:support:1791466200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "EXR",
+      "name": "Extra Space Storage",
+      "timeframe": "1d",
+      "level": 130.76951422267206,
+      "time": 1791466200,
+      "seen_at": "2026-10-08 20:07:42 UTC",
+      "first_seen": "2026-10-08 20:07:42 UTC"
+    },
+    {
+      "key": "sp500:PM:1d:trend_touch:resistance:1791466200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "PM",
+      "name": "Philip Morris International",
+      "timeframe": "1d",
+      "level": 194.86000061035156,
+      "time": 1791466200,
+      "seen_at": "2026-10-08 20:07:42 UTC",
+      "first_seen": "2026-10-08 20:07:42 UTC"
+    },
+    {
+      "key": "sp500:PSA:1d:trend_touch:support:1791466200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "PSA",
+      "name": "Public Storage",
+      "timeframe": "1d",
+      "level": 280.6511712843372,
+      "time": 1791466200,
+      "seen_at": "2026-10-08 20:07:42 UTC",
+      "first_seen": "2026-10-08 20:07:42 UTC"
+    },
+    {
+      "key": "sp500:TFC:1d:trend_touch:support:1791466200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "TFC",
+      "name": "Truist Financial",
+      "timeframe": "1d",
+      "level": 45.15537455544543,
+      "time": 1791466200,
+      "seen_at": "2026-10-08 20:07:42 UTC",
+      "first_seen": "2026-10-08 20:07:42 UTC"
+    },
+    {
+      "key": "sp500:TSCO:1d:trend_touch:resistance:1791466200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "TSCO",
+      "name": "Tractor Supply",
+      "timeframe": "1d",
+      "level": 32.80243224066657,
+      "time": 1791466200,
+      "seen_at": "2026-10-08 20:07:42 UTC",
+      "first_seen": "2026-10-08 20:07:42 UTC"
+    },
+    {
+      "key": "sp500:ULTA:1d:trend_touch:resistance:1791466200",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "ULTA",
+      "name": "Ulta Beauty",
+      "timeframe": "1d",
+      "level": 564.6679722377232,
+      "time": 1791466200,
+      "seen_at": "2026-10-08 20:07:42 UTC",
+      "first_seen": "2026-10-08 20:07:42 UTC"
+    },
+    {
+      "key": "sp500:WAB:1d:trend_touch:support:1791466200",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "WAB",
+      "name": "Wabtec",
+      "timeframe": "1d",
+      "level": 279.1640997825585,
+      "time": 1791466200,
+      "seen_at": "2026-10-08 20:07:42 UTC",
+      "first_seen": "2026-10-08 20:07:42 UTC"
     },
     {
       "key": "dji30:NVDA:1h:trend_touch:support:1791466200",
@@ -623,8 +753,21 @@
       "timeframe": "1d",
       "level": 5.481780430984276,
       "time": 1791417600,
-      "seen_at": "2026-10-08 14:22:00 UTC",
+      "seen_at": "2026-10-08 20:07:42 UTC",
       "first_seen": "2026-10-08 14:22:00 UTC"
+    },
+    {
+      "key": "crypto:UUSDT:1d:trend_touch:resistance:1791417600",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "UUSDT",
+      "name": "U",
+      "timeframe": "1d",
+      "level": 0.9999834862385321,
+      "time": 1791417600,
+      "seen_at": "2026-10-08 20:07:42 UTC",
+      "first_seen": "2026-10-08 20:07:42 UTC"
     },
     {
       "key": "crypto:ORCAUSDT:1d:trend_exceed:resistance:1791417600",
@@ -983,7 +1126,7 @@
       "timeframe": "1d",
       "level": 169.49000549316406,
       "time": 1791379800,
-      "seen_at": "2026-10-08 14:22:00 UTC",
+      "seen_at": "2026-10-08 20:07:42 UTC",
       "bars_after_signal": 13,
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
@@ -997,7 +1140,7 @@
       "timeframe": "1d",
       "level": 169.49000549316406,
       "time": 1791379800,
-      "seen_at": "2026-10-08 14:22:00 UTC",
+      "seen_at": "2026-10-08 20:07:42 UTC",
       "bars_after_signal": 13,
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
@@ -1011,7 +1154,7 @@
       "timeframe": "1d",
       "level": 228.17507094231206,
       "time": 1791379800,
-      "seen_at": "2026-10-08 14:22:00 UTC",
+      "seen_at": "2026-10-08 20:07:42 UTC",
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
     {
@@ -1024,7 +1167,7 @@
       "timeframe": "1d",
       "level": 228.17507094231206,
       "time": 1791379800,
-      "seen_at": "2026-10-08 14:22:00 UTC",
+      "seen_at": "2026-10-08 20:07:42 UTC",
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
     {
@@ -1037,7 +1180,7 @@
       "timeframe": "1d",
       "level": 124.18082320269417,
       "time": 1791379800,
-      "seen_at": "2026-10-08 14:22:00 UTC",
+      "seen_at": "2026-10-08 20:07:42 UTC",
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
     {
@@ -1050,7 +1193,7 @@
       "timeframe": "1d",
       "level": 171.55769540213205,
       "time": 1791379800,
-      "seen_at": "2026-10-08 14:22:00 UTC",
+      "seen_at": "2026-10-08 20:07:42 UTC",
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
     {
@@ -1063,7 +1206,7 @@
       "timeframe": "1d",
       "level": 167.8454458063299,
       "time": 1791379800,
-      "seen_at": "2026-10-08 14:22:00 UTC",
+      "seen_at": "2026-10-08 20:07:42 UTC",
       "first_seen": "2026-10-07 20:52:35 UTC"
     },
     {
@@ -6529,150 +6672,6 @@
       "time": 1790366400,
       "seen_at": "2026-09-28 08:01:19 UTC",
       "exceed_bars": 3,
-      "first_seen": "2026-09-25 22:13:21 UTC"
-    },
-    {
-      "key": "sp500:AMAT:1h:trend_exceed:resistance:1790366400",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "AMAT",
-      "name": "Applied Materials",
-      "timeframe": "1h",
-      "level": 484.39017223011365,
-      "time": 1790366400,
-      "seen_at": "2026-09-28 08:01:19 UTC",
-      "exceed_bars": 3,
-      "first_seen": "2026-09-25 22:13:21 UTC"
-    },
-    {
-      "key": "crypto:DOGEUSDT:1h:trend_touch:resistance:1790366400",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "DOGEUSDT",
-      "name": "DOGE",
-      "timeframe": "1h",
-      "level": 0.09853493827160494,
-      "time": 1790366400,
-      "seen_at": "2026-09-25 22:13:21 UTC",
-      "first_seen": "2026-09-25 22:13:21 UTC"
-    },
-    {
-      "key": "crypto:TAOUSDT:1h:trend_touch:resistance:1790366400",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "TAOUSDT",
-      "name": "TAO",
-      "timeframe": "1h",
-      "level": 310.8426229508197,
-      "time": 1790366400,
-      "seen_at": "2026-09-25 22:13:21 UTC",
-      "first_seen": "2026-09-25 22:13:21 UTC"
-    },
-    {
-      "key": "ndx100:KLAC:1h:trend_touch:resistance:1790364600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "KLAC",
-      "name": "KLA Corporation",
-      "timeframe": "1h",
-      "level": 188.76615134438316,
-      "time": 1790364600,
-      "seen_at": "2026-09-28 08:01:19 UTC",
-      "first_seen": "2026-09-25 22:13:21 UTC"
-    },
-    {
-      "key": "ndx100:TXN:1h:trend_touch:resistance:1790364600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "TXN",
-      "name": "Texas Instruments",
-      "timeframe": "1h",
-      "level": 278.3371595608986,
-      "time": 1790364600,
-      "seen_at": "2026-09-28 08:01:19 UTC",
-      "first_seen": "2026-09-25 22:13:21 UTC"
-    },
-    {
-      "key": "sp500:JCI:1h:trend_touch:resistance:1790364600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "JCI",
-      "name": "Johnson Controls",
-      "timeframe": "1h",
-      "level": 150.5471270835563,
-      "time": 1790364600,
-      "seen_at": "2026-09-28 08:01:19 UTC",
-      "first_seen": "2026-09-25 22:13:21 UTC"
-    },
-    {
-      "key": "sp500:KLAC:1h:trend_touch:resistance:1790364600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "KLAC",
-      "name": "KLA Corporation",
-      "timeframe": "1h",
-      "level": 188.76615134438316,
-      "time": 1790364600,
-      "seen_at": "2026-09-28 08:01:19 UTC",
-      "first_seen": "2026-09-25 22:13:21 UTC"
-    },
-    {
-      "key": "sp500:PLD:1h:trend_touch:support:1790364600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "PLD",
-      "name": "Prologis",
-      "timeframe": "1h",
-      "level": 132.74667946497598,
-      "time": 1790364600,
-      "seen_at": "2026-09-28 08:01:19 UTC",
-      "first_seen": "2026-09-25 22:13:21 UTC"
-    },
-    {
-      "key": "sp500:PRU:1h:trend_touch:resistance:1790364600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "PRU",
-      "name": "Prudential Financial",
-      "timeframe": "1h",
-      "level": 119.53922741229718,
-      "time": 1790364600,
-      "seen_at": "2026-09-28 08:01:19 UTC",
-      "first_seen": "2026-09-25 22:13:21 UTC"
-    },
-    {
-      "key": "sp500:PSKY:1h:trend_touch:support:1790364600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "PSKY",
-      "name": "Paramount Skydance Corp",
-      "timeframe": "1h",
-      "level": 9.95004341520112,
-      "time": 1790364600,
-      "seen_at": "2026-09-28 08:01:19 UTC",
-      "first_seen": "2026-09-25 22:13:21 UTC"
-    },
-    {
-      "key": "sp500:Q:1h:trend_touch:resistance:1790364600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "Q",
-      "name": "Qnity Electronics",
-      "timeframe": "1h",
-      "level": 124.79214228415975,
-      "time": 1790364600,
-      "seen_at": "2026-09-28 08:01:19 UTC",
       "first_seen": "2026-09-25 22:13:21 UTC"
     }
   ]
