@@ -1,8 +1,35 @@
 {
-  "updated_at": "2026-10-08 20:07:42 UTC",
+  "updated_at": "2026-10-09 00:44:37 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "crypto:OGNUSDT:1d:trend_exceed:resistance:1791504000",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "crypto",
+      "symbol": "OGNUSDT",
+      "name": "OGN",
+      "timeframe": "1d",
+      "level": 0.023101159420289855,
+      "time": 1791504000,
+      "seen_at": "2026-10-09 00:44:37 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-10-09 00:44:37 UTC"
+    },
+    {
+      "key": "fx:USDCAD=X:1h:trend_touch:support:1791504000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "fx",
+      "symbol": "USDCAD=X",
+      "name": "USD/CAD",
+      "timeframe": "1h",
+      "level": 1.4215359449386598,
+      "time": 1791504000,
+      "seen_at": "2026-10-09 00:44:37 UTC",
+      "first_seen": "2026-10-09 00:44:37 UTC"
+    },
     {
       "key": "fx:GBPUSD=X:1d:trend_touch:support:1791489947",
       "kind": "trend_touch",
@@ -26,7 +53,7 @@
       "timeframe": "1h",
       "level": 78.18714141845703,
       "time": 1791487800,
-      "seen_at": "2026-10-08 20:07:42 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "first_seen": "2026-10-08 20:07:42 UTC"
     },
     {
@@ -39,8 +66,34 @@
       "timeframe": "1h",
       "level": 71.99148211669922,
       "time": 1791487800,
-      "seen_at": "2026-10-08 20:07:42 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "first_seen": "2026-10-08 20:07:42 UTC"
+    },
+    {
+      "key": "dji30:MRK:1h:trend_touch:resistance:1791487800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "dji30",
+      "symbol": "MRK",
+      "name": "Merck & Co., Inc.",
+      "timeframe": "1h",
+      "level": 142.59125518798828,
+      "time": 1791487800,
+      "seen_at": "2026-10-09 00:44:37 UTC",
+      "first_seen": "2026-10-09 00:44:37 UTC"
+    },
+    {
+      "key": "sp500:MRK:1h:trend_touch:resistance:1791487800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "MRK",
+      "name": "Merck & Co.",
+      "timeframe": "1h",
+      "level": 142.59125518798828,
+      "time": 1791487800,
+      "seen_at": "2026-10-09 00:44:37 UTC",
+      "first_seen": "2026-10-09 00:44:37 UTC"
     },
     {
       "key": "sp500:IQV:1h:trend_exceed:support:1791468372",
@@ -753,7 +806,7 @@
       "timeframe": "1d",
       "level": 5.481780430984276,
       "time": 1791417600,
-      "seen_at": "2026-10-08 20:07:42 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "first_seen": "2026-10-08 14:22:00 UTC"
     },
     {
@@ -1126,7 +1179,7 @@
       "timeframe": "1d",
       "level": 169.49000549316406,
       "time": 1791379800,
-      "seen_at": "2026-10-08 20:07:42 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "bars_after_signal": 13,
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
@@ -1140,7 +1193,7 @@
       "timeframe": "1d",
       "level": 169.49000549316406,
       "time": 1791379800,
-      "seen_at": "2026-10-08 20:07:42 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "bars_after_signal": 13,
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
@@ -1154,7 +1207,7 @@
       "timeframe": "1d",
       "level": 228.17507094231206,
       "time": 1791379800,
-      "seen_at": "2026-10-08 20:07:42 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
     {
@@ -1167,7 +1220,7 @@
       "timeframe": "1d",
       "level": 228.17507094231206,
       "time": 1791379800,
-      "seen_at": "2026-10-08 20:07:42 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
     {
@@ -1180,7 +1233,7 @@
       "timeframe": "1d",
       "level": 124.18082320269417,
       "time": 1791379800,
-      "seen_at": "2026-10-08 20:07:42 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
     {
@@ -1193,7 +1246,7 @@
       "timeframe": "1d",
       "level": 171.55769540213205,
       "time": 1791379800,
-      "seen_at": "2026-10-08 20:07:42 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
     {
@@ -1206,7 +1259,7 @@
       "timeframe": "1d",
       "level": 167.8454458063299,
       "time": 1791379800,
-      "seen_at": "2026-10-08 20:07:42 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "first_seen": "2026-10-07 20:52:35 UTC"
     },
     {
@@ -1219,7 +1272,7 @@
       "timeframe": "1d",
       "level": 309.3326056649752,
       "time": 1791379800,
-      "seen_at": "2026-10-08 07:03:50 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "exceed_bars": 7,
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
@@ -1233,7 +1286,7 @@
       "timeframe": "1d",
       "level": 309.3326056649752,
       "time": 1791379800,
-      "seen_at": "2026-10-08 07:03:50 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "exceed_bars": 7,
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
@@ -1247,7 +1300,7 @@
       "timeframe": "1d",
       "level": 42.61721924679987,
       "time": 1791379800,
-      "seen_at": "2026-10-08 07:03:50 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
@@ -1261,7 +1314,7 @@
       "timeframe": "1d",
       "level": 691.9114100864955,
       "time": 1791379800,
-      "seen_at": "2026-10-08 07:03:50 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
@@ -1275,7 +1328,7 @@
       "timeframe": "1d",
       "level": 83.75770053761528,
       "time": 1791379800,
-      "seen_at": "2026-10-08 07:03:50 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-10-07 14:57:42 UTC"
     },
@@ -1750,7 +1803,7 @@
       "timeframe": "1d",
       "level": 97.95399627685546,
       "time": 1791293400,
-      "seen_at": "2026-10-08 07:03:50 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "first_seen": "2026-10-06 16:33:35 UTC"
     },
     {
@@ -1763,7 +1816,7 @@
       "timeframe": "1d",
       "level": 692.8249816894531,
       "time": 1791293400,
-      "seen_at": "2026-10-08 07:03:50 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "first_seen": "2026-10-06 16:33:35 UTC"
     },
     {
@@ -1776,7 +1829,7 @@
       "timeframe": "1d",
       "level": 88.7663140547903,
       "time": 1791293400,
-      "seen_at": "2026-10-08 07:03:50 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "first_seen": "2026-10-06 16:33:35 UTC"
     },
     {
@@ -1789,7 +1842,7 @@
       "timeframe": "1d",
       "level": 335.71233592313877,
       "time": 1791293400,
-      "seen_at": "2026-10-08 07:03:50 UTC",
+      "seen_at": "2026-10-09 00:44:37 UTC",
       "first_seen": "2026-10-06 16:33:35 UTC"
     },
     {
@@ -6620,59 +6673,6 @@
       "seen_at": "2026-09-27 16:03:38 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-09-27 16:03:38 UTC"
-    },
-    {
-      "key": "crypto:BNBUSDT:1h:trend_touch:resistance:1790463600",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "BNBUSDT",
-      "name": "BNB",
-      "timeframe": "1h",
-      "level": 773.6650000000001,
-      "time": 1790463600,
-      "seen_at": "2026-09-27 00:07:00 UTC",
-      "first_seen": "2026-09-27 00:07:00 UTC"
-    },
-    {
-      "key": "crypto:ETHUSDT:1h:trend_touch:resistance:1790456400",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "ETHUSDT",
-      "name": "ETH",
-      "timeframe": "1h",
-      "level": 2689.277108433735,
-      "time": 1790456400,
-      "seen_at": "2026-09-26 22:00:31 UTC",
-      "first_seen": "2026-09-26 22:00:31 UTC"
-    },
-    {
-      "key": "crypto:ARBUSDT:1h:trend_touch:resistance:1790431200",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "ARBUSDT",
-      "name": "ARB",
-      "timeframe": "1h",
-      "level": 0.22503164556962027,
-      "time": 1790431200,
-      "seen_at": "2026-09-26 15:08:40 UTC",
-      "first_seen": "2026-09-26 15:08:40 UTC"
-    },
-    {
-      "key": "ndx100:AMAT:1h:trend_exceed:resistance:1790366400",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "AMAT",
-      "name": "Applied Materials",
-      "timeframe": "1h",
-      "level": 484.39017223011365,
-      "time": 1790366400,
-      "seen_at": "2026-09-28 08:01:19 UTC",
-      "exceed_bars": 3,
-      "first_seen": "2026-09-25 22:13:21 UTC"
     }
   ]
 }
