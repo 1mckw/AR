@@ -1,8 +1,193 @@
 {
-  "updated_at": "2026-10-16 18:35:08 UTC",
+  "updated_at": "2026-10-16 22:06:13 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "ndx100:KLAC:1h:trend_exceed:support:1792180800",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "KLAC",
+      "name": "KLA Corporation",
+      "timeframe": "1h",
+      "level": 166.19691626567524,
+      "time": 1792180800,
+      "seen_at": "2026-10-16 22:06:13 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-10-16 22:06:13 UTC"
+    },
+    {
+      "key": "sp500:CMG:1h:trend_exceed:support:1792180800",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "CMG",
+      "name": "Chipotle Mexican Grill",
+      "timeframe": "1h",
+      "level": 30.036614049067264,
+      "time": 1792180800,
+      "seen_at": "2026-10-16 22:06:13 UTC",
+      "exceed_bars": 4,
+      "first_seen": "2026-10-16 22:06:13 UTC"
+    },
+    {
+      "key": "sp500:KLAC:1h:trend_exceed:support:1792180800",
+      "kind": "trend_exceed",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "KLAC",
+      "name": "KLA Corporation",
+      "timeframe": "1h",
+      "level": 166.19691626567524,
+      "time": 1792180800,
+      "seen_at": "2026-10-16 22:06:13 UTC",
+      "exceed_bars": 2,
+      "first_seen": "2026-10-16 22:06:13 UTC"
+    },
+    {
+      "key": "dji30:CSCO:1h:trend_touch:support:1792179000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "dji30",
+      "symbol": "CSCO",
+      "name": "Cisco Systems, Inc.",
+      "timeframe": "1h",
+      "level": 107.20781990027649,
+      "time": 1792179000,
+      "seen_at": "2026-10-16 22:06:13 UTC",
+      "first_seen": "2026-10-16 22:06:13 UTC"
+    },
+    {
+      "key": "ndx100:CSCO:1h:trend_touch:support:1792179000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "CSCO",
+      "name": "Cisco",
+      "timeframe": "1h",
+      "level": 107.20781990027649,
+      "time": 1792179000,
+      "seen_at": "2026-10-16 22:06:13 UTC",
+      "first_seen": "2026-10-16 22:06:13 UTC"
+    },
+    {
+      "key": "ndx100:KLAC:1h:trend_touch:support:1792179000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "KLAC",
+      "name": "KLA Corporation",
+      "timeframe": "1h",
+      "level": 166.19496166327357,
+      "time": 1792179000,
+      "seen_at": "2026-10-16 22:06:13 UTC",
+      "first_seen": "2026-10-16 22:06:13 UTC"
+    },
+    {
+      "key": "ndx100:NFLX:1h:trend_touch:support:1792179000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "ndx100",
+      "symbol": "NFLX",
+      "name": "Netflix",
+      "timeframe": "1h",
+      "level": 70.13238053094773,
+      "time": 1792179000,
+      "seen_at": "2026-10-16 22:06:13 UTC",
+      "first_seen": "2026-10-16 22:06:13 UTC"
+    },
+    {
+      "key": "sp500:AJG:1h:trend_touch:resistance:1792179000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "AJG",
+      "name": "Arthur J. Gallagher & Co.",
+      "timeframe": "1h",
+      "level": 254.9861842564174,
+      "time": 1792179000,
+      "seen_at": "2026-10-16 22:06:13 UTC",
+      "first_seen": "2026-10-16 22:06:13 UTC"
+    },
+    {
+      "key": "sp500:CPT:1h:trend_touch:resistance:1792179000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "CPT",
+      "name": "Camden Property Trust",
+      "timeframe": "1h",
+      "level": 98.7172915684192,
+      "time": 1792179000,
+      "seen_at": "2026-10-16 22:06:13 UTC",
+      "first_seen": "2026-10-16 22:06:13 UTC"
+    },
+    {
+      "key": "sp500:CSCO:1h:trend_touch:support:1792179000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "CSCO",
+      "name": "Cisco",
+      "timeframe": "1h",
+      "level": 107.20781990027649,
+      "time": 1792179000,
+      "seen_at": "2026-10-16 22:06:13 UTC",
+      "first_seen": "2026-10-16 22:06:13 UTC"
+    },
+    {
+      "key": "sp500:DUK:1h:trend_touch:resistance:1792179000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "DUK",
+      "name": "Duke Energy",
+      "timeframe": "1h",
+      "level": 121.59041358792052,
+      "time": 1792179000,
+      "seen_at": "2026-10-16 22:06:13 UTC",
+      "first_seen": "2026-10-16 22:06:13 UTC"
+    },
+    {
+      "key": "sp500:KLAC:1h:trend_touch:support:1792179000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "KLAC",
+      "name": "KLA Corporation",
+      "timeframe": "1h",
+      "level": 166.19496166327357,
+      "time": 1792179000,
+      "seen_at": "2026-10-16 22:06:13 UTC",
+      "first_seen": "2026-10-16 22:06:13 UTC"
+    },
+    {
+      "key": "sp500:MKC:1h:trend_touch:resistance:1792179000",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "MKC",
+      "name": "McCormick & Company",
+      "timeframe": "1h",
+      "level": 46.529991149902344,
+      "time": 1792179000,
+      "seen_at": "2026-10-16 22:06:13 UTC",
+      "first_seen": "2026-10-16 22:06:13 UTC"
+    },
+    {
+      "key": "sp500:NFLX:1h:trend_touch:support:1792179000",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "NFLX",
+      "name": "Netflix",
+      "timeframe": "1h",
+      "level": 70.13238053094773,
+      "time": 1792179000,
+      "seen_at": "2026-10-16 22:06:13 UTC",
+      "first_seen": "2026-10-16 22:06:13 UTC"
+    },
     {
       "key": "sp500:ARE:1h:trend_exceed:support:1792175052",
       "kind": "trend_exceed",
@@ -218,7 +403,7 @@
       "timeframe": "1d",
       "level": 356.0,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "bars_after_signal": 20,
       "first_seen": "2026-10-16 14:39:04 UTC"
     },
@@ -232,7 +417,7 @@
       "timeframe": "1d",
       "level": 356.0,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "bars_after_signal": 20,
       "first_seen": "2026-10-16 14:39:04 UTC"
     },
@@ -246,7 +431,7 @@
       "timeframe": "1d",
       "level": 27.279453376637953,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-10-16 14:39:04 UTC"
     },
@@ -260,7 +445,7 @@
       "timeframe": "1d",
       "level": 209.99000549316406,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-16 14:39:04 UTC"
     },
@@ -274,7 +459,7 @@
       "timeframe": "1d",
       "level": 97.4325653467423,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-16 14:39:04 UTC"
     },
@@ -288,7 +473,7 @@
       "timeframe": "1d",
       "level": 601.1506890190972,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-16 14:39:04 UTC"
     },
@@ -302,7 +487,7 @@
       "timeframe": "1d",
       "level": 34.92477018182928,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-16 14:39:04 UTC"
     },
@@ -316,7 +501,7 @@
       "timeframe": "1d",
       "level": 239.15357753208707,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-10-16 14:39:04 UTC"
     },
@@ -330,7 +515,7 @@
       "timeframe": "1d",
       "level": 381.34031413612564,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-16 14:39:04 UTC"
     },
@@ -344,7 +529,7 @@
       "timeframe": "1d",
       "level": 284.59572056361606,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "first_seen": "2026-10-16 14:39:04 UTC"
     },
     {
@@ -355,9 +540,9 @@
       "symbol": "CI",
       "name": "Cigna",
       "timeframe": "1d",
-      "level": 301.6631062324411,
+      "level": 302.652101086032,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "first_seen": "2026-10-16 14:39:04 UTC"
     },
     {
@@ -370,7 +555,7 @@
       "timeframe": "1d",
       "level": 108.63911491216615,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "first_seen": "2026-10-16 14:39:04 UTC"
     },
     {
@@ -383,7 +568,7 @@
       "timeframe": "1d",
       "level": 61.370525761654505,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "first_seen": "2026-10-16 14:39:04 UTC"
     },
     {
@@ -396,7 +581,7 @@
       "timeframe": "1d",
       "level": 166.08999633789062,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "bars_after_signal": 20,
       "gap_pct": 0.39737713086986587,
       "first_seen": "2026-10-16 18:35:08 UTC"
@@ -411,7 +596,7 @@
       "timeframe": "1d",
       "level": 166.08999633789062,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "bars_after_signal": 20,
       "gap_pct": 0.39737713086986587,
       "first_seen": "2026-10-16 18:35:08 UTC"
@@ -426,7 +611,7 @@
       "timeframe": "1d",
       "level": 133.1929789893429,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "first_seen": "2026-10-16 18:35:08 UTC"
     },
     {
@@ -439,7 +624,7 @@
       "timeframe": "1d",
       "level": 174.35057965446921,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "first_seen": "2026-10-16 18:35:08 UTC"
     },
     {
@@ -452,7 +637,7 @@
       "timeframe": "1d",
       "level": 259.6589874267578,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "first_seen": "2026-10-16 18:35:08 UTC"
     },
     {
@@ -465,7 +650,7 @@
       "timeframe": "1d",
       "level": 71.68805614869986,
       "time": 1792157400,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "first_seen": "2026-10-16 18:35:08 UTC"
     },
     {
@@ -1879,7 +2064,7 @@
       "timeframe": "1d",
       "level": 68.69999694824219,
       "time": 1792071000,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "bars_after_signal": 23,
       "first_seen": "2026-10-15 17:58:02 UTC"
     },
@@ -1893,7 +2078,7 @@
       "timeframe": "1d",
       "level": 39.72999954223633,
       "time": 1792071000,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "bars_after_signal": 22,
       "first_seen": "2026-10-15 17:58:02 UTC"
     },
@@ -1907,7 +2092,7 @@
       "timeframe": "1d",
       "level": 210.42933858235676,
       "time": 1792071000,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "first_seen": "2026-10-15 17:58:02 UTC"
     },
     {
@@ -1920,7 +2105,7 @@
       "timeframe": "1d",
       "level": 83.3769308236929,
       "time": 1792071000,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "first_seen": "2026-10-15 17:58:02 UTC"
     },
     {
@@ -1933,7 +2118,7 @@
       "timeframe": "1d",
       "level": 34.96465656974099,
       "time": 1792071000,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "first_seen": "2026-10-15 17:58:02 UTC"
     },
     {
@@ -1946,7 +2131,7 @@
       "timeframe": "1d",
       "level": 103.45836500688033,
       "time": 1792071000,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "first_seen": "2026-10-15 17:58:02 UTC"
     },
     {
@@ -1959,7 +2144,7 @@
       "timeframe": "1d",
       "level": 515.353353268255,
       "time": 1792071000,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "first_seen": "2026-10-15 17:58:02 UTC"
     },
     {
@@ -1972,7 +2157,7 @@
       "timeframe": "1d",
       "level": 325.5127161537729,
       "time": 1792071000,
-      "seen_at": "2026-10-16 18:35:08 UTC",
+      "seen_at": "2026-10-16 22:06:13 UTC",
       "first_seen": "2026-10-15 17:58:02 UTC"
     },
     {
@@ -6456,191 +6641,6 @@
       "seen_at": "2026-10-09 00:44:37 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-10-07 14:57:42 UTC"
-    },
-    {
-      "key": "sp500:HCA:1d:trend_touch:resistance:1791379800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "HCA",
-      "name": "HCA Healthcare",
-      "timeframe": "1d",
-      "level": 439.1406991141183,
-      "time": 1791379800,
-      "seen_at": "2026-10-07 14:57:42 UTC",
-      "first_seen": "2026-10-07 14:57:42 UTC"
-    },
-    {
-      "key": "sp500:KIM:1d:trend_touch:support:1791379800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "KIM",
-      "name": "Kimco Realty",
-      "timeframe": "1d",
-      "level": 21.901177088419598,
-      "time": 1791379800,
-      "seen_at": "2026-10-07 14:57:42 UTC",
-      "first_seen": "2026-10-07 14:57:42 UTC"
-    },
-    {
-      "key": "futures:GC=F:1d:trend_touch:support:1791345600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "futures",
-      "symbol": "GC=F",
-      "name": "Gold",
-      "timeframe": "1d",
-      "level": 4127.330292137633,
-      "time": 1791345600,
-      "seen_at": "2026-10-07 20:52:35 UTC",
-      "first_seen": "2026-10-07 14:57:42 UTC"
-    },
-    {
-      "key": "crypto:XAUTUSDT:1d:trend_touch:support:1791331200",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "crypto",
-      "symbol": "XAUTUSDT",
-      "name": "XAUT",
-      "timeframe": "1d",
-      "level": 4106.233448275862,
-      "time": 1791331200,
-      "seen_at": "2026-10-08 14:22:00 UTC",
-      "first_seen": "2026-10-07 14:57:42 UTC"
-    },
-    {
-      "key": "crypto:ORCAUSDT:1d:trend_exceed:resistance:1791331200",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "ORCAUSDT",
-      "name": "ORCA",
-      "timeframe": "1d",
-      "level": 2.136842465753425,
-      "time": 1791331200,
-      "seen_at": "2026-10-07 20:52:35 UTC",
-      "exceed_bars": 3,
-      "first_seen": "2026-10-07 01:13:36 UTC"
-    },
-    {
-      "key": "sp500:BBY:1h:trend_exceed:support:1791316800",
-      "kind": "trend_exceed",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "BBY",
-      "name": "Best Buy",
-      "timeframe": "1h",
-      "level": 85.01748162589982,
-      "time": 1791316800,
-      "seen_at": "2026-10-07 07:35:45 UTC",
-      "exceed_bars": 2,
-      "first_seen": "2026-10-06 21:32:59 UTC"
-    },
-    {
-      "key": "sp500:CIEN:1h:trend_exceed:resistance:1791316800",
-      "kind": "trend_exceed",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "CIEN",
-      "name": "Ciena Corporation",
-      "timeframe": "1h",
-      "level": 432.38203846324575,
-      "time": 1791316800,
-      "seen_at": "2026-10-07 07:35:45 UTC",
-      "exceed_bars": 4,
-      "first_seen": "2026-10-06 21:32:59 UTC"
-    },
-    {
-      "key": "crypto:QNTUSDT:1h:trend_touch:resistance:1791316800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "crypto",
-      "symbol": "QNTUSDT",
-      "name": "QNT",
-      "timeframe": "1h",
-      "level": 266.0055737704918,
-      "time": 1791316800,
-      "seen_at": "2026-10-06 21:32:59 UTC",
-      "first_seen": "2026-10-06 21:32:59 UTC"
-    },
-    {
-      "key": "ndx100:DASH:1h:trend_touch:resistance:1791315000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "DASH",
-      "name": "DoorDash",
-      "timeframe": "1h",
-      "level": 193.75972334835507,
-      "time": 1791315000,
-      "seen_at": "2026-10-07 07:35:45 UTC",
-      "first_seen": "2026-10-06 21:32:59 UTC"
-    },
-    {
-      "key": "ndx100:EXC:1h:trend_touch:resistance:1791315000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "EXC",
-      "name": "Exelon",
-      "timeframe": "1h",
-      "level": 41.69795018976385,
-      "time": 1791315000,
-      "seen_at": "2026-10-07 07:35:45 UTC",
-      "first_seen": "2026-10-06 21:32:59 UTC"
-    },
-    {
-      "key": "ndx100:MAR:1h:trend_touch:resistance:1791315000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "MAR",
-      "name": "Marriott International",
-      "timeframe": "1h",
-      "level": 362.22666426328857,
-      "time": 1791315000,
-      "seen_at": "2026-10-07 07:35:45 UTC",
-      "first_seen": "2026-10-06 21:32:59 UTC"
-    },
-    {
-      "key": "sp500:A:1h:trend_touch:support:1791315000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "A",
-      "name": "Agilent Technologies",
-      "timeframe": "1h",
-      "level": 169.06353759765625,
-      "time": 1791315000,
-      "seen_at": "2026-10-07 07:35:45 UTC",
-      "first_seen": "2026-10-06 21:32:59 UTC"
-    },
-    {
-      "key": "sp500:BBY:1h:trend_touch:support:1791315000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "BBY",
-      "name": "Best Buy",
-      "timeframe": "1h",
-      "level": 84.97504547958525,
-      "time": 1791315000,
-      "seen_at": "2026-10-07 07:35:45 UTC",
-      "first_seen": "2026-10-06 21:32:59 UTC"
-    },
-    {
-      "key": "sp500:DASH:1h:trend_touch:resistance:1791315000",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "DASH",
-      "name": "DoorDash",
-      "timeframe": "1h",
-      "level": 193.75972334835507,
-      "time": 1791315000,
-      "seen_at": "2026-10-07 07:35:45 UTC",
-      "first_seen": "2026-10-06 21:32:59 UTC"
     }
   ]
 }
