@@ -1,8 +1,49 @@
 {
-  "updated_at": "2026-10-23 15:40:21 UTC",
+  "updated_at": "2026-10-23 19:55:52 UTC",
   "count": 500,
   "max": 500,
   "hits": [
+    {
+      "key": "sp500:LDOS:1h:trend_exceed:resistance:1792784202",
+      "kind": "trend_exceed",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "LDOS",
+      "name": "Leidos",
+      "timeframe": "1h",
+      "level": 136.27327156066895,
+      "time": 1792784202,
+      "seen_at": "2026-10-23 19:55:52 UTC",
+      "exceed_bars": 3,
+      "first_seen": "2026-10-23 19:55:52 UTC"
+    },
+    {
+      "key": "sp500:FFIV:1h:trend_touch:resistance:1792783800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "FFIV",
+      "name": "F5, Inc.",
+      "timeframe": "1h",
+      "level": 455.9675766302615,
+      "time": 1792783800,
+      "seen_at": "2026-10-23 19:55:52 UTC",
+      "first_seen": "2026-10-23 19:55:52 UTC"
+    },
+    {
+      "key": "crypto:PUMPUSDT:1h:ar_dr_touch:DR:1792782000",
+      "kind": "ar_dr_touch",
+      "type": "DR",
+      "group": "crypto",
+      "symbol": "PUMPUSDT",
+      "name": "PUMP",
+      "timeframe": "1h",
+      "level": 0.004457,
+      "time": 1792782000,
+      "seen_at": "2026-10-23 19:55:52 UTC",
+      "bars_after_signal": 76,
+      "first_seen": "2026-10-23 19:55:52 UTC"
+    },
     {
       "key": "sp500:HPQ:1h:trend_exceed:resistance:1792769416",
       "kind": "trend_exceed",
@@ -219,7 +260,7 @@
       "timeframe": "1d",
       "level": 111.82941307959618,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -233,7 +274,7 @@
       "timeframe": "1d",
       "level": 1600.9453036221591,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -247,7 +288,7 @@
       "timeframe": "1d",
       "level": 83.10414830649772,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -261,7 +302,7 @@
       "timeframe": "1d",
       "level": 412.5807909982484,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -275,7 +316,7 @@
       "timeframe": "1d",
       "level": 233.39902291805186,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -289,7 +330,7 @@
       "timeframe": "1d",
       "level": 80.87114200257419,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -303,7 +344,7 @@
       "timeframe": "1d",
       "level": 182.50644729071456,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -317,7 +358,7 @@
       "timeframe": "1d",
       "level": 103.34261605727613,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -331,7 +372,7 @@
       "timeframe": "1d",
       "level": 175.75174464536516,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -345,7 +386,7 @@
       "timeframe": "1d",
       "level": 69.57333374023438,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -359,7 +400,7 @@
       "timeframe": "1d",
       "level": 111.82941307959618,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -373,7 +414,7 @@
       "timeframe": "1d",
       "level": 207.79334004720053,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 7,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -387,7 +428,7 @@
       "timeframe": "1d",
       "level": 83.10414830649772,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -401,7 +442,7 @@
       "timeframe": "1d",
       "level": 89.86049327850341,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -415,7 +456,7 @@
       "timeframe": "1d",
       "level": 48.893705721254705,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -429,7 +470,7 @@
       "timeframe": "1d",
       "level": 77.00381227523562,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 3,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -443,7 +484,7 @@
       "timeframe": "1d",
       "level": 224.0817968195135,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -457,7 +498,7 @@
       "timeframe": "1d",
       "level": 18.9054438999721,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -471,7 +512,7 @@
       "timeframe": "1d",
       "level": 129.99130957111032,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -485,7 +526,7 @@
       "timeframe": "1d",
       "level": 189.18530053570223,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 4,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -499,7 +540,7 @@
       "timeframe": "1d",
       "level": 412.5807909982484,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -513,7 +554,7 @@
       "timeframe": "1d",
       "level": 378.68432287267734,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -527,7 +568,7 @@
       "timeframe": "1d",
       "level": 380.9520069808028,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 7,
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
@@ -539,9 +580,9 @@
       "symbol": "STE",
       "name": "Steris",
       "timeframe": "1d",
-      "level": 232.24595490512468,
+      "level": 232.9103429333917,
       "time": 1792762200,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
     {
@@ -567,7 +608,7 @@
       "timeframe": "1d",
       "level": 0.025014172661870532,
       "time": 1792713600,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "exceed_bars": 2,
       "first_seen": "2026-10-23 05:45:15 UTC"
     },
@@ -581,7 +622,7 @@
       "timeframe": "1d",
       "level": 4.9186440677966104e-06,
       "time": 1792713600,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
     {
@@ -594,7 +635,7 @@
       "timeframe": "1d",
       "level": 3988.09,
       "time": 1792713600,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "first_seen": "2026-10-23 15:40:21 UTC"
     },
     {
@@ -1347,7 +1388,7 @@
       "timeframe": "1d",
       "level": 130.36823766371782,
       "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "first_seen": "2026-10-22 13:36:10 UTC"
     },
     {
@@ -1360,7 +1401,7 @@
       "timeframe": "1d",
       "level": 379.1084850414379,
       "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "first_seen": "2026-10-22 13:36:10 UTC"
     },
     {
@@ -1373,20 +1414,7 @@
       "timeframe": "1d",
       "level": 1599.7927579012785,
       "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
-      "first_seen": "2026-10-22 18:33:49 UTC"
-    },
-    {
-      "key": "ndx100:GEHC:1d:trend_touch:resistance:1792675800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "ndx100",
-      "symbol": "GEHC",
-      "name": "GE HealthCare",
-      "timeframe": "1d",
-      "level": 71.61571720668248,
-      "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "first_seen": "2026-10-22 18:33:49 UTC"
     },
     {
@@ -1399,7 +1427,7 @@
       "timeframe": "1d",
       "level": 413.06705428697035,
       "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "first_seen": "2026-10-22 18:33:49 UTC"
     },
     {
@@ -1412,7 +1440,7 @@
       "timeframe": "1d",
       "level": 233.8235760627909,
       "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "first_seen": "2026-10-22 18:33:49 UTC"
     },
     {
@@ -1425,7 +1453,7 @@
       "timeframe": "1d",
       "level": 182.59650656357113,
       "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "first_seen": "2026-10-22 18:33:49 UTC"
     },
     {
@@ -1438,7 +1466,7 @@
       "timeframe": "1d",
       "level": 105.6174911395457,
       "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "first_seen": "2026-10-22 18:33:49 UTC"
     },
     {
@@ -1451,7 +1479,7 @@
       "timeframe": "1d",
       "level": 513.3555700329766,
       "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "first_seen": "2026-10-22 18:33:49 UTC"
     },
     {
@@ -1464,7 +1492,7 @@
       "timeframe": "1d",
       "level": 71.73806011921181,
       "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "first_seen": "2026-10-22 18:33:49 UTC"
     },
     {
@@ -1477,7 +1505,7 @@
       "timeframe": "1d",
       "level": 49.03185385244864,
       "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "first_seen": "2026-10-22 18:33:49 UTC"
     },
     {
@@ -1490,7 +1518,7 @@
       "timeframe": "1d",
       "level": 71.61571720668248,
       "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
+      "seen_at": "2026-10-23 19:55:52 UTC",
       "first_seen": "2026-10-22 18:33:49 UTC"
     },
     {
@@ -1502,6 +1530,85 @@
       "name": "Gartner",
       "timeframe": "1d",
       "level": 224.23649389093572,
+      "time": 1792675800,
+      "seen_at": "2026-10-23 19:55:52 UTC",
+      "first_seen": "2026-10-22 18:33:49 UTC"
+    },
+    {
+      "key": "sp500:NVR:1d:trend_touch:support:1792675800",
+      "kind": "trend_touch",
+      "type": "support",
+      "group": "sp500",
+      "symbol": "NVR",
+      "name": "NVR, Inc.",
+      "timeframe": "1d",
+      "level": 5623.727443260483,
+      "time": 1792675800,
+      "seen_at": "2026-10-23 19:55:52 UTC",
+      "first_seen": "2026-10-22 18:33:49 UTC"
+    },
+    {
+      "key": "sp500:ROP:1d:trend_touch:resistance:1792675800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "ROP",
+      "name": "Roper Technologies",
+      "timeframe": "1d",
+      "level": 413.06705428697035,
+      "time": 1792675800,
+      "seen_at": "2026-10-23 19:55:52 UTC",
+      "first_seen": "2026-10-22 18:33:49 UTC"
+    },
+    {
+      "key": "sp500:SPG:1d:ar_dr_touch:AR:1792675800",
+      "kind": "ar_dr_touch",
+      "type": "AR",
+      "group": "sp500",
+      "symbol": "SPG",
+      "name": "Simon Property Group",
+      "timeframe": "1d",
+      "level": 212.55999755859375,
+      "time": 1792675800,
+      "seen_at": "2026-10-23 19:55:52 UTC",
+      "bars_after_signal": 32,
+      "first_seen": "2026-10-22 22:01:49 UTC"
+    },
+    {
+      "key": "sp500:EW:1d:trend_touch:resistance:1792675800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "EW",
+      "name": "Edwards Lifesciences",
+      "timeframe": "1d",
+      "level": 89.94399337768554,
+      "time": 1792675800,
+      "seen_at": "2026-10-23 19:55:52 UTC",
+      "first_seen": "2026-10-22 22:01:49 UTC"
+    },
+    {
+      "key": "sp500:SRE:1d:trend_touch:resistance:1792675800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "sp500",
+      "symbol": "SRE",
+      "name": "Sempra",
+      "timeframe": "1d",
+      "level": 84.95751762390137,
+      "time": 1792675800,
+      "seen_at": "2026-10-23 19:55:52 UTC",
+      "first_seen": "2026-10-22 22:01:49 UTC"
+    },
+    {
+      "key": "ndx100:GEHC:1d:trend_touch:resistance:1792675800",
+      "kind": "trend_touch",
+      "type": "resistance",
+      "group": "ndx100",
+      "symbol": "GEHC",
+      "name": "GE HealthCare",
+      "timeframe": "1d",
+      "level": 71.61571720668248,
       "time": 1792675800,
       "seen_at": "2026-10-23 15:40:21 UTC",
       "first_seen": "2026-10-22 18:33:49 UTC"
@@ -1518,72 +1625,6 @@
       "time": 1792675800,
       "seen_at": "2026-10-23 15:40:21 UTC",
       "first_seen": "2026-10-22 18:33:49 UTC"
-    },
-    {
-      "key": "sp500:NVR:1d:trend_touch:support:1792675800",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "sp500",
-      "symbol": "NVR",
-      "name": "NVR, Inc.",
-      "timeframe": "1d",
-      "level": 5623.727443260483,
-      "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
-      "first_seen": "2026-10-22 18:33:49 UTC"
-    },
-    {
-      "key": "sp500:ROP:1d:trend_touch:resistance:1792675800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "ROP",
-      "name": "Roper Technologies",
-      "timeframe": "1d",
-      "level": 413.06705428697035,
-      "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
-      "first_seen": "2026-10-22 18:33:49 UTC"
-    },
-    {
-      "key": "sp500:SPG:1d:ar_dr_touch:AR:1792675800",
-      "kind": "ar_dr_touch",
-      "type": "AR",
-      "group": "sp500",
-      "symbol": "SPG",
-      "name": "Simon Property Group",
-      "timeframe": "1d",
-      "level": 212.55999755859375,
-      "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
-      "bars_after_signal": 32,
-      "first_seen": "2026-10-22 22:01:49 UTC"
-    },
-    {
-      "key": "sp500:EW:1d:trend_touch:resistance:1792675800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "EW",
-      "name": "Edwards Lifesciences",
-      "timeframe": "1d",
-      "level": 89.94399337768554,
-      "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
-      "first_seen": "2026-10-22 22:01:49 UTC"
-    },
-    {
-      "key": "sp500:SRE:1d:trend_touch:resistance:1792675800",
-      "kind": "trend_touch",
-      "type": "resistance",
-      "group": "sp500",
-      "symbol": "SRE",
-      "name": "Sempra",
-      "timeframe": "1d",
-      "level": 84.95751762390137,
-      "time": 1792675800,
-      "seen_at": "2026-10-23 15:40:21 UTC",
-      "first_seen": "2026-10-22 22:01:49 UTC"
     },
     {
       "key": "sp500:BG:1d:trend_exceed:support:1792675800",
@@ -6650,45 +6691,6 @@
       "time": 1792071000,
       "seen_at": "2026-10-17 00:39:19 UTC",
       "first_seen": "2026-10-15 21:31:21 UTC"
-    },
-    {
-      "key": "futures:RTY=F:1h:trend_touch:support:1792065600",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "futures",
-      "symbol": "RTY=F",
-      "name": "E-mini Russell",
-      "timeframe": "1h",
-      "level": 2743.1286969866073,
-      "time": 1792065600,
-      "seen_at": "2026-10-15 13:11:44 UTC",
-      "first_seen": "2026-10-15 13:11:44 UTC"
-    },
-    {
-      "key": "crypto:SPCXBUSDT:1h:trend_touch:support:1792062000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "crypto",
-      "symbol": "SPCXBUSDT",
-      "name": "SPCXB",
-      "timeframe": "1h",
-      "level": 147.58473684210526,
-      "time": 1792062000,
-      "seen_at": "2026-10-15 13:11:44 UTC",
-      "first_seen": "2026-10-15 13:11:44 UTC"
-    },
-    {
-      "key": "crypto:ADAUSDT:1h:trend_touch:support:1792026000",
-      "kind": "trend_touch",
-      "type": "support",
-      "group": "crypto",
-      "symbol": "ADAUSDT",
-      "name": "ADA",
-      "timeframe": "1h",
-      "level": 0.2270876119402985,
-      "time": 1792026000,
-      "seen_at": "2026-10-15 02:08:39 UTC",
-      "first_seen": "2026-10-15 02:08:39 UTC"
     }
   ]
 }
